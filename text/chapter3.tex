@@ -1,0 +1,136 @@
+\chapter{Theory of Pricing}
+
+\section{Credit Derivative Approach}
+
+\subsection{Intensity-based Approach}
+
+\begin{align}
+    p^* &= 1 - \exp\left(- \lambda_{Trigger} \times T\right)
+\end{align}
+
+\begin{align}
+    s_{CoCo} &= \left(1 - R_{CoCo}\right) \times \lambda_{Trigger} = {Loss}_{CoCo} \times \lambda_{Trigger}
+\end{align}
+
+\begin{align}
+    {Loss}_{CoCo} &= N - C_r \times S^* = N \left(1 - \dfrac{S^*}{C_P} \right)
+\end{align}
+
+\begin{align}
+    R_{CoCo} &= \dfrac{S^*}{C_p}
+\end{align}
+
+\begin{align}
+    p^* = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu T}{\sigma \sqrt{T}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu T}{\sigma \sqrt{T}}\right)
+\end{align}
+
+\begin{align}
+\lambda_{Trigger} &= - \dfrac{\log \left(1 - p^* \right)}{T}
+\end{align}
+
+\begin{align}
+s_{CoCo} &= -\dfrac{\log \left(1 - p^*\right)}{T} \times \left( 1 - \dfrac{S^*}{C_p} \right)
+\end{align}
+
+\subsection{Application to CoCos}
+
+\subsection{Data Requirements and Calibration}
+
+\subsection{Pricing Example}
+
+\section{Equity Derivative Approach}
+Sources: \cite{erismann2015pricing}, \cite{de2011pricing}
+
+\begin{align}
+    P_T &= \mathbbm{1}_{\{ \tau > T \}} N +\left[ \left( 1 - \alpha \right) N + \dfrac{\alpha N}{C_p S^*} \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
+    &= N + \left[ \dfrac{\alpha N}{C_p} S^* - \alpha N \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
+    &= N + \left[ C_r S^* - \alpha N \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
+    &= N + C_r \left[S^* - \dfrac{\alpha N}{C_r}\right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
+    &= N + C_r \left[ S^* - C_p \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber
+\end{align}
+
+\begin{align}
+    V^{ed}_t &= V^{cb}_t - V_{t_i}^{dibi} + V_t^{difwd}
+\end{align}
+
+\subsection{Corporate Bonds}
+\begin{align}
+    V^{cb}_t &= \sum^T_{i=t}c_i \exp\left(-r t_i\right) + N \exp\left[-r\left(T-t\right)\right]
+\end{align}
+
+\subsection{Binary Options}
+
+\begin{align}
+    V_t^{dibi}\left( c_i, S^*, t \right) &= \alpha \sum^T_{i=t}c_i \exp\left(-r t_i\right) \left[ \Phi\left(-x_{1i} + \sigma \sqrt{t_i}\right)\vphantom{\dfrac{S^*}{S}}\right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S}} +\left(\dfrac{S^*}{S}\right)^{2\lambda -2} \Phi\left(y_{1i} - \sigma \sqrt{t_i}\right) \right]
+\end{align}
+
+with 
+
+\begin{align*}
+x_{1i} &= \dfrac{\log \left( \dfrac{S_t}{S^*} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
+y_{1i} &= \dfrac{\log \left( \dfrac{S^*}{S_t} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
+\lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}
+\end{align*}
+
+\subsection{Down-And-In Forward}
+
+\begin{align}
+    \max \left( S_T - K \right) \text{ if } \min_{0\leq t\leq T} \left( S_T \right) \leq S^*
+\end{align}
+
+\begin{align}
+    \max \left( K - S_T \right) \text{ if } \min_{0\leq t\leq T} \left( S_T \right) \leq S^*
+\end{align}
+
+\begin{align}
+V_t^{ dic }\left( S_t , S^* , K \right) &= S_t \exp \left[ - q \left(T-t\right) \right] \left( \dfrac{ S^* }{ S_t } \right) ^ { 2 \lambda } \Phi\left( y \right)\nonumber \\ 
+&- K \exp \left[ - r \left(T-t\right) \right] \left( \dfrac{ S^* }{ S_t } \right) ^ { 2 \lambda - 2} \Phi \left( y - \sigma \sqrt{T-t} \right)
+\end{align}
+
+with 
+
+\begin{align*}
+K &= C_p\\
+y &= \dfrac{\log\left( \dfrac{S^{* 2}}{S_t K} \right)}{\sigma \sqrt{T-t}} + \lambda \sigma \sqrt{T-t}\\
+\lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}
+\end{align*}
+
+\begin{align}
+V_t^{dip}\left( S_t, S^*, K \right) &=  S_t \exp\left[ -q\left(T-t\right) \right] \left( \dfrac{S^*}{S_t} \right)^{2\lambda} \left[ \Phi\left(y\right) - \Phi\left(y_1 \right) \right]\nonumber\\
+&- K \exp\left[ -r\left(T-t\right) \right] \left(\dfrac{S^*}{S_t}\right)^{2\lambda-2}\left[ \Phi\left( y- \sigma \sqrt{T-t} \right) -\Phi \left( y_1 - \sigma \sqrt{T} \right) \right] \nonumber\\
+&+ K \exp\left[ - r \left(T-t\right) \right] \Phi \left( x_1 + \sigma \sqrt{T-t} \right)\nonumber\\
+ &-S_t \exp\left[ -q \left(T-t\right) \right] \Phi\left( -x_1 \right)
+\end{align}
+
+with
+
+\begin{align*}
+x_1 &= \dfrac{\log\left(\dfrac{S_t}{S^*} \right)}{\sigma \sqrt{T-t}} + \lambda \sigma \sqrt{T-t}\\
+y_1 &= \dfrac{\log\left(\dfrac{S^*}{S_t} \right)}{\sigma \sqrt{T-t}} + \lambda \sigma \sqrt{T-t}
+\end{align*}
+
+\begin{align}
+\min\left( S_t\right) \leq S^* : P_T &= S_T -K = \max \left( S_T - K \right) -\max\left( K-S_T \right)
+\end{align}
+
+\begin{align}
+\min\left( S_t \right) > S^* : P_T &= 0
+\end{align}
+
+\begin{align}
+    V_t^{difwd} &= C_r \left[ S_t \exp\left[- q \left(T-t\right)\right]\left(\dfrac{S^*}{S_t}\right)^{2 \lambda} \Phi\left(y_1\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \left(\dfrac{S^*}{S}\right)^{2 \lambda - 2} \Phi\left(y_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S}} - K \exp\left[- r \left(T-t\right)\right] \Phi\left(-x_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S}} + S_t \exp\left[- q \left(T-t\right)\right] \Phi\left(- x_1\right) \right]
+\end{align}
+
+with 
+
+\begin{align}
+C_r &= \dfrac{\alpha N}{C_p}
+\end{align}
+
+\subsection{Data Requirements and Calibration}
+
+\subsection{Pricing Example}
