@@ -75,8 +75,8 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r){
   x0.nint <- 10 # number of intervals between x0.low and x0.high
   B <- 1
   
-  c.low <- 0.04
-  c.high <- 0.058
+  c.low <- 0.05
+  c.high <- 0.05
   c.nint <- 10
   c.fit.matrix <- matrix(0, x0.nint, length(lambda))
   
@@ -123,7 +123,7 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r){
             
             b[i + 1, j] <- b[i, j] * exp(- g[w] * (exp(ln.x[i, j]) - x.hat) * dt)
             
-            ln.x[i + 1, j] <- ln.x[i, j] + ( (r[i, j] - lambda[w] * k) - (r[i, j] + h[i, j] + c[m] * b[i, j]) / exp(ln.x[i, j]) - g[w] * (exp(ln.x[i, j]) - x.hat) - 0.5 * sigma_x^2) * dt + sigma_x * sqrt(dt) *dW_1[i,j] + ln.Y[i,j]*phi[i,j]
+            ln.x[i + 1, j] <- ln.x[i, j] + ( (r[i, j] - lambda[w] * k) - (r[i, j] + h[i, j] + c[m] * b[i, j]) / exp(ln.x[i, j]) - g[w] * (exp(ln.x[i, j]) - x.hat) - 0.5 * sigma_x^2) * dt + sigma_x * sqrt(dt) * dW_1[i, j] + ln.Y[i,j] * phi[i, j]
             
             x[i + 1, j] <- exp(ln.x[i + 1, j])
             
@@ -185,4 +185,4 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r){
 }
 
 # Pricing Example
-price_coco_sa(T = 5, npath = 20, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07)
+price_coco_sa(T = 5, npath = 50, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07)
