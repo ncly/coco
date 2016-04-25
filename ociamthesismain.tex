@@ -16,7 +16,8 @@
 \usepackage{amsmath}
 \usepackage{bbm}
 
-\usepackage{pgfplots}\pgfplotsset{compat=1.12}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
  
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -26,8 +27,8 @@
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
     commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
+    keywordstyle=\color{black},
+    numberstyle=\tiny\color{magenta},
     stringstyle=\color{codepurple},
     basicstyle=\footnotesize,
     breakatwhitespace=false,         
@@ -69,6 +70,7 @@
 \setcounter{tocdepth}{3}
 
 \maketitle                  % create a title page from the preamble info
+
 \include{text/dedication}        % include a dedication.tex file
 \include{text/acknowlegements}   % include an acknowledgements.tex file
 \include{text/abstract}          % include the abstract
@@ -79,9 +81,10 @@
 \end{romanpages}            % end roman page numbering
 
 %now include the files of latex for each of the chapters etc
+
 \include{text/chapter1}
 \include{text/chapter2}
-\include{text/chapter3}
+\include{text/chapter3} % Theory of Pricing
 \include{text/chapter4}
 \include{text/chapter5}
 \include{text/conclusions}
@@ -89,7 +92,7 @@
 %now enable appendix numbering format and include any appendices
 \appendix
 \include{text/appendix1}
-\include{text/appendix2}
+\include{text/appendix2} % Code Equity Derivative Approach
 
 %next line adds the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliography}

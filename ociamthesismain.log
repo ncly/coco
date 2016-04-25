@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  7 APR 2016 01:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  25 APR 2016 20:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1045,20 +1045,29 @@ File: lstlang2.sty 2014/09/06 1.5e listings language file
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2014/09/06 1.5e listings language file
 )
-(./code/example.R
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 5.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
+(./code/CreditDerivativeApproach.R
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 2.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 5.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
-[12
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+) [12
 
 
 
-] [13] [14] [15])) [16]
+] [13]
+Appendix C.
+(./code/EquityDerivativeApproach.R [14
+
+] [15]) [16]
+Appendix D.
+(./code/StructuralApproach.R [17
+
+] [18] [19] [20])) [21]
 No file ociamthesismain.bbl.
 (./ociamthesismain.aux (./text/dedication.aux) (./text/acknowlegements.aux)
 (./text/abstract.aux) (./text/chapter1.aux) (./text/chapter2.aux)
@@ -1069,13 +1078,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 24590 strings out of 493089
- 591798 string characters out of 6134843
- 2123295 words of memory out of 5000000
- 27543 multiletter control sequences out of 15000+600000
+ 24049 strings out of 493089
+ 576075 string characters out of 6134843
+ 995621 words of memory out of 5000000
+ 26996 multiletter control sequences out of 15000+600000
  13544 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,83p,736b,8089s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,83p,736b,2034s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bb
 m12.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
@@ -1091,10 +1100,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on ociamthesismain.pdf (23 pages, 256398 bytes).
+Output written on ociamthesismain.pdf (28 pages, 218192 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
+ 160 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
