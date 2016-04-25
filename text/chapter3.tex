@@ -61,8 +61,8 @@ Sources: \cite{erismann2015pricing}, \cite{de2011pricing}
 \subsection{Binary Options}
 
 \begin{align}
-    V_t^{dibi}\left( c_i, S^*, t \right) &= \alpha \sum^T_{i=t}c_i \exp\left(-r t_i\right) \left[ \Phi\left(-x_{1i} + \sigma \sqrt{t_i}\right)\vphantom{\dfrac{S^*}{S}}\right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S}} +\left(\dfrac{S^*}{S}\right)^{2\lambda -2} \Phi\left(y_{1i} - \sigma \sqrt{t_i}\right) \right]
+    V_t^{dibi}\left( c_i, S^*, t \right) &= \alpha \sum^k_{i=1} c_i \exp\left(-r t_i\right) \left[ \Phi\left(-x_{1i} + \sigma \sqrt{t_i}\right)\vphantom{\dfrac{S^*}{S}}\right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} +\left(\dfrac{S^*}{S_t}\right)^{2\lambda -2} \Phi\left(y_{1i} - \sigma \sqrt{t_i}\right) \right]
 \end{align}
 
 with 
@@ -120,9 +120,9 @@ y_1 &= \dfrac{\log\left(\dfrac{S^*}{S_t} \right)}{\sigma \sqrt{T-t}} + \lambda \
 
 \begin{align}
     V_t^{difwd} &= C_r \left[ S_t \exp\left[- q \left(T-t\right)\right]\left(\dfrac{S^*}{S_t}\right)^{2 \lambda} \Phi\left(y_1\right) \right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \left(\dfrac{S^*}{S}\right)^{2 \lambda - 2} \Phi\left(y_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S}} - K \exp\left[- r \left(T-t\right)\right] \Phi\left(-x_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S}} + S_t \exp\left[- q \left(T-t\right)\right] \Phi\left(- x_1\right) \right]
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \left(\dfrac{S^*}{S_t}\right)^{2 \lambda - 2} \Phi\left(y_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \Phi\left(-x_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} + S_t \exp\left[- q \left(T-t\right)\right] \Phi\left(- x_1\right) \right] 
 \end{align}
 
 with 
