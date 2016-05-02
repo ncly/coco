@@ -58,11 +58,7 @@ sim_interestrate <- function(kappa, r.bar, r0, sigma_r, dW_2corr, n, npath, dt){
 get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint){
 
   c.fit.matrix <- matrix(0, x0.nint, length(lambda))
-  
-  for(w in 1:length(lambda))
-  {
-    print("w")
-    print(w)
+
     # Create parametres for jump process
     phi <- matrix(rbinom( n%*%npath, 1, dt * lambda[w]), n, npath)
     ln.Y <- matrix(rnorm(n%*%npath, mu_Y, sigma_Y), n, npath)
@@ -153,9 +149,8 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
         V_t_sa <- mean(vec.disc.v)
       }
     }
-  }
   return(V_t_sa)
 }
 
 # Pricing Example
-price_coco_sa(T = 5, npath = 1000, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(0, 1), g = c(0.5, 0.5, 0.25), x.hat = 1.1, b0 = 0.04, p = 1, e.bar = 0.02, sigma_x = 0.02, x0.low = 1.065, x0.high = 1.15, x0.nint = 10, B = 1, c.low = 0.05, c.high = 0.05, c.nint = 10)
+price_coco_sa(T = 5, npath = 1000, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = 1, g = c(0.5, 0.5, 0.25), x.hat = 1.1, b0 = 0.04, p = 1, e.bar = 0.02, sigma_x = 0.02, x0.low = 1.065, x0.high = 1.15, x0.nint = 10, B = 1, c.low = 0.05, c.high = 0.05, c.nint = 10)
