@@ -1,4 +1,5 @@
-price_coco_sa <- function(T , npath , rho , kappa , r.bar, r0, sigma_r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint){
+# Price of Contingent Convertible Bond
+price_coco_sa <- function(T , npath , rho , kappa , r_bar, r0, sigma_r, mu_Y, sigma_Y, lambda, g, x_hat, b0, p, e_bar, sigma_x, x0_low, x0_high, x0_nint, B, c_low, c_high, c_nint){
   n <- T * 250
   dt <- T / n
   
@@ -6,20 +7,19 @@ price_coco_sa <- function(T , npath , rho , kappa , r.bar, r0, sigma_r, mu_Y, si
   dW_1 <- result$dW_1
   dW_2corr <- result$dW_2corr
   
-  r <- sim_interestrate(kappa, r.bar, r0, sigma_r, dW_2corr, n, npath, dt)
+  r <- sim_interestrate(kappa, r_bar, r0, sigma_r, dW_2corr, n, npath, dt)
   
-  V_t_sa <- get_price(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint) * 100
-  
-  print(V_t_sa)
+  V_t_sa <- get_price(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x_hat, b0, p, e_bar, sigma_x, x0_low, x0_high, x0_nint, B, c_low, c_high, c_nint) * 100
+  return(V_t_sa)
 }
 
 sim_corrProcess <- function(T, npath, rho, n, dt){
   vect <- c(1, rho, rho, 1)
   RHO <- matrix(vect, nrow = 2)
-  chol.RHO <- t(chol(RHO)) ### What does this function do?
-
-  # Create two Brownian Motions
-  dW_1 <- matrix(1, n, npath)
+  chol_RHO <- t(chol(RHO))
+ 
+    # Create two Brownian Motions
+    dW_1 <- matrix(1, n, npath)
   dW_2 <- matrix(1, n, npath)
   
   for(j in 1:npath)
@@ -34,100 +34,95 @@ sim_corrProcess <- function(T, npath, rho, n, dt){
   {
     for(i in 1:n)
     {
-      dW_2corr[i, j] <- dW_1[i, j] * chol.RHO[2, 1] + dW_2[i, j] * chol.RHO[2, 2] ### Why are those GBMs correlated?
+      dW_2corr[i, j] <- dW_1[i, j] * chol_RHO[2, 1] + dW_2[i, j] * chol_RHO[2, 2]
     }
   }
+  
   return(list("dW_1" = dW_1, "dW_2corr" = dW_2corr))
 }
 
 # Create Interest Rate Process
-sim_interestrate <- function(kappa, r.bar, r0, sigma_r, dW_2corr, n, npath, dt){
+sim_interestrate <- function(kappa, r_bar, r0, sigma_r, dW_2corr, n, npath, dt){
   r <- matrix(r0, n + 1, npath)
   
   for(j in 1:npath)
   {
     for(i in 1:n)
     {
-      r[i + 1, j] <- r[i, j] + kappa * (r.bar - r[i, j]) * dt + sigma_r * sqrt(r[i, j]) * dW_2corr[i, j] ### Why are those GBMs correlated?
+      r[i + 1, j] <- r[i, j] + kappa * (r_bar - r[i, j]) * dt + sigma_r * sqrt(r[i, j]) * dW_2corr[i, j] 
     }
   }
+  
   return(r)
 }
 
-
-get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint){
-
-  c.fit.matrix <- matrix(0, x0.nint, length(lambda))
+get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x_hat, b0, p, e_bar, sigma_x, x0_low, x0_high, x0_nint, B, c_low, c_high, c_nint){
+ 
+  c_fit_matrix <- matrix(0, x0_nint, length(lambda))
   
   for(w in 1:length(lambda))
   {
-    print("w")
-    print(w)
     # Create parametres for jump process
     phi <- matrix(rbinom( n%*%npath, 1, dt * lambda[w]), n, npath)
-    ln.Y <- matrix(rnorm(n%*%npath, mu_Y, sigma_Y), n, npath)
-
-    b <- matrix(b0, n + 1, npath) # Ratio of the contingent capital's par value to the date t value of deposits
-    x.bar0 <- 1 + e.bar + p * b0 
-    x.bar <- matrix(x.bar0, n + 1, npath) # Asset-to-deposit threshold
+    ln_Y <- matrix(rnorm(n%*%npath, mu_Y, sigma_Y), n, npath)
     
-    h <- matrix(1, n, npath) # Fair deposit insurance premium or deposit credit risk premium
+    b <- matrix(b0, n + 1, npath)
+    x_bar0 <- 1 + e_bar + p * b0 
+    x_bar <- matrix(x_bar0, n + 1, npath)
+    
+    h <- matrix(1, n, npath)
     
     k <- exp(mu_Y + 0.5 * sigma_Y^2) - 1
     
-    c <- seq(c.low, c.high, length = c.nint)
-    x0 <- seq(x0.low, x0.high, length = x0.nint)
-    reg.matrix <- matrix(0, c.nint, length(x0))
+    c <- seq(c_low, c_high, length = c_nint)
+    x0 <- seq(x0_low, x0_high, length = x0_nint)
     
-    reg.fit1 <- 1:x0.nint
-    reg.fit2 <- 1:x0.nint
-    c.fit <- 1:x0.nint
-    
-    for(l in 1:x0.nint)
+    for(l in 1:x0_nint) # Wieso?
     {
-      for(m in 1:c.nint)
+      for(m in 1:c_nint) # Wieso?
       {
         x <- matrix(x0[l],n+1,npath)
-        ln.x0 <- matrix(log(x0[l]),n+1,npath)
-        ln.x <- ln.x0
-        binom.c <- matrix(1,n+1,npath)
+        ln_x0 <- matrix(log(x0[l]),n+1,npath)
+        ln_x <- ln_x0
+        binom_c <- matrix(1,n+1,npath)
         
         for(j in 1:npath)
         {
           for(i in 1:n)
           {
-            d_1 <- (ln.x[i, j] + mu_Y) / sigma_Y
+            d_1 <- (ln_x[i, j] + mu_Y) / sigma_Y
             d_2 <- d_1 + sigma_Y
             
-            h[i, j] <- lambda[w] * (pnorm( - d_1) - exp(ln.x[i, j]) * exp(mu_Y + 0.5 * sigma_Y^2) * pnorm(-d_2))
+            h[i, j] <- lambda[w] * (pnorm( - d_1) - exp(ln_x[i, j]) * exp(mu_Y + 0.5 * sigma_Y^2) * pnorm(-d_2))
             
-            b[i + 1, j] <- b[i, j] * exp(- g[w] * (exp(ln.x[i, j]) - x.hat) * dt)
+            b[i + 1, j] <- b[i, j] * exp(- g[w] * (exp(ln_x[i, j]) - x_hat) * dt)
             
-            ln.x[i + 1, j] <- ln.x[i, j] + ( (r[i, j] - lambda[w] * k) - (r[i, j] + h[i, j] + c[m] * b[i, j]) / exp(ln.x[i, j]) - g[w] * (exp(ln.x[i, j]) - x.hat) - 0.5 * sigma_x^2) * dt + sigma_x * sqrt(dt) * dW_1[i, j] + ln.Y[i,j] * phi[i, j]
+            ln_x[i + 1, j] <- ln_x[i, j] + ( (r[i, j] - lambda[w] * k) - (r[i, j] + h[i, j] + c[m] * b[i, j]) / exp(ln_x[i, j]) - g[w] * (exp(ln_x[i, j]) - x_hat) - 0.5 * sigma_x^2) * dt + sigma_x * sqrt(dt) * dW_1[i, j] + ln_Y[i,j] * phi[i, j]
             
-            x[i + 1, j] <- exp(ln.x[i + 1, j])
+            x[i + 1, j] <- exp(ln_x[i + 1, j])
             
-            x.bar[i + 1, j] <- 1 + e.bar + p * b[i + 1, j]
+            x_bar[i + 1, j] <- 1 + e_bar + p * b[i + 1, j]
             
-            if(x[i + 1, j] >= x.bar[i + 1, j] && binom.c[i, j] > 0.5)
+            if(x[i + 1, j] >= x_bar[i + 1, j] && binom_c[i, j] > 0.5)
             {
-              binom.c[i + 1, j] <- 1
+              binom_c[i + 1, j] <- 1
             }else
             {
-              binom.c[i + 1, j] <- 0
+              binom_c[i + 1, j] <- 0
             }
           }
         }
         
-        payments <- matrix(c(rep(c[m] * dt, n - 1), B), n, npath) * binom.c[1:n, ]
+        payments <- matrix(c(rep(c[m] * dt, n - 1), B), n, npath) * binom_c[1:n, ]
+        
         for(j in 1:npath){
           for(i in 2:n){
-            if(payments[i, j] == 0 && p * b[sum(binom.c[ , j]) + 1, j] <= x[sum(binom.c[ , j]) + 1, j] - 1 ){
+            if(payments[i, j] == 0 && p * b[sum(binom_c[ , j]) + 1, j] <= x[sum(binom_c[ , j]) + 1, j] - 1 ){
               payments[i, j] <- p * B
               break
             }
-            else if(payments[i, j] == 0 && 0 < x[sum(binom.c[ , j]) + 1, j] - 1 && x[sum(binom.c[ , j]) + 1, j] - 1 < p * b[sum(binom.c[ , j]) + 1, j]){
-              payments[i, j] <- (x[sum(binom.c[ , j]) + 1, j] - 1) * B / b[sum(binom.c[ , j]) + 1, j]
+            else if(payments[i, j] == 0 && 0 < x[sum(binom_c[ , j]) + 1, j] - 1 && x[sum(binom_c[ , j]) + 1, j] - 1 < p * b[sum(binom_c[ , j]) + 1, j]){
+              payments[i, j] <- (x[sum(binom_c[ , j]) + 1, j] - 1) * B / b[sum(binom_c[ , j]) + 1, j]
               break
             }
             else{
@@ -135,27 +130,27 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
             }
           }
         }
-        
-        vec.disc.v <- rep(0, npath)
+        vec_disc_v <- rep(0, npath)
         for(j in 1:npath)
         {
-          disc.v <- 0
-          int.r <- 0
+          disc_v <- 0
+          int_r <- 0
           
           for(i in 1:n)
           {
-            int.r <- int.r + r[i, j] * dt
-            disc.v <- disc.v + exp(-int.r) * payments[i, j]
+            int_r <- int_r + r[i, j] * dt
+            disc_v <- disc_v + exp(- int_r) * payments[i, j]
           }
-          vec.disc.v[j] <- disc.v
+          vec_disc_v[j] <- disc_v
         }
         
-        V_t_sa <- mean(vec.disc.v)
+        V_t_sa <- mean(vec_disc_v)
+        
+        return(V_t_sa)
       }
     }
   }
-  return(V_t_sa)
 }
 
 # Pricing Example
-price_coco_sa(T = 5, npath = 1000, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(0, 1), g = c(0.5, 0.5, 0.25), x.hat = 1.1, b0 = 0.04, p = 1, e.bar = 0.02, sigma_x = 0.02, x0.low = 1.065, x0.high = 1.15, x0.nint = 10, B = 1, c.low = 0.05, c.high = 0.05, c.nint = 10)
+price_coco_sa(T = 5, npath = 25, rho = - 0.2, kappa = 0.114, r_bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(1), g = c(0.5), x_hat = 1.1, b0 = 0.04, p = 1, e_bar = 0.02, sigma_x = 0.02, x0_low = 1.15, x0_high = 1.15, x0_nint = 10, B = 1, c_low = 0.05, c_high = 0.05, c_nint = 10)
