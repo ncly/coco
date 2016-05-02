@@ -17,9 +17,9 @@ sim_corrProcess <- function(T, npath, rho, n, dt){
   vect <- c(1, rho, rho, 1)
   RHO <- matrix(vect, nrow = 2)
   chol_RHO <- t(chol(RHO))
- 
-    # Create two Brownian Motions
-    dW_1 <- matrix(1, n, npath)
+  
+  # Create two Brownian Motions
+  dW_1 <- matrix(1, n, npath)
   dW_2 <- matrix(1, n, npath)
   
   for(j in 1:npath)
@@ -57,7 +57,7 @@ sim_interestrate <- function(kappa, r_bar, r0, sigma_r, dW_2corr, n, npath, dt){
 }
 
 get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x_hat, b0, p, e_bar, sigma_x, x0_low, x0_high, x0_nint, B, c_low, c_high, c_nint){
- 
+  
   c_fit_matrix <- matrix(0, x0_nint, length(lambda))
   
   for(w in 1:length(lambda))
@@ -77,9 +77,9 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
     c <- seq(c_low, c_high, length = c_nint)
     x0 <- seq(x0_low, x0_high, length = x0_nint)
     
-    for(l in 1:x0_nint) # Wieso?
+    for(l in 1:x0_nint)
     {
-      for(m in 1:c_nint) # Wieso?
+      for(m in 1:c_nint)
       {
         x <- matrix(x0[l],n+1,npath)
         ln_x0 <- matrix(log(x0[l]),n+1,npath)
@@ -153,4 +153,5 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
 }
 
 # Pricing Example
-price_coco_sa(T = 5, npath = 25, rho = - 0.2, kappa = 0.114, r_bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(1), g = c(0.5), x_hat = 1.1, b0 = 0.04, p = 1, e_bar = 0.02, sigma_x = 0.02, x0_low = 1.15, x0_high = 1.15, x0_nint = 10, B = 1, c_low = 0.05, c_high = 0.05, c_nint = 10)
+price_coco_sa(T = 5, npath = 2, rho = - 0.2, kappa = 0.114, r_bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(1), g = c(0.5), x_hat = 1.1, b0 = 0.04, p = 1, e_bar = 0.02, sigma_x = 0.02, x0_low = 1.15, x0_high = 1.15, x0_nint = 10, B = 1, c_low = 0.05, c_high = 0.05, c_nint = 10)
+
