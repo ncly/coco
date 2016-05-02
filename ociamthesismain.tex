@@ -16,6 +16,8 @@
 \usepackage{amsmath}
 \usepackage{bbm}
 
+\usepackage[round]{natbib}
+
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.12}
  
@@ -60,6 +62,7 @@
 
 %end the preamble and start the document
 \begin{document}
+\bibliographystyle{plainnat}  %use the plain bibliography style
 
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
@@ -72,7 +75,7 @@
 \maketitle                  % create a title page from the preamble info
 
 \include{text/dedication}        % include a dedication.tex file
-\include{text/acknowlegements}   % include an acknowledgements.tex file
+%\include{text/acknowlegements}   % include an acknowledgements.tex file
 \include{text/abstract}          % include the abstract
 
 \begin{romanpages}          % start roman page numbering
@@ -97,9 +100,8 @@
 %next line adds the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliography}
 %uncomment next line to change bibliography name to references
-%\renewcommand{\bibname}{References}
+\renewcommand{\bibname}{References}
 \bibliography{bibliography/refs}        %use a bibtex bibliography file refs.bib
-\bibliographystyle{plain}  %use the plain bibliography style
 
 \end{document}
 

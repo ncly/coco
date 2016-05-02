@@ -137,7 +137,7 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
           int_r <- 0
           
           for(i in 1:n)
-          {
+          { 
             int_r <- int_r + r[i, j] * dt
             disc_v <- disc_v + exp(- int_r) * payments[i, j]
           }
