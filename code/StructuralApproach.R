@@ -1,4 +1,4 @@
-price_coco_sa <- function(T , npath , rho , kappa , r.bar = 0.069, r0 = 0.035, sigma_r = 0.07){
+price_coco_sa <- function(T , npath , rho , kappa , r.bar, r0, sigma_r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint){
   n <- T * 250
   dt <- T / n
   
@@ -8,7 +8,7 @@ price_coco_sa <- function(T , npath , rho , kappa , r.bar = 0.069, r0 = 0.035, s
   
   r <- sim_interestrate(kappa, r.bar, r0, sigma_r, dW_2corr, n, npath, dt)
   
-  V_t_sa <- get_price(npath, n, dt, dW_1, dW_2corr, r) * 100
+  V_t_sa <- get_price(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint) * 100
   
   print(V_t_sa)
 }
@@ -55,34 +55,14 @@ sim_interestrate <- function(kappa, r.bar, r0, sigma_r, dW_2corr, n, npath, dt){
 }
 
 
-get_price <- function(npath, n, dt, dW_1, dW_2corr, r){
+get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g, x.hat, b0, p, e.bar, sigma_x, x0.low, x0.high, x0.nint, B, c.low, c.high, c.nint){
 
-  # Initiliaze jump parameters
-  mu_Y <- - 0.01
-  sigma_Y <- 0.02
-  lambda <- c(1, 0, 1)
-  
-  #x
-  g <- c(0.5, 0.5, 0.25)
-  x.hat <- 1.1 # Capital ratio target
-  b0 <- 0.04 # CCB-to-deposit ratio, B/D
-  p <- 1 # Conversion parameter: par=1, premium>1, discount<1
-  e.bar <- 0.02 # equity-to-deposit ratio
-  sigma_x <- 0.02 # Standard deviation for assets
-  #x0 <- 1.075 # Starting capital-to-deposit ratio
-  x0.low <- 1 + 0.065
-  x0.high <- 1 + 0.15
-  x0.nint <- 10 # number of intervals between x0.low and x0.high
-  B <- 1
-  
-  c.low <- 0.04
-  c.high <- 0.058
-  c.nint <- 10
   c.fit.matrix <- matrix(0, x0.nint, length(lambda))
-  
   
   for(w in 1:length(lambda))
   {
+    print("w")
+    print(w)
     # Create parametres for jump process
     phi <- matrix(rbinom( n%*%npath, 1, dt * lambda[w]), n, npath)
     ln.Y <- matrix(rnorm(n%*%npath, mu_Y, sigma_Y), n, npath)
@@ -123,7 +103,7 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r){
             
             b[i + 1, j] <- b[i, j] * exp(- g[w] * (exp(ln.x[i, j]) - x.hat) * dt)
             
-            ln.x[i + 1, j] <- ln.x[i, j] + ( (r[i, j] - lambda[w] * k) - (r[i, j] + h[i, j] + c[m] * b[i, j]) / exp(ln.x[i, j]) - g[w] * (exp(ln.x[i, j]) - x.hat) - 0.5 * sigma_x^2) * dt + sigma_x * sqrt(dt) *dW_1[i,j] + ln.Y[i,j]*phi[i,j]
+            ln.x[i + 1, j] <- ln.x[i, j] + ( (r[i, j] - lambda[w] * k) - (r[i, j] + h[i, j] + c[m] * b[i, j]) / exp(ln.x[i, j]) - g[w] * (exp(ln.x[i, j]) - x.hat) - 0.5 * sigma_x^2) * dt + sigma_x * sqrt(dt) * dW_1[i, j] + ln.Y[i,j] * phi[i, j]
             
             x[i + 1, j] <- exp(ln.x[i + 1, j])
             
@@ -169,20 +149,13 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r){
           }
           vec.disc.v[j] <- disc.v
         }
-        V_t_sa <- mean(vec.disc.v)
         
-        reg.matrix[m, l] <- V_t_sa
+        V_t_sa <- mean(vec.disc.v)
       }
-      
-      reg.fit1[l] <- lm(reg.matrix[ , l]~1+c)$coef[1]
-      reg.fit2[l] <- lm(reg.matrix[,l]~1+c)$coef[2]
-
-      c.fit[l] <- (B-reg.fit1[l])/reg.fit2[l]
     }
-    c.fit.matrix[,w] <- c.fit
   }
   return(V_t_sa)
 }
 
 # Pricing Example
-price_coco_sa(T = 5, npath = 20, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07)
+price_coco_sa(T = 5, npath = 1000, rho = - 0.2, kappa = 0.114, r.bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(0, 1), g = c(0.5, 0.5, 0.25), x.hat = 1.1, b0 = 0.04, p = 1, e.bar = 0.02, sigma_x = 0.02, x0.low = 1.065, x0.high = 1.15, x0.nint = 10, B = 1, c.low = 0.05, c.high = 0.05, c.nint = 10)
