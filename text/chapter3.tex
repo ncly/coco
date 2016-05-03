@@ -4,6 +4,36 @@
 
 \subsection{Intensity-based Approach}
 
+Let $\tau$ denote the random time of default of some company. It is assumed that the distribution of $\tau$ has a continuous density function $f$, so that the distribution function $F$ and the curve of survival probabilities $q$ are related as follows:  
+\begin{align}
+P(\tau \leq t) &= F(t) = 1 - q(t) = \int_0^t f(s) ds \text{, with } t \geq 0.
+\end{align}
+
+The hazard rate respectively the default intensity $\lambda$ is defined as
+\begin{align} \label{hazardrate}
+\lambda(t) &= \lim_{\Delta \downarrow 0} \dfrac{1}{\Delta} P(\tau \leq t + \Delta | \tau > t) = \dfrac{F'(t)}{q(t)} = \dfrac{F'(t)}{1 - F(t)} = - \dfrac{d}{dt} \log q(t).
+\end{align}
+
+Intuitively, the hazard rate is the default rate per year as of today. Using \ref{hazardrate} we get
+\begin{align}
+q(t) &= \exp \left(- \int_0^t \lambda (s) ds \right).
+\end{align}
+
+% Change
+In reality the hazard rate is not constant over time but itself a stochastic process (Examples of term-structure models). This is in line with the fact that credit spreads are not static and stochastically varying over time. 
+For simplification it can also be assumed that the default intensity $\lambda(t)$ is a deterministic function of time, where $\lambda(t)$ can be constant or piecewise over time. Following \citet{de2011pricing} we assume that the hazard rate is constant. For a constant default intensity $\lambda(t) = \lambda$ an exponential distribution for the default time is implied:
+\begin{align}
+F(t) &=  1 - q(t) = 1 - \exp (- \lambda t)
+\end{align}
+
+% Steps
+Under the idealized assumption of a flat zero interest rate curve, a flat spread curve and continuous spread payments the default intensity can be calculated directly from the spread by the rule of thumb formula, which is also known as credit triangle: 
+\begin{align}
+\lambda &= \dfrac{s}{1-R}.
+\end{align}
+
+\subsection{Application to CoCos}
+
 \begin{align}
     p^* &= 1 - \exp\left(- \lambda_{Trigger} \times T\right)
 \end{align}
@@ -31,8 +61,6 @@
 \begin{align}
 s_{CoCo} &= -\dfrac{\log \left(1 - p^*\right)}{T} \times \left( 1 - \dfrac{S^*}{C_p} \right)
 \end{align}
-
-\subsection{Application to CoCos}
 
 \subsection{Data Requirements and Calibration}
 
