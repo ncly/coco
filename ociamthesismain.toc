@@ -6,14 +6,14 @@
 \contentsline {chapter}{\numberline {2}Structure of CoCos}{2}
 \contentsline {section}{\numberline {2.1}Description of CoCos}{2}
 \contentsline {section}{\numberline {2.2}Payoff and Risk Profile}{2}
-\contentsline {section}{\numberline {2.3}Conversion Trigger}{2}
-\contentsline {subsection}{\numberline {2.3.1}Market Trigger}{2}
-\contentsline {subsection}{\numberline {2.3.2}Accounting Trigger}{2}
-\contentsline {subsection}{\numberline {2.3.3}Regulatory Trigger}{2}
-\contentsline {subsection}{\numberline {2.3.4}Multivariate Trigger}{2}
-\contentsline {section}{\numberline {2.4}Conversion Details}{2}
-\contentsline {subsection}{\numberline {2.4.1}Conversion Fraction}{2}
-\contentsline {subsection}{\numberline {2.4.2}Conversion Price and Ratio}{2}
+\contentsline {section}{\numberline {2.3}Conversion Trigger}{3}
+\contentsline {subsection}{\numberline {2.3.1}Market Trigger}{3}
+\contentsline {subsection}{\numberline {2.3.2}Accounting Trigger}{3}
+\contentsline {subsection}{\numberline {2.3.3}Regulatory Trigger}{3}
+\contentsline {subsection}{\numberline {2.3.4}Multivariate Trigger}{3}
+\contentsline {section}{\numberline {2.4}Conversion Details}{3}
+\contentsline {subsection}{\numberline {2.4.1}Conversion Fraction}{3}
+\contentsline {subsection}{\numberline {2.4.2}Conversion Price and Ratio}{3}
 \contentsline {chapter}{\numberline {3}Theory of Pricing}{4}
 \contentsline {section}{\numberline {3.1}Credit Derivative Approach}{4}
 \contentsline {subsection}{\numberline {3.1.1}Intensity-based Approach}{4}

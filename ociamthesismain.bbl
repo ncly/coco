@@ -5,15 +5,16 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Alvemar and Ericson(2012)]{alvemar2012modelling}
-Per Alvemar and Philip Ericson.
-\newblock Modelling and pricing contingent convertibles.
-\newblock \emph{University of Gothenburg}, 2012.
+\bibitem[De~Spiegeleer and Schoutens(2011{\natexlab{a}})]{de2011handbook}
+Jan De~Spiegeleer and Wim Schoutens.
+\newblock \emph{The handbook of convertible bonds: pricing, strategies and risk
+  management}, volume 581.
+\newblock John Wiley \& Sons, 2011{\natexlab{a}}.
 
-\bibitem[De~Spiegeleer and Schoutens(2011)]{de2011pricing}
+\bibitem[De~Spiegeleer and Schoutens(2011{\natexlab{b}})]{de2011pricing}
 Jan De~Spiegeleer and Wim Schoutens.
 \newblock Pricing contingent convertibles: a derivatives approach.
-\newblock \emph{Available at SSRN 1795092}, 2011.
+\newblock \emph{Available at SSRN 1795092}, 2011{\natexlab{b}}.
 
 \bibitem[Erismann(2015)]{erismann2015pricing}
 Marc Erismann.
