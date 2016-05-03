@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2016.4.7)  3 MAY 2016 13:28
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2016.4.7)  3 MAY 2016 14:28
  restricted \write18 enabled.
  file:line:error style messages enabled.
 **ociamthesismain.tex
@@ -721,18 +721,18 @@ File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
 (./text/conclusions.aux) (./text/appendix1.aux) (./text/appendix2.aux))
 \openout1 = ociamthesismain.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -799,7 +799,7 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 <fslogo.jpeg, id=4, 513.92pt x 513.92pt>
 File: fslogo.jpeg Graphic file (type jpg)
  <use fslogo.jpeg>
-Package pdftex.def Info: fslogo.jpeg used on input line 78.
+Package pdftex.def Info: fslogo.jpeg used on input line 86.
 (pdftex.def)             Requested size: 91.04881pt x 91.04303pt.
  [1
 
@@ -854,23 +854,29 @@ Chapter 1.
 \openout2 = text/chapter2.aux
  (./text/chapter2.tex
 Chapter 2.
-<media/anatomy.pdf, id=32, 597.432pt x 844.95674pt>
+<media/basel3.pdf, id=32, 273.2633pt x 93.85353pt>
+File: media/basel3.pdf Graphic file (type pdf)
+ <use media/basel3.pdf>
+Package pdftex.def Info: media/basel3.pdf used on input line 7.
+(pdftex.def)             Requested size: 264.72678pt x 88.16245pt.
+
+<media/anatomy.pdf, id=33, 597.432pt x 844.95674pt>
 File: media/anatomy.pdf Graphic file (type pdf)
  <use media/anatomy.pdf>
-Package pdftex.def Info: media/anatomy.pdf used on input line 9.
+Package pdftex.def Info: media/anatomy.pdf used on input line 15.
 (pdftex.def)             Requested size: 221.89723pt x 178.07503pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
  [2
 
 
 
-<./media/anatomy.pdf>]) [3]
+<./media/basel3.pdf><./media/anatomy.pdf>]) [3]
 \openout2 = text/chapter3.aux
  (./text/chapter3.tex
 Chapter 3.
@@ -975,14 +981,14 @@ RL
 (./text/appendix1.aux) (./text/appendix2.aux)))
 
 Here is how much of LuaTeX's memory you used:
- 26402 strings out of 494693
- 381557,794899 words of node,token memory allocated
- 717 words of node memory still in use:
+ 26416 strings out of 494693
+ 381554,794899 words of node,token memory allocated
+ 718 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 46 glue_spec, 1 write nodes
-   avail lists: 2:30,3:484,4:18515,5:7828,6:1270,7:8780,8:1,9:16813,10:1298
- 28740 multiletter control sequences out of 65536+600000
+   avail lists: 1:1,2:31,3:484,4:18515,5:7828,6:1270,7:8780,9:16813,10:1298
+ 28745 multiletter control sequences out of 65536+600000
  72 fonts using 2839383 bytes
- 62i,16n,83p,1207b,1268s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 62i,16n,83p,1210b,1268s stack positions out of 5000i,500n,10000p,200000b,100000s
 <</Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm12
 .600pk>><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
@@ -999,10 +1005,10 @@ cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><</usr/local
 texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><</usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><</usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ociamthesismain.pdf (27 pages, 303121 bytes).
+Output written on ociamthesismain.pdf (27 pages, 351397 bytes).
 
-PDF statistics: 222 PDF objects out of 1000 (max. 8388607)
- 159 compressed objects within 2 object streams
+PDF statistics: 264 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

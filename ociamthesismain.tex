@@ -19,6 +19,14 @@
 \usepackage{graphicx}
 \usepackage{caption}
 
+\newcommand*{\captionsource}[2]{%
+  \caption[{#1}]{%
+    #1%
+    \\\hspace{\linewidth}%
+    \textbf{Source:} #2%
+  }%
+}
+
 \usepackage[round]{natbib}
 
 \usepackage{pgfplots}
