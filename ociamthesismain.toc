@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {3.2}Equity Derivative Approach}{5}
 \contentsline {subsection}{\numberline {3.2.1}Corporate Bonds}{6}
 \contentsline {subsection}{\numberline {3.2.2}Binary Options}{6}
-\contentsline {subsection}{\numberline {3.2.3}Down-And-In Forward}{7}
+\contentsline {subsection}{\numberline {3.2.3}Down-And-In Forward}{6}
 \contentsline {subsection}{\numberline {3.2.4}Data Requirements and Calibration}{8}
 \contentsline {subsection}{\numberline {3.2.5}Pricing Example}{8}
 \contentsline {section}{\numberline {3.3}Structural Approach}{8}
