@@ -77,9 +77,9 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
     c <- seq(c_low, c_high, length = c_nint)
     x0 <- seq(x0_low, x0_high, length = x0_nint)
     
-    for(l in 1:x0_nint) # Wieso?
+    for(l in 1:x0_nint)
     {
-      for(m in 1:c_nint) # Wieso?
+      for(m in 1:c_nint)
       {
         x <- matrix(x0[l],n+1,npath)
         ln_x0 <- matrix(log(x0[l]),n+1,npath)
