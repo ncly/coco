@@ -1,19 +1,25 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Alvemar and Ericson(2012)]{alvemar2012modelling}
-Per Alvemar and Philip Ericson.
-\newblock Modelling and pricing contingent convertibles.
-\newblock \emph{University of Gothenburg}, 2012.
+\bibitem[De~Spiegeleer and Schoutens(2011{\natexlab{a}})]{de2011handbook}
+Jan De~Spiegeleer and Wim Schoutens.
+\newblock \emph{The handbook of convertible bonds: pricing, strategies and risk
+  management}, volume 581.
+\newblock John Wiley \& Sons, 2011{\natexlab{a}}.
 
-\bibitem[De~Spiegeleer and Schoutens(2011)]{de2011pricing}
+\bibitem[De~Spiegeleer and Schoutens(2011{\natexlab{b}})]{de2011pricing}
 Jan De~Spiegeleer and Wim Schoutens.
 \newblock Pricing contingent convertibles: a derivatives approach.
-\newblock \emph{Available at SSRN 1795092}, 2011.
+\newblock \emph{Available at SSRN 1795092}, 2011{\natexlab{b}}.
+
+\bibitem[Duffie and Singleton(2003)]{duffie2003credit}
+Darrell Duffie and Kenneth~J Singleton.
+\newblock \emph{Credit risk pricing, measurement, and management}.
+\newblock Princeton University Press, 2003.
 
 \bibitem[Erismann(2015)]{erismann2015pricing}
 Marc Erismann.
@@ -21,10 +27,26 @@ Marc Erismann.
   Empirical Analysis of Selected Pricing Models}.
 \newblock PhD thesis, University of St. Gallen, 2015.
 
+\bibitem[Lando(2009)]{lando2009credit}
+David Lando.
+\newblock \emph{Credit risk modeling: theory and applications}.
+\newblock Princeton University Press, 2009.
+
 \bibitem[Pennacchi(2010)]{pennacchi2010structural}
 George Pennacchi.
 \newblock {A structural model of contingent bank capital}.
 \newblock Working Paper 1004, Federal Reserve Bank of Cleveland, 2010.
 \newblock URL \url{https://ideas.repec.org/p/fip/fedcwp/1004.html}.
+
+\bibitem[Quantnet(2011)]{codestructrural}
+Quantnet.
+\newblock Translate gauss code to r code, 2011.
+\newblock URL
+  \url{https://www.quantnet.com/threads/translate-gauss-code-to-r-code.7784/}.
+
+\bibitem[Schmidt(2015)]{lectureschmidt}
+Wolfgang Schmidt.
+\newblock Credit risk, default models and credit derivatives.
+\newblock Frankfurt School of Finance and Management, 2015.
 
 \end{thebibliography}

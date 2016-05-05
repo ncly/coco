@@ -2,10 +2,43 @@
 
 \section{Credit Derivative Approach}
 
-\subsection{Intensity-based Approach}
+The derivation mainly follows \citet{de2011pricing}.
 
+\subsection{Intensity-Based Approach}
+% Citation
+Intensity-based approaches model factors influencing the event of default but usually leave aside the question of the default trigger. However, they are an elegant way of bridging the gap between the prediction of default and the pricing of default risk. The following section highlights the link between estimated default intensities and credit spreads under the intensity-based approach \citep{lando2009credit} which shall be the basis of the credit risk approach. \citep{de2011pricing}\\
+
+Let $\tau$ denote the random time of default of some company. It is assumed that the distribution of $\tau$ has a continuous density function $f$, so that the distribution function $F$ and the curve of survival probabilities $q$ are related as follows:  
 \begin{align}
-    p^* &= 1 - \exp\left(- \lambda_{Trigger} \times T\right)
+P(\tau \leq t) &= F(t) = 1 - q(t) = \int_0^t f(s) ds \text{, with } t \geq 0
+\end{align}
+
+The hazard rate respectively the default intensity $\lambda$ is defined as
+\begin{align} \label{hazardrate}
+\lambda(t) &= \lim_{\Delta \downarrow 0} \dfrac{1}{\Delta} P(\tau \leq t + \Delta | \tau > t) = \dfrac{F'(t)}{q(t)} = \dfrac{F'(t)}{1 - F(t)} = - \dfrac{d}{dt} \log q(t)
+\end{align}
+
+Intuitively, the hazard rate is the default rate per year as of today. Using \ref{hazardrate} we get
+\begin{align}
+q(t) &= \exp \left(- \int_0^t \lambda (s) ds \right)
+\end{align}
+
+For our application of the credit derivative approach \citep{de2011pricing} we assume that the hazard rate $\lambda(t)$ is a deterministic function of time. A constant hazard rate $\lambda(t) = \lambda$ implies an exponential distribution of the default time:
+\begin{align}
+F(t) &=  1 - q(t) = 1 - \exp (- \lambda t)
+\end{align}
+In reality $\lambda(t)$ is not deterministic but itself stochastic. That fits in with the fact that credit spreads are not static but stochastically varying over time. \citep{lectureschmidt}\\
+
+Under the idealized assumption of a flat zero interest rate curve, a flat spread curve and continuous spread payments, the default intensity $\lambda$ can be calculated directly from the credit spread $s$ and the recovery rate $R$ by the rule of thumb formula \citep{lectureschmidt}, which is also known as credit triangle: 
+\begin{align}
+\lambda &= \dfrac{s}{1 - R} \Leftrightarrow s = \lambda \left( 1 - R \right)
+\end{align}
+Finally, this relationship makes it possible to determine the default probability $F$ from the credit spread $s$ and vice versa.
+
+\subsection{Application to CoCos}
+In line with the intensity-based approach, a hazard rate $\lambda_{Trigger}$ is introduced in order to model the triggering of a CoCo. It can be shown that the probability $F*$
+\begin{align}
+    F^* &= 1 - \exp\left(- \lambda_{Trigger} \times t\right)
 \end{align}
 
 \begin{align}
@@ -29,10 +62,8 @@
 \end{align}
 
 \begin{align}
-s_{CoCo} &= -\dfrac{\log \left(1 - p^*\right)}{T} \times \left( 1 - \dfrac{S^*}{C_p} \right)
+   s_{CoCo} &= -\dfrac{\log \left(1 - p^*\right)}{T} \times \left( 1 - \dfrac{S^*}{C_p} \right)
 \end{align}
-
-\subsection{Application to CoCos}
 
 \subsection{Data Requirements and Calibration}
 
@@ -136,6 +167,8 @@ C_r &= \dfrac{\alpha N}{C_p}
 \subsection{Pricing Example}
 
 \section{Structural Approach}
+
+"Structural credit pricing models are based on modeling the stochastic evolution of the balance sheet of the issuer, with default when the issuer is unable or unwilling to meet its obligations." \citep{duffie2003credit}
 
 \subsection{Synthetic Balance Sheet}
 
