@@ -2,68 +2,69 @@
 
 \section{Credit Derivative Approach}
 
-The derivation mainly follows \citet{de2011pricing}.
+The derivation mainly follows \citet{de2011pricing}. the reduced-form approach which will be the basis of the credit risk approach.
 
-\subsection{Intensity-Based Approach}
-% Citation
-Intensity-based approaches model factors influencing the event of default but usually leave aside the question of the default trigger. However, they are an elegant way of bridging the gap between the prediction of default and the pricing of default risk. The following section highlights the link between estimated default intensities and credit spreads under the intensity-based approach \citep{lando2009credit} which shall be the basis of the credit risk approach. \citep{de2011pricing}\\
+\subsection{Reduced-Form Approach and Credit Triangle}
+
+The reduced-form approach is an elegant way of bridging the gap between the prediction of default and the pricing of default risk of a straight bond. In the following, we investigate the link between estimated default intensities and credit spreads under the reduced-form approach. \citep{lando2009credit}\\
 
 Let $\tau$ denote the random time of default of some company. It is assumed that the distribution of $\tau$ has a continuous density function $f$, so that the distribution function $F$ and the curve of survival probabilities $q$ are related as follows:  
 \begin{align}
 P(\tau \leq t) &= F(t) = 1 - q(t) = \int_0^t f(s) ds \text{, with } t \geq 0
 \end{align}
 
-The hazard rate respectively the default intensity $\lambda$ is defined as
+The hazard rate respectively the default intensity $\lambda$ is defined as follows:
 \begin{align} \label{hazardrate}
 \lambda(t) &= \lim_{\Delta \downarrow 0} \dfrac{1}{\Delta} P(\tau \leq t + \Delta | \tau > t) = \dfrac{F'(t)}{q(t)} = \dfrac{F'(t)}{1 - F(t)} = - \dfrac{d}{dt} \log q(t)
 \end{align}
-
-Intuitively, the hazard rate is the default rate per year as of today. Using \ref{hazardrate} we get
+Intuitively, the hazard rate is the default rate per year as of today. Using \ref{hazardrate} we can derive a formula for the survival probability:
 \begin{align}
 q(t) &= \exp \left(- \int_0^t \lambda (s) ds \right)
 \end{align}
 
-For our application of the credit derivative approach \citep{de2011pricing} we assume that the hazard rate $\lambda(t)$ is a deterministic function of time. A constant hazard rate $\lambda(t) = \lambda$ implies an exponential distribution of the default time:
-\begin{align}
+For our application of the reduced-form approach we assume that the hazard rate $\lambda(t)$ is a deterministic function of time. In reality $\lambda(t)$ is not deterministic but itself stochastic. That fits in with the fact that credit spreads are not static but stochastically varying over time. \citep{lectureschmidt} But we further consider the hazard rate to be constant in order to simplify the problem. Hence, a constant hazard rate $\lambda(t) = \lambda$ implies an exponential distribution of the default time:
+\begin{align} \label{bonddefaultprob}
 F(t) &=  1 - q(t) = 1 - \exp (- \lambda t)
 \end{align}
-In reality $\lambda(t)$ is not deterministic but itself stochastic. That fits in with the fact that credit spreads are not static but stochastically varying over time. \citep{lectureschmidt}\\
 
 Under the idealized assumption of a flat zero interest rate curve, a flat spread curve and continuous spread payments, the default intensity $\lambda$ can be calculated directly from the credit spread $s$ and the recovery rate $R$ by the rule of thumb formula \citep{lectureschmidt}, which is also known as credit triangle: 
 \begin{align}
-\lambda &= \dfrac{s}{1 - R} \Leftrightarrow s = \lambda \left( 1 - R \right)
+\lambda &= \dfrac{s}{1 - R}
 \end{align}
 Finally, this relationship makes it possible to determine the default probability $F$ from the credit spread $s$ and vice versa.
 
-\subsection{Application to CoCos}
-In line with the intensity-based approach, a hazard rate $\lambda_{Trigger}$ is introduced in order to model the triggering of a CoCo. It can be shown that the probability $F*$
-\begin{align}
-    F^* &= 1 - \exp\left(- \lambda_{Trigger} \times t\right)
+\subsection{Adaption to CoCos}
+In accordance with the aforementioned reduced-form approach, \citet{de2011pricing} assume that the probability $F^*$, which measures the likelihood that a CoCo triggers within the next t years, follows similar mechanics as the default probability of a straight bond does. Under the credit derivative approach the probability $F^*$ can be expressed as follows:
+\begin{align} \label{cocodefaultprob}
+    F^*(t) &= 1 - \exp\left(- \lambda_{Trigger} t\right)
 \end{align}
 
+Additionally, the credit derivative approach models $F^*$ with the first exit time equation used in barrier option pricing under a Black-Scholes setting. \citep{su2009likely} Hence, the probability $F^*$ that the trigger level $S^*$ is touched within the next $t$ years is given by the following equation with the continuous dividend yield $q$, the continuous interest rate $r$, the drift $\mu$, the volatility $\sigma$ and the current share price $S$ of the issuing company: 
 \begin{align}
-    s_{CoCo} &= \left(1 - R_{CoCo}\right) \times \lambda_{Trigger} = {Loss}_{CoCo} \times \lambda_{Trigger}
+    F^*(t) = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu t}{\sigma \sqrt{t}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu t}{\sigma \sqrt{t}}\right)
 \end{align}
 
-\begin{align}
-    {Loss}_{CoCo} &= N - C_r \times S^* = N \left(1 - \dfrac{S^*}{C_P} \right)
+In this context, a CoCo's credit spread $s_{CoCo}$ can be approximated by the credit triangle, where $R_{CoCo}$ denotes the recovery rate of a CoCo and $L_{CoCo}$ is the loss rate:
+\begin{align} \label{cocospread}
+    s_{CoCo} &= \left(1 - R_{CoCo}\right) \lambda_{Trigger} = {L}_{CoCo} \lambda_{Trigger}
 \end{align}
 
+In the trigger event, the face value $N$ converts into $C_r$ shares worth $S^*$. The loss of a long position in a CoCo is therefore determined by the conversion price $C_p$:
+\begin{align} \label{cocoloss}
+    {Loss}_{CoCo} &= N - C_r S^* = N \left(1 - R_{CoCo} \right) = N \left(1 - \dfrac{S^*}{C_p} \right)
+\end{align} 
+
+By combining \ref{cocodefaultprob}, \ref{cocospread} and \ref{cocoloss} we see that credit spread $s_{CoCo}$ is driven by a CoCo's major design elements, the trigger level $S^*$ and the conversion price $C_p$:
 \begin{align}
-    R_{CoCo} &= \dfrac{S^*}{C_p}
+s_{CoCo} &= - \dfrac{\log (1 - p^*)}{t} \left( 1 - \dfrac{S^*}{C_p} \right)
 \end{align}
 
+Subsequently, the present value of a CoCo $V^{cd}$ can be calculated by:
 \begin{align}
-    p^* = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu T}{\sigma \sqrt{T}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu T}{\sigma \sqrt{T}}\right)
+V^{cd} &= \sum^T_{i=1} c_i \exp\left(-(r + s_{CoCo}) t_i\right) + N \exp\left[-(r+s_{CoCo}) T\right]
 \end{align}
 
-\begin{align}
-\lambda_{Trigger} &= - \dfrac{\log \left(1 - p^* \right)}{T}
-\end{align}
-
-\begin{align}
-   s_{CoCo} &= -\dfrac{\log \left(1 - p^*\right)}{T} \times \left( 1 - \dfrac{S^*}{C_p} \right)
-\end{align}
+In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to be aware of its largest shortcoming. Losses from cancelled coupon streams are not taken into account. The credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
 
 \subsection{Data Requirements and Calibration}
 

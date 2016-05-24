@@ -62,7 +62,7 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
   
   for(w in 1:length(lambda))
   {
-    # Create parametres for jump process
+    # Create Parametres for Jump Process
     phi <- matrix(rbinom( n%*%npath, 1, dt * lambda[w]), n, npath)
     ln_Y <- matrix(rnorm(n%*%npath, mu_Y, sigma_Y), n, npath)
     
