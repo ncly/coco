@@ -5,7 +5,7 @@
 \begin{figure}[ht]
 	\centering
 	\includegraphics[trim=0.1cm 0.1cm 0.2cm 0.1cm, scale = 1]{media/basel3} \par
-	\caption[CoCos under Basel III]{CoCos under Basel III \citep{de2011handbook}}
+	\caption[CoCos under Basel III]{CoCos under Basel III \citep{de2014handbook}}
 \end{figure}
 
 \section{Payoff and Risk Profile}
@@ -13,7 +13,7 @@
 \begin{figure}[ht]
 	\centering
 	\includegraphics[trim=0.6cm 7.05cm 0.9cm 7cm, scale = 0.4]{media/anatomy} \par
-	\caption[Anatomy of CoCos]{Anatomy of CoCos \citep{de2011handbook}}
+	\caption[Anatomy of CoCos]{Anatomy of CoCos \citep{de2014handbook}}
 \end{figure}
 
 \section{Conversion Trigger}
@@ -52,6 +52,9 @@
     C_r &= \frac{\alpha N}{C_p}\\
     R_{CoCo} &= \frac{S_T^{*} }{C_p}\\
     L_{CoCo} &= N - ( 1 - R_{CoCo}) = N \left( 1 - \frac{S_T^{*}}{C_p} \right)\\
-    P_T &= \begin{cases} (1 - \alpha) N + C_r S_T^{*} & \text{ if converted} \\ N & \text{if not converted} \end{cases}
+\end{align}
+
+\begin{align}\label{valueatmaturity}
+    P_T &= \begin{cases} (1 - \alpha) N + \frac{\alpha N}{C_p} S_T^{*} & \text{ if converted} \\ N & \text{if not converted} \end{cases}
 \end{align}
 

@@ -14,36 +14,35 @@
 \contentsline {section}{\numberline {2.4}Conversion Details}{3}
 \contentsline {subsection}{\numberline {2.4.1}Conversion Fraction}{3}
 \contentsline {subsection}{\numberline {2.4.2}Conversion Price and Ratio}{3}
-\contentsline {chapter}{\numberline {3}Theory of Pricing}{4}
-\contentsline {section}{\numberline {3.1}Credit Derivative Approach}{4}
-\contentsline {subsection}{\numberline {3.1.1}Reduced-Form Approach and Credit Triangle}{4}
-\contentsline {subsection}{\numberline {3.1.2}Adaption to CoCos}{5}
-\contentsline {subsection}{\numberline {3.1.3}Data Requirements and Calibration}{6}
-\contentsline {subsection}{\numberline {3.1.4}Pricing Example}{6}
-\contentsline {section}{\numberline {3.2}Equity Derivative Approach}{6}
-\contentsline {subsection}{\numberline {3.2.1}Corporate Bonds}{7}
-\contentsline {subsection}{\numberline {3.2.2}Binary Options}{7}
-\contentsline {subsection}{\numberline {3.2.3}Down-And-In Forward}{7}
-\contentsline {subsection}{\numberline {3.2.4}Data Requirements and Calibration}{9}
-\contentsline {subsection}{\numberline {3.2.5}Pricing Example}{9}
-\contentsline {section}{\numberline {3.3}Structural Approach}{9}
-\contentsline {subsection}{\numberline {3.3.1}Synthetic Balance Sheet}{9}
-\contentsline {subsection}{\numberline {3.3.2}Data Requirements and Calibration}{9}
-\contentsline {subsection}{\numberline {3.3.3}Pricing Example}{9}
-\contentsline {chapter}{\numberline {4}Dynamics and Sensitivity Analysis}{10}
-\contentsline {section}{\numberline {4.1}Credit Derivative Approach}{10}
-\contentsline {section}{\numberline {4.2}Equity Derivative Approach}{10}
-\contentsline {section}{\numberline {4.3}Structural Approach}{10}
-\contentsline {chapter}{\numberline {5}Empirical Analysis and Model Comparison}{11}
-\contentsline {section}{\numberline {5.1}Data Description}{11}
-\contentsline {subsection}{\numberline {5.1.1}Deutsche Bank}{11}
-\contentsline {section}{\numberline {5.2}Model Parametrization}{11}
-\contentsline {section}{\numberline {5.3}Model Comparison}{11}
-\contentsline {subsection}{\numberline {5.3.1}Qualitative Analysis}{11}
-\contentsline {subsection}{\numberline {5.3.2}Quantitative Analysis}{11}
-\contentsline {chapter}{\numberline {6}Conclusion}{12}
-\contentsline {chapter}{\numberline {A}Sample Title}{13}
-\contentsline {chapter}{\numberline {B}Code - Credit Derivative Approach}{14}
-\contentsline {chapter}{\numberline {C}Code - Equity Derivative Approach}{16}
-\contentsline {chapter}{\numberline {D}Code - Structural Approach}{19}
-\contentsline {chapter}{Bibliography}{23}
+\contentsline {chapter}{\numberline {3}Theory of Pricing}{5}
+\contentsline {section}{\numberline {3.1}Credit Derivative Approach}{5}
+\contentsline {subsection}{\numberline {3.1.1}Reduced-Form Approach and Credit Triangle}{5}
+\contentsline {subsection}{\numberline {3.1.2}Adaption to CoCos}{6}
+\contentsline {subsection}{\numberline {3.1.3}Data Requirements and Calibration}{7}
+\contentsline {subsection}{\numberline {3.1.4}Valuation Example}{7}
+\contentsline {section}{\numberline {3.2}Equity Derivative Approach}{7}
+\contentsline {subsection}{\numberline {3.2.1}First Step - Zero-Coupon CoCo}{8}
+\contentsline {subsection}{\numberline {3.2.2}Second Step - Adding Coupons}{11}
+\contentsline {subsection}{\numberline {3.2.3}Data Requirements and Calibration}{12}
+\contentsline {subsection}{\numberline {3.2.4}Pricing Example}{12}
+\contentsline {section}{\numberline {3.3}Structural Approach}{12}
+\contentsline {subsection}{\numberline {3.3.1}Synthetic Balance Sheet}{13}
+\contentsline {subsection}{\numberline {3.3.2}Data Requirements and Calibration}{13}
+\contentsline {subsection}{\numberline {3.3.3}Pricing Example}{13}
+\contentsline {chapter}{\numberline {4}Dynamics and Sensitivity Analysis}{14}
+\contentsline {section}{\numberline {4.1}Credit Derivative Approach}{14}
+\contentsline {section}{\numberline {4.2}Equity Derivative Approach}{14}
+\contentsline {section}{\numberline {4.3}Structural Approach}{14}
+\contentsline {chapter}{\numberline {5}Empirical Analysis and Model Comparison}{15}
+\contentsline {section}{\numberline {5.1}Data Description}{15}
+\contentsline {subsection}{\numberline {5.1.1}Deutsche Bank}{15}
+\contentsline {section}{\numberline {5.2}Model Parametrization}{15}
+\contentsline {section}{\numberline {5.3}Model Comparison}{15}
+\contentsline {subsection}{\numberline {5.3.1}Qualitative Analysis}{15}
+\contentsline {subsection}{\numberline {5.3.2}Quantitative Analysis}{15}
+\contentsline {chapter}{\numberline {6}Conclusion}{16}
+\contentsline {chapter}{\numberline {A}Sample Title}{17}
+\contentsline {chapter}{\numberline {B}Code - Credit Derivative Approach}{18}
+\contentsline {chapter}{\numberline {C}Code - Equity Derivative Approach}{20}
+\contentsline {chapter}{\numberline {D}Code - Structural Approach}{23}
+\contentsline {chapter}{Bibliography}{27}

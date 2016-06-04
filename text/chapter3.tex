@@ -2,7 +2,7 @@
 
 \section{Credit Derivative Approach}
 
-The derivation mainly follows \citet{de2011pricing}. the reduced-form approach which will be the basis of the credit risk approach.
+The reduced-form approaches is widely used in financial markets in order to price credit risk. It was originally introduced by \citet{jarrow1995pricing} respectively \citet{duffie1999modeling}. In this context, the credit derivative approach applies the reduced-form approach to CoCos. With that said, the derivation of a pricing formular for CoCos follows mainly \citet{lando2009credit} and \citet{de2011pricing}. 
 
 \subsection{Reduced-Form Approach and Credit Triangle}
 
@@ -34,14 +34,14 @@ Under the idealized assumption of a flat zero interest rate curve, a flat spread
 Finally, this relationship makes it possible to determine the default probability $F$ from the credit spread $s$ and vice versa.
 
 \subsection{Adaption to CoCos}
-In accordance with the aforementioned reduced-form approach, \citet{de2011pricing} assume that the probability $F^*$, which measures the likelihood that a CoCo triggers within the next t years, follows similar mechanics as the default probability of a straight bond does. Under the credit derivative approach the probability $F^*$ can be expressed as follows:
+In accordance with the aforementioned reduced-form approach, \citet{de2011pricing} assume that the probability $F^*$, which measures the likelihood that a CoCo triggers within the next $T - t$ years, follows similar mechanics as the default probability of a straight bond does. Under the credit derivative approach the probability $F^*$ can be expressed as follows:
 \begin{align} \label{cocodefaultprob}
-    F^*(t) &= 1 - \exp\left(- \lambda_{Trigger} t\right)
+    F^* &= 1 - \exp\left[- \lambda_{Trigger} (T-t)\right]
 \end{align}
 
-Additionally, the credit derivative approach models $F^*$ with the first exit time equation used in barrier option pricing under a Black-Scholes setting. \citep{su2009likely} Hence, the probability $F^*$ that the trigger level $S^*$ is touched within the next $t$ years is given by the following equation with the continuous dividend yield $q$, the continuous interest rate $r$, the drift $\mu$, the volatility $\sigma$ and the current share price $S$ of the issuing company: 
+Additionally, the credit derivative approach models $F^*$ with the first exit time equation used in barrier option pricing under a Black-Scholes setting. \citep{su2009likely} Hence, the probability $F^*$ that the trigger level $S^*$ is touched within the next $T - t$ years is given by the following equation with the continuous dividend yield $q$, the continuous interest rate $r$, the drift $\mu$, the volatility $\sigma$ and the current share price $S$ of the issuing company: 
 \begin{align}
-    F^*(t) = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu t}{\sigma \sqrt{t}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu t}{\sigma \sqrt{t}}\right)
+    F^* = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu (T - t)}{\sigma \sqrt{(T - t)}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu (T - t)}{\sigma \sqrt{(T - t)}}\right)
 \end{align}
 
 In this context, a CoCo's credit spread $s_{CoCo}$ can be approximated by the credit triangle, where $R_{CoCo}$ denotes the recovery rate of a CoCo and $L_{CoCo}$ is the loss rate:
@@ -54,69 +54,84 @@ In the trigger event, the face value $N$ converts into $C_r$ shares worth $S^*$.
     {Loss}_{CoCo} &= N - C_r S^* = N \left(1 - R_{CoCo} \right) = N \left(1 - \dfrac{S^*}{C_p} \right)
 \end{align} 
 
-By combining \ref{cocodefaultprob}, \ref{cocospread} and \ref{cocoloss} we see that credit spread $s_{CoCo}$ is driven by a CoCo's major design elements, the trigger level $S^*$ and the conversion price $C_p$:
+By combining \ref{cocodefaultprob}, \ref{cocospread} and \ref{cocoloss} we see that the credit spread $s_{CoCo}$ of a CoCo with maturity $T$ at time $t$ is driven by its major design elements, the trigger level $S^*$ and the conversion price $C_p$:
 \begin{align}
-s_{CoCo} &= - \dfrac{\log (1 - p^*)}{t} \left( 1 - \dfrac{S^*}{C_p} \right)
+s_{CoCo_t}&= - \dfrac{\log (1 - F^*)}{(T - t)} \left( 1 - \dfrac{S^*}{C_p} \right)
 \end{align}
 
-Subsequently, the present value of a CoCo $V^{cd}$ can be calculated by:
+Subsequently, a pricing formula for CoCos under the credit derivative approach can be derived. The present value $V^{cd}$ at time t can be calculated by:
 \begin{align}
-V^{cd} &= \sum^T_{i=1} c_i \exp\left(-(r + s_{CoCo}) t_i\right) + N \exp\left[-(r+s_{CoCo}) T\right]
+V^{cd}_t &= \sum^T_{i=1} c_i \exp\left[-(r + s_{CoCo_t}) (t_i - t)\right] + N \exp\left[-(r+s_{CoCo_t}) (T-t) \right]
 \end{align}
 
-In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to be aware of its largest shortcoming. Losses from cancelled coupon streams are not taken into account. The credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
+In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to bear in mind its largest shortcoming. Losses from cancelled coupons of triggered CoCos are not taken into account in the valuation. Hence, the credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
 
 \subsection{Data Requirements and Calibration}
 
-\subsection{Pricing Example}
+\subsection{Valuation Example}
 
 \section{Equity Derivative Approach}
-Sources: \cite{erismann2015pricing}, \cite{de2011pricing}
 
-\begin{align}
-    P_T &= \mathbbm{1}_{\{ \tau > T \}} N +\left[ \left( 1 - \alpha \right) N + \dfrac{\alpha N}{C_p S^*} \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
+\begin{itemize}
+\item another approach pursuant to \citet{de2011pricing} and \citet{de2014handbook} uses equity derivatives to assess the theoretical value of CoCos
+\item equity derivative approach attempts to compensate for the apparent disadvantage of the credit derivative approach
+	\subitem it takes into account that coupons may be knocked out if trigger is met
+\item pricing can be divided into two steps
+	\subitem first step: values a CoCo without coupon payments; a so called Zero-Coupon CoCo
+	\subitem second step: incorporates coupon payments in the pricing formula 
+\item the closed-form formula of the equity derivative approach involves the use of standard Black-Scholes assumptions
+\end{itemize}
+
+\subsection{First Step - Zero-Coupon CoCo}
+
+\begin{itemize}
+\item underlying assumption behind this approach is, that the triggering of a Zero-Coupon CoCo is equivalent to the share price falling below the level $S^*$
+\item trigger indicator $\mathbbm{1}_{\{ \tau \leq T \}}$ equals one when the Zero-Coupon CoCo triggers before maturity $T$ at default time $\tau$ and otherwise the indicator function is zero
+\item value of Zero-Coupon CoCo $V^{zcoco}$ at maturity $T$, can be derived based on \ref{valueatmaturity} as shown by \citet{erismann2015pricing}
+\end{itemize}
+\begin{align} \label{pvedcoco}    
+    V^{zcoco}_T &= \begin{cases} N & \text{if not triggered}\\ (1 - \alpha) N + \frac{\alpha N}{C_p} S^{*} & \text{if triggered} \end{cases} \nonumber\\
+    &= N \mathbbm{1}_{\{ \tau > T \}} +\left[ \left( 1 - \alpha \right) N + \dfrac{\alpha N}{C_p } S^* \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
     &= N + \left[ \dfrac{\alpha N}{C_p} S^* - \alpha N \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
     &= N + \left[ C_r S^* - \alpha N \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
     &= N + C_r \left[S^* - \dfrac{\alpha N}{C_r}\right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
-    &= N + C_r \left[ S^* - C_p \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber
+    &= N + C_r \left[ S^* - C_p \right] \mathbbm{1}_{\{ \tau \leq T \}}
 \end{align}
 
+\begin{itemize}
+\item financial payoff of equation \ref{pvedcoco} can be broken down into two components 
+\subitem face value $N$ of a Zero Bond
+\subitem long position in $C_r$ shares generating a payoff only if CoCo materializes
+\item long position in shares can be approximated with a knock-in forward
+\item Hence, at time t the payoff profile $V^{zcoco}_t$ can be replicated with a zero-coupon bond $V^{zb}_t$ and a knock-in forward $V_t^{kifwd}$
+\end{itemize}
 \begin{align}
-    V^{ed}_t &= V^{cb}_t - V_{t_i}^{dibi} + V_t^{difwd}
+V^{zcoco}_t &= V^{zb}_t + V_t^{kifwd}
 \end{align}
 
-\subsection{Corporate Bonds}
+\begin{itemize}
+\item price of zero bond at $V^{zb}$ time $t$ can be calculated with the risk free rate $r$:
+\end{itemize}
 \begin{align}
-    V^{cb}_t &= \sum^T_{i=t}c_i \exp\left(-r t_i\right) + N \exp\left[-r\left(T-t\right)\right]
+V^{zb}_t &= N \exp\left[- r (T - t)\right]
 \end{align}
 
-\subsection{Binary Options}
+\begin{itemize}
+\item long position in shares at time $t$ can be approximated with a knock-in forward with price $V^{kifwd}$
+	\subitem long position in a knock-in call
+	\subitem short position in a knock-in put on the underlying shares
+	\subitem both with strike K equal to conversion price $C_p$ 
+	\subitem with barrier level equal to trigger price $S^*$
+\item intuition: if trigger is met at share price $S^*$, investor uses face value $N$ to exercise forward which commits to buy the amount of $C_r$ shares for the price of $C_p$ at maturity $T$
+\end{itemize}
 
-\begin{align}
-    V_t^{dibi}\left( c_i, S^*, t \right) &= \alpha \sum^k_{i=1} c_i \exp\left(-r t_i\right) \left[ \Phi\left(-x_{1i} + \sigma \sqrt{t_i}\right)\vphantom{\dfrac{S^*}{S}}\right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} +\left(\dfrac{S^*}{S_t}\right)^{2\lambda -2} \Phi\left(y_{1i} - \sigma \sqrt{t_i}\right) \right]
-\end{align}
+\begin{itemize}
+\item closed form solution exists for both knock-in options \citep{merton1973theory}
+\item price of knock-in call $V^{kic}$ and knock-in put $V^{kip}$ at time $t$ can be calculated with:
+\end{itemize}
 
-with 
-
-\begin{align*}
-x_{1i} &= \dfrac{\log \left( \dfrac{S_t}{S^*} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
-y_{1i} &= \dfrac{\log \left( \dfrac{S^*}{S_t} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
-\lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}
-\end{align*}
-
-\subsection{Down-And-In Forward}
-
-\begin{align}
-    \max \left( S_T - K \right) \text{ if } \min_{0\leq t\leq T} \left( S_T \right) \leq S^*
-\end{align}
-
-\begin{align}
-    \max \left( K - S_T \right) \text{ if } \min_{0\leq t\leq T} \left( S_T \right) \leq S^*
-\end{align}
-
-\begin{align}
-V_t^{ dic }\left( S_t , S^* , K \right) &= S_t \exp \left[ - q \left(T-t\right) \right] \left( \dfrac{ S^* }{ S_t } \right) ^ { 2 \lambda } \Phi\left( y \right)\nonumber \\ 
+\begin{align} \label{pvkic}
+V_t^{ kic } &= S_t \exp \left[ - q \left(T-t\right) \right] \left( \dfrac{ S^* }{ S_t } \right) ^ { 2 \lambda } \Phi\left( y \right)\nonumber \\ 
 &- K \exp \left[ - r \left(T-t\right) \right] \left( \dfrac{ S^* }{ S_t } \right) ^ { 2 \lambda - 2} \Phi \left( y - \sigma \sqrt{T-t} \right)
 \end{align}
 
@@ -128,8 +143,8 @@ y &= \dfrac{\log\left( \dfrac{S^{* 2}}{S_t K} \right)}{\sigma \sqrt{T-t}} + \lam
 \lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}
 \end{align*}
 
-\begin{align}
-V_t^{dip}\left( S_t, S^*, K \right) &=  S_t \exp\left[ -q\left(T-t\right) \right] \left( \dfrac{S^*}{S_t} \right)^{2\lambda} \left[ \Phi\left(y\right) - \Phi\left(y_1 \right) \right]\nonumber\\
+\begin{align} \label{pvkip}
+V_t^{kip} &=  S_t \exp\left[ -q\left(T-t\right) \right] \left( \dfrac{S^*}{S_t} \right)^{2\lambda} \left[ \Phi\left(y\right) - \Phi\left(y_1 \right) \right]\nonumber\\
 &- K \exp\left[ -r\left(T-t\right) \right] \left(\dfrac{S^*}{S_t}\right)^{2\lambda-2}\left[ \Phi\left( y- \sigma \sqrt{T-t} \right) -\Phi \left( y_1 - \sigma \sqrt{T} \right) \right] \nonumber\\
 &+ K \exp\left[ - r \left(T-t\right) \right] \Phi \left( x_1 + \sigma \sqrt{T-t} \right)\nonumber\\
  &-S_t \exp\left[ -q \left(T-t\right) \right] \Phi\left( -x_1 \right)
@@ -142,13 +157,10 @@ x_1 &= \dfrac{\log\left(\dfrac{S_t}{S^*} \right)}{\sigma \sqrt{T-t}} + \lambda \
 y_1 &= \dfrac{\log\left(\dfrac{S^*}{S_t} \right)}{\sigma \sqrt{T-t}} + \lambda \sigma \sqrt{T-t}
 \end{align*}
 
-\begin{align}
-\min\left( S_t\right) \leq S^* : P_T &= S_T -K = \max \left( S_T - K \right) -\max\left( K-S_T \right)
-\end{align}
-
-\begin{align}
-\min\left( S_t \right) > S^* : P_T &= 0
-\end{align}
+\begin{itemize}
+\item knock-in forward can be constructed with knock-in call and knock-in put \citep{hull2006options}
+\item hence, price of knock-in forward $V^{ kifwd }$ at time $t$ can be replicated using equation \ref{pvkic} and \ref{pvkip}:
+\end{itemize}
 
 \begin{align}
     V_t^{difwd} &= C_r \left[ S_t \exp\left[- q \left(T-t\right)\right]\left(\dfrac{S^*}{S_t}\right)^{2 \lambda} \Phi\left(y_1\right) \right.\nonumber\\
@@ -161,6 +173,56 @@ with
 
 \begin{align}
 C_r &= \dfrac{\alpha N}{C_p}
+\end{align}
+
+\begin{itemize}
+\item constraint: subtle difference between actual economic payoff of \ref{pvedcoco} and replication with a knock-in forward
+	\subitem knock-in forward replicates an economic ownership of shares at maturity $T$
+	\subitem But: triggering of CoCo forces investor to accept conversion immediately leading to an economic ownership of shares at $\tau$
+\item it may be argued: receiving a forward when the trigger is met disregards the dividends a shareholder would receive especially when a CoCo triggers early in its lifetime
+\item \citet{de2011pricing} argue that dividends can be neglected because distressed banks are likely to behave with great restraint when it comes to dividend payments 
+\end{itemize}
+
+\subsection{Second Step - Adding Coupons}
+\begin{itemize}
+\item As mentioned in the first step we did not include coupon payments in our valuation
+\item In this step we replace the zero bond with a straight bond with regular coupon payments $c_i$ and a present value of $V^{sb}_t$
+\end{itemize}
+
+\begin{align}
+V^{sb}_t &= \sum^T_{i=1} c_i \exp\left[-r (t_i - t)\right] + N \exp\left[-r (T-t) \right]
+\end{align}
+
+\begin{itemize}
+\item However, we have to add a third component which takes into account the foregone coupon payments if the trigger is met
+	\subitem investor receives coupon payments only if trigger is not met
+	\subitem value of CoCo lower than straight bond of same issuer
+	\subitem difference can be modeled with a short position in $k$ binary down-and-in calls
+	\subitem short position in a single binary down-and-in call with maturity $t_i$ for each coupon payment at $t_i$
+	\subitem reduce present value of coupon payments of a straight bond
+	\subitem binary down-and-in option are knocked in if trigger $S^*$ is met offsetting future coupon payments
+	\subitem short position model possibility of losing coupon payment
+\end{itemize}
+
+\begin{align}
+    V_t^{bdic} &= \alpha \sum^k_{i=1} c_i \exp\left(-r t_i\right) \left[ \Phi\left(-x_{1i} + \sigma \sqrt{t_i}\right)\vphantom{\dfrac{S^*}{S}}\right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} +\left(\dfrac{S^*}{S_t}\right)^{2\lambda -2} \Phi\left(y_{1i} - \sigma \sqrt{t_i}\right) \right]
+\end{align}
+
+with 
+
+\begin{align*}
+x_{1i} &= \dfrac{\log \left( \dfrac{S_t}{S^*} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
+y_{1i} &= \dfrac{\log \left( \dfrac{S^*}{S_t} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
+\lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}
+\end{align*}
+
+\begin{itemize}
+\item theoretical price of CoCo $V^{ed}$ pursuant the equity derivative approach equals (1) straight bond plus (2) knock-in-forward and (3) binary down-and-in calls
+\end{itemize}
+
+\begin{align}
+    V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t_i}^{bdic} 
 \end{align}
 
 \subsection{Data Requirements and Calibration}
