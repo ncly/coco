@@ -1,9 +1,15 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{16}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adrian and Shin(2010)]{adrian2010liquidity}
+Tobias Adrian and Hyun~Song Shin.
+\newblock Liquidity and leverage.
+\newblock \emph{Journal of Financial Intermediation}, 19\penalty0 (3):\penalty0
+  418--437, 2010.
 
 \bibitem[De~Spiegeleer and Schoutens(2011)]{de2011pricing}
 Jan De~Spiegeleer and Wim Schoutens.
@@ -16,6 +22,12 @@ Jan De~Spiegeleer, Wim Schoutens, and Cynthia Van~Hulle.
 \newblock \emph{The Handbook of Hybrid Securities: convertible bonds, coco
   bonds and bail-in}.
 \newblock John Wiley \& Sons, 2014.
+
+\bibitem[Duffie and Lando(2001)]{duffie2001term}
+Darrell Duffie and David Lando.
+\newblock Term structures of credit spreads with incomplete accounting
+  information.
+\newblock \emph{Econometrica}, 69\penalty0 (3):\penalty0 633--664, 2001.
 
 \bibitem[Duffie and Singleton(1999)]{duffie1999modeling}
 Darrell Duffie and Kenneth~J Singleton.
@@ -50,11 +62,12 @@ David Lando.
 \newblock \emph{Credit risk modeling: theory and applications}.
 \newblock Princeton University Press, 2009.
 
-\bibitem[Merton(1973)]{merton1973theory}
+\bibitem[Merton(1974)]{merton1974pricing}
 Robert~C Merton.
-\newblock Theory of rational option pricing.
-\newblock \emph{The Bell Journal of economics and management science}, pages
-  141--183, 1973.
+\newblock On the pricing of corporate debt: The risk structure of interest
+  rates.
+\newblock \emph{The Journal of Finance}, 29\penalty0 (2):\penalty0 449--470,
+  1974.
 
 \bibitem[Pennacchi(2010)]{pennacchi2010structural}
 George Pennacchi.
@@ -67,6 +80,11 @@ Quantnet.
 \newblock Translate gauss code to r code, 2011.
 \newblock URL
   \url{https://www.quantnet.com/threads/translate-gauss-code-to-r-code.7784/}.
+
+\bibitem[Rubinstein and Reiner(1991)]{rubinstein1991unscrambling}
+Mark Rubinstein and Eric Reiner.
+\newblock Unscrambling the binary code.
+\newblock \emph{Risk Magazine}, 4\penalty0 (9):\penalty0 20, 1991.
 
 \bibitem[Schmidt(2015)]{lectureschmidt}
 Wolfgang Schmidt.

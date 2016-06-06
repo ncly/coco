@@ -2,7 +2,7 @@
 
 \section{Credit Derivative Approach}
 
-The reduced-form approaches is widely used in financial markets in order to price credit risk. It was originally introduced by \citet{jarrow1995pricing} respectively \citet{duffie1999modeling}. In this context, the credit derivative approach applies the reduced-form approach to CoCos. With that said, the derivation of a pricing formular for CoCos follows mainly \citet{lando2009credit} and \citet{de2011pricing}. 
+In financial markets the reduced-form approach is widely used in order to price credit risk. It was originally introduced by \citet{jarrow1995pricing} respectively \citet{duffie1999modeling}. The credit derivative approach applies the reduced-form approach to CoCos. In this context, the derivation of a pricing formula for CoCos follows mainly \citet{de2011pricing}. 
 
 \subsection{Reduced-Form Approach and Credit Triangle}
 
@@ -22,7 +22,7 @@ Intuitively, the hazard rate is the default rate per year as of today. Using \re
 q(t) &= \exp \left(- \int_0^t \lambda (s) ds \right)
 \end{align}
 
-For our application of the reduced-form approach we assume that the hazard rate $\lambda(t)$ is a deterministic function of time. In reality $\lambda(t)$ is not deterministic but itself stochastic. That fits in with the fact that credit spreads are not static but stochastically varying over time. \citep{lectureschmidt} But we further consider the hazard rate to be constant in order to simplify the problem. Hence, a constant hazard rate $\lambda(t) = \lambda$ implies an exponential distribution of the default time:
+For our application of the reduced-form approach we assume that the hazard rate $\lambda(t)$ is a deterministic function of time. In reality $\lambda(t)$ is not deterministic but itself stochastic. That fits in with the fact that credit spreads are not static but stochastically varying over time. \citep{lectureschmidt} However, we further consider the hazard rate to be constant in order to simplify the problem. Hence, a constant hazard rate $\lambda(t) = \lambda$ implies an exponential distribution of the default time:
 \begin{align} \label{bonddefaultprob}
 F(t) &=  1 - q(t) = 1 - \exp (- \lambda t)
 \end{align}
@@ -44,7 +44,7 @@ Additionally, the credit derivative approach models $F^*$ with the first exit ti
     F^* = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu (T - t)}{\sigma \sqrt{(T - t)}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu (T - t)}{\sigma \sqrt{(T - t)}}\right)
 \end{align}
 
-In this context, a CoCo's credit spread $s_{CoCo}$ can be approximated by the credit triangle, where $R_{CoCo}$ denotes the recovery rate of a CoCo and $L_{CoCo}$ is the loss rate:
+In this regard, a CoCo's credit spread $s_{CoCo}$ can be approximated by the credit triangle, where $R_{CoCo}$ denotes the recovery rate of a CoCo and $L_{CoCo}$ is the loss rate:
 \begin{align} \label{cocospread}
     s_{CoCo} &= \left(1 - R_{CoCo}\right) \lambda_{Trigger} = {L}_{CoCo} \lambda_{Trigger}
 \end{align}
@@ -59,7 +59,7 @@ By combining \ref{cocodefaultprob}, \ref{cocospread} and \ref{cocoloss} we see t
 s_{CoCo_t}&= - \dfrac{\log (1 - F^*)}{(T - t)} \left( 1 - \dfrac{S^*}{C_p} \right)
 \end{align}
 
-Subsequently, a pricing formula for CoCos under the credit derivative approach can be derived. The present value $V^{cd}$ at time t can be calculated by:
+Subsequently, a pricing formula for CoCos under the credit derivative approach can be derived. The present value $V^{cd}$ at time t is given by:
 \begin{align}
 V^{cd}_t &= \sum^T_{i=1} c_i \exp\left[-(r + s_{CoCo_t}) (t_i - t)\right] + N \exp\left[-(r+s_{CoCo_t}) (T-t) \right]
 \end{align}
@@ -72,23 +72,13 @@ In summary, the credit derivative approach provides us with a concise method to 
 
 \section{Equity Derivative Approach}
 
-\begin{itemize}
-\item another approach pursuant to \citet{de2011pricing} and \citet{de2014handbook} uses equity derivatives to assess the theoretical value of CoCos
-\item equity derivative approach attempts to compensate for the apparent disadvantage of the credit derivative approach
-	\subitem it takes into account that coupons may be knocked out if trigger is met
-\item pricing can be divided into two steps
-	\subitem first step: values a CoCo without coupon payments; a so called Zero-Coupon CoCo
-	\subitem second step: incorporates coupon payments in the pricing formula 
-\item the closed-form formula of the equity derivative approach involves the use of standard Black-Scholes assumptions
-\end{itemize}
+In order to assess the value of a CoCo, investors can use a method which depends on equity derivatives. \citep{de2011pricing, de2014handbook} The so-called equity derivative approach attempts to compensate for the main drawback of the credit derivative approach, since it takes into account that coupon payments might be cancelled if the trigger of a CoCo was touched.\\
 
-\subsection{First Step - Zero-Coupon CoCo}
+Subsequently, the valuation can be divided into two steps: In the first step, the value of a CoCo is determined without coupon payments. Such a CoCo is called Zero-Coupon CoCo. In the second step, one has to incorporate the coupon payments in the pricing formula while keeping in mind that they might be knocked out. The closed-form solution is derived under a Black-Scholes setting.
 
-\begin{itemize}
-\item underlying assumption behind this approach is, that the triggering of a Zero-Coupon CoCo is equivalent to the share price falling below the level $S^*$
-\item trigger indicator $\mathbbm{1}_{\{ \tau \leq T \}}$ equals one when the Zero-Coupon CoCo triggers before maturity $T$ at default time $\tau$ and otherwise the indicator function is zero
-\item value of Zero-Coupon CoCo $V^{zcoco}$ at maturity $T$, can be derived based on \ref{valueatmaturity} as shown by \citet{erismann2015pricing}
-\end{itemize}
+\subsection{Step One - Zero-Coupon CoCo}
+
+To determine the present value of a Zero-Coupon CoCo $V^{zcoco}$ at maturity $T$ we can use equation \ref{valueatmaturity}. The underlying assumption of the equity derivative approach is that the triggering of a CoCo respectively of a Zero-Coupon CoCo is equivalent to the share price falling below the level $S^*$. %The indicator function $\mathbbm{1}_{\{ \tau \leq T \}}$ equals one when trigger is touched at the time $\tau$, whereby $\tau$ is element of $[\tau, T]$.
 \begin{align} \label{pvedcoco}    
     V^{zcoco}_T &= \begin{cases} N & \text{if not triggered}\\ (1 - \alpha) N + \frac{\alpha N}{C_p} S^{*} & \text{if triggered} \end{cases} \nonumber\\
     &= N \mathbbm{1}_{\{ \tau > T \}} +\left[ \left( 1 - \alpha \right) N + \dfrac{\alpha N}{C_p } S^* \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
@@ -98,32 +88,40 @@ In summary, the credit derivative approach provides us with a concise method to 
     &= N + C_r \left[ S^* - C_p \right] \mathbbm{1}_{\{ \tau \leq T \}}
 \end{align}
 
-\begin{itemize}
-\item financial payoff of equation \ref{pvedcoco} can be broken down into two components 
-\subitem face value $N$ of a Zero Bond
-\subitem long position in $C_r$ shares generating a payoff only if CoCo materializes
-\item long position in shares can be approximated with a knock-in forward
-\item Hence, at time t the payoff profile $V^{zcoco}_t$ can be replicated with a zero-coupon bond $V^{zb}_t$ and a knock-in forward $V_t^{kifwd}$
-\end{itemize}
-\begin{align}
+It may be inferred that the financial payoff of equation \ref{pvedcoco} consists of two components \citep{erismann2015pricing}: (1) the face value $N$ of a zero bond and (2) a long position in $C_r$ shares generating a payoff only if the CoCo materializes at time $\tau$. This component can be approximated with a knock-in forward. The intuition behind equation \ref{pvedcoco} is that if the share price falls below a certain level $S^*$, an investor will use the face value $N$ to exercise the knock-in forward. That said, the investor is committed to buy the amount of $C_r$ shares for the price of $C_p$ at maturity $T$.\\
+
+Before maturity the present value of a Zero-Coupon CoCo $V^{zcoco}$ can be determined by adding up the present value of a zero bond $V^{zb}$ and the present value of a knock-in forward $V_t^{kifwd}$. Hereinafter, the components will be explained briefly. 
+\begin{align} \label{pvzcoco}
 V^{zcoco}_t &= V^{zb}_t + V_t^{kifwd}
 \end{align}
 
-\begin{itemize}
-\item price of zero bond at $V^{zb}$ time $t$ can be calculated with the risk free rate $r$:
-\end{itemize}
-\begin{align}
+with
+\begin{align} 
 V^{zb}_t &= N \exp\left[- r (T - t)\right]
 \end{align}
 
-\begin{itemize}
-\item long position in shares at time $t$ can be approximated with a knock-in forward with price $V^{kifwd}$
-	\subitem long position in a knock-in call
-	\subitem short position in a knock-in put on the underlying shares
-	\subitem both with strike K equal to conversion price $C_p$ 
-	\subitem with barrier level equal to trigger price $S^*$
-\item intuition: if trigger is met at share price $S^*$, investor uses face value $N$ to exercise forward which commits to buy the amount of $C_r$ shares for the price of $C_p$ at maturity $T$
-\end{itemize}
+Moreover, the long position in shares at time $t$ can be approximated with the respective closed-form solution of a knock-in forward. \citep{hull2006options} 
+\begin{align}
+    V_t^{kifwd} &= C_r \left[ S_t \exp\left[- q \left(T-t\right)\right]\left(\dfrac{S^*}{S_t}\right)^{2 \lambda} \Phi\left(y_1\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \left(\dfrac{S^*}{S_t}\right)^{2 \lambda - 2} \Phi\left(y_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \Phi\left(-x_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
+   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} + S_t \exp\left[- q \left(T-t\right)\right] \Phi\left(- x_1\right) \right] 
+\end{align}
+
+with 
+\begin{align*}
+C_r &= \dfrac{\alpha N}{C_p}\\
+K &= C_p\\
+\lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}\\
+x_1 &= \dfrac{\log\left(\dfrac{S_t}{S^*} \right)}{\sigma \sqrt{T-t}} + \lambda \sigma \sqrt{T-t}\\
+y_1 &= \dfrac{\log\left(\dfrac{S^*}{S_t} \right)}{\sigma \sqrt{T-t}} + \lambda \sigma \sqrt{T-t}\\
+\end{align*}
+
+
+%
+\begin{comment}
+A knock-in forward consists of a long position in a knock-in call and a short position in a knock-in put on the underlying shares both with strike K which is equal to the conversion price $C_p$ and with the barrier level being equal to trigger price $S^*$.
+
 
 \begin{itemize}
 \item closed form solution exists for both knock-in options \citep{merton1973theory}
@@ -161,68 +159,35 @@ y_1 &= \dfrac{\log\left(\dfrac{S^*}{S_t} \right)}{\sigma \sqrt{T-t}} + \lambda \
 \item knock-in forward can be constructed with knock-in call and knock-in put \citep{hull2006options}
 \item hence, price of knock-in forward $V^{ kifwd }$ at time $t$ can be replicated using equation \ref{pvkic} and \ref{pvkip}:
 \end{itemize}
+\end{comment}
+%
 
-\begin{align}
-    V_t^{difwd} &= C_r \left[ S_t \exp\left[- q \left(T-t\right)\right]\left(\dfrac{S^*}{S_t}\right)^{2 \lambda} \Phi\left(y_1\right) \right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \left(\dfrac{S^*}{S_t}\right)^{2 \lambda - 2} \Phi\left(y_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} - K \exp\left[- r \left(T-t\right)\right] \Phi\left(-x_1 - \sigma \sqrt{T-t}\right) \right.\nonumber\\
-   &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} + S_t \exp\left[- q \left(T-t\right)\right] \Phi\left(- x_1\right) \right] 
-\end{align}
+It is important, however, to recognize that a subtle difference exists between the actual economic payoff of equation \ref{pvedcoco} and its replication with a knock-in forward, since the knock-in forward replicates an economic ownership of shares at maturity $T$. Though, the triggering of a CoCo forces investors to accept the conversion immediately. This could lead to an economic ownership of shares at trigger time $\tau$ and, thus, prior to $T$. Therefore, one could argue that receiving a knock-in forward in the trigger event disregards the dividends which a shareholder would receive in particular when a CoCo triggers early. \citet{de2011pricing} argue that dividends can be neglected because distressed banks are likely to behave with great restraint when it comes to dividend payments.
 
-with 
+\subsection{Step Two - Adding Coupons}
+As mentioned earlier, the first step excludes coupon payments from the valuation. Yet, in this step we want to include them in order to replicate the exact payout profile of a CoCo. Therefore, we replace the zero bond in equation \ref{pvzcoco} with a straight bond with regular coupon payments $c$. Besides, a third component has to be added which takes into account the foregone coupon payments if the trigger is touched. This can be modeled with a short position in $k$ binary down-and-in calls with maturity $t_i$. Those binary down-and-in calls are knocked in if the trigger $S^*$ is met and hence, offset all future coupon payments.\\ 
 
-\begin{align}
-C_r &= \dfrac{\alpha N}{C_p}
-\end{align}
-
-\begin{itemize}
-\item constraint: subtle difference between actual economic payoff of \ref{pvedcoco} and replication with a knock-in forward
-	\subitem knock-in forward replicates an economic ownership of shares at maturity $T$
-	\subitem But: triggering of CoCo forces investor to accept conversion immediately leading to an economic ownership of shares at $\tau$
-\item it may be argued: receiving a forward when the trigger is met disregards the dividends a shareholder would receive especially when a CoCo triggers early in its lifetime
-\item \citet{de2011pricing} argue that dividends can be neglected because distressed banks are likely to behave with great restraint when it comes to dividend payments 
-\end{itemize}
-
-\subsection{Second Step - Adding Coupons}
-\begin{itemize}
-\item As mentioned in the first step we did not include coupon payments in our valuation
-\item In this step we replace the zero bond with a straight bond with regular coupon payments $c_i$ and a present value of $V^{sb}_t$
-\end{itemize}
-
+The price of a straight bond can be determined with:
 \begin{align}
 V^{sb}_t &= \sum^T_{i=1} c_i \exp\left[-r (t_i - t)\right] + N \exp\left[-r (T-t) \right]
 \end{align}
 
-\begin{itemize}
-\item However, we have to add a third component which takes into account the foregone coupon payments if the trigger is met
-	\subitem investor receives coupon payments only if trigger is not met
-	\subitem value of CoCo lower than straight bond of same issuer
-	\subitem difference can be modeled with a short position in $k$ binary down-and-in calls
-	\subitem short position in a single binary down-and-in call with maturity $t_i$ for each coupon payment at $t_i$
-	\subitem reduce present value of coupon payments of a straight bond
-	\subitem binary down-and-in option are knocked in if trigger $S^*$ is met offsetting future coupon payments
-	\subitem short position model possibility of losing coupon payment
-\end{itemize}
-
+To price the down-and-in calls one might use the formula of \citet{rubinstein1991unscrambling}:
 \begin{align}
     V_t^{bdic} &= \alpha \sum^k_{i=1} c_i \exp\left(-r t_i\right) \left[ \Phi\left(-x_{1i} + \sigma \sqrt{t_i}\right)\vphantom{\dfrac{S^*}{S}}\right.\nonumber\\
    &\qquad \left.\vphantom{\dfrac{S^*}{S_t}} +\left(\dfrac{S^*}{S_t}\right)^{2\lambda -2} \Phi\left(y_{1i} - \sigma \sqrt{t_i}\right) \right]
 \end{align}
 
 with 
-
 \begin{align*}
 x_{1i} &= \dfrac{\log \left( \dfrac{S_t}{S^*} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
 y_{1i} &= \dfrac{\log \left( \dfrac{S^*}{S_t} \right)}{\sigma \sqrt{t_i}} + \lambda \sigma \sqrt{t_i}\\
 \lambda &= \dfrac{r-q+\dfrac{\sigma^2}{2}}{\sigma^2}
 \end{align*}
 
-\begin{itemize}
-\item theoretical price of CoCo $V^{ed}$ pursuant the equity derivative approach equals (1) straight bond plus (2) knock-in-forward and (3) binary down-and-in calls
-\end{itemize}
-
+To sum up, the theoretical price of a CoCo $V^{ed}$ at time $t$ pursuant the equity derivative approach consists of three components: (1) a straight bond $V^{sb}$, (2) a knock-in-forward $V^{kifwd}$ and (3) a set of binary down-and-in calls $V^{bdic}$:
 \begin{align}
-    V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t_i}^{bdic} 
+    V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t}^{bdic} 
 \end{align}
 
 \subsection{Data Requirements and Calibration}
@@ -230,10 +195,130 @@ y_{1i} &= \dfrac{\log \left( \dfrac{S^*}{S_t} \right)}{\sigma \sqrt{t_i}} + \lam
 \subsection{Pricing Example}
 
 \section{Structural Approach}
-
-"Structural credit pricing models are based on modeling the stochastic evolution of the balance sheet of the issuer, with default when the issuer is unable or unwilling to meet its obligations." \citep{duffie2003credit}
+\begin{itemize}
+\item following section suggests a structural model as third alternative to price CoCos
+\item concept of structural models has its roots in the seminal work of \citet{merton1974pricing}
+\item the goal of the Merton model is to explain the default of a company based on its assets and liabilities under a Black-Scholes setting
+\item default event happens at maturity date of debt when the assets of the issuer are worth less than the face value of the debt \citep{duffie2003credit}
+\end{itemize}
+\begin{itemize}
+\item approach we use to price CoCos was developed by \citet{pennacchi2010structural}
+\item method has a bank's balance sheet as the main driver of a CoCo's price
+\item moreover, the approach modifies the idea of a structural model to incorporate equity, short-term deposits, subordinated debt and contingent capital 
+\item it tries to model the stochastic evolution of a bank's balance sheet respectively of its components, with default when the institution is unable to meet its obligations \citep{duffie2003credit}
+\end{itemize}
 
 \subsection{Synthetic Balance Sheet}
+\subsubsection{Bank Assets}
+\begin{itemize}
+\item bank's assets are invested into a portfolio of loans, securities and off-balance sheet positions whose returns follow a mixed jump-diffusion process
+\item bank's asset value at time $t$ is denoted $A_t$
+\item change in quantity of bank assets equals the assets' return plus changes due to cash inflows less cash outflows
+\item sources of inflows and outflows from bank assets to be specified shortly; but for now superscript $*$ is used to distinguish asset changes solely due to their rate of return, not including changes due to net cashflows
+\item instantaneous rate of return that the bank earns on its assets is denoted as $d A_t^*/ A_t^*$
+\item under the risk-neutral probability measure, $\mathbb{Q}$, this rate of return follows the process
+\end{itemize}
+\begin{align} \label{bankassetprocess}
+\dfrac{d A_t^*}{A_t^*} &= \left( r_t - \lambda_t k_t \right) dt + \sigma dz + \left( Y_{q_{t^{-}}} -1\right) dq_t
+\end{align}
+
+\begin{itemize}
+\item note that $dz$ is a Brownian motion under the risk-neutral probability measure
+\item $q_t$ is Poisson counting process that increases by one when a Poisson-distributed event occurs
+\item $dq_t$ is either zero when no Poisson event occurs or it augments by one whenever a jump occurs
+\item risk-neutral probability that a jump occurs and that $q_t$ increases by one is $\lambda_t dt$ where $\lambda_t$ is the intensity of the jump process
+\item $Y_{q_{t^{-}}}$ is an identically and independently distributed random variable drawn from $\ln(Y_{q_{t^{-}}}) \sim \Phi\left(\mu_{y}, \sigma^2_{y}\right)$ at time $t$ where $\mu_{y}$ is the mean jump size and $\sigma_{y}$ the standard deviation of the jumps
+\item depending on whether the random variable $Y_{q_{t^{-}}}$ is either greater or smaller than one there is an upward or downward jump in the bank's asset value
+\item risk-neutral expected proportional jump is defined as $E^{\mathbb{Q}}_t\left(Y_{q_{t^{-}}} - 1\right) = k_t$ where $k_t = \exp(\mu_{y}+\dfrac{1}{2}\sigma_y^2) - 1$ and the jump intensity and the risk neutral jump probability are assumed to be independent, then the change in the return over the time interval $dt$ caused by the jump element $(Y_{q_{t^{-}}}-1)dq_t$ is $\lambda_t k_t dt$
+\item path of $A_t^*$ as described in equation \ref{bankassetprocess} will be continuous most of the time, but can have finite jumps of differing signs and amplitudes at discrete points in time where the timing of jumps depends on the Poisson random variable $q_t$ and the jump sizes depend on the random variable $Y_{q_{t^{-}}}$
+\item Jumps may be interpreted as times when important information affecting the value of the assets is released \citep{duffie2001term}
+\end{itemize}
+
+\begin{itemize}
+\item risk-neutral process followed by the bank's assets equals the assets' risk-neutral rate of return less the payout of interest and premiums to depositors and, as long as contingent capital is unconverted, coupons to contingent capital investors $c_t$
+\end{itemize}
+\begin{align} \label{bankassetprocess2}
+dA_t &= \left[ \left( r_t - \lambda k \right) A_t - \left( r_t + h_t \right) D_t - c_t B \right] dt + \sigma A_t dz + \left( Y_{q_{t^{-}}} - 1 \right) A_t dq
+\end{align}
+
+\begin{itemize}
+\item asset process of equation \ref{bankassetprocess2} can be rewritten as
+\end{itemize}
+\begin{align} 
+\dfrac{dA_t}{A_t} &= \left[ \left( r_t - \lambda k \right) - \left( r_t + h_t \right) \dfrac{D_t}{A_t} - c_t b_t \dfrac{D_t}{A_t}\right] dt + \sigma dz + \left( Y_{q_{t^{-}}} - 1\right) dq_t\\ \nonumber
+&= \left[ \left( r_t - \lambda k \right) - \dfrac{r_t + h_t+c_t b_t}{x_t}\right] dt + \sigma dz + \left( Y_{q_{t^{-}}} - 1\right) dq_t
+\end{align}
+
+\begin{itemize}
+\item making the change in variable $x_t = A_t/D_t$ and recalling the deposit growth process $g\left(x_t - \hat{x}\right)$ of equation \ref{depositgrowthprocess}, the risk neutral process for the asset to-deposit ratio is
+\end{itemize}
+\begin{align}
+\dfrac{dx_t}{x_t}&= \dfrac{dA_t}{A_t} - \dfrac{dD_t}{D_t}\\ \nonumber
+&= \left[ \left(r_t - \lambda k \right) - \dfrac{r_t + h_t + c_t b_t}{x_t} - g\left(x_t - \hat{x}\right)\right] dt + \sigma dz + \left( Y_{q_{t^{-}}} - 1 \right) dq_t
+\end{align}
+
+\begin{itemize}
+\item simple application of It\^{o}'s lemma for jump-diffusion process implies
+\end{itemize}
+\begin{align}
+d \ln\left(x_t\right) &= \left[ \left( r_t - \lambda k \right) - \dfrac{r_t + h_t + c_t b_t}{x_t} - g\left( x_t - \hat{x} \right) - \dfrac{1}{2} \sigma^2 \right] dt \\ \nonumber
+&+ \sigma dz + \ln Y_{q_{t^{-}}} dq_t
+\end{align}
+
+\subsubsection{Default-Free Term Structure}
+
+\subsubsection{Deposits}
+
+% Intro
+\begin{itemize}
+\item given the risk-neutral distribution of asset returns, it is possible to solve for the fair deposit insurance premium or deposit credit risk premium $h_t$ as function of the current asset to deposit ratio $x_t$
+\item date $t$ quantity of deposits is denoted $D_t$
+\item since the bank is assumed to be closed by the deposit insurer whenever $x_t \leq 1$, if $x_t$ reaches 1 following continuous movement of the bank assets, the bank is closed with $A_{t_{b}}=D_t$ and depositors suffer no loss 
+\item depositors experience losses only following downward jump in asset value that exceeds the bank's capital
+\item if such a jump does occur at date $\hat{t}$, the instantaneous proportional loss to deposits is $\left(D_t - Y_{q_{t^{-}}} A_{\hat{t^{-}}}  \right) / D_t$
+\item credit risk premium on the instantaneous-maturity deposits, $h_t$, which depends on the asset-to-deposit ratio, equals:
+\end{itemize}
+
+\begin{align}
+ h_t &=  \lambda \left[ \Phi\left( -d_1 \right) - x_{t^{-}} \exp\left( \mu_y + \dfrac{1}{2} \sigma_y^2 \right) \Phi\left( -d_2 \right)    \right]
+\end{align}
+with
+\begin{align}
+d_1 &= \dfrac{\ln\left( x_{t^{-}}\right) + \mu_y}{\sigma_y}\\
+d_2 &= d_1 + \sigma_y
+\end{align}
+
+% Intro Deposit
+\begin{itemize}
+\item bank pays interest to the insured depositors at the competitive, instantaneous-maturity default-free rate, $r_t$
+\item other deposits may be uninsured and are paid the competitive, default-free interest rate, $r_t$, plus the fair credit risk premium, $h_t$
+\item in either the case of insured or uninsured deposits, the bank is assumed to continuously pay out total interest and deposit premiums of $\left( r_t + h_t \right) D_t dt$
+\end{itemize}
+
+\begin{itemize}
+\item with interest and insurance premiums paid out continuously, the bank's total quantity of deposits changes only due to growth in net new deposits (deposit inflows or outflows), which are no directly related to accrual of interest and premiums
+\item because empirical evidence such as \citet{adrian2010liquidity} finds that banks have target capital ratios and deposit growth expands when banks have excess capital, the model assumes that deposit growth is positively related to the bank's current asset-to deposit ratio, defined as $x_t = A_t / D_t$
+\end{itemize}
+
+\begin{align}\label{depositgrowthprocess}
+\dfrac{dD_t}{D_t} &= g\left(\hat{x} - x_t \right)dt
+\end{align}
+
+\begin{itemize}
+\item $g$ is a positive constant
+\item $\hat{x} > 1$ is a target asset-to-deposit ratio
+\item when the actual asset-to-deposit ratio exceeds its target, $x_t > \hat{x}$, the bank issues positive amounts of net new deposits
+\item when $x_t < \hat{x}$ the bank is gradually shrinking its balance sheet
+\item thus, deposit growth rate per unit time, $g\left( x_t - \hat{x} \right)$, creates a mean-reverting tendency for the bank's asset-to-deposit ratio, $x_t$ 
+\end{itemize}
+
+% Outro
+
+\subsubsection{Contingent Convertible Capital}
+
+\begin{itemize}
+\item biggest challenge is the accurate estimation of the valuation parameters that drive the stochastic processes\citep{de2014handbook} because input factors are often unobservable variables
+\end{itemize}
 
 \subsection{Data Requirements and Calibration}
 
