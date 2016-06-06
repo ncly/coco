@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  5 MAY 2016 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  6 JUN 2016 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,6 +392,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks25
+\verbatim@line=\toks26
+\verbatim@in@stream=\read1
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
@@ -424,7 +430,7 @@ Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
-\pgfutil@everybye=\toks25
+\pgfutil@everybye=\toks27
 \pgfutil@tempdima=\dimen125
 \pgfutil@tempdimb=\dimen126
 
@@ -444,12 +450,12 @@ Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks28
+\pgfkeys@tmptoks=\toks30
 ))
 \pgf@x=\dimen127
 \pgf@y=\dimen128
@@ -460,14 +466,14 @@ ode.tex
 \pgf@xc=\dimen133
 \pgf@yc=\dimen134
 \w@pgf@writea=\write3
-\r@pgf@reada=\read1
+\r@pgf@reada=\read2
 \c@pgf@counta=\count111
 \c@pgf@countb=\count112
 \c@pgf@countc=\count113
 \c@pgf@countd=\count114
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -518,9 +524,9 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 \pgfmath@dimen=\dimen135
 \pgfmath@count=\count117
 \pgfmath@box=\box31
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -667,8 +673,8 @@ Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen162
 \pgffor@skip=\dimen163
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -710,9 +716,9 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks37
-\t@pgfplots@tokb=\toks38
-\t@pgfplots@tokc=\toks39
+\t@pgfplots@toka=\toks39
+\t@pgfplots@tokb=\toks40
+\t@pgfplots@tokc=\toks41
 \pgfplots@tmpa=\dimen171
 \c@pgfplots@coordindex=\count130
 \c@pgfplots@scanlineindex=\count131
@@ -750,7 +756,7 @@ matrix.code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
 \c@pgfplotstable@counta=\count134
-\t@pgfplotstable@a=\toks40
+\t@pgfplotstable@a=\toks42
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 deque.code.tex)
@@ -832,18 +838,18 @@ File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
 (./text/conclusions.aux) (./text/appendix1.aux) (./text/appendix2.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -852,12 +858,12 @@ LaTeX Font Info:    ... okay on input line 77.
 \scratchbox=\box42
 \nofMPsegments=\count139
 \nofMParguments=\count140
-\everyMPshowfont=\toks41
+\everyMPshowfont=\toks43
 \MPscratchCnt=\count141
 \MPscratchDim=\dimen186
 \MPnumerator=\count142
 \makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks42
+\everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -917,7 +923,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
 <fslogo.jpeg, id=4, 513.92pt x 513.92pt>
 File: fslogo.jpeg Graphic file (type jpg)
  <use fslogo.jpeg>
-Package pdftex.def Info: fslogo.jpeg used on input line 88.
+Package pdftex.def Info: fslogo.jpeg used on input line 90.
 (pdftex.def)             Requested size: 91.04881pt x 91.04303pt.
  [1
 
@@ -998,7 +1004,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 
 
- <./media/basel3.pdf> <./media/anatomy.pdf>]) [3]
+ <./media/basel3.pdf> <./media/anatomy.pdf>] [3]) [4]
 \openout2 = `text/chapter3.aux'.
 
  (./text/chapter3.tex
@@ -1008,30 +1014,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[4
+[5
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
-[5]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 81.
+[7]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 89.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [6]
-Overfull \hbox (0.49553pt too wide) in paragraph at lines 135--135
-[] 
+)
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
  []
 
-[7]) [8] [9]
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+[9] [10] [11] [12] [13] [14]) [15]
 \openout2 = `text/chapter4.aux'.
 
  (./text/chapter4.tex
 Chapter 4.
-) [10
+) [16
 
 
 
@@ -1040,7 +1051,7 @@ Chapter 4.
 
  (./text/chapter5.tex
 Chapter 5.
-) [11
+) [17
 
 
 
@@ -1049,7 +1060,7 @@ Chapter 5.
 
  (./text/conclusions.tex
 Chapter 6.
-) [12
+) [18
 
 
 
@@ -1058,7 +1069,7 @@ Chapter 6.
 
  (./text/appendix1.tex
 Appendix A.
-) [13
+) [19
 
 
 
@@ -1086,56 +1097,56 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-) [14
+) [20
 
 
 
-] [15]
+] [21]
 Appendix C.
-(./code/EquityDerivativeApproach.R [16
+(./code/EquityDerivativeApproach.R [22
 
-] [17]) [18]
+] [23]) [24]
 Appendix D.
-(./code/StructuralApproach.R [19
+(./code/StructuralApproach.R [25
 
-] [20] [21])) [22] (./ociamthesismain.bbl
-Underfull \hbox (badness 1132) in paragraph at lines 36--40
+] [26] [27])) [28] (./ociamthesismain.bbl
+Underfull \hbox (badness 1132) in paragraph at lines 73--77
 []\OT1/cmr/m/n/12 George Pen-nac-chi.  A struc-tural model of con-tin-gent bank
  cap-i-tal.  Work-
  []
 
 
-Underfull \hbox (badness 7415) in paragraph at lines 36--40
+Underfull \hbox (badness 7415) in paragraph at lines 73--77
 \OT1/cmr/m/n/12 ing Pa-per 1004, Fed-eral Re-serve Bank of Cleve-land, 2010.  U
 RL
  []
 
+[29
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 79--83
 []\OT1/cmr/m/n/12 Quantnet.  Trans-late gauss code to r code, 2011.  URL
  []
 
 
-Overfull \hbox (7.46895pt too wide) in paragraph at lines 42--46
+Overfull \hbox (7.46895pt too wide) in paragraph at lines 79--83
 \OT1/cmtt/m/n/12 https://www.quantnet.com/threads/translate-gauss-code-to-r-cod
 e.7784/\OT1/cmr/m/n/12 . 
  []
 
-) [23
-
-
-] (./ociamthesismain.aux (./text/dedication.aux) (./text/abstract.aux)
+) [30] (./ociamthesismain.aux (./text/dedication.aux) (./text/abstract.aux)
 (./text/chapter1.aux) (./text/chapter2.aux) (./text/chapter3.aux)
 (./text/chapter4.aux) (./text/chapter5.aux) (./text/conclusions.aux)
 (./text/appendix1.aux) (./text/appendix2.aux)) ) 
 Here is how much of TeX's memory you used:
- 25439 strings out of 493089
- 599397 string characters out of 6134843
- 1058831 words of memory out of 5000000
- 28377 multiletter control sequences out of 15000+600000
+ 25501 strings out of 493089
+ 600649 string characters out of 6134843
+ 1059462 words of memory out of 5000000
+ 28437 multiletter control sequences out of 15000+600000
  14060 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,83p,1237b,2033s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,16n,83p,1238b,2033s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/nicolay/Library/texliv
 e/2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015
@@ -1150,16 +1161,18 @@ st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist
 onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/stix/stix-mathex.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/stix/stix-mathit.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/stix/stix-mathrm.pfb>
-Output written on ociamthesismain.pdf (29 pages, 410498 bytes).
+pe1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/stix/stix-mathex.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/stix/stix-mathit.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/stix/stix-mathrm.pfb>
+Output written on ociamthesismain.pdf (36 pages, 445220 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
+ 300 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
