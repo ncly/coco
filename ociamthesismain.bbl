@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,35 @@ Tobias Adrian and Hyun~Song Shin.
 \newblock Liquidity and leverage.
 \newblock \emph{Journal of Financial Intermediation}, 19\penalty0 (3):\penalty0
   418--437, 2010.
+
+\bibitem[A{\"\i}t-Sahalia and Hansen(2009)]{ait2009handbook}
+Yacine A{\"\i}t-Sahalia and Lars~Peter Hansen.
+\newblock \emph{Handbook of Financial Econometrics, Vol 1: Tools and
+  Techniques}, volume~1.
+\newblock Elsevier, 2009.
+
+\bibitem[Albul et~al.(2010)Albul, Jaffee, and Tchistyi]{albul2010contingent}
+Boris Albul, Dwight~M Jaffee, and Alexei Tchistyi.
+\newblock Contingent convertible bonds and capital structure decisions.
+\newblock \emph{Coleman Fung Risk Management Research Center}, 2010.
+
+\bibitem[Alvemar and Ericson(2012)]{alvemar2012modelling}
+Per Alvemar and Philip Ericson.
+\newblock Modelling and pricing contingent convertibles.
+\newblock \emph{University of Gothenburg}, 2012.
+
+\bibitem[Buergi(2013)]{buergi2013pricing}
+Markus~PH Buergi.
+\newblock Pricing contingent convertibles: a general framework for application
+  in practice.
+\newblock \emph{Financial Markets and Portfolio Management}, 27\penalty0
+  (1):\penalty0 31--63, 2013.
+
+\bibitem[Cox et~al.(1985)Cox, Ingersoll~Jr, and Ross]{cox1985theory}
+John~C Cox, Jonathan~E Ingersoll~Jr, and Stephen~A Ross.
+\newblock A theory of the term structure of interest rates.
+\newblock \emph{Econometrica: Journal of the Econometric Society}, pages
+  385--407, 1985.
 
 \bibitem[De~Spiegeleer and Schoutens(2011)]{de2011pricing}
 Jan De~Spiegeleer and Wim Schoutens.
@@ -23,11 +52,10 @@ Jan De~Spiegeleer, Wim Schoutens, and Cynthia Van~Hulle.
   bonds and bail-in}.
 \newblock John Wiley \& Sons, 2014.
 
-\bibitem[Duffie and Lando(2001)]{duffie2001term}
-Darrell Duffie and David Lando.
-\newblock Term structures of credit spreads with incomplete accounting
-  information.
-\newblock \emph{Econometrica}, 69\penalty0 (3):\penalty0 633--664, 2001.
+\bibitem[Dietegen(2016)]{schmuddel2016}
+Mueller Dietegen.
+\newblock Vom wunder- zum schmuddelkind.
+\newblock \emph{B{\"o}rsen-Zeitung}, 61:\penalty0 13--14, 2016.
 
 \bibitem[Duffie and Singleton(1999)]{duffie1999modeling}
 Darrell Duffie and Kenneth~J Singleton.
@@ -35,16 +63,29 @@ Darrell Duffie and Kenneth~J Singleton.
 \newblock \emph{Review of Financial studies}, 12\penalty0 (4):\penalty0
   687--720, 1999.
 
-\bibitem[Duffie and Singleton(2003)]{duffie2003credit}
-Darrell Duffie and Kenneth~J Singleton.
-\newblock \emph{Credit risk pricing, measurement, and management}.
-\newblock Princeton University Press, 2003.
-
 \bibitem[Erismann(2015)]{erismann2015pricing}
 Marc Erismann.
 \newblock \emph{Pricing Contingent Convertible Capital-A Theoretical and
   Empirical Analysis of Selected Pricing Models}.
 \newblock PhD thesis, University of St. Gallen, 2015.
+
+\bibitem[Glasserman and Nouri(2012)]{glasserman2012contingent}
+Paul Glasserman and Behzad Nouri.
+\newblock Contingent capital with a capital-ratio trigger.
+\newblock \emph{Management Science}, 58\penalty0 (10):\penalty0 1816--1833,
+  2012.
+
+\bibitem[Henriques and Doctor(2011)]{henriques2011making}
+Roberto Henriques and Saul Doctor.
+\newblock Making cocos work: Structural and pricing considerations for
+  contingent capital securities.
+\newblock \emph{European Credit Research, JP Morgan, February}, 15, 2011.
+
+\bibitem[Hilscher and Raviv(2014)]{hilscher2014bank}
+Jens Hilscher and Alon Raviv.
+\newblock Bank stability and market discipline: The effect of contingent
+  capital on risk taking and default probability.
+\newblock \emph{Journal of Corporate Finance}, 29:\penalty0 542--560, 2014.
 
 \bibitem[Hull(2006)]{hull2006options}
 John~C Hull.
@@ -61,6 +102,13 @@ Robert~A Jarrow and Stuart~M Turnbull.
 David Lando.
 \newblock \emph{Credit risk modeling: theory and applications}.
 \newblock Princeton University Press, 2009.
+
+\bibitem[Madan and Schoutens(2011)]{madan2011conic}
+Dilip~B Madan and Wim Schoutens.
+\newblock Conic coconuts: the pricing of contingent capital notes using conic
+  finance.
+\newblock \emph{Mathematics and Financial Economics}, 4\penalty0 (2):\penalty0
+  87--106, 2011.
 
 \bibitem[Merton(1974)]{merton1974pricing}
 Robert~C Merton.
@@ -96,5 +144,18 @@ Lujing Su and Marc~Olivier Rieger.
 \newblock How likely is it to hit a barrier? theoretical and emperical
   estimates.
 \newblock Technical report, Technical Report Working Paper, 2009.
+
+\bibitem[Sundaresan and Wang(2015)]{sundaresan2015design}
+Suresh Sundaresan and Zhenyu Wang.
+\newblock On the design of contingent capital with a market trigger.
+\newblock \emph{The Journal of Finance}, 70\penalty0 (2):\penalty0 881--920,
+  2015.
+
+\bibitem[Wilkens and Bethke(2014)]{wilkens2014contingent}
+Sascha Wilkens and Nastja Bethke.
+\newblock Contingent convertible (coco) bonds: A first empirical assessment of
+  selected pricing models.
+\newblock \emph{Financial Analysts Journal}, 70\penalty0 (2):\penalty0 59--77,
+  2014.
 
 \end{thebibliography}

@@ -66,9 +66,51 @@ V^{cd}_t &= \sum^T_{i=1} c_i \exp\left[-(r + s_{CoCo_t}) (t_i - t)\right] + N \e
 
 In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to bear in mind its largest shortcoming. Losses from cancelled coupons of triggered CoCos are not taken into account in the valuation. Hence, the credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
 
-\subsection{Data Requirements and Calibration}
+\subsection{Parameter Classification and Adjustment}
 
-\subsection{Valuation Example}
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+			 & Description & Usage & Source \\
+		\midrule
+			$T$ & CoCo maturity & Static input & Term sheet \\
+			$N$ & CoCo nominal & Static input & Term sheet \\			
+			$c$ & CoCo coupon rate & Static input & Term sheet \\
+			$S_0$ & Initial share price of the issuer & Dynamic input & Market data \\
+			$S^*$ & Trigger share price & Static input & Term sheet \\
+			$C_p$ & CoCo nominal conversion price & Static input & Term sheet \\
+			$r$ & Risk-free interest rate & Static input & Market data \\
+			$q$ & Dividend yield & Static input & Market data\\
+			$\sigma$& Implied volatility & Static input & Market data \\
+		\bottomrule
+	\end{tabular}
+	\caption[Parameter Classification of the Credit Derivative Approach]{Parameter Classification of the Credit Derivative Approach \citep{wilkens2014contingent}}
+\end{table}
+
+\subsection{Model Application}
+
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{lrl}
+		\toprule
+			 & Value & Comment \\
+		\midrule
+			$T$ & $10$yrs & Maturity \\
+			$N$ & $100$ & Nominal \\			
+			$c$ & $6.00$ & Annual coupon rate \\
+			$S_0$ & $100$ & Initial share price of the bank \\
+			$S^*$ & $35$ & Trigger share price \\
+			$C_p$ & $65$ & Nominal conversion price \\
+			$r$ & $1.00 \%$ & Risk-free interest rate\\
+			$q$ & $2.00\%$ & Dividend yield \\
+			$\sigma$& $30.00 \%$ & Implied volatility \\
+		\bottomrule
+	\end{tabular}
+	\caption[Parameter Specification of Credit Derivative Approach Application]{Parameter Specification of Credit Derivative Approach Application \citep{alvemar2012modelling}}
+\end{table}
 
 \section{Equity Derivative Approach}
 
@@ -187,99 +229,141 @@ y_{1i} &= \dfrac{\log \left( \dfrac{S^*}{S_t} \right)}{\sigma \sqrt{t_i}} + \lam
 
 To sum up, the theoretical price of a CoCo $V^{ed}$ at time $t$ pursuant the equity derivative approach consists of three components: (1) a straight bond $V^{sb}$, (2) a knock-in-forward $V^{kifwd}$ and (3) a set of binary down-and-in calls $V^{bdic}$:
 \begin{align}
-    V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t}^{bdic} 
+V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t}^{bdic}
 \end{align}
 
-\subsection{Data Requirements and Calibration}
+\subsection{Parameter Classification and Adjustment}
 
-\subsection{Pricing Example}
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{clll}
+		\toprule
+			 & Description & Usage & Source \\ 
+		\midrule
+			$T$ & CoCo maturity & Static input & Term sheet \\
+			$N$ & CoCo nominal & Static input & Term sheet \\
+			$c$ & CoCo coupon rate & Static input & Term sheet \\
+			$\alpha$ & CoCo nominal conversion factor & Static input & Term sheet \\
+			$S_0$ & Initial share price of the issuer & Dynamic input & Market data \\
+			$S^*$ & Trigger share price & Static input & Term sheet \\
+			$C_p$ & CoCo nominal conversion price & Static input & Term sheet \\
+			$r$ & Risk-free interest rate & Static input & Market data \\						
+			$q$ & Dividend yield & Static input & Market data \\
+			$\sigma$& Implied volatility & Static input & Market data \\
+		\bottomrule
+	\end{tabular}
+	\caption[Parameter Classification of the Equity Derivative Approach]{Parameter Classification of the Equity Derivative Approach \citep{wilkens2014contingent}}
+\end{table}
+
+\subsection{Model Application}
+
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{lrl}
+		\toprule
+			 & Value & Comment \\
+		\midrule
+			$T$ & $10$yrs & Maturity \\
+			$N$ & $100$ & Nominal \\			
+			$c$ & $6.00$ & Annual coupon rate \\
+			$\alpha$ & $1$ & Nominal conversion factor \\ 
+			$S_0$ & $100$ & Initial share price of the bank \\
+			$S^*$ & $35$ & Trigger share price \\
+			$C_p$ & $65$ & Nominal conversion price \\
+			$r$ & $1.00 \%$ & Risk-free interest rate\\
+			$q$ & $2.00\%$ & Dividend yield \\
+			$\sigma$& $30.00 \%$ & Implied volatility \\
+		\bottomrule
+	\end{tabular}
+	\caption[Parameter Specification of Equity Derivative Approach Application]{Parameter Specification of Equity Derivative Approach Application \citep{alvemar2012modelling}}
+\end{table}
 
 \section{Structural Approach}
-\begin{itemize}
-\item following section suggests a structural model as third alternative to price CoCos
-\item concept of structural models has its roots in the seminal work of \citet{merton1974pricing}
-\item the goal of the Merton model is to explain the default of a company based on its assets and liabilities under a Black-Scholes setting
-\item default event happens at maturity date of debt when the assets of the issuer are worth less than the face value of the debt \citep{duffie2003credit}
-\end{itemize}
-\begin{itemize}
-\item approach we use to price CoCos was developed by \citet{pennacchi2010structural}
-\item method has a bank's balance sheet as the main driver of a CoCo's price
-\item moreover, the approach modifies the idea of a structural model to incorporate equity, short-term deposits, subordinated debt and contingent capital 
-\item it tries to model the stochastic evolution of a bank's balance sheet respectively of its components, with default when the institution is unable to meet its obligations \citep{duffie2003credit}
-\end{itemize}
+A third alternative to price CoCos is the structural approach of \citet{pennacchi2010structural}. The idea has its roots in the seminal work of \citet{merton1974pricing}, which aims to explain a company's default based on the relationship of its assets and liabilities under a standard Black-Scholes setting. \citet{pennacchi2010structural}'s approach expands the idea by modeling the stochastic evolution of a bank's balance sheet respectively of its components. In the following, the assets' rate of return process will be explained. Thereafter, we will outline the assumptions of the model regarding the various liabilities a bank issues to refinance itself including deposits, equity and coupon bonds in the form of CoCos. Lastly, a pricing formula will be illustrated.
 
-\subsection{Synthetic Balance Sheet}
-\subsubsection{Bank Assets}
-\begin{itemize}
-\item bank's assets are invested into a portfolio of loans, securities and off-balance sheet positions whose returns follow a mixed jump-diffusion process
-\item bank's asset value at time $t$ is denoted $A_t$
-\item change in quantity of bank assets equals the assets' return plus changes due to cash inflows less cash outflows
-\item sources of inflows and outflows from bank assets to be specified shortly; but for now superscript $*$ is used to distinguish asset changes solely due to their rate of return, not including changes due to net cashflows
-\item instantaneous rate of return that the bank earns on its assets is denoted as $d A_t^*/ A_t^*$
-\item under the risk-neutral probability measure, $\mathbb{Q}$, this rate of return follows the process
-\end{itemize}
+\subsection{Structural Banking Model}
+\subsubsection*{Bank Assets and Asset-To-Deposit Ratio}
+\citet{pennacchi2010structural} assumes that a bank holds a portfolio of loans, equities and off-balance sheet positions as assets whose returns follow a jump-diffusion process. The change of this portfolio $A_t$ is determined by the rate of return and the cash in- respectively outflows. In this context, the symbol $*$ is used to point out the change in value of the portfolio which can be quantified by the rate of return, excluding net cashflows. The aforementioned instantaneous rate of return is denoted as $d A_t^*/ A_t^*$ and follows a stochastic process as stated below under the risk-neutral probability measure $\mathbb{Q}$:
 \begin{align} \label{bankassetprocess}
 \dfrac{d A_t^*}{A_t^*} &= \left( r_t - \lambda_t k_t \right) dt + \sigma dz + \left( Y_{q_{t^{-}}} -1\right) dq_t
 \end{align}
 
-\begin{itemize}
-\item note that $dz$ is a Brownian motion under the risk-neutral probability measure
-\item $q_t$ is Poisson counting process that increases by one when a Poisson-distributed event occurs
-\item $dq_t$ is either zero when no Poisson event occurs or it augments by one whenever a jump occurs
-\item risk-neutral probability that a jump occurs and that $q_t$ increases by one is $\lambda_t dt$ where $\lambda_t$ is the intensity of the jump process
-\item $Y_{q_{t^{-}}}$ is an identically and independently distributed random variable drawn from $\ln(Y_{q_{t^{-}}}) \sim \Phi\left(\mu_{y}, \sigma^2_{y}\right)$ at time $t$ where $\mu_{y}$ is the mean jump size and $\sigma_{y}$ the standard deviation of the jumps
-\item depending on whether the random variable $Y_{q_{t^{-}}}$ is either greater or smaller than one there is an upward or downward jump in the bank's asset value
-\item risk-neutral expected proportional jump is defined as $E^{\mathbb{Q}}_t\left(Y_{q_{t^{-}}} - 1\right) = k_t$ where $k_t = \exp(\mu_{y}+\dfrac{1}{2}\sigma_y^2) - 1$ and the jump intensity and the risk neutral jump probability are assumed to be independent, then the change in the return over the time interval $dt$ caused by the jump element $(Y_{q_{t^{-}}}-1)dq_t$ is $\lambda_t k_t dt$
-\item path of $A_t^*$ as described in equation \ref{bankassetprocess} will be continuous most of the time, but can have finite jumps of differing signs and amplitudes at discrete points in time where the timing of jumps depends on the Poisson random variable $q_t$ and the jump sizes depend on the random variable $Y_{q_{t^{-}}}$
-\item Jumps may be interpreted as times when important information affecting the value of the assets is released \citep{duffie2001term}
-\end{itemize}
+It should be noted that $r_t$ stands for the risk-free interest rate as defined by the \citet{cox1985theory} term-structure model which will be discussed shortly. $dz$ is a Brownian motion, whereby $\sigma$ denotes the volatility of returns of the aforementioned asset portfolio. $q_t$ is a Poisson counting process which increases by one whenever a Poisson-distributed event respectively a jump occurs. Hence, the variable $dq_t$ is one whenever such a jump takes place and zero otherwise. The risk-neutral probability that a jump happens is equal to $\lambda_t dt$ where $\lambda_t$ stands for the intensity of the jump process. Variable $Y_{q_{t^{-}}}$ is a i.i.d. random variable drawn from $\ln(Y_{q_{t^{-}}}) \sim \Phi\left(\mu_{y}, \sigma^2_{y}\right)$ at time $t$ where $\mu_{y}$ stands for the mean jump size and $\sigma_{y}$ denotes the standard deviation of jumps. In case the random variable $Y_{q_{t^{-}}}$ is greater than one, an upward shift in the bank's asset value can be observed. If the value is smaller than one a downward jump takes place. Given that the risk-neutral expected proportional jump $k_t$ is defined as $k_t = E^\mathbb{Q}_t\left[ Y_{q_{t^{-}}} - 1 \right]$, one can determine $k_t$ with the following formula: $k_t = \exp(\mu_{y}+\dfrac{1}{2}\sigma_y^2) - 1$. Thus, the risk-neutral expected change in $A^*$ from the jump element $(Y_{q_{t^{-}}}-1)dq_t$ equals $\lambda_t k_t dt$ in $dt$. To sum up, the value development of a bank's asset portfolio $A_t^*$ follows largely a continuous process. But disruptive jumps may occur as illustrated below in the graph \ref{fig:jumpgraph}.\\
+\begin{figure}[ht]
+	\centering
+	\includegraphics[trim=0.6cm 7.05cm 0.9cm 9cm, scale = 0.4]{media/jumpprocess} \par
+	\caption[Jump-Diffusion Process]{The first graph shows two jumps in the state variable $A^*$ at discrete time points. Additionally, the corresponding Poisson counting process $q_t$ is highlighted in the second graph. \citep{ait2009handbook}}
+	\label{fig:jumpgraph}
+\end{figure}
 
-\begin{itemize}
-\item risk-neutral process followed by the bank's assets equals the assets' risk-neutral rate of return less the payout of interest and premiums to depositors and, as long as contingent capital is unconverted, coupons to contingent capital investors $c_t$
-\end{itemize}
+The risk-neutral process of bank assets $A_t$ including the net cashflows is equal to the assets' rate of return less interest payments $r_t$ respectively premium payments $h_t$ to deposit holders proportionally to their deposits $D_t$. Furthermore, one has to subtract the coupon payments $c_t$ to CoCo investors proportionally to the face value $B$.
 \begin{align} \label{bankassetprocess2}
 dA_t &= \left[ \left( r_t - \lambda k \right) A_t - \left( r_t + h_t \right) D_t - c_t B \right] dt + \sigma A_t dz + \left( Y_{q_{t^{-}}} - 1 \right) A_t dq
 \end{align}
 
-\begin{itemize}
-\item asset process of equation \ref{bankassetprocess2} can be rewritten as
-\end{itemize}
-\begin{align} 
-\dfrac{dA_t}{A_t} &= \left[ \left( r_t - \lambda k \right) - \left( r_t + h_t \right) \dfrac{D_t}{A_t} - c_t b_t \dfrac{D_t}{A_t}\right] dt + \sigma dz + \left( Y_{q_{t^{-}}} - 1\right) dq_t\\ \nonumber
-&= \left[ \left( r_t - \lambda k \right) - \dfrac{r_t + h_t+c_t b_t}{x_t}\right] dt + \sigma dz + \left( Y_{q_{t^{-}}} - 1\right) dq_t
-\end{align}
-
-\begin{itemize}
-\item making the change in variable $x_t = A_t/D_t$ and recalling the deposit growth process $g\left(x_t - \hat{x}\right)$ of equation \ref{depositgrowthprocess}, the risk neutral process for the asset to-deposit ratio is
-\end{itemize}
+By substituting variable $x_t$ with $A_t/D_t$ and anticipating the deposit growth process $g\left(x_t - \hat{x}\right)$ as pointed out by equation \ref{depositgrowthprocess}, the risk neutral process of the asset-to-deposit ratio equals:
 \begin{align}
 \dfrac{dx_t}{x_t}&= \dfrac{dA_t}{A_t} - \dfrac{dD_t}{D_t}\\ \nonumber
 &= \left[ \left(r_t - \lambda k \right) - \dfrac{r_t + h_t + c_t b_t}{x_t} - g\left(x_t - \hat{x}\right)\right] dt + \sigma dz + \left( Y_{q_{t^{-}}} - 1 \right) dq_t
 \end{align}
 
-\begin{itemize}
-\item simple application of It\^{o}'s lemma for jump-diffusion process implies
-\end{itemize}
+with
+\begin{align}
+b_t &= \dfrac{B}{D_t}
+\end{align}
+
+Lastly, an application of It\^{o}'s lemma for jump-diffusion processes leads to the following formula for the asset-to-deposit ratio process:
 \begin{align}
 d \ln\left(x_t\right) &= \left[ \left( r_t - \lambda k \right) - \dfrac{r_t + h_t + c_t b_t}{x_t} - g\left( x_t - \hat{x} \right) - \dfrac{1}{2} \sigma^2 \right] dt \\ \nonumber
 &+ \sigma dz + \ln Y_{q_{t^{-}}} dq_t
 \end{align}
 
-\subsubsection{Default-Free Term Structure}
+\subsubsection*{Default-Free Term Structure}
+\label{termstructure}
 
-\subsubsection{Deposits}
+\citet{pennacchi2010structural} applies the term-structure specifications of \citet{cox1985theory} to model the risk-neutral process of the instantaneous risk-free interest rate $dr_t$ which is defined as follows:
+\begin{align}
+dr_t = \kappa \left(\bar{r} - r_t \right) dt + \sigma_r \sqrt{r_t} d \zeta
+\end{align}
 
-% Intro
-\begin{itemize}
-\item given the risk-neutral distribution of asset returns, it is possible to solve for the fair deposit insurance premium or deposit credit risk premium $h_t$ as function of the current asset to deposit ratio $x_t$
-\item date $t$ quantity of deposits is denoted $D_t$
-\item since the bank is assumed to be closed by the deposit insurer whenever $x_t \leq 1$, if $x_t$ reaches 1 following continuous movement of the bank assets, the bank is closed with $A_{t_{b}}=D_t$ and depositors suffer no loss 
-\item depositors experience losses only following downward jump in asset value that exceeds the bank's capital
-\item if such a jump does occur at date $\hat{t}$, the instantaneous proportional loss to deposits is $\left(D_t - Y_{q_{t^{-}}} A_{\hat{t^{-}}}  \right) / D_t$
-\item credit risk premium on the instantaneous-maturity deposits, $h_t$, which depends on the asset-to-deposit ratio, equals:
-\end{itemize}
+Note that $\kappa$ is the speed of convergence, $\bar{r}$ is the long-run equilibrium interest rate, $r_t$ is the continuous short-term interest rate, $\sigma_r$ is the instantaneous volatility and $d\zeta$ is a Brownian motion.\\
+
+A zero bond can be priced using the \citet{cox1985theory} specifications under the no-arbitrage assumption. This implies that the price of a risk-free zero bond at time t that pays the amount of \EUR $1$ in $\tau = T - t$ is given by:
+\begin{align} \label{zerobondprice}
+P\left( r_t, \tau \right) = A\left(\tau \right) \exp\left[ - B\left( \tau \right) r_t \right]
+\end{align}
+
+with
+\begin{align}
+A\left( \tau \right) &= \left\{ \dfrac{2\theta \exp{\left[ \left(\theta + \kappa \right) \dfrac{\tau}{2}\right] } }{ \left( \theta + \kappa \right) \left[ \exp\left( \theta \tau \right) - 1 \right] +2 \theta} \right\}^{2 \kappa \bar{r} / \sigma_r^2 }\nonumber
+\end{align}
 
 \begin{align}
+B\left(\tau \right) &= \dfrac{2 \left[ \exp\left( \theta \tau \right) -1 \right]}{\left( \theta + \kappa \right) \left[ \exp\left( \theta \tau \right) -1 \right] +2\theta } \nonumber
+\end{align}
+
+\begin{align}
+\theta = \sqrt{\kappa^2 + 2 \sigma_r^2}\nonumber
+\end{align}
+
+The cost of replication of a risk-free coupon bond that pays a continuous coupon of $c_r dt$ is equal to a set of zero bonds which can be priced with equation \ref{zerobondprice}. Therefore, the fair coupon rate $c_r $ of such a coupon bond at time $t$, which is issued at par, equals:
+\begin{align}
+c_r &= \dfrac{1-A\left( \tau \right) \exp\left[ - B\left( \tau \right) r_t \right]}{\int_0^{\tau} A \left( s \right) \exp\left[ -B\left(s\right) r_t \right] ds}\nonumber \\
+&\approx \dfrac{1- A\left( \tau \right)\exp\left[ -B \left( \tau \right) r_t \right]}{\sum_{i=1}^{i=n} A\left( \Delta t \times i \right) \exp\left[ -B \left( \Delta t \times i \right) r_t \right] \Delta t}
+\end{align}
+
+with
+\begin{align}
+n &= \dfrac{\tau}{\Delta t}
+\end{align}
+
+\subsubsection*{Deposits and Insurance Premium}
+Bank deposits are not riskless because depositors may suffer losses if a bank's asset value $A_t$ is worth less than the deposits $D_t$. That said, one can assume that a bank is closed by the deposit insurer when the asset-to-deposit ratio $x_t$ is less or equal to one. A bank might become distressed due to continuous downward movements in its asset value. Then, the bank will be shut down with $A_{t_{b}}=D_t$ and subsequently, depositors will not face any loss. However, depositors may experience severe losses when a downward jump in asset value happens at a discrete point in time, $\hat{t}$. It may be that the downward jump in asset value exceeds the bank's capital. If such a jump occurs the instantaneous proportional loss to deposits will equal $\left(D_t - Y_{q_{t^{-}}} A_{\hat{t^{-}}}  \right) / D_t$.\\
+
+The fair deposit insurance premium $h_t$ for deposit holders can be derived with equation \ref{insurancepremium}. The equation illustrates that $h_t$ is closely related to the asset-to-deposit ratio $x_t$:
+\begin{align} \label{insurancepremium}
  h_t &=  \lambda \left[ \Phi\left( -d_1 \right) - x_{t^{-}} \exp\left( \mu_y + \dfrac{1}{2} \sigma_y^2 \right) \Phi\left( -d_2 \right)    \right]
 \end{align}
 with
@@ -288,41 +372,96 @@ d_1 &= \dfrac{\ln\left( x_{t^{-}}\right) + \mu_y}{\sigma_y}\\
 d_2 &= d_1 + \sigma_y
 \end{align}
 
-% Intro Deposit
-\begin{itemize}
-\item bank pays interest to the insured depositors at the competitive, instantaneous-maturity default-free rate, $r_t$
-\item other deposits may be uninsured and are paid the competitive, default-free interest rate, $r_t$, plus the fair credit risk premium, $h_t$
-\item in either the case of insured or uninsured deposits, the bank is assumed to continuously pay out total interest and deposit premiums of $\left( r_t + h_t \right) D_t dt$
-\end{itemize}
-
-\begin{itemize}
-\item with interest and insurance premiums paid out continuously, the bank's total quantity of deposits changes only due to growth in net new deposits (deposit inflows or outflows), which are no directly related to accrual of interest and premiums
-\item because empirical evidence such as \citet{adrian2010liquidity} finds that banks have target capital ratios and deposit growth expands when banks have excess capital, the model assumes that deposit growth is positively related to the bank's current asset-to deposit ratio, defined as $x_t = A_t / D_t$
-\end{itemize}
-
+The model assumes that a bank pays continuously a total interest and deposit premium of $\left( r_t + h_t \right) D_t dt$ to each depositor. Hence, one can recognize that the deposits of the bank change only because of comparatively higher deposit inflows than outflows. Empirical research of \citet{adrian2010liquidity} suggests that banks have a target capital ratio and that deposit growth is positively related to the bank's current asset-to deposit ratio:
 \begin{align}\label{depositgrowthprocess}
-\dfrac{dD_t}{D_t} &= g\left(\hat{x} - x_t \right)dt
+\dfrac{dD_t}{D_t} &= g\left(x_t -\hat{x} \right)dt
 \end{align}
 
-\begin{itemize}
-\item $g$ is a positive constant
-\item $\hat{x} > 1$ is a target asset-to-deposit ratio
-\item when the actual asset-to-deposit ratio exceeds its target, $x_t > \hat{x}$, the bank issues positive amounts of net new deposits
-\item when $x_t < \hat{x}$ the bank is gradually shrinking its balance sheet
-\item thus, deposit growth rate per unit time, $g\left( x_t - \hat{x} \right)$, creates a mean-reverting tendency for the bank's asset-to-deposit ratio, $x_t$ 
-\end{itemize}
+$\hat{x} > 1$ is a bank's target asset-to-deposit ratio with $g$ being a positive constant. Whenever the actual asset-to-deposit ratio is higher than its target, $x_t > \hat{x}$, a bank will shrink its balance sheet. Thus, the deposit growth rate $g\left( x_t - \hat{x} \right)$ in the time interval $dt$, leads to a mean-reverting tendency for the bank's asset-to-deposit ratio $x_t$.
 
-% Outro
+\subsubsection*{Equity and Conversion Threshold}
 
-\subsubsection{Contingent Convertible Capital}
+As stated originally, the conversion of a CoCo at time $t_c$ occurs when the asset-to-deposit ratio $x_{t_c}$ meets the trigger level $\bar{x}_{t_c}$. The conversion threshold can also be expressed relative to the original equity-to-deposits ratio $\bar{e}$. This is favourable because the equity value is directly observable in the market whereas the asset value is not. The relationship between the equity threshold $\bar{e}$ and the asset-to-deposit threshold $\bar{x}_{t_c}$ can be summarized as follows:
+\begin{align}
+\bar{e} &= \dfrac{E_{t_c}}{D_{t_c}} = \dfrac{A_{t_c} - D_{t_c} - pB}{D_{t_c}} = \bar{x}_{t_c} - 1 - p b_{t_c}
+\end{align}
 
-\begin{itemize}
-\item biggest challenge is the accurate estimation of the valuation parameters that drive the stochastic processes\citep{de2014handbook} because input factors are often unobservable variables
-\end{itemize}
+Hence, it is possible to specify exactly the conversion trigger of a CoCo bond. This will be important for the valuation part.
 
-\subsection{Data Requirements and Calibration}
+\subsubsection*{CoCos}
+The valuation of a CoCo can be accomplished with a Monte Carlo simulation of both the asset and the deposit process. Along the asset-to-deposit ratio process, the CoCo pays coupons and the nominal at maturity unless the CoCo has not been triggered. If the trigger event occurs the conversion amount is paid out. \citep{wilkens2014contingent} The price of the CoCo $V^{st}$ is equal to the risk-neutral expectation of the aforementioned cashflows as derived by \citet{pennacchi2010structural}:
+\begin{align}
+V_0^{st} &= E_0^{\mathbb{Q}} \left[ \int_0^T \exp\left(-\int_0^t r_s ds\right) v\left( t \right) dt \right]
+\end{align}
 
-\subsection{Pricing Example}
+Please note that $v(t)$ stands for a CoCo's coupon payment at date $t$ which equals $c_t B$ as long as the CoCo has not been triggered. If the CoCo does not convert until maturity $T$, a final payout of $B$ will be performed. However, if the CoCo triggers early at time $t_c$, there is the one-time cashflow of $pB$. Parameter $p$ determines the maximum conversion amount of new equity per par value of contingent capital. Thereafter, $v(t)$ is zero.
 
+\subsection{Parameter Classification and Adjustment}
+
+%\begin{itemize}
+%\item biggest challenge is the accurate estimation of the valuation parameters that drive the stochastic processes\citep{de2014handbook} because input factors are often unobservable variables
+%\end{itemize}
+
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{cp{8cm}ll}
+		\toprule
+			 & Description & Usage & Source \\
+		\midrule
+			$T$ & CoCo maturity & Static input & Term sheet\\
+			$B$ & CoCo nominal & Static input & Term sheet \\
+			$c$ & CoCo coupon rate & Static input & Term sheet\\ 
+			$p$ & CoCo nominal conversion factor & Static input & Term sheet \\
+			$x_0$ &Initial asset-to-deposit ratio & Dynamic input & Balance sheet\\
+			$\hat{x}$ & Target asset-to-deposit ratio & Static input & Assumption \\
+			$g$ & Mean-reversion speed & Static input & Assumption  \\
+			$\sigma$ & Annual asset return volatility & Static input & Assumption \\
+			$\lambda$ & Jump intensity in asset return process & Static input  &  Assumption  \\			
+			$\mu_y$ & Mean jump size in asset return process & Static input & Assumption\\
+			$\sigma_y$ & Jump volatility in asset return process & Static input & Assumption \\		
+			$r_0$ & Initial risk-free interest rate & Dynamic input & Market data \\
+			$\bar{r}$ & Long-term risk-free interest rate & Static input & Market data\\
+			$\sigma_r$ &Interest rate volatility & Static input &  Market data \\
+			$\kappa$ & Speed of convergence & Static input & Assumption \\
+			$\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Static input & Market data \\ % This is approximately the long-run daily correlation between Treasury bill yields and the S&P 500
+			$\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & Balance sheet \\
+			$b_0$ & Ratio of the contingent capital's nominal to the initial value of deposits & Dynamic input & Balance sheet \\
+		\bottomrule
+	\end{tabular}
+	\caption[Parameter Classification of the Structural Approach]{Parameter Classification of the Structural Approach \citep{wilkens2014contingent}}
+\end{table}
+
+\subsection{Model Application}
+
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{lrp{10cm}}
+		\toprule
+			 & Value & Comment \\
+		\midrule
+			$T$ & $10$yrs & Maturity \\
+			$B$ & $100.00\%$ & Nominal \\
+			$c$ & $6.00\%$ & Annual coupon rate \\
+			$p$ & $1$ & Nominal conversion factor\\
+			$x_0$ & $1.15$ & Initial asset-to-deposit ratio\\
+			$\hat{x}$ & $1.1$ & Target asset-to-deposit ratio\\
+			$g$ & $0.5$ & Mean-reversion speed \\
+			$\sigma$ & $2.00\%$ & Annual asset return volatility \\
+			$\lambda$ & $1$& Jump intensity in asset return process\\			
+			$\mu_y$ &$-1.00\%$ & Mean jump size in asset return process\\
+			$\sigma_y$ &$2.00\%$ & Jump volatility in asset return process\\		
+			$r_0$ & $1.00 \%$ & Risk-free interest rate\\
+			$\bar{r}$ & $ 6.90\%$ & Long-term risk-free interest rate\\
+			$\sigma_r$ & $7.00\%$ & Interest rate volatility \\
+			$\kappa$ & $11.40\%$ & Speed of convergence \\
+			$\rho$ & $-20.00\%$ & Correlation between Brownian motion for asset returns and interest rate process\\
+			$\bar{e}$ & $2.00\%$ & Conversion threshold of the market value of original shareholders' equity to deposit value\\
+			$b_0$ & $4.00\%$ & Ratio of contingent capital's nominal to the initial deposit value\\
+		\bottomrule
+	\end{tabular}
+	\caption[Parameter Specification of Structural Approach Application]{Parameter Specification of Structural Approach Application \citep{alvemar2012modelling, pennacchi2010structural}}
+\end{table}
 
 

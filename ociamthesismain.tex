@@ -12,6 +12,12 @@
 \usepackage{listings}
 \usepackage{color}
 
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{siunitx}
+
+\usepackage{eurosym}
+
 \usepackage{enumerate}
 \usepackage{amsmath}
 \usepackage{bbm}
@@ -20,6 +26,8 @@
 
 \usepackage{graphicx}
 \usepackage{caption}
+
+\usepackage{float}
 
 \newcommand*{\captionsource}[2]{%
   \caption[{#1}]{%
@@ -32,6 +40,28 @@
 \usepackage[round]{natbib}
 
 \usepackage{pgfplots}
+\usepgfplotslibrary{external}
+\usepgfplotslibrary{patchplots}
+\usepgfplotslibrary{units}
+
+\pgfplotsset{
+  xpercent/.style={
+    change x base,
+    x SI prefix = centi,
+    xticklabel  = {\pgfmathprintnumber{\tick}\,\%},
+  },
+  ypercent/.style={
+    change y base,
+    y SI prefix = centi,
+    yticklabel  = {\pgfmathprintnumber{\tick}\,\%},
+  },
+  zpercent/.style={
+    change z base,
+    z SI prefix = centi,
+    zticklabel  = {\pgfmathprintnumber{\tick}\,\%},
+  },
+}
+
 \pgfplotsset{compat=1.12}
  
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -89,13 +119,14 @@
 
 \maketitle                  % create a title page from the preamble info
 
-\include{text/dedication}        % include a dedication.tex file
+%\include{text/dedication}        % include a dedication.tex file
 %\include{text/acknowlegements}   % include an acknowledgements.tex file
 \include{text/abstract}          % include the abstract
 
 \begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
-\listoffigures              % generate and include a list of figures
+\listoffigures	 % generate and include a list of figures
+\listoftables
 \end{romanpages}            % end roman page numbering
 
 %now include the files of latex for each of the chapters etc

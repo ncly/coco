@@ -153,5 +153,5 @@ get_price <- function(npath, n, dt, dW_1, dW_2corr, r, mu_Y, sigma_Y, lambda, g,
 }
 
 # Pricing Example
-price_coco_sa(T = 5, npath = 2, rho = - 0.2, kappa = 0.114, r_bar = 0.069, r0 = 0.035, sigma_r = 0.07, mu_Y = -0.01, sigma_Y = 0.02, lambda = c(1), g = c(0.5), x_hat = 1.1, b0 = 0.04, p = 1, e_bar = 0.02, sigma_x = 0.02, x0_low = 1.15, x0_high = 1.15, x0_nint = 10, B = 1, c_low = 0.05, c_high = 0.05, c_nint = 10)
+price_coco_sa(T <- 10, npath <- 100000, rho <- - 0.2, kappa <- 0.114, r_bar <- 0.069, r0 <- 0.01, sigma_r <- 0.07, mu_Y <- -0.01, sigma_Y <- 0.02, lambda <- c(1), g <- c(0.5), x_hat <- 1.1, b0 <- 0.04, p <- 1, e_bar <- 0.02, sigma_x <- 0.02, x0_low <- 1.15, x0_high <- 1.15, x0_nint <- 10, B <- 1, c_low <- 0.06, c_high <- 0.06, c_nint <- 10)
 
