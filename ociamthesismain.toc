@@ -32,7 +32,7 @@
 \contentsline {chapter}{\numberline {4}Dynamics and Sensitivity Analysis}{22}
 \contentsline {section}{\numberline {4.1}Credit Derivative Approach}{22}
 \contentsline {section}{\numberline {4.2}Equity Derivative Approach}{25}
-\contentsline {section}{\numberline {4.3}Structural Approach}{28}
+\contentsline {section}{\numberline {4.3}Structural Approach}{27}
 \contentsline {chapter}{\numberline {5}Empirical Analysis and Model Comparison}{33}
 \contentsline {section}{\numberline {5.1}Data Description}{33}
 \contentsline {subsection}{\numberline {5.1.1}Deutsche Bank}{33}

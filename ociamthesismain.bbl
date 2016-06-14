@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -127,7 +127,7 @@ George Pennacchi.
 Quantnet.
 \newblock Translate gauss code to r code, 2011.
 \newblock URL
-  \url{https://www.quantnet.com/threads/translate-gauss-code-to-r-code.7784/}.
+  \url{www.quantnet.com/threads/translate-gauss-code-to-r-code.7784/}.
 
 \bibitem[Rubinstein and Reiner(1991)]{rubinstein1991unscrambling}
 Mark Rubinstein and Eric Reiner.
@@ -138,6 +138,12 @@ Mark Rubinstein and Eric Reiner.
 Wolfgang Schmidt.
 \newblock Credit risk, default models and credit derivatives.
 \newblock Frankfurt School of Finance and Management, 2015.
+
+\bibitem[Shekel(2015)]{amazonrstudio}
+Liad Shekel.
+\newblock Rstudio server on amazon ec2, 2015.
+\newblock URL \url{r-israel.com/wp-content/
+  uploads/2015/06/Rstudio-in-AWS-16_9.pdf}.
 
 \bibitem[Su and Rieger(2009)]{su2009likely}
 Lujing Su and Marc~Olivier Rieger.
