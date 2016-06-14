@@ -2,8 +2,146 @@
 
 \section{Credit Derivative Approach}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[view={10}{190}, height=12cm, width=13cm, grid=both, ypercent, z dir=reverse,
+    xlabel={$Share$ $Price$}, ylabel={$Implied$ $Volatility$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_CD_S_sigma.txt};
+    \end{axis}
+  \end{tikzpicture}
+  \caption[CoCo price $V^{cd}$ as function of share price and implied volatility]{CoCo price $V^{cd}$ pursuant to the credit derivative approach \citep{de2011pricing} as function of share price $S$ and implied volatility $\sigma$}
+  \end{figure}
+  
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, ypercent, y dir = reverse,
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_CD_T_r.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{cd}$ as function of maturity and interest rate]{CoCo price $V^{cd}$ pursuant to the credit derivative approach \citep{de2011pricing} as function of maturity $T$ and risk-free interest rate $r$}
+  \end{figure}
+
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
+    xlabel={$Trigger$ $Price$}, ylabel={$Conversion$ $Price$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, xtickmin=22]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_CD_Sstar_Cp.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{cd}$ as function of trigger price and conversion volatility]{CoCo price $V^{cd}$ pursuant to the credit derivative approach \citep{de2011pricing} as function of trigger price $S^*$ and conversion price $C_p$}
+  \end{figure}
+
 \section{Equity Derivative Approach}
 
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+    \begin{axis}[view={10}{190}, height=12cm, width=13cm, grid=both, ypercent, z dir=reverse,
+    xlabel={$Share$ $Price$}, ylabel={$Implied$ $Volatility$}, zlabel={$Theoretical$ $Price$}
+    ,xlabel style={sloped like x axis}, ylabel style={sloped}]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_ED_S_sigma.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{ed}$ as function of share price and implied volatility]{CoCo price $V^{ed}$ pursuant to the equity derivative approach \citep{de2011pricing} as function of share price $S$ and volatility $\sigma$}
+  \end{figure}
+ 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+    \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, ypercent, y dir = reverse,
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_ED_T_r.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{ed}$ as function of maturity and interest rate]{CoCo price $V^{ed}$ pursuant to the credit derivative approach \citep{de2011pricing} as function of maturity $T$ and risk-free interest rate $r$}
+  \end{figure}
+  
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
+    xlabel={$Trigger$ $Price$}, ylabel={$Conversion$ $Price$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_ED_Sstar_Cp.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{ed}$ as function of trigger price and conversion price]{CoCo price $V^{ed}$ pursuant to the credit derivative approach \citep{de2011pricing} as function of trigger price $S^*$ and conversion price $C_p$}
+  \end{figure}
+
+
 \section{Structural Approach}
+%CoCo price V^st as function of initial asset-to-deposit ratio x_0 and volatility sigma
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Asset$ $Volatility$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_sigma.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility]{CoCo price $V^{sa}$ pursuant to the structural approach \citep{pennacchi2010structural} as function of initial asset-to-deposit ratio $x_0$ and asset volatility $\sigma$}
+  \end{figure}
+
+%CoCo price V^st as function of maturity T and risk-free interest rate r
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_SA_T_r.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility]{CoCo price $V^{sa}$ pursuant to the structural approach \citep{pennacchi2010structural} as function of maturity $T$ and interest rate $r$}
+  \end{figure}
+
+%CoCo price V^st as function of initial asset-to-deposit ratio x_0 and equity-to-deposit threshold ebar
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Equity$-$to$-$Deposit$ $Threshold$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_ebar.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility]{CoCo price $V^{sa}$ pursuant to the structural approach \citep{pennacchi2010structural} as function of initial asset-to-deposit ratio $x_0$ and equity-to-deposit threshold $\bar{e}$}
+  \end{figure}
+
+%CoCo price V^st as function of initial asset-to-deposit ratio x_0 and jump intensity in asset return process lambda
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Jump$ $Intensity$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ytickmin=1, xtickmin=1.08]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_lambda.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{sa}$ as function of asset-to-deposit ratio and jump intensity]{CoCo price $V^{sa}$ pursuant to the structural approach \citep{pennacchi2010structural} as function of initial asset-to-deposit ratio $x_0$ and jump intensity $\lambda$}
+  \end{figure}
+
+%CoCo price V^st as function of initial asset-to-deposit ratio x_0 and initial ratio of contingent capital's nominal to the initial value of deposits
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Nominal$-$to$-$Deposit$ $Ratio$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, ytickmin=0.08, xtickmin=1.08]
+      \addplot3[surf] 
+      	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_b0.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price $V^{sa}$ as function of asset-to-deposit ratio and initial ratio of contingent capital's nominal to deposits]{CoCo price $V^{sa}$ pursuant to the structural approach \citep{pennacchi2010structural} as function of initial asset-to-deposit ratio $x_0$ and initial ratio of contingent capital's nominal to the initial value of deposits}
+  \end{figure}
 
 
