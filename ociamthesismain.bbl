@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -33,6 +33,13 @@ Markus~PH Buergi.
   in practice.
 \newblock \emph{Financial Markets and Portfolio Management}, 27\penalty0
   (1):\penalty0 31--63, 2013.
+
+\bibitem[Calomiris and Herring(2013)]{calomiris2013design}
+Charles~W Calomiris and Richard~J Herring.
+\newblock How to design a contingent convertible debt requirement that helps
+  solve our too-big-to-fail problem.
+\newblock \emph{Journal of Applied Corporate Finance}, 25\penalty0
+  (2):\penalty0 39--62, 2013.
 
 \bibitem[Cox et~al.(1985)Cox, Ingersoll~Jr, and Ross]{cox1985theory}
 John~C Cox, Jonathan~E Ingersoll~Jr, and Stephen~A Ross.
@@ -75,6 +82,11 @@ Paul Glasserman and Behzad Nouri.
 \newblock \emph{Management Science}, 58\penalty0 (10):\penalty0 1816--1833,
   2012.
 
+\bibitem[Haldane(2011)]{haldane2011capital}
+Andrew~G Haldane.
+\newblock Capital discipline.
+\newblock In \emph{American Economic Association Meeting}, volume~9, 2011.
+
 \bibitem[Henriques and Doctor(2011)]{henriques2011making}
 Roberto Henriques and Saul Doctor.
 \newblock Making cocos work: Structural and pricing considerations for
@@ -84,7 +96,7 @@ Roberto Henriques and Saul Doctor.
 \bibitem[Hilscher and Raviv(2014)]{hilscher2014bank}
 Jens Hilscher and Alon Raviv.
 \newblock Bank stability and market discipline: The effect of contingent
-  capital on risk taking and default probability.
+  capital on risk taking and fault probability.
 \newblock \emph{Journal of Corporate Finance}, 29:\penalty0 542--560, 2014.
 
 \bibitem[Hull(2006)]{hull2006options}
@@ -110,12 +122,24 @@ Dilip~B Madan and Wim Schoutens.
 \newblock \emph{Mathematics and Financial Economics}, 4\penalty0 (2):\penalty0
   87--106, 2011.
 
+\bibitem[McDonald(2013)]{mcdonald2013contingent}
+Robert~L McDonald.
+\newblock Contingent capital with a dual price trigger.
+\newblock \emph{Journal of Financial Stability}, 9\penalty0 (2):\penalty0
+  230--241, 2013.
+
 \bibitem[Merton(1974)]{merton1974pricing}
 Robert~C Merton.
 \newblock On the pricing of corporate debt: The risk structure of interest
   rates.
 \newblock \emph{The Journal of Finance}, 29\penalty0 (2):\penalty0 449--470,
   1974.
+
+\bibitem[Pazarbasioglu et~al.(2011)Pazarbasioglu, Zhou, Le~Lesle, and
+  Moore]{pazarbasioglu2011contingent}
+Ceyla Pazarbasioglu, Ms~Jian-Ping Zhou, Vanessa Le~Lesle, and Michael Moore.
+\newblock \emph{Contingent capital: economic rationale and design features}.
+\newblock International Monetary Fund, 2011.
 
 \bibitem[Pennacchi(2010)]{pennacchi2010structural}
 George Pennacchi.
@@ -142,8 +166,14 @@ Wolfgang Schmidt.
 \bibitem[Shekel(2015)]{amazonrstudio}
 Liad Shekel.
 \newblock Rstudio server on amazon ec2, 2015.
-\newblock URL \url{r-israel.com/wp-content/
+\newblock URL \url{www.r-israel.com/wp-content/
   uploads/2015/06/Rstudio-in-AWS-16_9.pdf}.
+
+\bibitem[{Squam Lake Working Group}(2009)]{squam2009expedited}
+{Squam Lake Working Group}.
+\newblock An expedited resolution mechanism for distressed financial firms:
+  Regulatory hybrid securities.
+\newblock \emph{Council on Foreign Relations}, 10, 2009.
 
 \bibitem[Su and Rieger(2009)]{su2009likely}
 Lujing Su and Marc~Olivier Rieger.
@@ -156,6 +186,12 @@ Suresh Sundaresan and Zhenyu Wang.
 \newblock On the design of contingent capital with a market trigger.
 \newblock \emph{The Journal of Finance}, 70\penalty0 (2):\penalty0 881--920,
   2015.
+
+\bibitem[Valukas(2010)]{valukas2010report}
+Anton Valukas.
+\newblock Report of anton r. valukas, examiner for united states bankruptcy
+  court, southern district of new york, volume 5, march.
+\newblock 2010.
 
 \bibitem[Wilkens and Bethke(2014)]{wilkens2014contingent}
 Sascha Wilkens and Nastja Bethke.

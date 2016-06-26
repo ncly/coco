@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  15 JUN 2016 00:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  26 JUN 2016 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1217,24 +1217,21 @@ ts.units.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
-(./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
-(./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix1.aux)
-(./text/appendix2.aux))
+(./ociamthesismain.aux)
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 374.
+LaTeX Font Info:    ... okay on input line 374.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1371,11 +1368,11 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
 
 \c__siunitx_mathsf_int=\count195
-LaTeX Font Info:    Try loading font information for U+msa on input line 112.
+LaTeX Font Info:    Try loading font information for U+msa on input line 374.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 112.
+LaTeX Font Info:    Try loading font information for U+msb on input line 374.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1385,7 +1382,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <fslogo.jpeg, id=4, 513.92pt x 513.92pt>
 File: fslogo.jpeg Graphic file (type jpg)
  <use fslogo.jpeg>
-Package pdftex.def Info: fslogo.jpeg used on input line 123.
+Package pdftex.def Info: fslogo.jpeg used on input line 385.
 (pdftex.def)             Requested size: 91.04881pt x 91.04303pt.
  [1
 
@@ -1395,35 +1392,100 @@ o.jpeg>]
 \openout2 = `text/abstract.aux'.
 
 
-(./text/abstract.tex [2
+(./text/abstract.tex
+
+Package natbib Warning: Citation `pennacchi2010structural' on page 2 undefined 
+on input line 2.
 
 
-]) (./ociamthesismain.toc [1
+Package natbib Warning: Citation `de2011pricing' on page 2 undefined on input l
+ine 2.
+
+[2
 
 
-
-])
+]) (./ociamthesismain.toc)
 \tf@toc=\write4
 \openout4 = `ociamthesismain.toc'.
 
- [2]
-(./ociamthesismain.lof)
+ [1
+
+
+
+] (./ociamthesismain.lof)
 \tf@lof=\write5
 \openout5 = `ociamthesismain.lof'.
 
- [3
+ [2
 
-] (./ociamthesismain.lot)
+]
+(./ociamthesismain.lot)
 \tf@lot=\write6
 \openout6 = `ociamthesismain.lot'.
 
- [4
+ [3
 
 ]
 \openout2 = `text/chapter1.aux'.
 
  (./text/chapter1.tex
 Chapter 1.
+
+Package natbib Warning: Citation `schmuddel2016' on page 1 undefined on input l
+ine 23.
+
+
+Package natbib Warning: Citation `schmuddel2016' on page 1 undefined on input l
+ine 23.
+
+
+Package natbib Warning: Citation `pennacchi2010structural' on page 1 undefined 
+on input line 35.
+
+
+Package natbib Warning: Citation `de2011pricing' on page 1 undefined on input l
+ine 35.
+
+
+Package natbib Warning: Citation `de2011pricing' on page 1 undefined on input l
+ine 35.
+
+
+Package natbib Warning: Citation `glasserman2012contingent' on page 1 undefined
+ on input line 36.
+
+
+Package natbib Warning: Citation `henriques2011making' on page 1 undefined on i
+nput line 36.
+
+
+Package natbib Warning: Citation `madan2011conic' on page 1 undefined on input 
+line 37.
+
+
+Package natbib Warning: Citation `albul2010contingent' on page 1 undefined on i
+nput line 38.
+
+
+Package natbib Warning: Citation `sundaresan2015design' on page 1 undefined on 
+input line 39.
+
+
+Package natbib Warning: Citation `hilscher2014bank' on page 1 undefined on inpu
+t line 40.
+
+
+Package natbib Warning: Citation `buergi2013pricing' on page 1 undefined on inp
+ut line 41.
+
+
+Package natbib Warning: Citation `erismann2015pricing' on page 1 undefined on i
+nput line 44.
+
+
+Package natbib Warning: Citation `erismann2015pricing' on page 1 undefined on i
+nput line 44.
+
 [1
 
 
@@ -1433,242 +1495,167 @@ Chapter 1.
 
  (./text/chapter2.tex
 Chapter 2.
-<media/basel3.pdf, id=38, 273.2633pt x 93.85353pt>
-File: media/basel3.pdf Graphic file (type pdf)
- <use media/basel3.pdf>
-Package pdftex.def Info: media/basel3.pdf used on input line 7.
-(pdftex.def)             Requested size: 264.72678pt x 88.16245pt.
-
-<media/anatomy.pdf, id=39, 597.432pt x 844.95674pt>
+<media/anatomy.pdf, id=33, 597.432pt x 844.95674pt>
 File: media/anatomy.pdf Graphic file (type pdf)
  <use media/anatomy.pdf>
-Package pdftex.def Info: media/anatomy.pdf used on input line 15.
+Package pdftex.def Info: media/anatomy.pdf used on input line 9.
 (pdftex.def)             Requested size: 221.89723pt x 178.07503pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
 
+
+Package natbib Warning: Citation `de2014handbook' on page 3 undefined on input 
+line 10.
+
+
+Package natbib Warning: Citation `de2014handbook' on page 3 undefined on input 
+line 10.
+
+
+Package natbib Warning: Citation `erismann2015pricing' on page 3 undefined on i
+nput line 23.
+
+
+LaTeX Warning: Reference `accountingtrigger' on page 3 undefined on input line 
+23.
+
+
+LaTeX Warning: Reference `markettrigger' on page 3 undefined on input line 23.
+
+
+LaTeX Warning: Reference `regulatorytrigger' on page 3 undefined on input line 
+23.
+
+
+LaTeX Warning: Reference `multivariatetrigger' on page 3 undefined on input lin
+e 23.
+
+[3
+
+
+
+ <./media/anatomy.pdf>]
+
+Package natbib Warning: Citation `de2014handbook' on page 4 undefined on input 
+line 37.
+
+
+Package natbib Warning: Citation `pazarbasioglu2011contingent' on page 4 undefi
+ned on input line 37.
+
+
+LaTeX Warning: Reference `cocoexamples' on page 4 undefined on input line 37.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Package natbib Warning: Citation `de2011pricing' on page 4 undefined on input l
+ine 39.
+
+
+Package natbib Warning: Citation `mcdonald2013contingent' on page 4 undefined o
+n input line 39.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+[4]
+
+Package natbib Warning: Citation `haldane2011capital' on page 5 undefined on in
+put line 41.
+
+
+Package natbib Warning: Citation `haldane2011capital' on page 5 undefined on in
+put line 41.
+
+
+Package natbib Warning: Citation `haldane2011capital' on page 5 undefined on in
+put line 41.
+
+
+Package natbib Warning: Citation `valukas2010report' on page 5 undefined on inp
+ut line 41.
+
+
+Package natbib Warning: Citation `pazarbasioglu2011contingent' on page 5 undefi
+ned on input line 41.
+
+
+Package natbib Warning: Citation `haldane2011capital' on page 5 undefined on in
+put line 45.
+
+
+Package natbib Warning: Citation `calomiris2013design' on page 5 undefined on i
+nput line 45.
+
+
+Package natbib Warning: Citation `haldane2011capital' on page 5 undefined on in
+put line 45.
+
+
+Package natbib Warning: Citation `pazarbasioglu2011contingent' on page 5 undefi
+ned on input line 45.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+
+ []
+
+
+Package natbib Warning: Citation `calomiris2013design' on page 5 undefined on i
+nput line 47.
+
+
+Package natbib Warning: Citation `pazarbasioglu2011contingent' on page 5 undefi
+ned on input line 47.
+
+[5]
+
+Package natbib Warning: Citation `erismann2015pricing' on page 6 undefined on i
+nput line 51.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Package natbib Warning: Citation `alvemar2012modelling' on page 6 undefined on 
+input line 53.
+
+
+Package natbib Warning: Citation `de2014handbook' on page 6 undefined on input 
+line 53.
+
+
+Package natbib Warning: Citation `squam2009expedited' on page 6 undefined on in
+put line 57.
+
+
+Package natbib Warning: Citation `erismann2015pricing' on page 6 undefined on i
+nput line 77.
+
+
+Package natbib Warning: Citation `erismann2015pricing' on page 6 undefined on i
+nput line 77.
+
+[6]
+
+LaTeX Warning: Reference `table:evaluationtrigger' on page 7 undefined on input
+ line 81.
+
+
+Package natbib Warning: Citation `haldane2011capital' on page 7 undefined on in
+put line 81.
+
+
+LaTeX Warning: Reference `examples' on page 7 undefined on input line 81.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
- [3
-
-
-
- <./media/basel3.pdf> <./media/anatomy.pdf>] [4]) [5]
-\openout2 = `text/chapter3.aux'.
-
- (./text/chapter3.tex
-Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-[6
-
-
-
-] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-[9]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 131.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
-File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-)
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
-
- []
-
-[10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
-
- []
-
-[12] [13] [14] <media/jumpprocess.pdf, id=182, 597.432pt x 844.95674pt>
-File: media/jumpprocess.pdf Graphic file (type pdf)
-
-<use media/jumpprocess.pdf>
-Package pdftex.def Info: media/jumpprocess.pdf used on input line 296.
-(pdftex.def)             Requested size: 221.89723pt x 155.31322pt.
- [15 <./media/jumpprocess.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
-
- []
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
-
- []
-
-[17] [18]
-Overfull \hbox (1.64731pt too wide) in paragraph at lines 408--432
- [][] 
- []
-
-[19] [20]) [21]
-\openout2 = `text/chapter4.aux'.
-
- (./text/chapter4.tex
-Chapter 4.
-PGFPlots: reading {code/createData_CD_S_sigma.txt}
-PGFPlots: reading {code/createData_CD_T_r.txt}
-[22
-
-
-
-]
-PGFPlots: reading {code/createData_CD_Sstar_Cp.txt}
- [23]
-PGFPlots: reading {code/createData_ED_S_sigma.txt}
- [24]
-PGFPlots: reading {code/createData_ED_T_r.txt}
- [25]
-PGFPlots: reading {code/createData_ED_Sstar_Cp.txt}
- [26]
-PGFPlots: reading {code/createData_SA_x0_sigma.txt}
- [27]
-PGFPlots: reading {code/createData_SA_T_r.txt}
- [28]
-PGFPlots: reading {code/createData_SA_x0_ebar.txt}
-
-Overfull \hbox (4.27757pt too wide) in paragraph at lines 119--120
- [][] 
- []
-
-[29]
-PGFPlots: reading {code/createData_SA_x0_lambda.txt}
- [30]
-PGFPlots: reading {code/createData_SA_x0_b0.txt}
-
-Overfull \hbox (1.94078pt too wide) in paragraph at lines 145--146
- [][] 
- []
-
-[31]) [32]
-\openout2 = `text/chapter5.aux'.
-
- (./text/chapter5.tex
-Chapter 5.
-) [33
-
-
-
-]
-\openout2 = `text/conclusions.aux'.
-
- (./text/conclusions.tex
-Chapter 6.
-) [34
-
-
-
-]
-\openout2 = `text/appendix1.aux'.
-
- (./text/appendix1.tex
-Appendix A.
-) [35
-
-
-
-]
-\openout2 = `text/appendix2.aux'.
-
- (./text/appendix2.tex
-Appendix B.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2014/09/06 1.5e listings language file
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2014/09/06 1.5e listings language file
-)
-(./code/CreditDerivativeApproach.R
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 2.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-) [36
-
-
-
-] [37]
-Appendix C.
-(./code/EquityDerivativeApproach.R [38
-
-] [39]) [40]
-Appendix D.
-(./code/StructuralApproach.R [41
-
-] [42] [43]) [44]
-Appendix E.
-(./code/DiagramsCreditDerivativeApproach.R [45
-
-])
-(./code/DiagramsEquityDerivativeApproach.R [46] [47])
-(./code/DiagramsStructuralApproach.R [48] [49])) [50] (./ociamthesismain.bbl
-[51
-
-
-]
-Underfull \hbox (badness 2753) in paragraph at lines 143--147
-[]\OT1/cmr/m/n/12 Liad Shekel.  Rstu-dio server on ama-zon ec2, 2015.  URL $r-[
-]israel . com /
- []
-
-[52]) [53] (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
-(./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
-(./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix1.aux)
-(./text/appendix2.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
-Here is how much of TeX's memory you used:
- 36144 strings out of 493089
- 859401 string characters out of 6134843
- 1319383 words of memory out of 5000000
- 38954 multiletter control sequences out of 15000+600000
- 16530 words of font info for 68 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 62i,16n,83p,10382b,2524s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bb
-m12.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
-x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on ociamthesismain.pdf (59 pages, 667844 bytes).
-PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+LaTeX F
