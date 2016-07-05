@@ -12,11 +12,14 @@
 \usepackage{listings}
 \usepackage{color}
 
+\usepackage{array}
+
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{siunitx}
 
 \usepackage{eurosym}
+
 
 \usepackage{enumerate}
 \usepackage{amsmath}
@@ -24,8 +27,13 @@
 
 \usepackage{verbatim}
 
+%\usepackage{url} % hyperref works too
+%\urlstyle{same}  % (sf also works, for something more subtle than tt)
+
 \usepackage{graphicx}
 \usepackage{caption}
+
+\usepackage[table]{xcolor}
 
 \usepackage{float}
 
@@ -45,6 +53,11 @@
 \usepgfplotslibrary{units}
 
 \usepackage{url} % hyperref works too
+\PassOptionsToPackage{hyphens}{url}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+%\usepackage[anythingbreaks]{breakurl}
+
+
 \urlstyle{same}  % (sf also works, for something more subtle than tt)
 
 \pgfplotsset{
