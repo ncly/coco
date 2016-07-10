@@ -1,60 +1,73 @@
-\chapter{Introduction and Motivation}
+\chapter{Introduction}
 
-\section{Introduction}
+\section{Background}
+Investors are overly restrictive in providing liquidity to financial institutions during periods of financial distress. In the past, governments were often in the situation to inject liquidity to financial markets in order to avoid disruptive insolvencies as no other market participant was inclined to do so. Government bailouts, however, externalize the cost of bankruptcy to taxpayers while distorting risk-taking incentives of banking professionals. Contingent convertibles (CoCos) aim to internalize these costs in the capital structure of systemically important financial institutions. CoCos are hybrid financial instruments that absorb losses pursuant to their specifications in case a pre-determined threshold fails to remain above a minimum trigger level. Then, debt automatically morphs to equity which instantly improves a bank's capitalization. Due to their loss-absorption capacity, CoCos are eligible to be categorized as regulatory capital. \citep{avdjiev2013cocos} \\
 
-Past Situation
+After the global financial crisis of 2008, regulators around the world have been working on two different objectives. On the one hand, they attempted to lower spillover effects on the economy due to bankruptcies of financial institutions. On the other hand, they tried to reduce the individual default probabilities of banks. The latter objective might be attained by ensuring that banks have enough loss absorbing capital on their balance sheet even in though times. \citep{de2011handbook} In this context, the Basel Committee on Banking Supervision (BCBS) specified that debt instruments are permitted as regulatory capital if losses are absorbed to such an extent that tax payers do not have to bear the costs. \citep{basel2011press} Subsequently, this opened the door for CoCos and ever since, the regulatory treatment has been a major driver of past issues.
 
-CoCo as Solution & Studies
+%Under Basel III, CoCos can be categorized as either Additional Tier 1 (AT1) or Tier 2 (T2) capital. Both types qualify to meet regulatory capital requirements. \citep{avdjiev2013cocos} But the BCBS requires both categories to inherit a trigger event that activates a loss-absorption mechanism. The trigger event is determined to be the earlier of either the decision of a regulatory authority to inject funds into a distressed bank or the decision that a financial institution is not viable without loss-absorption. In addition to this standard component a CoCo also features an automatic trigger which is based on regulatory capital ratios. \citep{de2014handbook} The terms and conditions ensure that losses are fully absorbed at the point of non-viability. \citep{basel2011press} \\
 
-CoCo under Basel III
+Besides the reforms of policy makers to raise the quality of regulatory capital, recent studies on CoCos highlight a number of advantages. \citet{albul2015contingent} show that CoCos lessen financial distress, whether caused by idiosyncratic or systemic shocks. They indicate lower default probabilities of banks and a smaller likelihood of costly bailouts by the public sector. \citet{hilscher2014bank} support these findings. Additionally, they argue that an appropriate specification of a CoCo's building parts can eliminate the incentives of shareholders to asset-substitution. The problem of asset-substitution arises when managers undertake excessively risky investment decisions to maximize shareholder value at the expense of debtholders. \citep{bannier2010} Research evinces that CoCos increase the firm value of their issuer as they reduce the cost of capital. \citep{albul2015contingent, von2011contingent, barucci2012countercyclical} From an academic standpoint, CoCos should be considered in the liability structure of banks.\\ 
+
+In addition to the positive perception of policy makers and academia, CoCos are well accepted by the financial industry. Banks value that the hybrid instrument enables them to refinance themselves while simultaneously satisfying the regulatory capital requirements at lower costs than with equity. \citep{europeanparliament2016} Between 2009 and 2015, financial institutions around the world issued CoCos worth USD 446.96 bn in 519 different issues. \citep{avdjiev2015coco} Albeit the amount of CoCos issued is relatively small compared to the market size of other financial products, they were brought into focus in early 2016. At this time, CoCos contributed to increased market volatility in view of some European banks (i.a. Deutsche Bank and Credit Suisse). The relevance of this episode concerning the potential systemic implications should not be whitewashed as it is likely that discussions on regulatory changes will emerge. Having regard to this circumstances, the question arises about the perception of CoCos by investors and the robustness of their pricing models. \citep{europeanparliament2016} \\
+
+In this context, an investigation and analysis of different valuation concepts for CoCos is highly interesting for both investors as well as supervisory authorities. The paper contributes to a better understanding of relevant concepts. Additionally, the valuation approaches will be applied to a CoCo which was affected by the turbulences in early 2016.
+
+%\begin{itemize}
+%\item between January 2009 and September 2015, banks around the world issued a total amount of USD 446.96 bn in CoCos through 519 different issues %\citep{avdjiev2015coco}
+%\subitem 53.9\% used principal write-down loss absorption, while the rest used conversion-to-equity %\citep{avdjiev2015coco}
+%\subitem 44.6\% were issued in USD, 18.1 \% in EUR and the rest in other currencies %\citep{avdjiev2015coco}
+%\subitem 54\% were classified as AT1, while 46\% were classified as Tier 2 %\citep{avdjiev2015coco}
+%\subitem the majority (57.1\%) were perpetual bonds (no set maturity), while most of the other (38.3\%) were bonds with a maturity of more than 10 years %\citep{avdjiev2015coco}
+%\subitem Finally, with regards to the trigger, almost half (48\%) of CoCos issued had a trigger between 4.5\% and 6\%, almost a fifth (18\%) used a higher trigger (>6\%) and almost a third (29.6\%) had no numerical trigger %\citep{avdjiev2015coco}
+%\end{itemize}
+
+
+%\begin{itemize}
+%\item CoCos are regarded positively both by the industry and by regulators. Banks appreciate the fact that this instrument allows them to fund themselves and satisfy their regulatory capital requirements at a lesser cost than with equity. Regulators note positively the fact that the instrument is designed to facilitate balance-sheet repair, or the orderly resolution of a bank, without the bank having to seek to issue extra equity under stressful conditions.\citep{europeanparliament2016}
+%\item Although the size of CoCos issued until now is still small in comparison with other financial instruments, they attracted media attention in early 2016, when they contributed to increasing market volatility around some EU issuing financial institutions. While the 'incident' was contained, its importance should not be downplayed. The possible systemic implications for European markets of a more serious episode should be considered. This raises questions about how investors understand CoCos, as well as the robustness of models that estimate their risks. CoCos are also likely to feature in discussions on possible regulatory changes to banks' capital requirements. \citep{europeanparliament2016}
+%\end{itemize}
+
+
+%Sundaresan 2015: Contingent capital (CC), which aims to internalize the costs of too-big-to-fail in the capital structure of large banks, has been under intense debate by policy makers and academics. We show that CC with a market trigger, in which direct stakeholders are unable to choose optimal conversion policies, does not lead to a unique competitive equilibrium unless value transfer at conversion is not expected ex ante. The ?no value transfer? restriction precludes penalizing bank managers for taking excessive risk. Multiplicity or absence of equilibrium introduces the potential for price uncertainty, market manipulation, inefficient capital allocation, and frequent conversion errors.
+
+%The regulatory treatment has been a major driver of past CoCo issues. 
+
+%\begin{table}[h]
+%	\centering
+%	\begin{tabular}{cl}
+%		\toprule
+%			Face Value in USD bn & Issuer \\
+%		\midrule
+%			3.75 & HSBC (GB) \\
+%			3.63 & UBS (CH) \\
+%			3.15 & Royal Bank of Scotland (GB) \\
+%			3.00 & Barclays (GB) \\
+%			2.70 & UBS (CH) \\
+%			2.50 & Credit Suisse (CH) \\
+%			2.50 & UBS (CH) \\
+%			2.45 & HSBC (GB) \\
+%			2.25 & ING (NL) \\
+%			2.06 & Banco Santander (ESP)\\
+%		\bottomrule
+%	\end{tabular}
+%	\caption[Largest CoCo issues in Europe]{Largest CoCo issues in Europe from 2010 to 2016 \citep{schmuddel2016}}
+%\end{table}
+
+\section{Previous Studies}
 
 \begin{itemize}
-\item regulators have been simultaneously working on two different fronts in the aftermath of the 2008 crisis
-\item first, they wanted to reduce the impact of a single bank failure on the rest of the economy
-\item second, they aimed to reduce the probability of a bank failure taking place
-\item this second goal can be achieved by making sure that banks are better equipped to weather a financial storm
-\item banks need to be more loss absorbing
-\item this can be achieved by increasing the amount of regulatory capital 
+\item pricing models for CoCo bonds proposed in literature can be grouped broadly into three main approaches
+\subitem structural approach
+\subitem equity derivative approach
+\subitem credit derivative approach
+\item the diversity of pricing models is due to the hybrid nature of CoCo bonds
+\item several studies have been conducted on these different model types
+\item a comprehensive overview of relevant papers can be found in table \ref{tbl:paper}
 \end{itemize}
-
-\begin{itemize}
-\item in 2011, the Basel Committee specified that a debt instrument can only be part of the regulatory capital if losses can be absorbed in such a way that tax-payers' money is not going to be needed to bail out banks {14}
-\item the loss absorption is triggered by an event which forces the bond to be either converted into common equity or written off
-\item according to the Basel Committee, the trigger event is the earlier of
-\subitem decision by the relevant authority to use public funds and inject these into the company without which this bank would become non-viable
-\subitem decision by the same relevant authority that the bank is no longer viable without a write-off on its debt
-\item in both cases the trigger is in the hands of a regulatory body that supervises the bank when the trigger mechanism is called a non-viability or regulatory trigger and is a standard component of any Tier 2 or Additional Tier 1 instrument issued in the Basel III framework
-\item on this non-viability trigger, contingent debt has an automatic trigger mechanism through incorporation of an accounting trigger in its terms and conditions
-\item when implementing Basel III into European law, CRD IV, has for example laid out a minimum level of 5.12 \% CET1.
-\end{itemize}
-
-Current Situation
-
-\begin{table}[h]
-	\centering
-	\begin{tabular}{cl}
-		\toprule
-			Face Value in USD bn & Issuer \\
-		\midrule
-			3.75 & HSBC (GB) \\
-			3.63 & UBS (CH) \\
-			3.15 & Royal Bank of Scotland (GB) \\
-			3.00 & Barclays (GB) \\
-			2.70 & UBS (CH) \\
-			2.50 & Credit Suisse (CH) \\
-			2.50 & UBS (CH) \\
-			2.45 & HSBC (GB) \\
-			2.25 & ING (NL) \\
-			2.06 & Banco Santander (ESP)\\
-		\bottomrule
-	\end{tabular}
-	\caption[Largest CoCo issues in Europe]{Largest CoCo issues in Europe from 2010 to 2016 \citep{schmuddel2016}}
-\end{table}
-
-\section{Literature Overview}
-
 
 \begin{table}[H]
+	\tiny
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
 	\begin{tabular}{>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}}
@@ -62,45 +75,112 @@ Current Situation
 			Structural Approach & Equity Derivative Approach & Credit Derivative Approach \\
 		\midrule
 			\citet{pennacchi2010structural} & \citet{de2011pricing} &  \citet{de2011pricing}\\
-			\citet{glasserman2012contingent}  & \citet{henriques2011making} & \\
-			\citet{madan2011conic}  &  &  \\
-			\citet{albul2010contingent}  &  &  \\
-			\citet{sundaresan2015design}  &  &  \\
+			\citet{albul2010contingent}  & \citet{henriques2011making} &  \citet{serjantov2011hybrid} as cited by \citet{wilkens2014contingent}\\
+			\citet{madan2011conic}  & \citet{alvemar2012modelling} &  \citet{alvemar2012modelling}\\
+			\citet{glasserman2012contingent} & \citet{teneberg2012equity} & \citet{erismann2015pricing}   \\
+			\citet{alvemar2012modelling}  & \citet{corcuera2014close} &  \\
+			\citet{buergi2013pricing} & \citet{erismann2015pricing}  &  \\
 			\citet{hilscher2014bank}  &  &  \\
-			\citet{buergi2013pricing} &  &  \\
+			\citet{pennacchi2015reexamination} & & \\
+			\citet{turfus2015cocos} & & \\
+			\citet{cheridito2015pricing} & & \\
+			\citet{erismann2015pricing} & & \\
+			\citet{sundaresan2015design} & & \\
 		\bottomrule
 	\end{tabular}
-	\caption[Literature overview of valuation approaches for CoCos] {Literature overview of valuation approaches for CoCos \citep{erismann2015pricing}}
+	\caption[Literature overview of valuation approaches for CoCos] {Literature overview of valuation approaches for CoCos \citep{wilkens2014contingent, erismann2015pricing}}
+	\label{tbl:paper}
 \end{table}
 
-\subsection{Structural Approaches}
-
-\subsection{Equity Derivative Approaches}
-
-\subsection{Credit Derivative Approaches}
-
-\section{Motivation}
 
 \begin{itemize}
-\item 
+\item structural approaches explicitly capture the typical trigger event and the purpose of CoCos as deleveraged tool
+\item attempts to capture the trigger event by modeling the CET1 
+\item equity derivative approaches mainly reflect the dependence on share price as an indicator of both the financial health of a company and the value transfer at conversion
+\item model the equity price, taking this as a proxy for the financial health of the company and hence of its Common Equity Tier 1 ratio
+\item credit derivative approaches encapsulate the fact that CoCo bonds are credit-risky debt, paying coupons until maturity or until trigger or default
+\item models an equity conversion intensity process analogous to a credit default intensity process
+\item neither pure equity nor credit derivative models, however, lend themselves easily to reflecting the capital ratio trigger
+\item the various pricing approaches are outlined in the following sections
 \end{itemize}
 
-
-\section{Methodology}
+\subsection*{Structural Approaches}
 
 \begin{itemize}
-\item in the wake of the new regulatory standards proposed by EU and the Basel Committee, an investigation and analysis on how to model the value of CoCos is of great interest for both investors and regulatory authorities
-\item study CoCos in detail to get a deeper knowledge about the pros and cons as well as an understanding on how to price these instruments
-\item we will go through three models on how to price CoCos thoroughly and also investigate the sensitivity of the chosen pricing frameworks
-\item will go through the building parts of a CoCo 
-\item Chapter 2 provides a comprehensive overview of CoCos and characteristic design features to introduce the qualitative framework needed to understand the behavior, the mechanisms and most importantly the risk drivers of a CoCo
-\item Real-life examples further substantiate the relevance of the framework
-\item we present and describe the structure of some of the CoCos issued so far 
-\item using this framework, the three mentioned pricing approaches are introduced in the following chapter both in a setting where returns are allowed to be discontinuous
-\item chapter four further outlines the data requirements and parametrization techniques of the models and provides first pricing examples
-\item in section 4 we carefully study the three chosen pricing frameworks and the modifications to increase accuracy
-\item Chapter 5 includes a dynamics and sensitivity analysis to assess the model behaviour with respect to different pricing and design parameters
-\item an empirical analysis follows in chapter 6, where the models are parametrized on one Deutsche Bank CoCo and the resulting price dynamics are qualitively and quantitavely compared to reach a conclusion and outlook in chapter 7
+\item because most of the CoCos issued to date have expressed their trigger thresholds in terms of a predetermined capital ratio, structural models provide a natural pricing framework that considers the institution's balance sheet structure as the main price driver
+\item these models are economically fundamental because they are based on modeling the institution's assets and liabilities with the difference representing the institutions capital
+\item structural models describe processes for the institution's assets and liabilities and impose contingent capital conversion into equity when the critical capital-to-assets threshold has been reached
+\item within this framework, bankruptcy occurs when the value of the institution's assets drops below the value of its liabilities
+\item several structural models have been proposed in the literature
+\item all share common features but differ, for example in their applications
+\item \citet{albul2010contingent} focused on optimal capital structure and asset-substitution incentives. Similarly, Albul et al. (2010) apply a structural model but do not primarily focus on the pricing but they use the default model by Leland (1994) to obtain closed-form expressions that allow them to study the effects of a CoCo issue on the capital structure decision of a firm. Furthermore, they investigate the risk of stock price manipulation depending on different implementation designs.
+\item \citet{glasserman2012contingent} considered CoCos that continuously convert sufficient nominal to maintain a capital ratio above the critical level. Glasserman and Nouri (2012) adapt a structural model to analyze contingent capital with a capital ratio trigger and on-going partial conversion, such that just enough debt is converted into equity to meet the minimum requirement. They arrive at closed form solutions for the market value of such securities in a setting where the assets are modeled as a Geometric Brownian Motion.
+\item \citet{pennacchi2010structural} applies such a structural model and values CoCos as claims contingent on assets. tThe model incorporates discontinuous asset returns, mean-reverting capital ratios and stochastic interest rates. This allows Pennacchi (2010) to calculate fair new issue yields depending on the debt-to-equity ratio at the time of issuance. One of the key findings of his work is that CoCos would in fact yield a riskless return if there were no jumps in the asset process. This structural model is able to include a sum of risk factors that have an impact on the value of the CoCo. However, the determination of the optimal parameter estimates is difficult in practice and has not been addressed by Pennacchi (2010).
+\item \citet{madan2011conic} incorporate the fact that assets and liabilities are both risky and employ conic finance techniques to introduce bid-ask-prices into their model. They argue that under the presence of risky liabilities the trigger should not be based on a core tier ratio but rather a trigger based on capital shortfall.
+\item \citet{alvemar2012modelling}
+\item \citet{buergi2013pricing} presents a structural framework that combines multiple aspects from theoretical and practical literature, allowing him to model tier 1 triggered CoCos by imposing that there is a linear relationship between straight and tier 1 equity ratios. The model reveals large pricing differences in a time series analysis on a Credit Suisse CoCo, concluding with the fact that the parametrization in any model is attached with a lot of uncertainty and that future CoCo issuances should be designed in the form of pure write-down bonds.
+\item \citet{hilscher2014bank} propose a tractable form of contingent capital and provide a closed form solution for its price in a structural model. They show that an appropriate CoCo design can mitigate the stockholders? incentives to risk-shift thus concluding that CoCos may cancel out negative effects of equity-based compensation schemes.
+\item \citet{pennacchi2015reexamination}
+\item \citet{turfus2015cocos}
+\item \citet{cheridito2015pricing}
+\item \citet{erismann2015pricing}
+\item \citet{sundaresan2015design} argue within a structural model that an implementation using equity based market triggers can lead to multiple equilibria and price manipulations. As a consequence they propose that the coupon payment of a CoCo must be floating and equal to the risk free rate, which on the one hand ensures that the bond trades at par during its lifetime and on the other hand eliminates a value transfer between share holders and CoCo holders.
 \end{itemize}
 
+\subsection*{Equity Derivative Approaches}
+
+\begin{itemize}
+\item main price driver is typically the share price of the company
+\item \citet{de2011pricing} replicated a CoCo via a straight bond, a knock-in forward, and a strip of binary down-and-in options
+\item the knock-in forward represents the trigger event, when the CoCo bondholder exchanges the bond for shares at a predetermined strike price 
+\item because the shares are received at the trigger date and thus before the original maturity, the representation as a forward is a simplification; this assumption is usually justified because the company will likely not pay any dividends for some time after the conversion
+\item the binary down-and-in options reflect the cancellation of the coupon payments after the conversion has taken place
+\item equity derivative approach offers the advantage of a closed-form solution for the CoCo price and its sensitivities, as well as a straightforward parameterization similar to that of equity options
+\item enhancements proposed in the literature \citet{corcuera2014close}, which require numerically more involved computation or Monte Carlo simulation, use smile confirm equity derivative formulas to represent the underlying risky asset dynamics, with an exponential Levy process reflecting jumps and heavy tails. \citet{teneberg2012equity} also includes a higher fat tail risk
+\item this approach is complemented by the modeling of a separate trigger process for the conversion in combination with a downward jump for the share price at conversion \citet{de2011pricing}
+\item \citet{de2011pricing} suggest to separate the payoff of the CoCo into a zero corporate bond, a knock-in forward and a sum of binary down-and-in options. The forward contract simulates the conversion of the bond into shares at a predetermined strike price while the binary options ac- count for the foregone coupon payments if a conversion occurs. One of the main conclusions is that Black-Scholes dynamics do not sufficiently cover the fat-tail dynamics that CoCos have.
+\item \citet{henriques2011making} consider a CoCo to be a bond issued by a financial institution where the issuer has a long position in an option from the bondholder which is exercised at the occurrence of a trigger event such that the face value of the bond is converted into equity at a predetermined strike. Hence, they replicate a CoCo with an amount that gets written down to zero in the event of a trigger and an amount that gets converted into equity. These components are priced individually. They believe that such a model accurately reflects the risk and structure of CoCo bonds and advise that conflicting interests could be mitigated by establishing a direct link between the solvency variable and the underlying equity value.
+\item \citet{alvemar2012modelling}
+\item \citet{erismann2015pricing}
+\end{itemize}
+
+\subsection*{Credit Derivative Approaches}
+
+\begin{itemize}
+\item main feature of a CoCo is conversion in the case of financial distress of the company
+\item the bond price is thus closely related to the company's financial health and default probability, and intensity-based credit modeling lends itself a pricing approach
+\item among others \citet{de2011pricing} and \citet{serjantov2011hybrid} suggested a pricing framework based on credit derivatives
+\item \citet{de2011pricing} formulated a general rule to derive the additional yield a CoCo must offer to compensate the holder for a premature repayment, which might amount to less than the bond's nominal 
+\item a fundamental problem with this approach is the usual non-negligible stream of future coupon payments that the holder of the CoCo forfeits at conversion
+\item this effect cannot easily be incorporated explicitly, for example, into the recovery rate at conversion, without making it time dependent
+\item \citet{serjantov2011hybrid} offered a slightly different approach, explicitly taking the coupon payments into account
+\item to obtain the CoCo price, the repayment of the nominal at maturity and the coupon payments over the lifetime are weighted with cumulative survival probabilities representing the absence of trigger and default events until the respective payment and discounted to the pricing date
+\item the recovery rates for the default case and for he conversion case without default are distinct in this model and can thus differ
+\item the joint probability of both events happening within the same time interval is defined by a Gaussian copula in the simplest case, where the correlation between trigger and default events is a model input
+\item the credit derivatives model gives a quasi-closed-form solution for the CoCo price
+\item \citet{alvemar2012modelling}
+\item \citet{erismann2015pricing}
+\end{itemize}
+
+\section{Research Methodology}
+The objective of the thesis consists of an examination of three dominant pricing approaches for CoCos. All of them are widely discussed in academic literature as they are often used as basis for further model advancements. The utilized approaches are namely the structural approach of \citet{pennacchi2010structural}, the equity derivative approach and the credit derivative approach both pursuant to \citet{de2011pricing}. Hereinafter, chapter 2 provides an overview of the anatomy of CoCos. Characteristic building parts of the financial product will be discussed in detail in order to create an improved understanding of the mechanisms which drive the valuation of this hybrid instrument. In chapter 3, examples of past CoCos issues are highlighted covering the most important variations of the aforementioned design features. On this basis, chapter 4 studies the theoretical concepts behind each of the three valuation approaches. In addition, pricing examples provide an understanding of the data requirements of each model. In chapter 5, sensitivity analysis determine how different values of certain pricing parameters impact the valuation of CoCos. Chapter 6 comprises an empirical analysis on the price tracking accuracy of the aforementioned valuation approaches. Finally, a conclusion is reached in chapter 7.
+
+%\begin{itemize}
+%\item chapter 2 - provides a comprehensive overview of the anatomy of CoCos and goes through characteristic building parts  
+%\item chapter 3 - highlights examples of issued CoCos covering all variations of the aforementioned design features
+%\item chapter 4 - studies the theoretical concepts behind the three valuation approaches; investigates pricing examples and their data requirements
+%\item chapter 5 - covers sensitivity analysis to investigate the behavior of each model with respect to varying parameters
+%\item chapter 6 - details an empirical analysis where the models are parametrized on one CoCo. 
+%\item chapter 7 - resulting price dynamics are qualitatively and quantitatively compared to reach a conclusion in chapter 7
+
+
+
+
+
+
+
+%http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/582011/EPRS_BRI(2016)582011_EN.pdf
+%http://econ.au.dk/fileadmin/site_files/filer_oekonomi/Research_groups/Finance_Research_Group/CoCos_Extension.pdf
+%http://www.unisg.ch/~/media/3306F28E094441F09BA75404F090312E.ashx
+%CH0181115681
 

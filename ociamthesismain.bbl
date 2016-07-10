@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -22,10 +22,33 @@ Boris Albul, Dwight~M Jaffee, and Alexei Tchistyi.
 \newblock Contingent convertible bonds and capital structure decisions.
 \newblock \emph{Coleman Fung Risk Management Research Center}, 2010.
 
+\bibitem[Albul et~al.(2015)Albul, Jaffee, and Tchistyi]{albul2015contingent}
+Boris Albul, Dwight~M Jaffee, and Alexei Tchistyi.
+\newblock Contingent convertible bonds and capital structure decisions.
+\newblock \emph{Available at SSRN 2772612}, 2015.
+
 \bibitem[Alvemar and Ericson(2012)]{alvemar2012modelling}
 Per Alvemar and Philip Ericson.
 \newblock Modelling and pricing contingent convertibles.
 \newblock \emph{University of Gothenburg}, 2012.
+
+\bibitem[Avdjiev et~al.(2013)Avdjiev, Kartasheva, and
+  Bogdanova]{avdjiev2013cocos}
+Stefan Avdjiev, Anastasia~V Kartasheva, and Bilyana Bogdanova.
+\newblock Cocos: a primer.
+\newblock \emph{Available at SSRN 2326334}, 2013.
+
+\bibitem[Avdjiev et~al.(2015)Avdjiev, Bolton, Jiang, Kartasheva, and
+  Bogdanova]{avdjiev2015coco}
+Stefan Avdjiev, Patrick Bolton, Wei Jiang, Anastasia Kartasheva, and Bilyana
+  Bogdanova.
+\newblock Coco bond issuance and bank funding costs.
+\newblock \emph{BIS and Columbia University working paper}, 2015.
+
+\bibitem[Bannier(2011)]{bannier2010}
+Christina Bannier.
+\newblock Definition of risk shifting, 2011.
+\newblock URL \url{http://lexicon.ft.com/Term?term=risk-shifting}.
 
 \bibitem[Barclays(2010)]{barclays2010}
 Barclays.
@@ -33,6 +56,26 @@ Barclays.
   november 2022 barclays bank plc, 2010.
 \newblock URL
   \url{https://www.home.barclays/content/dam/barclayspublic/docs/InvestorRelations/esma/capital-securities-documentation/tier-2-securities/contingent-tier-2/7625-Contingent-Capital-Notes-due-November-2022-Prospectus-PDF-992KB.pdf}.
+
+\bibitem[Barucci and Del~Viva(2012)]{barucci2012countercyclical}
+Emilio Barucci and Luca Del~Viva.
+\newblock Countercyclical contingent capital.
+\newblock \emph{Journal of Banking and Finance}, 36\penalty0 (6):\penalty0
+  1688--1709, 2012.
+
+\bibitem[{Basel Committee on Banking
+  Supervision}(2010{\natexlab{a}})]{basel2010proposal}
+{Basel Committee on Banking Supervision}.
+\newblock Proposal to ensure the loss absorbency of regulatory capital at the
+  point of non-viability.
+\newblock \emph{Bank for International Settlements}, 2010{\natexlab{a}}.
+
+\bibitem[{Basel Committee on Banking
+  Supervision}(2010{\natexlab{b}})]{basel2011press}
+{Basel Committee on Banking Supervision}.
+\newblock Basel committee issues final elements of the reforms to raise the
+  quality of regulatory capital.
+\newblock \emph{Bank for International Settlements}, 2010{\natexlab{b}}.
 
 \bibitem[Buergi(2013)]{buergi2013pricing}
 Markus~PH Buergi.
@@ -48,6 +91,18 @@ Charles~W Calomiris and Richard~J Herring.
 \newblock \emph{Journal of Applied Corporate Finance}, 25\penalty0
   (2):\penalty0 39--62, 2013.
 
+\bibitem[Cheridito and Xu(2015)]{cheridito2015pricing}
+Patrick Cheridito and Zhikai Xu.
+\newblock Pricing and hedging cocos.
+\newblock \emph{Available at SSRN 2201364}, 2015.
+
+\bibitem[Corcuera et~al.(2014)Corcuera, De~Spiegeleer, Fajardo, J{\"o}nsson,
+  Schoutens, and Valdivia]{corcuera2014close}
+Jos{\'e}~Manuel Corcuera, Jan De~Spiegeleer, Jos{\'e} Fajardo, Henrik
+  J{\"o}nsson, Wim Schoutens, and Arturo Valdivia.
+\newblock Close form pricing formulas for coupon cancellable cocos.
+\newblock \emph{Journal of Banking \& Finance}, 42:\penalty0 339--351, 2014.
+
 \bibitem[Cox et~al.(1985)Cox, Ingersoll~Jr, and Ross]{cox1985theory}
 John~C Cox, Jonathan~E Ingersoll~Jr, and Stephen~A Ross.
 \newblock A theory of the term structure of interest rates.
@@ -61,10 +116,16 @@ John~C Cox, Jonathan~E Ingersoll~Jr, and Stephen~A Ross.
 \newblock URL
   \url{https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/t2-xs0595225318.pdf}.
 
-\bibitem[De~Spiegeleer and Schoutens(2011)]{de2011pricing}
+\bibitem[De~Spiegeleer and Schoutens(2011{\natexlab{a}})]{de2011handbook}
+Jan De~Spiegeleer and Wim Schoutens.
+\newblock \emph{The handbook of convertible bonds: pricing, strategies and risk
+  management}, volume 581.
+\newblock John Wiley \& Sons, 2011{\natexlab{a}}.
+
+\bibitem[De~Spiegeleer and Schoutens(2011{\natexlab{b}})]{de2011pricing}
 Jan De~Spiegeleer and Wim Schoutens.
 \newblock Pricing contingent convertibles: a derivatives approach.
-\newblock \emph{Available at SSRN 1795092}, 2011.
+\newblock \emph{Available at SSRN 1795092}, 2011{\natexlab{b}}.
 
 \bibitem[De~Spiegeleer et~al.(2014)De~Spiegeleer, Schoutens, and
   Van~Hulle]{de2014handbook}
@@ -72,11 +133,6 @@ Jan De~Spiegeleer, Wim Schoutens, and Cynthia Van~Hulle.
 \newblock \emph{The Handbook of Hybrid Securities: convertible bonds, coco
   bonds and bail-in}.
 \newblock John Wiley \& Sons, 2014.
-
-\bibitem[Dietegen(2016)]{schmuddel2016}
-Mueller Dietegen.
-\newblock Vom wunder- zum schmuddelkind.
-\newblock \emph{B{\"o}rsen-Zeitung}, 61:\penalty0 13--14, 2016.
 
 \bibitem[Duffie and Singleton(1999)]{duffie1999modeling}
 Darrell Duffie and Kenneth~J Singleton.
@@ -89,6 +145,12 @@ Marc Erismann.
 \newblock \emph{Pricing Contingent Convertible Capital-A Theoretical and
   Empirical Analysis of Selected Pricing Models}.
 \newblock PhD thesis, University of St. Gallen, 2015.
+
+\bibitem[{European Parliament}(2016)]{europeanparliament2016}
+{European Parliament}.
+\newblock Contingent convertible securities, is a storm brewing?, 2016.
+\newblock URL
+  \url{http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/582011/EPRS_BRI(2016)582011_EN.pdf}.
 
 \bibitem[Glasserman and Nouri(2012)]{glasserman2012contingent}
 Paul Glasserman and Behzad Nouri.
@@ -155,12 +217,6 @@ Robert~C Merton.
 \newblock \emph{The Journal of Finance}, 29\penalty0 (2):\penalty0 449--470,
   1974.
 
-\bibitem[on~Banking~Supervision(2010)]{basel2010proposal}
-Basel~Committee on~Banking~Supervision.
-\newblock Proposal to ensure the loss absorbency of regulatory capital at the
-  point of non-viability.
-\newblock \emph{Bank for International Settlements}, 2010.
-
 \bibitem[Pazarbasioglu et~al.(2011)Pazarbasioglu, Zhou, Le~Lesle, and
   Moore]{pazarbasioglu2011contingent}
 Ceyla Pazarbasioglu, Ms~Jian-Ping Zhou, Vanessa Le~Lesle, and Michael Moore.
@@ -172,6 +228,11 @@ George Pennacchi.
 \newblock {A structural model of contingent bank capital}.
 \newblock Working Paper 1004, Federal Reserve Bank of Cleveland, 2010.
 \newblock URL \url{https://ideas.repec.org/p/fip/fedcwp/1004.html}.
+
+\bibitem[Pennacchi and Tchistyi(2015)]{pennacchi2015reexamination}
+George Pennacchi and Alexei Tchistyi.
+\newblock A reexamination of contingent convertibles with stock price triggers.
+\newblock \emph{Available at SSRN 2773335}, 2015.
 
 \bibitem[Quantnet(2011)]{codestructrural}
 Quantnet.
@@ -195,6 +256,11 @@ Mark Rubinstein and Eric Reiner.
 Wolfgang Schmidt.
 \newblock Credit risk, default models and credit derivatives.
 \newblock Frankfurt School of Finance and Management, 2015.
+
+\bibitem[Serjantov(2011)]{serjantov2011hybrid}
+Andrei Serjantov.
+\newblock On practical pricing hybrid capital securities.
+\newblock In \emph{Global Derivative Trading ad Risk Management Meeting}, 2011.
 
 \bibitem[Shekel(2015)]{amazonrstudio}
 Liad Shekel.
@@ -220,11 +286,21 @@ Suresh Sundaresan and Zhenyu Wang.
 \newblock \emph{The Journal of Finance}, 70\penalty0 (2):\penalty0 881--920,
   2015.
 
-\bibitem[Valukas(2010)]{valukas2010report}
-Anton Valukas.
-\newblock Report of anton r. valukas, examiner for united states bankruptcy
-  court, southern district of new york, volume 5, march.
-\newblock 2010.
+\bibitem[Turfus and Shubert(2015)]{turfus2015cocos}
+Colin Turfus and Alexander Shubert.
+\newblock Analytic pricing of coco bonds.
+\newblock \emph{Deutsche Bank and J.P. Morgan working paper}, 2015.
+
+\bibitem[United States Bankruptcy~Court(2010)]{valukas2010report}
+Southern District of New~York United States Bankruptcy~Court.
+\newblock Report of anton r. valukas, examiner.
+\newblock \emph{Lehman Brothers Holdings Inc., et al., Debtors}, 11, 2010.
+
+\bibitem[Von~Furstenberg et~al.(2011)]{von2011contingent}
+George~M Von~Furstenberg et~al.
+\newblock \emph{Contingent capital to strengthen the private safety net for
+  financial institutions: CoCos to the rescue?}
+\newblock Dt. Bundesbank, Press and Public Relations Division, 2011.
 
 \bibitem[Wilkens and Bethke(2014)]{wilkens2014contingent}
 Sascha Wilkens and Nastja Bethke.
