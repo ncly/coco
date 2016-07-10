@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -27,6 +27,13 @@ Per Alvemar and Philip Ericson.
 \newblock Modelling and pricing contingent convertibles.
 \newblock \emph{University of Gothenburg}, 2012.
 
+\bibitem[Barclays(2010)]{barclays2010}
+Barclays.
+\newblock Usd 3,000,000,000 7.625 per cent. contingent capital notes due
+  november 2022 barclays bank plc, 2010.
+\newblock URL
+  \url{https://www.home.barclays/content/dam/barclayspublic/docs/InvestorRelations/esma/capital-securities-documentation/tier-2-securities/contingent-tier-2/7625-Contingent-Capital-Notes-due-November-2022-Prospectus-PDF-992KB.pdf}.
+
 \bibitem[Buergi(2013)]{buergi2013pricing}
 Markus~PH Buergi.
 \newblock Pricing contingent convertibles: a general framework for application
@@ -34,11 +41,25 @@ Markus~PH Buergi.
 \newblock \emph{Financial Markets and Portfolio Management}, 27\penalty0
   (1):\penalty0 31--63, 2013.
 
+\bibitem[Calomiris and Herring(2013)]{calomiris2013design}
+Charles~W Calomiris and Richard~J Herring.
+\newblock How to design a contingent convertible debt requirement that helps
+  solve our too-big-to-fail problem.
+\newblock \emph{Journal of Applied Corporate Finance}, 25\penalty0
+  (2):\penalty0 39--62, 2013.
+
 \bibitem[Cox et~al.(1985)Cox, Ingersoll~Jr, and Ross]{cox1985theory}
 John~C Cox, Jonathan~E Ingersoll~Jr, and Stephen~A Ross.
 \newblock A theory of the term structure of interest rates.
 \newblock \emph{Econometrica: Journal of the Econometric Society}, pages
   385--407, 1985.
+
+\bibitem[{Credit Suisse}(2011)]{creditsuisse2011}
+{Credit Suisse}.
+\newblock Usd 2,000,000,000 7.875 per cent. tier 2 buffer capital notes due
+  2041, 2011.
+\newblock URL
+  \url{https://www.credit-suisse.com/media/assets/corporate/docs/about-us/investor-relations/regulatory-disclosures/t2-xs0595225318.pdf}.
 
 \bibitem[De~Spiegeleer and Schoutens(2011)]{de2011pricing}
 Jan De~Spiegeleer and Wim Schoutens.
@@ -75,6 +96,11 @@ Paul Glasserman and Behzad Nouri.
 \newblock \emph{Management Science}, 58\penalty0 (10):\penalty0 1816--1833,
   2012.
 
+\bibitem[Haldane(2011)]{haldane2011capital}
+Andrew~G Haldane.
+\newblock Capital discipline.
+\newblock In \emph{American Economic Association Meeting}, volume~9, 2011.
+
 \bibitem[Henriques and Doctor(2011)]{henriques2011making}
 Roberto Henriques and Saul Doctor.
 \newblock Making cocos work: Structural and pricing considerations for
@@ -84,7 +110,7 @@ Roberto Henriques and Saul Doctor.
 \bibitem[Hilscher and Raviv(2014)]{hilscher2014bank}
 Jens Hilscher and Alon Raviv.
 \newblock Bank stability and market discipline: The effect of contingent
-  capital on risk taking and default probability.
+  capital on risk taking and fault probability.
 \newblock \emph{Journal of Corporate Finance}, 29:\penalty0 542--560, 2014.
 
 \bibitem[Hull(2006)]{hull2006options}
@@ -103,6 +129,12 @@ David Lando.
 \newblock \emph{Credit risk modeling: theory and applications}.
 \newblock Princeton University Press, 2009.
 
+\bibitem[Lloyds(2009)]{lloyds2009}
+Lloyds.
+\newblock Enhanced capital notes, 2009.
+\newblock URL
+  \url{http://www.lloydsbankinggroup.com/globalassets/documents/investors/2009/non-us_eom.pdf}.
+
 \bibitem[Madan and Schoutens(2011)]{madan2011conic}
 Dilip~B Madan and Wim Schoutens.
 \newblock Conic coconuts: the pricing of contingent capital notes using conic
@@ -110,12 +142,30 @@ Dilip~B Madan and Wim Schoutens.
 \newblock \emph{Mathematics and Financial Economics}, 4\penalty0 (2):\penalty0
   87--106, 2011.
 
+\bibitem[McDonald(2013)]{mcdonald2013contingent}
+Robert~L McDonald.
+\newblock Contingent capital with a dual price trigger.
+\newblock \emph{Journal of Financial Stability}, 9\penalty0 (2):\penalty0
+  230--241, 2013.
+
 \bibitem[Merton(1974)]{merton1974pricing}
 Robert~C Merton.
 \newblock On the pricing of corporate debt: The risk structure of interest
   rates.
 \newblock \emph{The Journal of Finance}, 29\penalty0 (2):\penalty0 449--470,
   1974.
+
+\bibitem[on~Banking~Supervision(2010)]{basel2010proposal}
+Basel~Committee on~Banking~Supervision.
+\newblock Proposal to ensure the loss absorbency of regulatory capital at the
+  point of non-viability.
+\newblock \emph{Bank for International Settlements}, 2010.
+
+\bibitem[Pazarbasioglu et~al.(2011)Pazarbasioglu, Zhou, Le~Lesle, and
+  Moore]{pazarbasioglu2011contingent}
+Ceyla Pazarbasioglu, Ms~Jian-Ping Zhou, Vanessa Le~Lesle, and Michael Moore.
+\newblock \emph{Contingent capital: economic rationale and design features}.
+\newblock International Monetary Fund, 2011.
 
 \bibitem[Pennacchi(2010)]{pennacchi2010structural}
 George Pennacchi.
@@ -127,7 +177,14 @@ George Pennacchi.
 Quantnet.
 \newblock Translate gauss code to r code, 2011.
 \newblock URL
-  \url{https://www.quantnet.com/threads/translate-gauss-code-to-r-code.7784/}.
+  \url{www.quantnet.com/threads/translate-gauss-code-to-r-code.7784/}.
+
+\bibitem[Rabobank(2010)]{rabobank2010}
+Rabobank.
+\newblock Rabobank nederland cooperatieve centrale raiffeisen-boerenleenbank
+  b.a. eur 1,250,000,000 6.875 per cent. senior contingent notes due 2020,
+  2010.
+\newblock URL \url{https://www.afm.nl/registers/emissies_documents/4220.pdf}.
 
 \bibitem[Rubinstein and Reiner(1991)]{rubinstein1991unscrambling}
 Mark Rubinstein and Eric Reiner.
@@ -138,6 +195,18 @@ Mark Rubinstein and Eric Reiner.
 Wolfgang Schmidt.
 \newblock Credit risk, default models and credit derivatives.
 \newblock Frankfurt School of Finance and Management, 2015.
+
+\bibitem[Shekel(2015)]{amazonrstudio}
+Liad Shekel.
+\newblock Rstudio server on amazon ec2, 2015.
+\newblock URL \url{www.r-israel.com/wp-content/
+  uploads/2015/06/Rstudio-in-AWS-16_9.pdf}.
+
+\bibitem[{Squam Lake Working Group}(2009)]{squam2009expedited}
+{Squam Lake Working Group}.
+\newblock An expedited resolution mechanism for distressed financial firms:
+  Regulatory hybrid securities.
+\newblock \emph{Council on Foreign Relations}, 10, 2009.
 
 \bibitem[Su and Rieger(2009)]{su2009likely}
 Lujing Su and Marc~Olivier Rieger.
@@ -151,11 +220,23 @@ Suresh Sundaresan and Zhenyu Wang.
 \newblock \emph{The Journal of Finance}, 70\penalty0 (2):\penalty0 881--920,
   2015.
 
+\bibitem[Valukas(2010)]{valukas2010report}
+Anton Valukas.
+\newblock Report of anton r. valukas, examiner for united states bankruptcy
+  court, southern district of new york, volume 5, march.
+\newblock 2010.
+
 \bibitem[Wilkens and Bethke(2014)]{wilkens2014contingent}
 Sascha Wilkens and Nastja Bethke.
 \newblock Contingent convertible (coco) bonds: A first empirical assessment of
   selected pricing models.
 \newblock \emph{Financial Analysts Journal}, 70\penalty0 (2):\penalty0 59--77,
   2014.
+
+\bibitem[{Zurich Cantonal Bank}(2013)]{zkv2013}
+{Zurich Cantonal Bank}.
+\newblock Nachrangige tier-1-anleihe chf 590 mio., 2013.
+\newblock URL
+  \url{https://www.zkb.ch/media/dok/corporate/investor-relations/produktinformationsblatt-nachrangige-tier1-anleihe.pdf}.
 
 \end{thebibliography}

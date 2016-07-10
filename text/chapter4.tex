@@ -6,7 +6,7 @@
 \centering
 \begin{tikzpicture}
     \begin{axis}[view={10}{190}, height=12cm, width=13cm, grid=both, ypercent, z dir=reverse,
-    xlabel={$Share$ $Price$}, ylabel={$Implied$ $Volatility$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+    xlabel={$Share$ $Price$}, ylabel={$Implied$ $Volatility$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_CD_S_sigma.txt};
     \end{axis}
@@ -18,7 +18,7 @@
 \centering
 \begin{tikzpicture}
     \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, ypercent, y dir = reverse,
-    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_CD_T_r.txt};
     \end{axis}
@@ -30,7 +30,7 @@
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
-    xlabel={$Trigger$ $Price$}, ylabel={$Conversion$ $Price$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, xtickmin=22]
+    xlabel={$Trigger$ $Price$}, ylabel={$Conversion$ $Price$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, xtickmin=22, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_CD_Sstar_Cp.txt};
     \end{axis}
@@ -45,7 +45,7 @@
   \begin{tikzpicture}
     \begin{axis}[view={10}{190}, height=12cm, width=13cm, grid=both, ypercent, z dir=reverse,
     xlabel={$Share$ $Price$}, ylabel={$Implied$ $Volatility$}, zlabel={$Theoretical$ $Price$}
-    ,xlabel style={sloped like x axis}, ylabel style={sloped}]
+    ,xlabel style={sloped like x axis}, ylabel style={sloped}, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_ED_S_sigma.txt};
     \end{axis}
@@ -57,7 +57,7 @@
 \centering
 \begin{tikzpicture}
     \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, ypercent, y dir = reverse,
-    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_ED_T_r.txt};
     \end{axis}
@@ -69,7 +69,7 @@
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
-    xlabel={$Trigger$ $Price$}, ylabel={$Conversion$ $Price$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}]
+    xlabel={$Trigger$ $Price$}, ylabel={$Conversion$ $Price$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped},colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_ED_Sstar_Cp.txt};
     \end{axis}
@@ -77,14 +77,15 @@
     \caption[CoCo price $V^{ed}$ as function of trigger price and conversion price]{CoCo price $V^{ed}$ pursuant to the credit derivative approach \citep{de2011pricing} as function of trigger price $S^*$ and conversion price $C_p$}
   \end{figure}
 
-
 \section{Structural Approach}
+
+\footnote{The Monte-Carlo simulation runs in the Amazon Elastic Compute Cloud (EC2) as the service provides a re-sizable compute capacity which is key to quickly scale the computing requirements. If one wants to replicate the simulations it is recommended to follow the instructions of \citet{amazonrstudio} to set up a Rstudio server on Amazon EC2.}
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and volatility sigma
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Asset$ $Volatility$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent]
+  \begin{axis}[view={50}{190}, height=12cm, width=13cm, grid=both, z dir = reverse, y dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Asset$ $Volatility$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, xtickmin = 1.1, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_sigma.txt};
     \end{axis}
@@ -96,8 +97,8 @@
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
-    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent]
+  \begin{axis}[view={20}{190}, height=12cm, width=13cm, grid=both, z dir = reverse,
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_T_r.txt};
     \end{axis}
@@ -109,8 +110,8 @@
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Equity$-$to$-$Deposit$ $Threshold$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent]
+  \begin{axis}[view={40}{190}, height=12cm, width=13cm, grid=both, z dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Equity$-$to$-$Deposit$ $Threshold$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, colormap/viridis, ytickmax = 0.025]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_ebar.txt};
     \end{axis}
@@ -122,8 +123,8 @@
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Jump$ $Intensity$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ytickmin=1, xtickmin=1.08]
+  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both, y dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Jump$ $Intensity$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, xtickmax=1.16, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_lambda.txt};
     \end{axis}
@@ -135,8 +136,8 @@
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={10}{10}, height=12cm, width=13cm, grid=both,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Nominal$-$to$-$Deposit$ $Ratio$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, ytickmin=0.08, xtickmin=1.08]
+  \begin{axis}[view={10}{190}, height=12cm, width=13cm, grid=both, z dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Nominal$-$to$-$Deposit$ $Ratio$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, xtickmin=1.08, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_b0.txt};
     \end{axis}
