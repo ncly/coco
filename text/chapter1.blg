@@ -3,9 +3,9 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chapter1.aux
 I found no \bibdata command---while reading file chapter1.aux
 I found no \bibstyle command---while reading file chapter1.aux
-You've used 20 entries,
+You've used 31 entries,
             0 wiz_defined-function locations,
-            103 strings with 841 characters,
+            114 strings with 1055 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0

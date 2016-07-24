@@ -1,6 +1,8 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2016.4.7)  24 JUL 2016 09:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  12 JUL 2016 14:12
+entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
+ %&-line parsing enabled.
 **ociamthesismain.tex
 (./ociamthesismain.tex
 LaTeX2e <2015/01/01>
@@ -76,10 +78,219 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
 
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
 
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count89
 \lst@gtempboxa=\box26
 \lst@token=\toks18
@@ -442,7 +653,6 @@ Variant \prop_get:NVNTF already defined; not changing it on line 382
 . Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7348.
 .................................................
 \g__file_internal_ior=\read1
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/translator.sty
 Package: translator 2010/06/12 ver 1.10
 
@@ -579,7 +789,6 @@ LaTeX Info: Redefining \cite on input line 694.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -600,7 +809,6 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
 ))
 Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
-
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
@@ -803,8 +1011,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
@@ -853,110 +1061,14 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
-Package: luatexbase 2013/05/11 v0.6 Resource management for the LuaTeX macro pro
-grammer
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/luatex.sty
-Package: luatex 2010/03/09 v0.4 LuaTeX basic definition package (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/etex-pkg/etex.sty
-Package: etex 2015/03/02 v2.1 eTeX basic definition package (PEB,DPC)
-\et@xins=\count181
-)
-\LuT@AllocAttribute=\count277
-\LuT@AllocCatcodeTable=\count278
-\CatcodeTableStack=\count279
-\CatcodeTableIniTeX=\catcodetable1
-\CatcodeTableString=\catcodetable3
-\CatcodeTableOther=\catcodetable5
-\CatcodeTableLaTeX=\catcodetable7
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/luatex-loader.sty
-Package: luatex-loader 2010/03/09 v0.4 Lua module loader (HO)
-
-(/usr/local/texlive/2015/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)))
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-compat.sty
-Package: luatexbase-compat 2011/05/24 v0.4 Compatibility tools for LuaTeX
-)
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-modutils.s
-ty
-Package: luatexbase-modutils 2013/05/11 v0.6 Module utilities for LuaTeX
-
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-loader.sty
-Package: luatexbase-loader 2013/05/11 v0.6 Lua module loader for LuaTeX
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase.loader.lua)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/modutils.lua)
-Lua module: luatexbase-modutils 2013/05/11 0.6 Module utilities for LuaTeX
-)
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-regs.sty
-Package: luatexbase-regs 2011/05/24 v0.4 Registers allocation for LuaTeX
-)
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-attr.sty
-Package: luatexbase-attr 2013/05/11 v0.6 Attributes allocation for LuaTeX
-
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/attr.lua)
-Lua module: luatexbase-attr 2013/05/11 0.6 Attributes allocation for LuaTeX
-\lltxb@attr@unsetvalue=\count280
-)
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-cctb.sty
-Package: luatexbase-cctb 2013/05/11 v0.6 Catcodetable allocation for LuaTeX
-
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/cctb.lua)
-Lua module: luatexbase-cctb 2013/05/11 0.6 Catcodetable allocation for LuaTeX
-\lltxb@catcodetable@alloc=\count281
-\CatcodeTableStack=\count282
-\CatcodeTableIniTeX=\luatexcatcodetable1
-\CatcodeTableString=\luatexcatcodetable3
-\CatcodeTableOther=\luatexcatcodetable5
-\CatcodeTableLaTeX=\luatexcatcodetable7
-\CatcodeTableLaTeXAtLetter=\luatexcatcodetable9
-\CatcodeTableExpl=\luatexcatcodetable11
-)
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-mcb.sty
-Package: luatexbase-mcb 2013/05/11 v0.6 Callback management for LuaTeX
-
-(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/mcb.lua)
-Lua module: luatexbase-mcb 2013/05/11 0.6 register several functions in a callba
-ck
-))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-Package pgfplots info on input line 115: Initializing with LUA version Lua 5.2
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots.lua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/binary.lua
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/pgfplotsut
-il.lua)
-pgfplots.lua: loading complementary lua code for your pgf version...
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplotsoldpgfsupp/
-luamath/functions.lua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplotsoldpgfsupp/
-luamath/parser.lua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/plothandle
-r.lua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/meshplotha
-ndler.lua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/colormap.l
-ua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/streamer.l
-ua)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/pgfplotste
-xio.lua)
-\pgfplots@luabackend@table=\catcodetable9
 \t@pgfplots@toka=\toks43
 \t@pgfplots@tokb=\toks44
 \t@pgfplots@tokc=\toks45
-\pgfplots@tmpa=\dimen256
-\c@pgfplots@coordindex=\count283
-\c@pgfplots@scanlineindex=\count284
+\pgfplots@tmpa=\dimen230
+\c@pgfplots@coordindex=\count181
+\c@pgfplots@scanlineindex=\count182
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
 .code.tex))
@@ -972,12 +1084,10 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 soldpgfsupp_pgflibraryfpu.code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
 soldpgfsupp_pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count285
+\c@pgfmathroundto@lastzeros=\count183
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
-soldpgfsupp_trig_format.code.tex)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
-soldpgfsupp_pgflibraryluamath.code.tex))
+soldpgfsupp_trig_format.code.tex))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
 .tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
@@ -986,13 +1096,13 @@ liststructure.code.tex)
 liststructureext.code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 array.code.tex
-\c@pgfplotsarray@tmp=\count286
+\c@pgfplotsarray@tmp=\count184
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
 matrix.code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
 shared.code.tex
-\c@pgfplotstable@counta=\count287
+\c@pgfplotstable@counta=\count185
 \t@pgfplotstable@a=\toks46
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
@@ -1005,7 +1115,7 @@ ta.code.tex))
 .code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
 s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count288
+\c@pgfplotslibrarysurf@no=\count186
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
 .surfshading.pgfsys-pdftex.def)))
@@ -1035,16 +1145,16 @@ x)
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen257
-\pgfdecoratedremainingdistance=\dimen258
-\pgfdecoratedinputsegmentcompleteddistance=\dimen259
-\pgfdecoratedinputsegmentremainingdistance=\dimen260
-\pgf@decorate@distancetomove=\dimen261
-\pgf@decorate@repeatstate=\count289
-\pgfdecorationsegmentamplitude=\dimen262
-\pgfdecorationsegmentlength=\dimen263
+\pgfdecoratedcompleteddistance=\dimen231
+\pgfdecoratedremainingdistance=\dimen232
+\pgfdecoratedinputsegmentcompleteddistance=\dimen233
+\pgfdecoratedinputsegmentremainingdistance=\dimen256
+\pgf@decorate@distancetomove=\dimen257
+\pgf@decorate@repeatstate=\count187
+\pgfdecorationsegmentamplitude=\dimen258
+\pgfdecorationsegmentlength=\dimen259
 )
-\tikz@lib@dec@box=\box256
+\tikz@lib@dec@box=\box66
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.pathmorphing.code.tex
@@ -1054,13 +1164,13 @@ brarydecorations.pathmorphing.code.tex))
 s/tikzlibrarydecorations.pathreplacing.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
 brarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count290
-\pgfplots@xmin@reg=\dimen264
-\pgfplots@xmax@reg=\dimen265
-\pgfplots@ymin@reg=\dimen266
-\pgfplots@ymax@reg=\dimen267
-\pgfplots@zmin@reg=\dimen268
-\pgfplots@zmax@reg=\dimen269
+\pgfplots@numplots=\count188
+\pgfplots@xmin@reg=\dimen260
+\pgfplots@xmax@reg=\dimen261
+\pgfplots@ymin@reg=\dimen262
+\pgfplots@ymax@reg=\dimen263
+\pgfplots@zmin@reg=\dimen264
+\pgfplots@zmax@reg=\dimen265
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryplotmarks.code.tex
@@ -1075,36 +1185,38 @@ ts.external.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/libraries/tikzl
 ibraryexternal.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
 
-
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
+Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-
-(/usr/local/texlive/2015/texmf-dist/scripts/oberdiek/pdftexcmds.lua)
-\pdftexcmds@toks=\toks47
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzexternalshared.code.tex))
-Package pgfplots external lib: loading complementary code for your PGF version..
-.
+Package pgfplots external lib: loading complementary code for your PGF version.
+..
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
 soldpgfsupp_pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
-\pgfexternal@startupbox=\box257
+\pgfexternal@startupbox=\box67
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
 soldpgfsupp_tikzlibraryexternal.code.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
 soldpgfsupp_tikzexternalshared.code.tex))
-Package pgfplots external lib: patching system driver code for your PGF version.
-..
+Package pgfplots external lib: patching system driver code for your PGF version
+...
 )
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.patchplots.code.tex)
@@ -1116,44 +1228,35 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
 (./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
 (./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix1.aux)
-(./text/appendix2.aux
+(./text/appendix2.aux))
+\openout1 = `ociamthesismain.aux'.
 
-LaTeX Warning: Label `sensicredit' multiply defined.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 387.
+LaTeX Font Info:    ... okay on input line 387.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 387.
+LaTeX Font Info:    ... okay on input line 387.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 387.
+LaTeX Font Info:    ... okay on input line 387.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 387.
+LaTeX Font Info:    ... okay on input line 387.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 387.
+LaTeX Font Info:    ... okay on input line 387.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 387.
+LaTeX Font Info:    ... okay on input line 387.
 
-
-LaTeX Warning: Label `sensiequity' multiply defined.
-
-
-LaTeX Warning: Label `sensistructural' multiply defined.
-
-))
-\openout1 = ociamthesismain.aux
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 388.
-LaTeX Font Info:    ... okay on input line 388.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 388.
-LaTeX Font Info:    ... okay on input line 388.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 388.
-LaTeX Font Info:    ... okay on input line 388.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 388.
-LaTeX Font Info:    ... okay on input line 388.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 388.
-LaTeX Font Info:    ... okay on input line 388.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 388.
-LaTeX Font Info:    ... okay on input line 388.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen270
-\scratchbox=\box258
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen271
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count189
+\scratchdimen=\dimen266
+\scratchbox=\box68
+\nofMPsegments=\count190
+\nofMParguments=\count191
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count192
+\MPscratchDim=\dimen267
+\MPnumerator=\count193
+\makeMPintoPDFobject=\count194
+\everyMPtoPDFconversion=\toks48
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1171,17 +1274,96 @@ Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
 )))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.tif,.jpeg,.PNG,.PDF,.JPG,.JPEG,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
-\c@lstlisting=\count297
+\c@lstlisting=\count195
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
 
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/dicts/translato
 r-basic-dictionary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
@@ -1193,32 +1375,33 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
-Package pgfplots notification 'compat/show suggested version=true': document has
- been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
 
-\c__siunitx_mathsf_int=\count298
-LaTeX Font Info:    Try loading font information for U+msa on input line 388.
+\c__siunitx_mathsf_int=\count196
+LaTeX Font Info:    Try loading font information for U+msa on input line 387.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 388.
+LaTeX Font Info:    Try loading font information for U+msb on input line 387.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count299
+\c__siunitx_mathtt_int=\count197
 
 <fslogo.jpeg, id=4, 513.92pt x 513.92pt>
 File: fslogo.jpeg Graphic file (type jpg)
  <use fslogo.jpeg>
-Package pdftex.def Info: fslogo.jpeg used on input line 399.
+Package pdftex.def Info: fslogo.jpeg used on input line 398.
 (pdftex.def)             Requested size: 91.04881pt x 91.04303pt.
  [1
 
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}<./fslogo.
-jpeg>]
-\openout2 = text/abstract.aux
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fslog
+o.jpeg>]
+\openout2 = `text/abstract.aux'.
+
 
 (./text/abstract.tex [2
 
@@ -1227,25 +1410,26 @@ jpeg>]
 
 
 
-])
+] [2])
 \tf@toc=\write4
+\openout4 = `ociamthesismain.toc'.
 
-\openout4 = ociamthesismain.toc
- [2]
+ [3]
 (./ociamthesismain.lof)
 \tf@lof=\write5
+\openout5 = `ociamthesismain.lof'.
 
-\openout5 = ociamthesismain.lof
- [3
+ [4
 
 ] (./ociamthesismain.lot)
 \tf@lot=\write6
+\openout6 = `ociamthesismain.lot'.
 
-\openout6 = ociamthesismain.lot
- [4
+ [5
 
 ]
-\openout2 = text/chapter1.aux
+\openout2 = `text/chapter1.aux'.
+
  (./text/chapter1.tex
 Chapter 1.
 
@@ -1268,49 +1452,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Overfull \hbox (4.94212pt too wide) in paragraph at lines 126--127
-[][]\OT1/cmr/m/n/12 De Spiegeleer and Schoutens (2011b) tackle the pric-ing pro
-b-lem with a credit-derivative
- []
-
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+ [3] [4]
+[5] [6] [7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
+ []
+
+
+Overfull \hbox (4.94212pt too wide) in paragraph at lines 128--129
+[]\OT1/cmr/m/n/12 De Spiegeleer and Schoutens (2011b) tackle the pric-ing prob-
+lem with a credit-derivative
  []
 
 
@@ -1318,8 +1475,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-[6]) [7]
-\openout2 = text/chapter2.aux
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
+ []
+
+[9]) [10]
+\openout2 = `text/chapter2.aux'.
+
  (./text/chapter2.tex
 Chapter 2.
 
@@ -1327,199 +1490,202 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<media/anatomy.pdf, id=55, 597.432pt x 844.95674pt>
+<media/anatomy.pdf, id=68, 597.432pt x 844.95674pt>
 File: media/anatomy.pdf Graphic file (type pdf)
  <use media/anatomy.pdf>
 Package pdftex.def Info: media/anatomy.pdf used on input line 11.
-(pdftex.def)             Requested size: 177.52455pt x 142.46545pt.
+(pdftex.def)             Requested size: 221.89723pt x 178.07503pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[8
+[11
 
 
 
-<./media/anatomy.pdf>] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+] [12 <./media/anatomy.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[][]|\OT1/cmr/m/n/6 Tier 2 Buffer
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[][]|\OT1/cmr/m/n/6 Se-nior Con-tin-
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[14] [15] [16] [17] [18]
+Chapter 3.
+
+Underfull \hbox (badness 6236) in paragraph at lines 147--148
+[]|\OT1/cmr/m/n/6 Zurich Can-tonal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-[][]|\OT1/cmr/m/n/6 Sub-or-di-nated
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/6 Tier 2 Buffer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
-[][]|\OT1/cmr/m/n/6 Callable from
+Underfull \hbox (badness 10000) in paragraph at lines 149--149
+[]|\OT1/cmr/m/n/6 Senior Con-tin-
  []
 
 
-Underfull \hbox (badness 3536) in paragraph at lines 110--110
-[][]|\OT1/cmr/m/n/6 Par-tial (75% of
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[]|\OT1/cmr/m/n/6 Subordinated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[][]|\OT1/cmr/bx/n/6 Con-ver-sion
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]|\OT1/cmr/m/n/6 Callable from
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[][]|\OT1/cmr/m/n/6 Fixed at GBP
+Underfull \hbox (badness 3536) in paragraph at lines 158--158
+[]|\OT1/cmr/m/n/6 Partial (75% of
  []
 
 
-Underfull \hbox (badness 4492) in paragraph at lines 112--112
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/6 Conversion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/6 Fixed at GBP
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 160--160
 \OT1/cmr/m/n/6 tifi-cates to risk
  []
 
+[19
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-[][]|\OT1/cmr/bx/n/6 Trig-ger
- []
+] [20]) [21]
+\openout2 = `text/chapter3.aux'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-[13] [14] [15]) [16]
-\openout2 = text/chapter3.aux
  (./text/chapter3.tex
-Chapter 3.
+Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[17
+[22
 
 
 
-] [18] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-LaTeX Font Info:    Try loading font information for U+bbm on input line 140.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+[25]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 131.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [21]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+)
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+[26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
-[23] [24] [25]
-Package pgfplots info on input line 320: Using 'lua backend=false' for axis: x c
-oord trafo unsupported.
- [26] <media/jumpprocess.pdf, id=187, 597.432pt x 844.95674pt>
+[28] [29] [30] <media/jumpprocess.pdf, id=201, 597.432pt x 844.95674pt>
 File: media/jumpprocess.pdf Graphic file (type pdf)
 
 <use media/jumpprocess.pdf>
-Package pdftex.def Info: media/jumpprocess.pdf used on input line 344.
+Package pdftex.def Info: media/jumpprocess.pdf used on input line 296.
 (pdftex.def)             Requested size: 221.89723pt x 155.31322pt.
- [27<./media/jumpprocess.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 379--380
+ [31 <./media/jumpprocess.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
 
  []
 
-[29] [30]
-Overfull \hbox (38.78995pt too wide) in paragraph at lines 456--480
- [][][] 
+[33] [34]
+Overfull \hbox (1.64728pt too wide) in paragraph at lines 408--432
+ [][] 
  []
 
-[31] [32]) [33]
-\openout2 = text/chapter4.aux
+[35] [36]) [37]
+\openout2 = `text/chapter4.aux'.
+
  (./text/chapter4.tex
-Chapter 4.
+Chapter 5.
 PGFPlots: reading {code/createData_CD_S_sigma.txt}
 PGFPlots: reading {code/createData_CD_T_r.txt}
-[34
+[38
 
 
 
 ]
 PGFPlots: reading {code/createData_CD_Sstar_Cp.txt}
- [35]
-PGFPlots: reading {code/createData_ED_S_sigma.txt}
- [36]
-PGFPlots: reading {code/createData_ED_T_r.txt}
- [37]
-PGFPlots: reading {code/createData_ED_Sstar_Cp.txt}
- [38]
-PGFPlots: reading {code/createData_SA_x0_sigma.txt}
  [39]
-PGFPlots: reading {code/createData_SA_T_r.txt}
+PGFPlots: reading {code/createData_ED_S_sigma.txt}
  [40]
-PGFPlots: reading {code/createData_SA_x0_ebar.txt}
+PGFPlots: reading {code/createData_ED_T_r.txt}
  [41]
-PGFPlots: reading {code/createData_SA_x0_lambda.txt}
+PGFPlots: reading {code/createData_ED_Sstar_Cp.txt}
  [42]
+PGFPlots: reading {code/createData_SA_x0_sigma.txt}
+ [43]
+PGFPlots: reading {code/createData_SA_T_r.txt}
+ [44]
+PGFPlots: reading {code/createData_SA_x0_ebar.txt}
+ [45]
+PGFPlots: reading {code/createData_SA_x0_lambda.txt}
+ [46]
 PGFPlots: reading {code/createData_SA_x0_b0.txt}
- [43]) [44]
-\openout2 = text/chapter5.aux
+ [47]) [48]
+\openout2 = `text/chapter5.aux'.
+
  (./text/chapter5.tex
-Chapter 5.
-) [45
-
-
-
-]
-\openout2 = text/conclusions.aux
- (./text/conclusions.tex
 Chapter 6.
-) [46
+) [49
 
 
 
 ]
-\openout2 = text/appendix1.aux
+\openout2 = `text/conclusions.aux'.
+
+ (./text/conclusions.tex
+Chapter 7.
+) [50
+
+
+
+]
+\openout2 = `text/appendix1.aux'.
+
  (./text/appendix1.tex
 Appendix A.
-) [47
+) [51
 
 
 
 ]
-\openout2 = text/appendix2.aux
+\openout2 = `text/appendix2.aux'.
+
  (./text/appendix2.tex
 Appendix B.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1539,32 +1705,27 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-) [48
+) [52
 
 
 
-] [49]
+] [53]
 Appendix C.
-(./code/EquityDerivativeApproach.R [50
+(./code/EquityDerivativeApproach.R [54
 
-] [51]) [52]
+] [55]) [56]
 Appendix D.
-(./code/StructuralApproach.R [53
+(./code/StructuralApproach.R [57
 
-] [54] [55]) [56]
+] [58] [59]) [60]
 Appendix E.
-(./code/DiagramsCreditDerivativeApproach.R [57
+(./code/DiagramsCreditDerivativeApproach.R [61
 
 ])
-(./code/DiagramsEquityDerivativeApproach.R [58] [59])
-(./code/DiagramsStructuralApproach.R [60] [61])) [62] (./ociamthesismain.bbl
+(./code/DiagramsEquityDerivativeApproach.R [62] [63])
+(./code/DiagramsStructuralApproach.R [64] [65])) [66] (./ociamthesismain.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \OT1/cmr/m/n/12 barclayspublic / docs / InvestorRelations / esma / capital -[] 
 securities -[] documentation /
@@ -1576,61 +1737,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 ] Contingent -[] Capital -[] Notes -[] due -[] November -[]
  []
 
-[63
+[67
 
 
-] [64] [65
-Missing character: There is no ’ (U+2019) in font cmr12!
-] [66]
-Underfull \hbox (badness 10000) in paragraph at lines 350--354
+] [68] [69] [70]
+Underfull \hbox (badness 10000) in paragraph at lines 324--328
 \OT1/cmr/m/n/12 www . zkb . ch / media / dok / corporate / investor -[] relatio
 ns / produktinformationsblatt -[]
  []
 
-) [67] (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
+) [71] (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
 (./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
 (./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix1.aux)
 (./text/appendix2.aux))
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-)
-
-Here is how much of LuaTeX's memory you used:
- 37909 strings out of 494693
- 381533,1373583 words of node,token memory allocated
- 1027 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 2 sub_mlist, 53 glue_spec, 1 write 
-nodes
-   avail lists: 1:2,2:47,3:3429,4:16908,5:6773,6:3129,7:13454,9:14156,10:1082
- 39961 multiletter control sequences out of 65536+600000
- 83 fonts using 3270695 bytes
- 62i,17n,102p,1683b,2838s stack positions out of 5000i,500n,10000p,200000b,100000s
-<</Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm12
-.600pk>><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6
-.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pf
-b><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-<</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><<
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><</u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><</usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><</usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><</usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><</usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><</usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><</usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><</usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><</usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><</usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><</usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ociamthesismain.pdf (73 pages, 673326 bytes).
-
-PDF statistics: 464 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
- 0 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ ) 
+Here is how much of TeX's memory you used:
+ 36801 strings out of 493089
+ 873613 string characters out of 6134843
+ 1338774 words of memory out of 5000000
+ 39608 multiletter control sequences out of 15000+600000
+ 16530 words of font info for 68 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 62i,17n,83p,10382b,2839s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bb
+m12.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/stix/stix-mathrm.pfb>
+Output written on ociamthesismain.pdf (78 pages, 705789 bytes).
+PDF statistics:
+ 482 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

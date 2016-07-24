@@ -1,21 +1,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Anatomy of CoCos}}{9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Anatomy of CoCos}}{8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces CoCo price $V^{ed}$ and its components}}{26}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Jump-diffusion process}}{27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Jump-diffusion process}}{28}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces CoCo price $V^{cd}$ as function of share price and implied volatility}}{35}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces CoCo price $V^{cd}$ as function of maturity and interest rate}}{36}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces CoCo price $V^{cd}$ as function of trigger price and conversion volatility}}{37}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces CoCo price $V^{ed}$ as function of share price and implied volatility}}{38}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces CoCo price $V^{ed}$ as function of maturity and interest rate}}{39}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces CoCo price $V^{ed}$ as function of trigger price and conversion price}}{40}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility}}{41}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility}}{42}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility}}{43}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and jump intensity}}{44}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and initial ratio of contingent capital's nominal to deposits}}{45}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces CoCo price $V^{cd}$ as function of share price and implied volatility}}{34}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces CoCo price $V^{cd}$ as function of maturity and interest rate}}{35}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CoCo price $V^{cd}$ as function of trigger price and conversion volatility}}{36}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces CoCo price $V^{ed}$ as function of share price and implied volatility}}{37}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces CoCo price $V^{ed}$ as function of maturity and interest rate}}{38}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces CoCo price $V^{ed}$ as function of trigger price and conversion price}}{39}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility}}{40}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility}}{41}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and asset volatility}}{42}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and jump intensity}}{43}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces CoCo price $V^{sa}$ as function of asset-to-deposit ratio and initial ratio of contingent capital's nominal to deposits}}{44}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

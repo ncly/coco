@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -96,6 +96,14 @@ Patrick Cheridito and Zhikai Xu.
 \newblock Pricing and hedging cocos.
 \newblock \emph{Available at SSRN 2201364}, 2015.
 
+\bibitem[Corcuera et~al.(2013)Corcuera, De~Spiegeleer, Ferreiro-Castilla,
+  Kyprianou, Madan, and Schoutens]{corcuera2013pricing}
+Jos{\'e}~Manuel Corcuera, Jan De~Spiegeleer, Albert Ferreiro-Castilla,
+  Andreas~E Kyprianou, Dilip~B Madan, and Wim Schoutens.
+\newblock Pricing of contingent convertibles under smile conform models.
+\newblock \emph{The Journal of Credit Risk}, 9\penalty0 (3):\penalty0 121,
+  2013.
+
 \bibitem[Corcuera et~al.(2014)Corcuera, De~Spiegeleer, Fajardo, J{\"o}nsson,
   Schoutens, and Valdivia]{corcuera2014close}
 Jos{\'e}~Manuel Corcuera, Jan De~Spiegeleer, Jos{\'e} Fajardo, Henrik
@@ -139,6 +147,17 @@ Darrell Duffie and Kenneth~J Singleton.
 \newblock Modeling term structures of defaultable bonds.
 \newblock \emph{Review of Financial studies}, 12\penalty0 (4):\penalty0
   687--720, 1999.
+
+\bibitem[Duffie and Singleton(2003)]{duffie2003credit}
+Darrell Duffie and Kenneth~J Singleton.
+\newblock \emph{Credit risk pricing, measurement, and management}.
+\newblock Princeton University Press, 2003.
+
+\bibitem[Erismann(2011)]{erismann2011analytical}
+Marc Erismann.
+\newblock \emph{Analytical propositions to evaluate contingent convertible
+  capital}.
+\newblock PhD thesis, Master’s thesis, University of St. Gallen, 2011.
 
 \bibitem[Erismann(2015)]{erismann2015pricing}
 Marc Erismann.
@@ -190,6 +209,12 @@ Robert~A Jarrow and Stuart~M Turnbull.
 David Lando.
 \newblock \emph{Credit risk modeling: theory and applications}.
 \newblock Princeton University Press, 2009.
+
+\bibitem[Leland(1994)]{leland1994corporate}
+Hayne~E Leland.
+\newblock Corporate debt value, bond covenants, and optimal capital structure.
+\newblock \emph{The journal of finance}, 49\penalty0 (4):\penalty0 1213--1252,
+  1994.
 
 \bibitem[Lloyds(2009)]{lloyds2009}
 Lloyds.
@@ -286,6 +311,12 @@ Suresh Sundaresan and Zhenyu Wang.
 \newblock \emph{The Journal of Finance}, 70\penalty0 (2):\penalty0 881--920,
   2015.
 
+\bibitem[Teneberg(2015)]{teneberg2012equity}
+Henrik Teneberg.
+\newblock Pricing contingent convertibles using equity derivatives jump
+  diffusion approach.
+\newblock \emph{Master thesis}, 2015.
+
 \bibitem[Turfus and Shubert(2015)]{turfus2015cocos}
 Colin Turfus and Alexander Shubert.
 \newblock Analytic pricing of coco bonds.
@@ -308,6 +339,12 @@ Sascha Wilkens and Nastja Bethke.
   selected pricing models.
 \newblock \emph{Financial Analysts Journal}, 70\penalty0 (2):\penalty0 59--77,
   2014.
+
+\bibitem[Z{\"a}hres(2011)]{zahres2011contingent}
+Meta Z{\"a}hres.
+\newblock Contingent convertibles: Bank bonds take on a new look.
+\newblock \emph{Deutsche Bank Research, Financial Market Special, EU Monitor},
+  79, 2011.
 
 \bibitem[{Zurich Cantonal Bank}(2013)]{zkv2013}
 {Zurich Cantonal Bank}.

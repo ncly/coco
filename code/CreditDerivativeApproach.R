@@ -5,7 +5,7 @@ price_coco_cd <- function(t, T, S_t, S_star, C_p, c_i, r, N, q, sigma){
   V_t_coco <- N * exp(-(r + spread_coco) * (T - t))
   
   for (t in 1:T){
-    V_t_coco <- V_t_coco + c_i * exp(-(r + spread_coco) * t)  
+    V_t_coco <- V_t_coco + c_i * exp(-(r + spread_coco) * t)
   }
   return(V_t_coco)
 }
@@ -29,4 +29,4 @@ calc_spread_coco <- function(t, T, S_t, S_star, C_p, r, q, sigma){
 }
 
 # Pricing Example
-price_coco_cd(t <- 0, T <- 5, S_t <- 40, S_star <- 20, C_p <- 25, c_i <- 7, r <- 0.03, N <- 100, q <- 0, sigma <- 0.3)
+price_coco_cd(t <- 0, T <- 10, S_t <- 100, S_star <- 35, C_p <- 65, c_i <- 6.00, r <- 0.01, N <- 100, q <- 0.02, sigma <- 0.3)
