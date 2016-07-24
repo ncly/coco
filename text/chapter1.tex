@@ -1,106 +1,168 @@
-\chapter{Introduction and Motivation}
+\chapter{Introduction}
 
-\section{Introduction}
+\section{Background}
+Investors are overly restrictive in providing liquidity to financial institutions during periods of financial distress. In the past, governments were often in the situation to inject liquidity to financial markets in order to avoid disruptive insolvencies as no other market participant was inclined to do so. Government bailouts, however, externalize the cost of bankruptcy to taxpayers while distorting risk-taking incentives of banking professionals. Contingent convertibles (CoCos) aim to internalize these costs in the capital structure of systemically important financial institutions. CoCos are hybrid financial instruments that absorb losses pursuant to their specifications in case a pre-determined threshold fails to remain above a minimum trigger level. Then, debt automatically morphs to equity which instantly improves a bank's capitalization. Due to their loss-absorption capacity, CoCos are eligible to be categorized as regulatory capital under Basel III. \citep{avdjiev2013cocos} \\
 
-Past Situation
+After the global financial crisis of 2008, regulators around the world have been working on two different objectives. On the one hand, they attempt to lower spillover effects on the economy due to bankruptcies of financial institutions. On the other hand, they aim to reduce the individual default probabilities of banks. The latter objective might be attained by ensuring that banks have enough loss absorbing capital on their balance sheet even in though times. \citep{de2011handbook} In this context, the Basel Committee on Banking Supervision (BCBS) specified that debt instruments are permitted as regulatory capital if losses are absorbed to such an extent that tax payers do not have to bear the costs. \citep{basel2011press} Subsequently, this opened the door for CoCos and ever since, the regulatory treatment has been a major driver of past issues.
 
-CoCo as Solution & Studies
+%Under Basel III, CoCos can be categorized as either Additional Tier 1 (AT1) or Tier 2 (T2) capital. Both types qualify to meet regulatory capital requirements. \citep{avdjiev2013cocos} But the BCBS requires both categories to inherit a trigger event that activates a loss-absorption mechanism. The trigger event is determined to be the earlier of either the decision of a regulatory authority to inject funds into a distressed bank or the decision that a financial institution is not viable without loss-absorption. In addition to this standard component a CoCo also features an automatic trigger which is based on regulatory capital ratios. \citep{de2014handbook} The terms and conditions ensure that losses are fully absorbed at the point of non-viability. \citep{basel2011press} \\
 
-CoCo under Basel III
+Besides the reforms of policy makers to raise the quality of regulatory capital, recent studies on CoCos highlight a number of advantages. \citet{albul2015contingent} show that CoCos lessen financial distress, whether caused by idiosyncratic or systemic shocks. They indicate lower default probabilities of banks and a smaller likelihood of costly bailouts by the public sector. \citet{hilscher2014bank} support these findings. Additionally, they argue that an appropriate specification of a CoCo's building parts can eliminate the incentives of shareholders to asset-substitution. The problem of asset-substitution arises when managers undertake excessively risky investment decisions to maximize shareholder value at the expense of debtholders. \citep{bannier2010} Moreover, research evinces that CoCos increase the firm value of their issuer as they reduce the cost of capital. \citep{albul2015contingent, von2011contingent, barucci2012countercyclical} To sum up, CoCos should be considered in the liability structure of banks from an academic standpoint.\\ 
 
-\begin{itemize}
-\item regulators have been simultaneously working on two different fronts in the aftermath of the 2008 crisis
-\item first, they wanted to reduce the impact of a single bank failure on the rest of the economy
-\item second, they aimed to reduce the probability of a bank failure taking place
-\item this second goal can be achieved by making sure that banks are better equipped to weather a financial storm
-\item banks need to be more loss absorbing
-\item this can be achieved by increasing the amount of regulatory capital 
-\end{itemize}
+In addition to the positive perception of policy makers and academia, CoCos are well accepted by the financial industry. Banks value that the hybrid instrument enables them to refinance themselves while simultaneously satisfying the regulatory capital requirements at lower costs than with equity. \citep{europeanparliament2016} Between 2009 and 2015, financial institutions around the world issued CoCos worth USD 446.96 bn in 519 different issues. \citep{avdjiev2015coco} Albeit the amount of CoCos issued is relatively small compared to the market size of other financial products, they were brought into focus in early 2016. At this time, CoCos contributed to increased market volatility in view of some European banks (i.a. Deutsche Bank and Credit Suisse). The relevance of this episode concerning the potential systemic implications should not be whitewashed as it is likely that discussions on regulatory changes will emerge. Having regard to this circumstances, the question arises about the perception of CoCos by investors and the robustness of their pricing models. \citep{europeanparliament2016} \\
 
-\begin{itemize}
-\item in 2011, the Basel Committee specified that a debt instrument can only be part of the regulatory capital if losses can be absorbed in such a way that tax-payers' money is not going to be needed to bail out banks {14}
-\item the loss absorption is triggered by an event which forces the bond to be either converted into common equity or written off
-\item according to the Basel Committee, the trigger event is the earlier of
-\subitem decision by the relevant authority to use public funds and inject these into the company without which this bank would become non-viable
-\subitem decision by the same relevant authority that the bank is no longer viable without a write-off on its debt
-\item in both cases the trigger is in the hands of a regulatory body that supervises the bank when the trigger mechanism is called a non-viability or regulatory trigger and is a standard component of any Tier 2 or Additional Tier 1 instrument issued in the Basel III framework
-\item on this non-viability trigger, contingent debt has an automatic trigger mechanism through incorporation of an accounting trigger in its terms and conditions
-\item when implementing Basel III into European law, CRD IV, has for example laid out a minimum level of 5.12 \% CET1.
-\end{itemize}
+In this context, an investigation and analysis of different valuation concepts for CoCos is highly interesting for both investors as well as supervisory authorities. The paper contributes to a better understanding of relevant concepts. Additionally, the valuation approaches will be applied to a CoCo which was affected by the turbulences in early 2016.
 
-Current Situation
+%\begin{itemize}
+%\item between January 2009 and September 2015, banks around the world issued a total amount of USD 446.96 bn in CoCos through 519 different issues %\citep{avdjiev2015coco}
+%\subitem 53.9\% used principal write-down loss absorption, while the rest used conversion-to-equity %\citep{avdjiev2015coco}
+%\subitem 44.6\% were issued in USD, 18.1 \% in EUR and the rest in other currencies %\citep{avdjiev2015coco}
+%\subitem 54\% were classified as AT1, while 46\% were classified as Tier 2 %\citep{avdjiev2015coco}
+%\subitem the majority (57.1\%) were perpetual bonds (no set maturity), while most of the other (38.3\%) were bonds with a maturity of more than 10 years %\citep{avdjiev2015coco}
+%\subitem Finally, with regards to the trigger, almost half (48\%) of CoCos issued had a trigger between 4.5\% and 6\%, almost a fifth (18\%) used a higher trigger (>6\%) and almost a third (29.6\%) had no numerical trigger %\citep{avdjiev2015coco}
+%\end{itemize}
 
-\begin{table}[h]
-	\centering
-	\begin{tabular}{cl}
-		\toprule
-			Face Value in USD bn & Issuer \\
-		\midrule
-			3.75 & HSBC (GB) \\
-			3.63 & UBS (CH) \\
-			3.15 & Royal Bank of Scotland (GB) \\
-			3.00 & Barclays (GB) \\
-			2.70 & UBS (CH) \\
-			2.50 & Credit Suisse (CH) \\
-			2.50 & UBS (CH) \\
-			2.45 & HSBC (GB) \\
-			2.25 & ING (NL) \\
-			2.06 & Banco Santander (ESP)\\
-		\bottomrule
-	\end{tabular}
-	\caption[Largest CoCo issues in Europe]{Largest CoCo issues in Europe from 2010 to 2016 \citep{schmuddel2016}}
-\end{table}
 
-\section{Literature Overview}
+%\begin{itemize}
+%\item CoCos are regarded positively both by the industry and by regulators. Banks appreciate the fact that this instrument allows them to fund themselves and satisfy their regulatory capital requirements at a lesser cost than with equity. Regulators note positively the fact that the instrument is designed to facilitate balance-sheet repair, or the orderly resolution of a bank, without the bank having to seek to issue extra equity under stressful conditions.\citep{europeanparliament2016}
+%\item Although the size of CoCos issued until now is still small in comparison with other financial instruments, they attracted media attention in early 2016, when they contributed to increasing market volatility around some EU issuing financial institutions. While the 'incident' was contained, its importance should not be downplayed. The possible systemic implications for European markets of a more serious episode should be considered. This raises questions about how investors understand CoCos, as well as the robustness of models that estimate their risks. CoCos are also likely to feature in discussions on possible regulatory changes to banks' capital requirements. \citep{europeanparliament2016}
+%\end{itemize}
 
+
+%Sundaresan 2015: Contingent capital (CC), which aims to internalize the costs of too-big-to-fail in the capital structure of large banks, has been under intense debate by policy makers and academics. We show that CC with a market trigger, in which direct stakeholders are unable to choose optimal conversion policies, does not lead to a unique competitive equilibrium unless value transfer at conversion is not expected ex ante. The ?no value transfer? restriction precludes penalizing bank managers for taking excessive risk. Multiplicity or absence of equilibrium introduces the potential for price uncertainty, market manipulation, inefficient capital allocation, and frequent conversion errors.
+
+%The regulatory treatment has been a major driver of past CoCo issues. 
+
+%\begin{table}[h]
+%	\centering
+%	\begin{tabular}{cl}
+%		\toprule
+%			Face Value in USD bn & Issuer \\
+%		\midrule
+%			3.75 & HSBC (GB) \\
+%			3.63 & UBS (CH) \\
+%			3.15 & Royal Bank of Scotland (GB) \\
+%			3.00 & Barclays (GB) \\
+%			2.70 & UBS (CH) \\
+%			2.50 & Credit Suisse (CH) \\
+%			2.50 & UBS (CH) \\
+%			2.45 & HSBC (GB) \\
+%			2.25 & ING (NL) \\
+%			2.06 & Banco Santander (ESP)\\
+%		\bottomrule
+%	\end{tabular}
+%	\caption[Largest CoCo issues in Europe]{Largest CoCo issues in Europe from 2010 to 2016 \citep{schmuddel2016}}
+%\end{table}
+
+\section{Previous Studies}
+Various valuation approaches for CoCos have been developed over time covering different aspects of their nature. The variety of approaches is due to the hybrid character of CoCos which also makes them a highly interesting object of study. \citet{wilkens2014contingent} propose three groups to organize the broad universe: structural approaches, equity derivative approaches and credit derivative approaches. Additionally, \citet{turfus2015cocos} suggest a fourth category: hybrid equity-credit derivative approaches. A comprehensive compilation of relevant studies for each category can be found in table \ref{tbl:paper}. Subsequently, the main idea of each approach type will be explained.
 
 \begin{table}[H]
+	\tiny
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
 	\begin{tabular}{>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}>{\centering\arraybackslash}p{4cm}}
 		\toprule
-			Structural Approach & Equity Derivative Approach & Credit Derivative Approach \\
+			\textbf{Structural Approaches} & \textbf{Equity Derivative Approaches} & \textbf{Credit Derivative Approaches} \\
 		\midrule
-			\citet{pennacchi2010structural} & \citet{de2011pricing} &  \citet{de2011pricing}\\
-			\citet{glasserman2012contingent}  & \citet{henriques2011making} & \\
-			\citet{madan2011conic}  &  &  \\
-			\citet{albul2010contingent}  &  &  \\
-			\citet{sundaresan2015design}  &  &  \\
-			\citet{hilscher2014bank}  &  &  \\
-			\citet{buergi2013pricing} &  &  \\
+			\cellcolor{green!20} \citet{pennacchi2010structural} &\cellcolor{green!20} \citet{de2011pricing} & \cellcolor{green!20} \citet{de2011pricing}\\
+			\citet{albul2010contingent}  & \citet{henriques2011making} as cited by \citet{erismann2015pricing} &  \citet{serjantov2011hybrid} as cited by \citet{wilkens2014contingent}\\
+			\citet{madan2011conic}  & \citet{alvemar2012modelling} &  \citet{alvemar2012modelling}\\
+			\citet{glasserman2012contingent} & \citet{corcuera2013pricing} & \citet{erismann2015pricing}   \\
+			\citet{alvemar2012modelling}  & \citet{corcuera2014close}  &  \\
+			\citet{buergi2013pricing} & \citet{teneberg2012equity} &  \\
+			\citet{hilscher2014bank}  & \citet{erismann2015pricing} &  \\
+			\citet{pennacchi2015reexamination} & & \\
+			\cmidrule[0.12em](lr){2-3}
+			\citet{cheridito2015pricing} & \multicolumn{2}{c}{\textbf{Hybrid Equity-Credit Derivative Approaches}}  \\
+			\cmidrule[0.075em](lr){2-3}
+			\citet{erismann2015pricing} & \multicolumn{2}{c}{\citet{turfus2015cocos}} \\
+			\citet{sundaresan2015design} & & \\
 		\bottomrule
 	\end{tabular}
-	\caption[Literature overview of valuation approaches for CoCos] {Literature overview of valuation approaches for CoCos \citep{erismann2015pricing}}
+	\caption[Literature overview of valuation approaches for CoCos] {Literature overview of valuation approaches for CoCos \citep{wilkens2014contingent, erismann2015pricing, turfus2015cocos} with the examined methods (highlighted in green) }
+	\label{tbl:paper}
 \end{table}
 
-\subsection{Structural Approaches}
+\textbf{Structural approaches} try to capture all parameters that influence the issuer's ability to pay its liabilities. They are normally built upon a stochastic model which focusses on the variation in asset values relative to liabilities. \citep{duffie2003credit} By contrast, \textbf{equity derivative approaches} emphasize the dependence of a CoCo's state on the share price and use equity derivatives to replicate CoCos. This model type follows the train of thought that the share price is the best proxy to track the solvency of the issuer. In contrast, \textbf{credit derivative approaches} assume an exogenously specified process for the migration of conversion probabilities. They apply the idea of reduced-form approaches to model the equity conversion intensity process of CoCos in line with a credit default intensity process. The rationale behind this approach is that CoCos are credit-risky instruments as their conversion depends on the issuer's solvency. \citep{wilkens2014contingent} \textbf{Hybrid equity-credit derivative approaches} capture the advantages of the latter two approaches. They model both the share price and the conversion intensity process as correlated stochastic processes. \citep{turfus2015cocos}\\ 
 
-\subsection{Equity Derivative Approaches}
+A detailed literature review of the various pricing approaches is outlined in the following sections.
 
-\subsection{Credit Derivative Approaches}
+\subsection*{Structural Approaches}
+Structural approaches offer a natural pricing framework for CoCos. They consider a bank's balance sheet structure as the most important value driver. Numerous structural approaches have been proposed in academia. All share common characteristics but vary in their application. \citep{wilkens2014contingent} For instance, they are often used to draw policy recommendations. A selection can be found in the following.\\ 
 
-\section{Motivation}
+%\begin{itemize}
+%\item \citet{glasserman2012contingent} considered CoCos that continuously convert sufficient nominal to maintain a capital ratio above the critical level. Glasserman and Nouri (2012) adapt a structural model to analyze contingent capital with a capital ratio trigger and on-going partial conversion, such that just enough debt is converted into equity to meet the minimum requirement. They arrive at closed form solutions for the market value of such securities in a setting where the assets are modeled as a Geometric Brownian Motion.
+%\item \citet{buergi2013pricing} presents a structural framework that combines multiple aspects from theoretical and practical literature, allowing him to model tier 1 triggered CoCos by imposing that there is a linear relationship between straight and tier 1 equity ratios. The model reveals large pricing differences in a time series analysis on a Credit Suisse CoCo, concluding with the fact that the parametrization in any model is attached with a lot of uncertainty and that future CoCo issuances should be designed in the form of pure write-dobuergwn bonds.
+%\end{itemize}
 
-\begin{itemize}
-\item 
-\end{itemize}
+% Hybrid stuff explain turfus henriques and doctor
 
-
-\section{Methodology}
-
-\begin{itemize}
-\item in the wake of the new regulatory standards proposed by EU and the Basel Committee, an investigation and analysis on how to model the value of CoCos is of great interest for both investors and regulatory authorities
-\item study CoCos in detail to get a deeper knowledge about the pros and cons as well as an understanding on how to price these instruments
-\item we will go through three models on how to price CoCos thoroughly and also investigate the sensitivity of the chosen pricing frameworks
-\item will go through the building parts of a CoCo 
-\item Chapter 2 provides a comprehensive overview of CoCos and characteristic design features to introduce the qualitative framework needed to understand the behavior, the mechanisms and most importantly the risk drivers of a CoCo
-\item Real-life examples further substantiate the relevance of the framework
-\item we present and describe the structure of some of the CoCos issued so far 
-\item using this framework, the three mentioned pricing approaches are introduced in the following chapter both in a setting where returns are allowed to be discontinuous
-\item chapter four further outlines the data requirements and parametrization techniques of the models and provides first pricing examples
-\item in section 4 we carefully study the three chosen pricing frameworks and the modifications to increase accuracy
-\item Chapter 5 includes a dynamics and sensitivity analysis to assess the model behaviour with respect to different pricing and design parameters
-\item an empirical analysis follows in chapter 6, where the models are parametrized on one Deutsche Bank CoCo and the resulting price dynamics are qualitively and quantitavely compared to reach a conclusion and outlook in chapter 7
-\end{itemize}
+%\item \citet{cheridito2015pricing} Contingent convertible bonds are typical hybrid products in that they are exposed to different types of risk: interest rate risk, equity risk and conversion risk. We first develop a general framework for their pricing and hedging that can be specified in different ways. Then we focus on intensity-based and first-passage time models driven by a finite-dimensional Markov process. The two approaches are qualitatively different. But both allow to price contingent convertibles and calculate dynamic hedging strategies with holdings in related instruments such as fixed income products, the issuing company?s stock and credit default swaps. As case studies we consider contingent convertibles issued by Lloyds Banking Group in December of 2009 and Rabobank in March of 2010.
 
 
+%\citet{cheridito2015pricing} 
+
+The study of \citet{albul2010contingent} is the first paper to provide analytic propositions to price CoCos by adapting the structural model of \citet{leland1994corporate}. The authors develop implications for the design of CoCos with the objective of maximizing the benefit for the issuer. Interestingly, their analysis is at first not limited to financial institutions. In fact, they argue that CoCos might generally be advantageous for corporates to optimize their capital structure. The authors further recommend the specific use of CoCos as tool for bank regulation. In this context, studies like \citet{madan2011conic}, \citet{hilscher2014bank} and \citet{sundaresan2015design} analyze beneficial structures of CoCos.\\
+
+In the scientific literature, the work of \citet{pennacchi2010structural} is often used as a reference article for structural approaches as he attempts to model the stochastic evolution of a bank's balance sheet to price CoCos (for further details see chapter \ref{sec:structuralapproach}). The author is able determine the value of CoCos by applying a jump-diffusion process to account for discontinuous asset returns. Capital ratios with mean-reverting tendency and a stochastic term-structure model shall improve the pricing accuracy. Based on the derived framework the author is able to capture several risk factors that may influence a CoCo's price. However, this is also the main shortcoming of the approach because the author does not address the parametrization of input factors in practice, which is also indicated by the work of \citet{erismann2015pricing}.\\
+
+\citet{madan2011conic} implement a structural model utilizing conic finance theory. Classical Mertonian models \citep{merton1974pricing} assume that assets are risky but liabilities are not. For instance, \citet{alvemar2012modelling} applies such a pure model pursuant to \citet{merton1974pricing} to price CoCos. In contrast, the model of \citet{madan2011conic} assumes that liabilities are risky and correlated to the asset dynamics. The authors abandon the one-price-market idea and assume that bid-ask spreads exist. In addition, they argue that the Core Tier 1 ratio is potentially not optimal as trigger if one considers the presence of risky liabilities. As alternative they propose accounting triggers based on capital shortfall.
+
+%\citet{hilscher2014bank} demonstrate that an appropriate design of CoCos can mitigate the risk of asset-substitution by exactly offsetting costs and benefits of shareholders when increasing the probability of conversion. Hence, the inclusion of CoCos has positive effects on the financial stability of banks through the reduction of default probability and incentives for managerial risk taking.\\
+
+%\citet{sundaresan2015design} argue based on a structural approach that CoCos with market trigger do not lead to a unique share price equilibrium, unless conversion result in a value transfer  between shareholders and CoCo investors. Having said that, the design of dilutive conversion ratios to punish bank managers for taking excessive risks creates multiple equilibria which in turn makes CoCos susceptible to market manipulation. The authors conclude that regulation with good intention might cause instability in the market and that the impact of regulation may be limited by the market itself. %However, \citet{hilscher2014bank} demonstrate that an appropriate design of CoCos can mitigate the risk of asset-substitution by exactly offsetting costs and benefits of shareholders when increasing the probability of conversion. However, \citet{pennacchi2015reexamination} weaken the argumentation of \citet{sundaresan2015design} as they demonstrate that a unique share price equilibrium exists for CoCos with perpetual maturity independent of their trigger type. The relevance of their findings is emphasized by the fact that 57.1\% of CoCos, which have been issued between 2009 and 2015 do not have a set maturity. \citep{europeanparliament2016}
+
+\subsection*{Equity Derivative Approaches}
+Equity derivative approaches are an important category of valuation approaches which consider the share price as the best proxy. Most important approaches will be summarized in the following.\\
+
+\citet{de2011pricing}, for example, replicate the payout profile of a CoCo with a portfolio consisting of a straight bond, a knock-in forward and a set of binary down-and-in calls (for further details see chapter \ref{sec:structuralapproach}). Under the assumption that a CoCo will not convert to equity, one can assume that a CoCo is equivalent to a straight bond. Though, the knock-in forward simulates the conversion of a straight bond when a predetermined strike price is met. A CoCo investor would receive the shares at maturity if he or she is long a knock-in forward. However, this is a simplification which is reasonable under the assumption that dividend payments are cancelled in times of distress. Additionally, the foregone coupon payments of a straight bond at conversion are modeled with a short position in binary down-and-in calls. One of the main findings is that the assumed Black-Scholes setting does not sufficiently capture tail risks but which are inherent in CoCos.\\
+
+Other models enhance the model dynamics by accounting for jumps and heavy tails. \citet{erismann2015pricing} and \citet{teneberg2012equity} amend the model of \citet{de2011pricing} by allowing for discontinuous returns. The calculations with regard to the binary down-and-in calls and the knock-in forward position accommodates a jump-diffusion process. \citet{corcuera2013pricing} also consider an equity derivative approach that reduces the valuation to a set of barrier options in which the trigger event is determined by the underlying hitting the barrier. They use smile conform models, more precisely, an exponential L\'{e}vy process incorporating jumps and heavy tails.
+
+\subsection*{Credit Derivative Approaches}
+The price of a CoCo is directly linked to the issuer's solvency and default probability. Intensity-based credit modeling allows to develop comprehensive pricing approaches. In this connection, one should mention the work of \citet{de2011pricing}, \citet{serjantov2011hybrid} and \citet{erismann2015pricing}. \\
+
+\citet{de2011pricing} tackle the pricing problem with a credit-derivative approach (for further details see chapter \ref{sec:creditderivativeapproach}). Their main contribution lies in the derivation of a closed-form solution of a CoCo's credit spread. In their model the spread follows a function of an exogenously defined trigger probability. The spread compensates for the risk that the CoCo converts to equity implying a loss for each investor. Their approach is an elegant way of bridging the gap between the prediction of conversion and the pricing of conversion risk. Though, the largest shortcoming of the model is that it fails to capture losses from cancelled coupons of triggered CoCos.\\
+
+\citet{erismann2015pricing} expands the model of \citet{de2011pricing} by assuming that returns follow a jump-diffusion process. The approach models the exposure to return outliers of both signs and amplitudes. Finally, the author demonstrates that his approach is superior to \citet{de2011pricing} considering pricing accuracy.\\
+
+\citet{serjantov2011hybrid} as cited by \citet{wilkens2014contingent} develops a closed form solution to price CoCos. All cashflows are weighted with cumulative survival probabilities. In addition, the approach distinguishes between the conversion ratio without default and the recovery rate at default. The joint probability of both events happening in the same time interval is described with a Gaussian copula. Furthermore, this approach overcomes the shortcoming of the credit derivative approach of \citet{de2011pricing} as it explicitly captures coupon payments.
+
+\subsection*{Hybrid Equity-Credit Derivative Approaches}
+\citet{turfus2015cocos} present a new pricing approach for CoCos. Their starting point is a stochastic model which captures interest rates, share prices and a conversion intensity process. The evolution of the first two is assumed to be determined by diffusive processes. By contrast, the share price is supposed to be governed by a jump-diffusion process which factors into a downward jump when the trigger level is touched. Both the share price and the conversion intensity process are modeled as correlated stochastic processes. For this very reason, the hybrid equity-credit derivative approach may be regarded as an important step forward because two direct benefits arise. On the one hand, the share price at conversion is modeled instead of being an input parameter and on the other hand, both equity and credit risk sensitivity can be estimated individually.  
+
+\section{Research Methodology}
+The objective of the thesis consists of an examination of three dominant pricing approaches for CoCos similar to the proceedings of \citet{alvemar2012modelling}, \citet{erismann2015pricing} and \citet{wilkens2014contingent}. All of them are widely discussed in academic literature as they are often used as basis for further model advancements. The utilized approaches are namely the structural approach of \citet{pennacchi2010structural}, the equity derivative approach and the credit derivative approach both pursuant to \citet{de2011pricing}. Hereinafter, chapter 2 provides an overview of the anatomy of CoCos. Characteristic building parts of the financial product will be discussed in detail in order to create an improved understanding of the mechanisms which drive the valuation of this hybrid instrument. In chapter 3, examples of past CoCos issues are highlighted covering the most important variations of the aforementioned design features. On this basis, chapter 4 studies the theoretical concepts behind each of the three valuation approaches. In addition, pricing examples provide an understanding of the data requirements of each model. In chapter 5, sensitivity analysis determine how different values of certain pricing parameters impact the valuation of CoCos. Chapter 6 comprises an empirical analysis on the price tracking accuracy of the aforementioned valuation approaches. Finally, a conclusion is reached in chapter 7.
+
+%\begin{itemize}
+%\item chapter 2 - provides a comprehensive overview of the anatomy of CoCos and goes through characteristic building parts  
+%\item chapter 3 - highlights examples of issued CoCos covering all variations of the aforementioned design features
+%\item chapter 4 - studies the theoretical concepts behind the three valuation approaches; investigates pricing examples and their data requirements
+%\item chapter 5 - covers sensitivity analysis to investigate the behavior of each model with respect to varying parameters
+%\item chapter 6 - details an empirical analysis where the models are parametrized on one CoCo. 
+%\item chapter 7 - resulting price dynamics are qualitatively and quantitatively compared to reach a conclusion in chapter 7
+
+
+
+%\citet{henriques2011making} as cited by \citet{erismann2015pricing} develop an practical approach. They consider CoCos as bonds,  
+%
+%considers a CoCo to be a bind, where the issuer has a long position  
+
+
+%\begin{itemize}
+%\item \citet{henriques2011making} consider a CoCo to be a bond issued by a financial institution where the issuer has a long position in an option from the bondholder which is exercised at the occurrence of a trigger event such that the face value of the bond is converted into equity at a predetermined strike. Hence, they replicate a CoCo with an amount that gets written down to zero in the event of a trigger and an amount that gets converted into equity. These components are priced individually. They believe that such a model accurately reflects the risk and structure of CoCo bonds and advise that conflicting interests could be mitigated by establishing a direct link between the solvency variable and the underlying equity value.
+%\end{itemize}
+
+
+
+
+
+%http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/582011/EPRS_BRI(2016)582011_EN.pdf
+%http://econ.au.dk/fileadmin/site_files/filer_oekonomi/Research_groups/Finance_Research_Group/CoCos_Extension.pdf
+%http://www.unisg.ch/~/media/3306F28E094441F09BA75404F090312E.ashx
+%CH0181115681
+
+% \item \citet{turfus2015cocos} We present a new model for pricing contingent convertible (CoCo) bonds which facilitates the calculation of equity, credit and interest rate risk sensitivities. We assume a lognormal equity process and a Hull- White (normal) short rate process for the conversion intensity with an equity jump on conversion. We are able to derive approximate solutions in closed form which are seen to be highly accurate for a wide range of market conditions, even out to long maturities. The method relies on the assumption that the conversion intensity volatility is asymptotically small, but is seen to work adequately even for relatively large conversion intensity volatilities. Extension of the method to a Black-Karasinski (lognormal) process for the conversion intensity is also considered.
+
+% Parametrization of a stochastic model of the unobservable details of a financial institution's fluctuating assets is problematic. Further it is not obvious how to calculate sensitivities of model prices to market market parameters when calibration is done to balance-sheet figures published infrequently

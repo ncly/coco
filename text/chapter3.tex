@@ -1,6 +1,6 @@
 \chapter{Theory of Pricing}
 
-\section{Credit Derivative Approach}
+\section{Credit Derivative Approach} \label{sec:creditderivativeapproach}
 
 In financial markets the reduced-form approach is widely used in order to price credit risk. It was originally introduced by \citet{jarrow1995pricing} respectively \citet{duffie1999modeling}. The credit derivative approach applies the reduced-form approach to CoCos. In this context, the derivation of a pricing formula for CoCos follows mainly \citet{de2011pricing}. 
 
@@ -66,37 +66,43 @@ V^{cd}_t &= \sum^T_{i=1} c_i \exp\left[-(r + s_{CoCo_t}) (t_i - t)\right] + N \e
 
 In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to bear in mind its largest shortcoming. Losses from cancelled coupons of triggered CoCos are not taken into account in the valuation. Hence, the credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
 
-\subsection{Parameter Classification and Adjustment}
+\subsection{Parameter Classification and Adjustment} \label{creditparameterssection}
+The credit derivative approach requires several model inputs which can be found in table \ref{creditparameters}. Generally, one can separate three different types. Static inputs comprise parameters that are specified ex ante and are assumed to be constant. Dynamic inputs are updated regularly. Fitting parameters are used to fit the model prices to market prices. \citep{wilkens2014contingent}
 
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
 	\begin{tabular}{llll}
 		\toprule
-			 & Description & Usage & Source \\
+			 & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\
 		\midrule
 			$T$ & CoCo maturity & Static input & Term sheet \\
 			$N$ & CoCo nominal & Static input & Term sheet \\			
 			$c$ & CoCo coupon rate & Static input & Term sheet \\
 			$S_0$ & Initial share price of the issuer & Dynamic input & Market data \\
-			$S^*$ & Trigger share price & Static input & Term sheet \\
+			$S^*$ & Trigger share price & Fitting parameter & -- \\
 			$C_p$ & CoCo nominal conversion price & Static input & Term sheet \\
-			$r$ & Risk-free interest rate & Static input & Market data \\
-			$q$ & Dividend yield & Static input & Market data\\
-			$\sigma$& Implied volatility & Static input & Market data \\
+			$r$ & Risk-free interest rate & Dynamic input & Market data \\
+			$q$ & Dividend yield & Dynamic input & Market data\\
+			$\sigma$& Share price volatility & Dynamic input & Market data \\
 		\bottomrule
 	\end{tabular}
 	\caption[Parameter classification of the credit derivative approach]{Parameter classification of the credit derivative approach \citep{wilkens2014contingent}}
+	\label{creditparameters}
 \end{table}
 
+All static inputs can be found in the term sheets of the respective CoCo. But beyond the model depends upon further dynamic inputs among others the share price $S$, the risk-free interest rate $r$, the dividend yield $q$ and the share price volatility $\sigma$. The daily share price $S$ is directly observed in the market. The risk-free interest rate $r$ is derived from sovereign bonds with the same maturity and currency. Furthermore, the input parameter $q$ relies on the three year average dividend yield of the issuing company. The share price volatility $\sigma$ is derived based on a yearly average volatility on a reference stock market index of the last five years similar to \citet{alvemar2012modelling}. In addition, the only degree of freedom in the credit derivative approach is the fitting parameter $S^*$ respectively the trigger share price. Because this input variable is neither a static parameter nor a market parameter, $S^*$ is adjusted by minimizing the root mean squared deviation to realized CoCo prices. \citep{erismann2011analytical}
+
 \subsection{Model Application}
+
+In the following a fictive CoCo is priced with the credit derivative approach pursuantly the specifications as stated in table \ref{creditcoco}. After installing both R, a programming language for statistical computing, and Rstudio, an open-source integrated development environment, a reader can easily price the aforementioned CoCo example with the source code of chapter \ref{creditderivativeapproach}. The CoCo specifications are also used to analyze the price sensitivity in regard to certain input parameters. The results of the sensitivity analysis for the credit derivative approach can be found in section \ref{sensicredit}.
 
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
 	\begin{tabular}{lrl}
 		\toprule
-			 & Value & Comment \\
+			 & \textbf{Value} & \textbf{Comment} \\
 		\midrule
 			$T$ & $10$yrs & Maturity \\
 			$N$ & $100$ & Nominal \\			
@@ -110,9 +116,12 @@ In summary, the credit derivative approach provides us with a concise method to 
 		\bottomrule
 	\end{tabular}
 	\caption[Parameter specification of credit derivative approach application]{Parameter specification of credit derivative approach application \citep{alvemar2012modelling}}
+	\label{creditcoco}
 \end{table}
 
-\section{Equity Derivative Approach}
+The spread of the CoCo $s_{CoCo}$ equals $2.88\%$ and the respective price of the fictive CoCo $V^{cd}$ equates to $112.51$.
+
+\section{Equity Derivative Approach} \label{sec:equityderivativeapproach}
 
 In order to assess the value of a CoCo, investors can use a method which depends on equity derivatives. \citep{de2011pricing, de2014handbook} The so-called equity derivative approach attempts to compensate for the main drawback of the credit derivative approach, since it takes into account that coupon payments might be cancelled if the trigger of a CoCo was touched.\\
 
@@ -234,36 +243,41 @@ V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t}^{bdic}
 
 \subsection{Parameter Classification and Adjustment}
 
+The equity derivative approach requires the same input parameters as the credit derivative approach. Respective variables are shown in table \ref{equityparameters}. The parameters are calibrated in the same manner as already explained in section \ref{creditparameterssection}.
+
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
 	\begin{tabular}{clll}
 		\toprule
-			 & Description & Usage & Source \\ 
+			 & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\ 
 		\midrule
 			$T$ & CoCo maturity & Static input & Term sheet \\
-			$N$ & CoCo nominal & Static input & Term sheet \\
+			$N$ & CoCo nominal & Static input & Term sheet \\			
 			$c$ & CoCo coupon rate & Static input & Term sheet \\
 			$\alpha$ & CoCo nominal conversion factor & Static input & Term sheet \\
 			$S_0$ & Initial share price of the issuer & Dynamic input & Market data \\
-			$S^*$ & Trigger share price & Static input & Term sheet \\
+			$S^*$ & Trigger share price & Fitting parameter & -- \\
 			$C_p$ & CoCo nominal conversion price & Static input & Term sheet \\
-			$r$ & Risk-free interest rate & Static input & Market data \\						
-			$q$ & Dividend yield & Static input & Market data \\
-			$\sigma$& Implied volatility & Static input & Market data \\
+			$r$ & Risk-free interest rate & Dynamic input & Market data \\
+			$q$ & Dividend yield & Dynamic input & Market data\\
+			$\sigma$& Implied volatility & Dynamic input & Market data \\
 		\bottomrule
 	\end{tabular}
 	\caption[Parameter classification of the equity derivative approach]{Parameter classification of the equity derivative approach \citep{wilkens2014contingent}}
+	\label{equityparameters}
 \end{table}
 
 \subsection{Model Application}
+
+A fictive CoCo is priced based on the values shown in table \ref{equityexample}. The source code for the equity derivative approach can be found in chapter \ref{equityderivativeapproach}. 
 
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
 	\begin{tabular}{lrl}
 		\toprule
-			 & Value & Comment \\
+			 & \textbf{Value} & \textbf{Comment} \\
 		\midrule
 			$T$ & $10$yrs & Maturity \\
 			$N$ & $100$ & Nominal \\			
@@ -278,9 +292,28 @@ V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t}^{bdic}
 		\bottomrule
 	\end{tabular}
 	\caption[Parameter specification of equity derivative approach application]{Parameter specification of equity derivative approach application \citep{alvemar2012modelling}}
+	\label{equityexample}
 \end{table}
 
-\section{Structural Approach}
+The price of the fictive CoCo $V^{ed}$ under the equity derivative approach is equal to 113.92. The price of the CoCo can be separated into its individuals components as highlighted in graph \ref{pricecomponents}. In that sense, the value of the risk-free coupon bond equals 147.3. The short position in the set of binary down-and-in calls is equivalent to -12.98 and the value of the knock-in forward is -20.40.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}  \begin{axis}[    enlargelimits=0.15,    legend style={at={(0.5,-0.2)},      anchor=north,legend columns=-1},    ylabel={$Theoretical$ $Price$},    symbolic x coords={Vsb,Vbdic,Vkifwd},
+    xticklabels={$V^{sb}$, $V^{bdic}$, $V^{kifwd}$},    xtick=data,    nodes near coords,    nodes near coords align={vertical},    x tick label style={rotate=45,anchor=east},
+    ybar=1pt,
+    bar width=1cm,
+    x=2cm,
+    enlarge x limits={abs=1cm},
+    enlarge y limits={abs=1cm},
+    colormap/viridis    ]    \addplot coordinates {(Vsb,147.30) (Vbdic,-12.98)        (Vkifwd,-20.40)};
+    \draw [red] ({rel axis cs:0,0}|-{axis cs:Vsb,113.92}) -- ({rel axis cs:1,0}|-{axis cs:Vkifwd,113.92}) node [pos=0.73, above] {$V^{ed} = 113.92$};
+        \draw [black] ({rel axis cs:0,0}|-{axis cs:Vsb,0}) -- ({rel axis cs:1,0}|-{axis cs:Vkifwd,0}) node [pos=0.73, above] {};  \end{axis}\end{tikzpicture}
+\caption[CoCo price $V^{ed}$ and its components]{CoCo price $V^{ed}$ and its components under the equity derivative approach}
+\label{pricecomponents}
+\end{figure}
+
+\section{Structural Approach} \label{sec:structuralapproach}
 A third alternative to price CoCos is the structural approach of \citet{pennacchi2010structural}. The idea has its roots in the seminal work of \citet{merton1974pricing}, which aims to explain a company's default based on the relationship of its assets and liabilities under a standard Black-Scholes setting. \citet{pennacchi2010structural}'s approach expands the idea by modeling the stochastic evolution of a bank's balance sheet respectively of its components. In the following, the assets' rate of return process will be explained. Thereafter, we will outline the assumptions of the model regarding the various liabilities a bank issues to refinance itself including deposits, equity and coupon bonds in the form of CoCos. Lastly, a pricing formula will be illustrated.
 
 \subsection{Structural Banking Model}
@@ -402,6 +435,13 @@ Please note that $v(t)$ stands for a CoCo's coupon payment at date $t$ which equ
 %\item biggest challenge is the accurate estimation of the valuation parameters that drive the stochastic processes\citep{de2014handbook} because input factors are often unobservable variables
 %\end{itemize}
 
+\begin{itemize}
+\item pricing parameters can be grouped broadly into three categories
+\item parameters that can be observed directly in the market
+\item model requires parameters that are linked to the bank's balance sheet/strategy
+\end{itemize}
+
+
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
 	\centering
@@ -413,26 +453,34 @@ Please note that $v(t)$ stands for a CoCo's coupon payment at date $t$ which equ
 			$B$ & CoCo nominal & Static input & Term sheet \\
 			$c$ & CoCo coupon rate & Static input & Term sheet\\ 
 			$p$ & CoCo nominal conversion factor & Static input & Term sheet \\
-			$x_0$ &Initial asset-to-deposit ratio & Dynamic input & Balance sheet\\
-			$\hat{x}$ & Target asset-to-deposit ratio & Static input & Assumption \\
-			$g$ & Mean-reversion speed & Static input & Assumption  \\
-			$\sigma$ & Annual asset return volatility & Static input & Assumption \\
-			$\lambda$ & Jump intensity in asset return process & Static input  &  Assumption  \\			
-			$\mu_y$ & Mean jump size in asset return process & Static input & Assumption\\
-			$\sigma_y$ & Jump volatility in asset return process & Static input & Assumption \\		
+			$x_0$ &Initial asset-to-deposit ratio & Static input & Balance sheet\\
+			$\hat{x}$ & Target asset-to-deposit ratio & Static input & Balance sheet \\
+			$g$ & Mean-reversion speed & Static input & Expert judgement  \\
+			$\sigma$ & Annual asset return volatility & Fitting parameter & -- \\
+			$\lambda$ & Jump intensity in asset return process & Fitting parameter  &  --  \\			
+			$\mu_y$ & Mean jump size in asset return process & Fitting parameter & -- \\
+			$\sigma_y$ & Jump volatility in asset return process & Fitting parameter & -- \\		
 			$r_0$ & Initial risk-free interest rate & Dynamic input & Market data \\
-			$\bar{r}$ & Long-term risk-free interest rate & Static input & Market data\\
-			$\sigma_r$ &Interest rate volatility & Static input &  Market data \\
-			$\kappa$ & Speed of convergence & Static input & Assumption \\
-			$\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Static input & Market data \\ % This is approximately the long-run daily correlation between Treasury bill yields and the S&P 500
-			$\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & Balance sheet \\
+			$\bar{r}$ & Long-term risk-free interest rate & Dynamic input & Market data\\
+			$\sigma_r$ &Interest rate volatility & Dynamic input &  Market data \\
+			$\kappa$ & Speed of convergence & Static input & Expert judgement \\
+			$\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Dynamic input & Market Data \\ 
+			$\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & Term sheet \\
 			$b_0$ & Ratio of the contingent capital's nominal to the initial value of deposits & Dynamic input & Balance sheet \\
 		\bottomrule
 	\end{tabular}
 	\caption[Parameter classification of the structural approach]{Parameter classification of the structural approach \citep{wilkens2014contingent}}
 \end{table}
 
+Assets are derived from deposits and (market) share price. The deposit level is interpolated between balance sheet values
+
+The parameters ?y and ?y are estimated on the first day for both LBG issues and then kept unchanged. They are also used for the CS bond.
+
+rho This is approximately the long-run daily correlation between Treasury bill yields and the S&P 500
+
 \subsection{Model Application}
+
+\ref{structuralapproach}
 
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
