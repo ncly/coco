@@ -1,9 +1,5 @@
 # Price of Contingent Convertible Bond
 price_coco_ed <- function(t, T, S_t, S_star, C_p, c_i, r, N, q, sigma, alpha){
-  print(price_cb(t, T, c_i, r, N))
-  print(price_dibi(t, T, S_t, S_star, c_i, r, q, sigma, alpha))
-  print(price_difwd(t, T, S_t, S_star, C_p, r, N, q, sigma, alpha))
-  
   V_t_ed <- price_cb(t, T, c_i, r, N) - price_dibi(t, T, S_t, S_star, c_i, r, q, sigma, alpha) + price_difwd(t, T, S_t, S_star, C_p, r, N, q, sigma, alpha)
   
   return(V_t_ed)

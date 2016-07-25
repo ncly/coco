@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2016.4.7)  24 JUL 2016 09:18
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2016.4.7)  24 JUL 2016 13:43
  restricted \write18 enabled.
  file:line:error style messages enabled.
 **ociamthesismain.tex
@@ -1462,43 +1462,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 411--412
  []
 
 [29] [30]
-Overfull \hbox (38.78995pt too wide) in paragraph at lines 456--480
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 450.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 450.
+
+[31]
+Overfull \hbox (38.78995pt too wide) in paragraph at lines 475--499
  [][][] 
  []
 
-[31] [32]) [33]
+[32] [33]) [34]
 \openout2 = text/chapter4.aux
  (./text/chapter4.tex
 Chapter 4.
 PGFPlots: reading {code/createData_CD_S_sigma.txt}
 PGFPlots: reading {code/createData_CD_T_r.txt}
-[34
+[35
 
 
 
 ]
 PGFPlots: reading {code/createData_CD_Sstar_Cp.txt}
- [35]
-PGFPlots: reading {code/createData_ED_S_sigma.txt}
  [36]
-PGFPlots: reading {code/createData_ED_T_r.txt}
+PGFPlots: reading {code/createData_ED_S_sigma.txt}
  [37]
-PGFPlots: reading {code/createData_ED_Sstar_Cp.txt}
+PGFPlots: reading {code/createData_ED_T_r.txt}
  [38]
-PGFPlots: reading {code/createData_SA_x0_sigma.txt}
+PGFPlots: reading {code/createData_ED_Sstar_Cp.txt}
  [39]
-PGFPlots: reading {code/createData_SA_T_r.txt}
+PGFPlots: reading {code/createData_SA_x0_sigma.txt}
  [40]
-PGFPlots: reading {code/createData_SA_x0_ebar.txt}
+PGFPlots: reading {code/createData_SA_T_r.txt}
  [41]
-PGFPlots: reading {code/createData_SA_x0_lambda.txt}
+PGFPlots: reading {code/createData_SA_x0_ebar.txt}
  [42]
+PGFPlots: reading {code/createData_SA_x0_lambda.txt}
+ [43]
 PGFPlots: reading {code/createData_SA_x0_b0.txt}
- [43]) [44]
+ [44]) [45]
 \openout2 = text/chapter5.aux
  (./text/chapter5.tex
 Chapter 5.
-) [45
+) [46
 
 
 
@@ -1506,7 +1514,7 @@ Chapter 5.
 \openout2 = text/conclusions.aux
  (./text/conclusions.tex
 Chapter 6.
-) [46
+) [47
 
 
 
@@ -1514,7 +1522,7 @@ Chapter 6.
 \openout2 = text/appendix1.aux
  (./text/appendix1.tex
 Appendix A.
-) [47
+) [48
 
 
 
@@ -1539,32 +1547,27 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
-) [48
+) [49
 
 
 
-] [49]
+] [50]
 Appendix C.
-(./code/EquityDerivativeApproach.R [50
+(./code/EquityDerivativeApproach.R [51
 
-] [51]) [52]
+] [52]) [53]
 Appendix D.
-(./code/StructuralApproach.R [53
+(./code/StructuralApproach.R [54
 
-] [54] [55]) [56]
+] [55] [56]) [57]
 Appendix E.
-(./code/DiagramsCreditDerivativeApproach.R [57
+(./code/DiagramsCreditDerivativeApproach.R [58
 
 ])
-(./code/DiagramsEquityDerivativeApproach.R [58] [59])
-(./code/DiagramsStructuralApproach.R [60] [61])) [62] (./ociamthesismain.bbl
+(./code/DiagramsEquityDerivativeApproach.R [59] [60])
+(./code/DiagramsStructuralApproach.R [61] [62])) [63] (./ociamthesismain.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \OT1/cmr/m/n/12 barclayspublic / docs / InvestorRelations / esma / capital -[] 
 securities -[] documentation /
@@ -1576,18 +1579,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 ] Contingent -[] Capital -[] Notes -[] due -[] November -[]
  []
 
-[63
+[64
 
 
-] [64] [65
+] [65] [66
 Missing character: There is no ’ (U+2019) in font cmr12!
-] [66]
+] [67]
 Underfull \hbox (badness 10000) in paragraph at lines 350--354
 \OT1/cmr/m/n/12 www . zkb . ch / media / dok / corporate / investor -[] relatio
 ns / produktinformationsblatt -[]
  []
 
-) [67] (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
+) [68] (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
 (./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
 (./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix1.aux)
 (./text/appendix2.aux))
@@ -1597,14 +1600,14 @@ LaTeX Warning: There were multiply-defined labels.
 )
 
 Here is how much of LuaTeX's memory you used:
- 37909 strings out of 494693
- 381533,1373583 words of node,token memory allocated
- 1027 words of node memory still in use:
+ 37913 strings out of 494693
+ 381527,1373583 words of node,token memory allocated
+ 1028 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 2 sub_mlist, 53 glue_spec, 1 write 
 nodes
-   avail lists: 1:2,2:47,3:3429,4:16908,5:6773,6:3129,7:13454,9:14156,10:1082
- 39961 multiletter control sequences out of 65536+600000
- 83 fonts using 3270695 bytes
+   avail lists: 1:2,2:47,3:3429,4:16908,5:6773,6:3129,7:13341,9:14156,10:1082
+ 39963 multiletter control sequences out of 65536+600000
+ 85 fonts using 3349255 bytes
  62i,17n,102p,1683b,2838s stack positions out of 5000i,500n,10000p,200000b,100000s
 <</Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm12
 .600pk>><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
@@ -1627,10 +1630,10 @@ ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><</usr/local/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><</usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/eurosym/feymr10.pfb><</usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on ociamthesismain.pdf (73 pages, 673326 bytes).
+Output written on ociamthesismain.pdf (74 pages, 675167 bytes).
 
-PDF statistics: 464 PDF objects out of 1000 (max. 8388607)
- 330 compressed objects within 4 object streams
+PDF statistics: 467 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

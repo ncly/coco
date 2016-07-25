@@ -431,16 +431,34 @@ Please note that $v(t)$ stands for a CoCo's coupon payment at date $t$ which equ
 
 \subsection{Parameter Classification and Adjustment}
 
-%\begin{itemize}
-%\item biggest challenge is the accurate estimation of the valuation parameters that drive the stochastic processes\citep{de2014handbook} because input factors are often unobservable variables
-%\end{itemize}
+\begin{itemize}
+\item biggest challenge is the accurate estimation of the valuation parameters that drive the stochastic processes \citep{de2014handbook} because input factors are often unobservable variables
+\end{itemize}
 
 \begin{itemize}
 \item pricing parameters can be grouped broadly into three categories
 \item parameters that can be observed directly in the market
-\item model requires parameters that are linked to the bank's balance sheet/strategy
+\item model requires parameters that are linked to the bank's balance sheet/strategy and are thus semi-observable
+\item parameters that are non-observable and are thus obtained from expert judgement or calibrated to market prices of CoCos
 \end{itemize}
 
+\begin{itemize}
+\item model simulates the asset-to-deposit ratio $x=A/D$, and both the assets and deposits are required as inputs
+\item there are various approaches to estimate the bank's assets. The simplest approach is to use the value in the balance sheet published at most quarterly
+\item the bank's deposits are inferred the balance sheet, assuming that the balance sheet liabilities are simple deposits. To estimate the amount of deposits over time, interpolations are made between the values known from the balance sheet
+\item several non-observable parameters are required as model inputs
+\item a reasonable mean-reversion speed $g$ for deposits is 10. the estimation is done by computing the deposit's half-life (i.e., the time it takes for the deposit to move half the distance toward its target value); $g=10$ gives a plausible half-life of around 1.5 years.
+
+\item 
+\item target asset-to-deposit ratio $\hat{x}$ is inferred from the leverage ratio stated in the balance sheet similarly to the initial asset-to-deposit ratio. It is assumed that the balance sheet liabilities are simple deposits
+\item this third category of parameters includes the asset volatility $\sigma$ and the jump intensity $\lambda$, as well as the mean $\mu_y$ and the volatility $\sigma_y$ that govern the distribution of the jump size  
+\item although there are methods for estimating the asset volatility $\sigma$ is obtained, together with the jump intensity and jump parameters, by jointly fitting the model output to market prices
+\item $\rho$ is approximately the five year daily correlation between a sovereign bond of the same tenure respectively denomination and a related stock market index 
+\end{itemize}
+
+
+
+\item only parameter in the structural model that is effectively market observable is the risk-free rate $r$
 
 \begin{table}[H]
 	\setlength{\extrarowheight}{2.5pt}
@@ -475,8 +493,6 @@ Please note that $v(t)$ stands for a CoCo's coupon payment at date $t$ which equ
 Assets are derived from deposits and (market) share price. The deposit level is interpolated between balance sheet values
 
 The parameters ?y and ?y are estimated on the first day for both LBG issues and then kept unchanged. They are also used for the CS bond.
-
-rho This is approximately the long-run daily correlation between Treasury bill yields and the S&P 500
 
 \subsection{Model Application}
 
