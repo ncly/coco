@@ -1,9 +1,5 @@
 # Price of Contingent Convertible Bond
 price_coco_ed <- function(t, T, S_t, S_star, C_p, c_i, r, N, q, sigma, alpha){
-  print(price_cb(t, T, c_i, r, N))
-  print(price_dibi(t, T, S_t, S_star, c_i, r, q, sigma, alpha))
-  print(price_difwd(t, T, S_t, S_star, C_p, r, N, q, sigma, alpha))
-  
   V_t_ed <- price_cb(t, T, c_i, r, N) - price_dibi(t, T, S_t, S_star, c_i, r, q, sigma, alpha) + price_difwd(t, T, S_t, S_star, C_p, r, N, q, sigma, alpha)
   
   return(V_t_ed)
@@ -13,8 +9,8 @@ price_coco_ed <- function(t, T, S_t, S_star, C_p, c_i, r, N, q, sigma, alpha){
 price_cb <- function(t, T, c_i, r, N){
   V_t_cb <- N * exp(-r * (T - t))
   
-  for (t in 1:T){
-  V_t_cb <- V_t_cb + c_i * exp(-r * t)  
+  for (time in (t+1):T){
+  V_t_cb <- V_t_cb + c_i * exp(-r * time)  
   }
   
   return(V_t_cb)
@@ -27,7 +23,7 @@ price_dibi <- function(t, T, S_t, S_star, c_i, r, q, sigma, alpha){
   i <- t
   k <- T
   
-  for (i in 1:k) {
+  for (i in (t+1):k) {
   V_t_dibi <- V_t_dibi + c_i * exp(- r * i) * (pnorm(- calc_x_1_i(S_t, S_star, sigma, r, q, i) + sigma * sqrt(i)) + (S_star / S_t)^(2 * calc_lambda(r, q, sigma) - 2) * pnorm ( calc_y_1_i(S_t, S_star, sigma, r, q, i) - sigma * sqrt(i)))
   }
   
@@ -82,5 +78,4 @@ calc_y_1 <- function(t, T, S_t, S_star, r, q, sigma){
 }
 
 # Pricing Example
-price_coco_ed(t <- 0, T <- 10, S_t <- 100, S_star <- 35, C_p <- 65, c_i <- 6.00, r <- 0.01, N <- 100, q <- 0.02, sigma <- 0.3, alpha <- 1)
-
+#price_coco_ed(t <- 0, T <- 10, S_t <- 120, S_star <- 60, C_p <- 75, c_i <- 6.00, r <- 0.03, N <- 100, q <- 0.00, sigma <- 0.3, alpha <- 1)

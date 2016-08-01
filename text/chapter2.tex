@@ -1,4 +1,4 @@
-\chapter{Structure of CoCos}
+\chapter{CoCo Structure}
 
 This chapter explains the nature of CoCos, a new member in the family of hybrid securities. In the following, the general structure of these new instruments will be explained (section \ref{definitioncocos}) including characteristic design features among others their trigger (section \ref{triggermechanism}) and loss-absorption mechanism (section \ref{lossabsorption}).
 
@@ -12,7 +12,6 @@ The term CoCo is used to describe a new hybrid capital instrument with an automa
 	\caption[Anatomy of CoCos]{Anatomy of CoCos \citep{de2014handbook}}
 	\label{figure:anatomy}
 \end{figure}
-
 CoCos are particularly interesting from the perspective of a regulatory authority because they might mitigate externalization costs of insolvencies and frictions due to spill-over effects. In times of distress, stakeholders might question the financial viability of the respective financial institute. Yet, the major advantage of CoCos is that a distressed bank does not have to approach new investors to issue new capital in extremely though times as everything happens automatically. \citep{de2011pricing}\\ 
 
 In 2009, the Lloyds Banking Group was the first financial institute which issued this new financial instrument. In an exchange offer, they asked hybrid debt holders to swap their holdings into CoCos. \citep{de2011pricing} In 2010, the Basel Committee on Banking Supervision (BCBS) provided further impetus to the use of this instrument when it disclosed its proposal to ensure the loss absorbency of regulatory capital at the point of non-viability. CoCos fit into their line of  argumentation that regulatory capital instruments have to be capable of absorbing financial losses in gone-concern phases. \citep{basel2010proposal}
@@ -27,36 +26,37 @@ In 2009, the Lloyds Banking Group was the first financial institute which issued
 
 \section{Trigger} \label{triggermechanism}
 
-The trigger is a key design element of a CoCo which initializes the loss-absorption mechanism. In the following sections, four different trigger mechanisms will be described: accounting triggers, market triggers, regulatory triggers and multi-variate triggers. Generally one can evaluate the trigger design based on the criteria as summarized by \citet{erismann2015pricing}. %The concept of an accounting trigger will be illustrated in section \ref{accountingtrigger} followed by the market trigger in section \ref{markettrigger}. Additionally, the regulatory trigger will be detailed in section \ref{regulatorytrigger} and the multi-variate trigger will be explained in section \ref{multivariatetrigger}.
+The trigger is a key design element of a CoCo which initializes the loss-absorption mechanism. In the following sections, four different trigger mechanisms will be described: accounting triggers, market triggers, regulatory triggers and multi-variate triggers. %Generally one can evaluate the trigger design based on the criteria as summarized by \citet{erismann2015pricing}. %The concept of an accounting trigger will be illustrated in section \ref{accountingtrigger} followed by the market trigger in section \ref{markettrigger}. Additionally, the regulatory trigger will be detailed in section \ref{regulatorytrigger} and the multi-variate trigger will be explained in section \ref{multivariatetrigger}.
 
-\begin{itemize}
-\renewcommand\labelitemi{--}
-\item \textbf{Clarity}:  The trigger mechanism should be universally applicable irrespective of the jurisdiction in which the CoCo is traded.
-\item \textbf{Fixedness}: The definition of a CoCo's trigger should remain the same until maturity.
-\item \textbf{Frequency}: Data to which the trigger is linked should be updated at frequent intervals.
-\item \textbf{Objectiveness}: The trigger mechanism should be based on observable and well-known facts. Their should be no room for subjectivity.
-\item \textbf{Publicity}: Data concerning the trigger should be open to the general view of all market participants at the same time. This needs to be possible without concealment, thereby reducing the chance of manipulation.
-\end{itemize}
+%\begin{itemize}
+%\renewcommand\labelitemi{--}
+%\item \textbf{Clarity}:  The trigger mechanism should be universally applicable irrespective of the jurisdiction in which the CoCo is traded.
+%\item \textbf{Fixedness}: The definition of a CoCo's trigger should remain the same until maturity.
+%\item \textbf{Frequency}: Data to which the trigger is linked should be updated at frequent intervals.
+%\item \textbf{Objectiveness}: The trigger mechanism should be based on observable and well-known facts. Their should be no room for subjectivity.
+%\item \textbf{Publicity}: Data concerning the trigger should be open to the general view of all market participants at the same time. This needs to be possible without concealment, thereby reducing the chance of manipulation.
+%\end{itemize}
 
-\begin{table}[H]
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\begin{tabular}{lcccc}
-		\toprule
-			 & \textbf{Accounting} & \textbf{Market} & \textbf{Regulatory} & \textbf{Multi-Variate} \\
-		\midrule
-			\textbf{Clarity} & \cellcolor{yellow!20} medium & \cellcolor{green!20} high & \cellcolor{red!20} low & \cellcolor{yellow!20} medium\\
-			\textbf{Fixedness} & \cellcolor{green!20} high & \cellcolor{green!20} high & \cellcolor{red!20} low & \cellcolor{green!20} high \\
-			\textbf{Frequency} & \cellcolor{yellow!20} medium & \cellcolor{green!20} high & \cellcolor{red!20} low & \cellcolor{green!20} high\\
-			\textbf{Objectiveness} & \cellcolor{yellow!20} medium & \cellcolor{green!20} high & \cellcolor{red!20} low & \cellcolor{yellow!20} medium \\
-			\textbf{Publicity} & \cellcolor{green!20} high & \cellcolor{green!20} high & \cellcolor{green!20} high & \cellcolor{green!20} high \\
-		\bottomrule
-	\end{tabular}
-	\caption[Evaluation of different trigger mechanisms]{Evaluation of different trigger mechanisms. High means that the trigger meets the requirements of the criterion whereas low implies that the trigger does not satisfy the conditions. \citep{erismann2015pricing}}
-	\label{table:evaluationtrigger}
-\end{table}
+%\begin{table}[H]
+%	\setlength{\extrarowheight}{2.5pt}
+%	\centering
+%	\begin{tabular}{lcccc}
+%		\toprule
+%			 & \textbf{Accounting} & \textbf{Market} & \textbf{Regulatory} & \textbf{Multi-Variate} \\
+%		\midrule
+%			\textbf{Clarity} & \cellcolor{green!20} medium & \cellcolor{blue!20} high & \cellcolor{yellow!20} low & \cellcolor{green!20} medium\\
+%			\textbf{Fixedness} & \cellcolor{blue!20} high & \cellcolor{blue!20} high & \cellcolor{yellow!20} low & \cellcolor{blue!20} high \\
+%			\textbf{Frequency} & \cellcolor{green!20} medium & \cellcolor{blue!20} high & \cellcolor{yellow!20} low & \cellcolor{blue!20} high\\
+%			\textbf{Objectiveness} & \cellcolor{green!20} medium & \cellcolor{blue!20} high & \cellcolor{yellow!20} low & \cellcolor{green!20} medium \\
+%			\textbf{Publicity} & \cellcolor{blue!20} high & \cellcolor{blue!20} high & \cellcolor{blue!20} high & \cellcolor{blue!20} high \\
+%		\bottomrule
+%	\end{tabular}
+%	\caption[Evaluation of different trigger mechanisms]{Evaluation of different trigger mechanisms. High means that the trigger meets the requirements of the criterion whereas low implies that the trigger does not satisfy the conditions. \citep{erismann2015pricing}}
+%	\label{table:evaluationtrigger}
+%\end{table}
 
-Table \ref{table:evaluationtrigger} indicates that market triggers might be the preferable mechanism as they satisfy all of the aforementioned but purely conceptual requirements. However, the appropriateness of all trigger types will be discussed in the following.
+%Table \ref{table:evaluationtrigger} indicates that market triggers might be the preferable mechanism as they satisfy all of the aforementioned but purely conceptual requirements. However, the appropriateness of all trigger types will be discussed in the following.
+%\todo{include table in evaluation hereinafter}
 
 \subsection{Accounting Trigger}\label{accountingtrigger}
 
@@ -64,7 +64,7 @@ CoCos with accounting trigger have a loss absorption mechanism which is inherent
 %Issuing banks and regulators seem to have perceived the benefits of accounting triggers partly because a significant portion of CoCos use the common equity tier (CET1) ratio as reference metric. Examples of CoCos will be described shortly in section \ref{examples}.\\
 Having said that, one might argue that accounting triggers assess the viability of financial institutions from a perspective that is far-removed from reality. A major objection against accounting triggers follow the line of thought that they just become active long after the need for loss absorbing capital arose because accounting data is published infrequently. \citep{de2011pricing} Moreover, as accounting concept, book values are prone to manipulation and managerial dishonesty especially in times of distress. \citep{mcdonald2013contingent}\\ 
 
-Empirical findings bring up a another aspect. \citet{haldane2011capital} points out that major financial institutions, which either went bankrupt, were bailed out or were taken over under distress during the global financial crisis, reported similar CET 1 ratios right before the collapse of Lehman Brothers compared to their peers which coped relatively well with the collapse. In this context, \citet{haldane2011capital} highlights that market-based solvency measures\footnote{\citet{haldane2011capital} mentions three metrices: (1) market-based capital ratio (ratio of market capitalization to total assets), (2) market-based leverage ratio (ratio of market capitalization to total debt) and (3) Tobin's Q (ratio of market capitalization to book value of equity).} performed creditably as they showed clear signals of impending distress a year ahead of the bankruptcy of Lehman Brothers. Empirical evidence of the \Citet{valukas2010report} further supports these findings. This leads to the conclusion that CoCos with accounting triggers might not reinforce distressed banks at the right time but instead produce false positives, which means that CoCos of non-distressed banks trigger prematurely. Inefficiencies like higher funding costs could be the consequence. \citep{pazarbasioglu2011contingent}
+Empirical findings bring up a another aspect. \citet{haldane2011capital} points out that major financial institutions, which either went bankrupt, were bailed out or were taken over under distress during the global financial crisis, reported similar CET 1 ratios right before the collapse of Lehman Brothers compared to their peers which coped relatively well with the collapse. In this context, \citet{haldane2011capital} highlights that market-based solvency measures performed creditably as they showed clear signals of impending distress a year ahead of the bankruptcy of Lehman Brothers. Empirical evidence of the \Citet{valukas2010report} further supports these findings. This leads to the conclusion that CoCos with accounting triggers might not reinforce distressed banks at the right time but instead produce false positives, which means that CoCos of non-distressed banks trigger prematurely. Inefficiencies like higher funding costs could be the consequence. \citep{pazarbasioglu2011contingent}
 
 \subsection{Market Trigger} \label{markettrigger}
 
@@ -82,7 +82,7 @@ Though, it is very difficult for market participants to estimate the conversion 
 
 \subsection{Multi-Variate Trigger} \label{multivariatetrigger}
 
-The multi-variate trigger combines an accounting trigger with a systemic trigger which covers severe states of the world. For instance, the \citet{squam2009expedited} argues that the implementation of such a dual trigger is preferable as it combines the best of two worlds. The bank-specific trigger serves as direct disciplining mechanism for a bank's management. In parallel, it reduces the political pressure from the regulator who has to decide whether the systemic trigger is met. Moreover, if the conversion of a CoCo has only been linked to a systemic trigger, even well capitalized banks would be forced to convert debt into equity during a systemic crisis. However, this would disincentivize financially sound banks to preserve their status quo. \\
+The multi-variate trigger combines an accounting trigger with a systemic trigger which covers severe states of the world. For instance, the \citet{squam2009expedited} argues that the implementation of such a dual trigger is preferable as it combines the best of two worlds. The bank-specific trigger serves as direct disciplining mechanism for a bank's management. In parallel, it reduces the political pressure from the regulator who has to decide whether the systemic trigger is met. Moreover, if the conversion of a CoCo has only been linked to a systemic trigger, even well capitalized banks would be forced to convert debt into equity during a systemic crisis. However, this would disincentivize financially sound banks to preserve their status quo.
 
 %As mentioned earlier, empirical evidence exists which shows that market triggers have been performed well as early-warning indicators. \citet{haldane2011capital}
 
@@ -107,8 +107,8 @@ As mentioned earlier, banks can decide whether to issue CoCos with an equity con
 			\textbf{Callability} & n/a & Callable from Aug 24, 2016 & n/a & n/a & Callable from Jun 20, 2017 \\	
 			\textbf{Coupon} & 7.5884\% & 7.875\% & 7.625\% & 6.875\% & 3.5\% \\
 		\midrule
-			\textbf{Write-down} & \cellcolor{red!20} n/a & \cellcolor{red!20} n/a & \cellcolor{green!20} Full by (100\% of notional) & \cellcolor{green!20} Partial (75\% of notional) & \cellcolor{green!20} Staggered (multiples of 25\% of notional) \\
-			\textbf{Conversion price} & \cellcolor{green!20} Fixed at GBP 0.59 ($=S_0$) & \cellcolor{green!20}Floored at lowest of USD 20 and 30 day-VWAP & \cellcolor{red!20} n/a & \cellcolor{red!20} n/a & \cellcolor{red!20} n/a \\
+			\textbf{Write-down} & \cellcolor{blue!20} n/a & \cellcolor{blue!20} n/a & \cellcolor{green!20} Full by (100\% of notional) & \cellcolor{green!20} Partial (75\% of notional) & \cellcolor{green!20} Staggered (multiples of 25\% of notional) \\
+			\textbf{Conversion price} & \cellcolor{green!20} Fixed at GBP 0.59 ($=S_0$) & \cellcolor{green!20}Floored at lowest of USD 20 and 30 day-VWAP & \cellcolor{blue!20} n/a & \cellcolor{blue!20} n/a & \cellcolor{blue!20} n/a \\
 			\textbf{Trigger} & Core Tier 1 capital ratio & CET 1 ratio & CET 1 ratio & Equity capital ratio (Member certificates to risk weighted assets)& CET 1 ratio \\
 			\textbf{Trigger Level} & 5\% & 7\% & 7\% & 7\% & 7\% \\
 		\bottomrule
@@ -165,6 +165,8 @@ Another approach is that only a certain portion of the notional is wiped out. Co
 
 \subsubsection*{Staggered write-down}
 The third option consists of a staggered write-down. This means that a CoCo inherits a flexible write-down mechanism. Losses materialize up to the point to enhance a certain capital ratio to a fixed threshold. One might think of a gradual process in which a haircut is imposed in multiples of $10\%$. \citep{de2014handbook} Zurich Cantonal Bank is wholly owned by the Canton of Zurich and hence, it is not listed. The bank has been in a similar situation to improve its regulatory capital as Rabobank. In this situation, the bank issued Subordinated Tier 1 Notes that are exemplary for CoCos with a staggered write-down mechanism. What has been new is that an investor faces a dilution of his or her holdings up to the point where the write-down lifts the regulatory capital up to its minimum level. Haircuts only materialize in multiples of 25\%. \citep{zkv2013}
+
+\todo{Temporary write-down}
 
 %\section{Regulatory Treatment and Anatomical Influence} \label{lossabsorption}
 

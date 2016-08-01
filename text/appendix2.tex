@@ -1,22 +1,23 @@
-\chapter{Code - Credit Derivative Approach} \label{creditderivativeapproach}
+\chapter{Code - Models} \label{creditderivativeapproach}
+\section{Credit Derivative Approach} \label{creditderivativeapproach}
 
 The following source code is an implementation of the Credit Derivative Approach \citep{de2011pricing} written in R.
  
 \lstinputlisting[language=R]{code/CreditDerivativeApproach.R}
 
-\chapter{Code - Equity Derivative Approach} \label{equityderivativeapproach}
+\section{Equity Derivative Approach} \label{equityderivativeapproach}
 
 The following source code is an implementation of the Equity Derivative Approach \citep{de2011pricing} written in R.
  
 \lstinputlisting[language=R]{code/EquityDerivativeApproach.R}
 
-\chapter{Code - Structural Approach} \label{structuralapproach}
+\section{Structural Approach} \label{structuralapproach}
 
 The following source code is an implementation of the Structural Approach \citep{pennacchi2010structural} with support from \citet{codestructrural} in translating the source code of \citet{pennacchi2010structural} from GAUSS to R.
  
 \lstinputlisting[language=R]{code/StructuralApproach.R}
 
-\chapter{Code - Sensitivity Analysis}
+\chapter{Code - Sensitivity Analyses}
 
 \section{Credit Derivative Approach} \label{sensicredit}
 
@@ -35,3 +36,22 @@ The following source code is an implementation of the sensitivity analysis of th
 The following source code is an implementation of the sensitivity analysis of the Structural Approach \citep{pennacchi2010structural} written in R.
  
 \lstinputlisting[language=R]{code/DiagramsStructuralApproach.R}
+
+\chapter{Code - Case Study}
+
+\section{Parametrization - Structural Approach} \label{empirical}
+\lstinputlisting[language=R]{code/calibrateStructuralApproach.R}
+
+\subsection{\citet{cox1985theory} Model}
+
+The following source code is an implementation of the method as described by \citet{remillard2013statistical}. The method is used to calibrate the \citet{cox1985theory} model which is used for the structural approach pursuant to \citet{pennacchi2010structural} based on historical data. The software is an adaption of the source code as provided by \citet{calibrateCIR}.
+
+\lstinputlisting[language=R]{code/estimateCIRParameter.R}\label{estimateCIRParameter}
+
+\subsection{\citet{merton1974pricing} Model}
+\lstinputlisting[language=R]{code/estimateMertonParameter.R}\label{estimateMertonParameter}
+
+\subsection{Jump-Diffusion Process}
+\lstinputlisting[language=R]{code/estimateJumpParameter.R}\label{estimateJumpsParameter}
+
+
