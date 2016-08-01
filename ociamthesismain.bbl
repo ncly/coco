@@ -1,4 +1,4 @@
-\begin{thebibliography}{58}
+\begin{thebibliography}{61}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -213,7 +213,7 @@ David Lando.
 \bibitem[Leland(1994)]{leland1994corporate}
 Hayne~E Leland.
 \newblock Corporate debt value, bond covenants, and optimal capital structure.
-\newblock \emph{The journal of finance}, 49\penalty0 (4):\penalty0 1213--1252,
+\newblock \emph{The Journal of Finance}, 49\penalty0 (4):\penalty0 1213--1252,
   1994.
 
 \bibitem[Lloyds(2009)]{lloyds2009}
@@ -221,6 +221,12 @@ Lloyds.
 \newblock Enhanced capital notes, 2009.
 \newblock URL
   \url{http://www.lloydsbankinggroup.com/globalassets/documents/investors/2009/non-us_eom.pdf}.
+
+\bibitem[Longin and Solnik(2001)]{longin2001extreme}
+Francois Longin and Bruno Solnik.
+\newblock Extreme correlation of international equity markets.
+\newblock \emph{The journal of finance}, 56\penalty0 (2):\penalty0 649--676,
+  2001.
 
 \bibitem[Madan and Schoutens(2011)]{madan2011conic}
 Dilip~B Madan and Wim Schoutens.
@@ -271,6 +277,16 @@ Rabobank.
   b.a. eur 1,250,000,000 6.875 per cent. senior contingent notes due 2020,
   2010.
 \newblock URL \url{https://www.afm.nl/registers/emissies_documents/4220.pdf}.
+
+\bibitem[Remillard(2013{\natexlab{a}})]{calibrateCIR}
+Bruno Remillard.
+\newblock Estimation of the parameters of the cir model, 2013{\natexlab{a}}.
+\newblock URL \url{https://github.com/cran/SMFI5/blob/master/R/est.cir.R}.
+
+\bibitem[Remillard(2013{\natexlab{b}})]{remillard2013statistical}
+Bruno Remillard.
+\newblock \emph{Statistical Methods for Financial Engineering}.
+\newblock CRC Press, 2013{\natexlab{b}}.
 
 \bibitem[Rubinstein and Reiner(1991)]{rubinstein1991unscrambling}
 Mark Rubinstein and Eric Reiner.

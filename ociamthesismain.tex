@@ -33,8 +33,13 @@
 \usepackage{graphicx}
 \usepackage{caption}
 
-\usepackage[table]{xcolor}
+\widowpenalty10000
+\clubpenalty10000
 
+\usepackage[table]{xcolor}
+\usepackage[color=green]{todonotes}
+
+\usepackage{ltxtable}
 \usepackage{float}
 
 \newcommand*{\captionsource}[2]{%
@@ -419,7 +424,7 @@
 
 %now enable appendix numbering format and include any appendices
 \appendix
-\include{text/appendix1}
+%\include{text/appendix1}
 \include{text/appendix2} % Code Equity Derivative Approach
 
 %next line adds the Bibliography to the contents page
