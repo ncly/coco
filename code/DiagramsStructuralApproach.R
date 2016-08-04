@@ -11,6 +11,12 @@ createData_SA_x0_sigma <- function(x0_min, x0_max, sigma_min, sigma_max){
       data[counter, 1] <- x0_increment
       data[counter, 2] <- price_coco_sa(T <- 10, nsimulations <- 5000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.12, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_x <- sigma_increment, x0 <- x0_increment, B <- 1, coupon <- 0.06)
       data[counter, 3] <- sigma_increment
+      
+      print('___')
+      print(data[counter, 1])
+      print(data[counter, 2])
+      print(data[counter, 3])
+      
       counter <- counter + 1
     }
   }
@@ -28,6 +34,12 @@ createData_SA_T_r <- function(T_min, T_max, r_min, r_max){
       data[counter, 1] <- T_increment
       data[counter, 2] <- price_coco_sa(T <- T_increment, nsimulations <- 5000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- r_increment, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.12, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_x <- 0.0363, x0 <- 1.1364, B <- 1, coupon <- 0.06)
       data[counter, 3] <- r_increment
+      
+      print('___')
+      print(data[counter, 1])
+      print(data[counter, 2])
+      print(data[counter, 3])
+      
       counter <- counter + 1    
     }
   }
@@ -45,6 +57,12 @@ createData_SA_x0_ebar <- function(x0_min, x0_max, ebar_min, ebar_max){
       data[counter, 1] <- x0_increment
       data[counter, 2] <- price_coco_sa(T <- 10, nsimulations <- 5000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.12, b0 <- 0.0341, p <- 0.8, e_bar <- ebar_increment, sigma_x <- 0.0363, x0 <- x0_increment, B <- 1, coupon <- 0.06)
       data[counter, 3] <- ebar_increment
+      
+      print('___')
+      print(data[counter, 1])
+      print(data[counter, 2])
+      print(data[counter, 3])
+      
       counter <- counter + 1    
     }
   }
@@ -62,6 +80,12 @@ createData_SA_x0_lambda <- function(x0_min, x0_max, lambda_min, lambda_max){
       data[counter, 1] <- x0_increment
       data[counter, 2] <- price_coco_sa(T <- 10, nsimulations <- 5000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- lambda_increment, g <- 0.5, x_hat <- 1.12, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_x <- 0.0363, x0 <- x0_increment, B <- 1, coupon <- 0.06)
       data[counter, 3] <- lambda_increment
+      
+      print('___')
+      print(data[counter, 1])
+      print(data[counter, 2])
+      print(data[counter, 3])
+      
       counter <- counter + 1    
     }
   }
@@ -79,6 +103,12 @@ createData_SA_x0_b0 <- function(x0_min, x0_max, b0_min, b0_max){
       data[counter, 1] <- x0_increment
       data[counter, 2] <- price_coco_sa(T <- 10, nsimulations <- 5000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.12, b0 <- b0_increment, p <- 0.8, e_bar <- 0.0681, sigma_x <- 0.0363, x0 <- x0_increment, B <- 1, coupon <- 0.06)
       data[counter, 3] <- b0_increment
+      
+      print('___')
+      print(data[counter, 1])
+      print(data[counter, 2])
+      print(data[counter, 3])
+      
       counter <- counter + 1    
     }
   }

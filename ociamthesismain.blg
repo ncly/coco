@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ociamthesismain.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: text/abstract.aux
+A level-1 auxiliary file: text/chapter1.aux
+A level-1 auxiliary file: text/chapter2.aux
+A level-1 auxiliary file: text/chapter3.aux
+A level-1 auxiliary file: text/chapter4.aux
+A level-1 auxiliary file: text/chapter5.aux
+A level-1 auxiliary file: text/conclusions.aux
+A level-1 auxiliary file: text/appendix2.aux
+Database file #1: bibliography/refs.bib
+You've used 62 entries,
+            2773 wiz_defined-function locations,
+            901 strings with 14450 characters,
+and the built_in function-call counts, 23177 in all, are:
+= -- 2046
+> -- 1133
+< -- 58
++ -- 401
+- -- 336
+* -- 1610
+:= -- 3637
+add.period$ -- 187
+call.type$ -- 62
+change.case$ -- 287
+chr.to.int$ -- 59
+cite$ -- 124
+duplicate$ -- 1171
+empty$ -- 2083
+format.name$ -- 443
+if$ -- 4842
+int.to.chr$ -- 4
+int.to.str$ -- 1
+missing$ -- 55
+newline$ -- 319
+num.names$ -- 248
+pop$ -- 636
+preamble$ -- 1
+purify$ -- 235
+quote$ -- 0
+skip$ -- 908
+stack$ -- 0
+substring$ -- 562
+swap$ -- 81
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 637
+warning$ -- 0
+while$ -- 223
+width$ -- 0
+write$ -- 783

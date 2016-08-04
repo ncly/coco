@@ -54,7 +54,7 @@ sim_interestrate <- function(kappa, r_bar, r0, sigma_r, dz_2corr, ndays, nsimula
   {
     for(i in 1:ndays)
     {
-      r[i + 1, j] <- r[i, j] + kappa * (r_bar - r[i, j]) * dt + sigma_r * sqrt(r[i, j]) * dz_2corr[i, j] 
+      r[i + 1, j] <- r[i, j] + kappa * (r_bar - r[i, j]) * dt + sigma_r * sqrt(abs(r[i, j])) * dz_2corr[i, j] 
     }
   }
 
@@ -88,6 +88,7 @@ get_price <- function(nsimulations, ndays, dt, dz_1, dz_2corr, r, mu_Y, sigma_Y,
   trigger_dummy <- matrix(1, ndays + 1, nsimulations)
   
   # Simulate asset-to-deposit ratio and trigger events   
+
   for(j in 1:nsimulations)
   {
     for(i in 1:ndays)
@@ -104,7 +105,11 @@ get_price <- function(nsimulations, ndays, dt, dz_1, dz_2corr, r, mu_Y, sigma_Y,
       x[i + 1, j] <- exp(ln_x[i + 1, j])
             
       x_bar[i + 1, j] <- 1 + e_bar + p * b[i + 1, j]
-            
+      
+      if(is.na(trigger_dummy[i, j]) == TRUE){
+        trigger_dummy[i, j] <- trigger_dummy[i-1, j]
+      }
+      
       if(x[i + 1, j] >= x_bar[i + 1, j] && trigger_dummy[i, j] > 0.5)
       {
         trigger_dummy[i + 1, j] <- 1
@@ -156,4 +161,4 @@ get_price <- function(nsimulations, ndays, dt, dz_1, dz_2corr, r, mu_Y, sigma_Y,
 }
 
 # Pricing Example
-# price_coco_sa(T <- 10, nsimulations <- 1000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.1494, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_A <- 0.0367, x0 <- 1.1364, B <- 1, coupon <- 0.06)
+# price_coco_sa(T <- 10, nsimulations <- 1, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.1494, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_A <- 0.0367, x0 <- 1.1364, B <- 1, coupon <- 0.06)
