@@ -69,10 +69,8 @@ For equity derivative approach we conduct the same sensitivity analyses much lik
   \label{fig:ed1}
   \end{figure}
   
-  \begin{itemize}
-  \item figure \ref{fig:ed1}
-  \end{itemize}
- 
+Figure \ref{fig:ed1} helps to understand the price dynamics with respect to the share price $S$ and the share price volatility $\sigma_E$. Generally, one might argue that with increasing share price $S$ the distance to the trigger price $S^*$ grows, which in turn reduces the conversion probability of the CoCo. This has a positive impact on the price. The CoCo becomes more similar to a straight bond. Besides, the line of thought for changes of the share price volaitlity $\sigma_E$ is comparable. With a rising share price volatility $\sigma_E$ the risk increases that the underlying share price $S$ hits the barrier $S^*$ and that the CoCo investor faces a loss. Moreover, this effect can be explained with vega respectively the falling values of the short position in several down-and-in calls and the put option of the synthetic forward. Both are used under the equity derivative approach to replicate the payoff of a CoCo.
+
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
@@ -85,15 +83,9 @@ For equity derivative approach we conduct the same sensitivity analyses much lik
     \caption[CoCo price pursuant to the equity derivative approach as function of maturity and interest rate]{CoCo price pursuant to the credit derivative approach as function of maturity $T$ and risk-free interest rate $r$}
   \label{fig:ed2}
   \end{figure}
-  
-  \begin{itemize}
-  \item figure \ref{fig:ed2}
-    \item to better understand the price dynamics one can analyze the impact of the conversion price and the trigger price on the CoCo price
-  
-  
-  \item in order to understand the price dynamics shown in the diagram one has to analyze the respective impact of each of the two inputs the CoCo price
-  \end{itemize}
-  
+
+Figure \ref{fig:ed2} illustrates the price sensitivity of a CoCo with respect to its maturity $T$ and the interest rate $r$. Considering a straight bond as major component of a CoCo helps to understand the shown price dynamics. One can observe an inverse relationship of the CoCo price and the risk-free interest rate. In addition, the price sensitivity of the CoCo with respect to the interest rate rises with its maturity. Though, the increase occurs at a decreasing rate except for a maturity smaller than ten years.
+ 
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
@@ -107,24 +99,11 @@ For equity derivative approach we conduct the same sensitivity analyses much lik
   \label{fig:ed3}
   \end{figure}
   
-Figure \ref{fig:ed3} illustrates the sensitivity of the CoCo price concerning the conversion price $C_p$ and the trigger price $S^*$. In this regard, it is advantageous to take a look at a CoCo's components under the equity derivative approach. The first component namely the long position in a straight bond is not affected by either of the variables. However, the value of the short position in several down-and-in calls is determined by the trigger price $S^*$. The price of the long position in a knock-in forward is influenced by the trigger price $S^*$ and the conversion price $C_p$. The knock-in forward consists of a long position in a call and short position in a put both with strike $C_p$. These two options come into existence if the trigger price $S^*$ is met. One might argue for a given trigger price $S^*$, the lower the conversion price $C_p$ is the farer the knock-in forward is in the money. This is in turn associated with higher CoCo prices. 
-
-
-For the second parameter, one can argue that the lower the trigger price $S^*$ is the lower is the CoCo price.  
-
-
-This leads to a higher CoCo price. Though, the lower the trigger price $S^*$ the lower is the CoCo price. the lower the trigger price $S^*$ the higher the value of the short position in binary down-and-in calls. The lower the trigger price $S^*$ the lower the value of the long position in long knock-in forward. These are opposing effects, whereupon the impact of both change with decreasing conversion price where the knock-in forward effect becomes dominant
- 
- \begin{itemize}
-  \item however at a conversion price of 90 and a trigger price of below 64 the down-and-in call effect is higher
-  \item on the one hand because it becomes less likely that the synthetic forward comes into existence 
-  \item with higher trigger price $S^*$ the probability increases that the binary down-and come into existance. respectively the underlying share price $S$ falls below the threshold of $S^*$
-  \item due to the short position the short position's value should decrease
-  \end{itemize}
+Figure \ref{fig:ed3} illustrates the price sensitivity of a CoCo concerning the conversion price $C_p$ and the trigger price $S^*$. In order to understand the dynamics in detail, it is advantageous to take a look at a CoCo's components under the equity derivative approach. The first component namely the long position in a straight bond is not affected by either of the variables. However, the value of the short position in a set of down-and-in calls is determined by the trigger price $S^*$. Moreover, the trigger price $S^*$ and the conversion price $C_p$ influence the price of the long position in a knock-in forward which consists of a long position in a call and a short position in a put both with strike $C_p$. These two options come into existence if the trigger price $S^*$ is met. One might argue for a given trigger price $S^*$, the lower the conversion price $C_p$ is the farer the knock-in forward is in the money. This in turn might be associated with a higher CoCo price. Though, these two options come only into existence if the trigger price $S^*$ is met. Hence, the lower $S^*$ is the lower is the probability that the knock-in forward comes into existence and the lower is the value of the position. Having said that, one has also to consider that the lower the trigger price $S^*$ is the higher is the value of the short position in a set of binary down-and-in calls as it becomes more likely that the underlying share price $S$ fails to remain above the trigger price $S^*$. These are two opposite forces, whereupon the impact of both change with decreasing conversion prices as the influence of the knock-in forward effect becomes dominant. 
 
 \section{Structural Approach}\label{sensistructural}
+The structural approach requires different model inputs in comparison to the other two approaches. Therefore, the focus of the following sensitivity analyses is concentrated on the initial asset-to-deposit ratio $x_0$, the asset volatility $\sigma_A$, maturity $T$, the risk-free interest rate $r$, the equity-to-deposit threshold $\bar{e}$, the jump intensity $\lambda$ and the contingent capital's nominal to the initial value of deposits $b_0$.\footnote{The Monte-Carlo simulation which is used to determine the prices runs in the Amazon Elastic Compute Cloud (EC2) as the service provides a re-sizable compute capacity which is key to quickly scale the computing requirements. If one wants to replicate the simulations it is recommended to follow the instructions of \citet{amazonrstudio} to set up a Rstudio server on Amazon EC2.} 
 
-\footnote{The Monte-Carlo simulation runs in the Amazon Elastic Compute Cloud (EC2) as the service provides a re-sizable compute capacity which is key to quickly scale the computing requirements. If one wants to replicate the simulations it is recommended to follow the instructions of \citet{amazonrstudio} to set up a Rstudio server on Amazon EC2.}
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and volatility sigma
 \begin{figure}[H]
 \centering
@@ -141,16 +120,19 @@ This leads to a higher CoCo price. Though, the lower the trigger price $S^*$ the
   
   \begin{itemize}
   \item figure \ref{fig:sa1}
+  \item with an increasing starting level
+  \item interestingly the analysis shows that the impact of the asset volatility is very small
+  \item not stable 
   \end{itemize}
 
 %CoCo price V^st as function of maturity T and risk-free interest rate r
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={20}{190}, height=9cm, width=13cm, grid=both, z dir = reverse,
-    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, colormap/viridis]
+  \begin{axis}[view={-30}{210}, height=9cm, width=13cm, grid=both, z dir = reverse,
+    xlabel={$Maturity$}, ylabel={$Interest$ $Rate$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, ytickmax = 0.04, colormap/viridis]
       \addplot3[surf] 
-      	table [x=V1, y=V3, z=V2] {code/createData_SA_T_r_31Aug2016.txt};
+      	table [x=V1, y=V3, z=V2] {code/createData_SA_T_r_5_Aug_2016.txt};
     \end{axis}
   \end{tikzpicture}
     \caption[CoCo price pursuant to the structural approach as function of maturity and interest rate]{CoCo price pursuant to the structural approach as function of maturity $T$ and interest rate $r$}
@@ -171,7 +153,7 @@ This leads to a higher CoCo price. Though, the lower the trigger price $S^*$ the
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_ebar_31Aug2016.txt};
     \end{axis}
   \end{tikzpicture}
-    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and equity-to-deposit threshold]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_0$ and equity-to-deposit threshold $\bar{e}$}
+    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and equity-to-deposit threshold]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_t$ and equity-to-deposit threshold $\bar{e}$}
   \label{fig:sa3}
   \end{figure}
 
@@ -207,7 +189,7 @@ This leads to a higher CoCo price. Though, the lower the trigger price $S^*$ the
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_b0_31Aug2016.txt};
     \end{axis}
   \end{tikzpicture}
-    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and initial ratio of contingent capital's nominal to deposits]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_0$ and initial ratio of contingent capital's nominal to the initial value of deposits}
+    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and initial ratio of contingent capital's nominal to deposits]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_0$ and initial ratio of contingent capital's nominal to the initial value of deposits $b_0$}
   \label{fig:sa5}
   \end{figure}
 

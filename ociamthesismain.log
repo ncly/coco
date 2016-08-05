@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  4 AUG 2016 08:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  5 AUG 2016 22:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1766,46 +1766,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--50
 
 [38]
 PGFPlots: reading {code/createData_ED_S_sigma_31Aug2016.txt}
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 73.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+ [39]
+PGFPlots: reading {code/createData_ED_T_r_31Aug2016.txt}
+PGFPlots: reading {code/createData_ED_Sstar_Cp_31Aug2016.txt}
+ [40] [41]
+PGFPlots: reading {code/createData_SA_x0_sigma_31Aug2016.txt}
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 122.
+
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
-PGFPlots: reading {code/createData_ED_T_r_31Aug2016.txt}
- [39]
-PGFPlots: reading {code/createData_ED_Sstar_Cp_31Aug2016.txt}
-
-[40] [41]
-PGFPlots: reading {code/createData_SA_x0_sigma_31Aug2016.txt}
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 122.
+PGFPlots: reading {code/createData_SA_T_r_5_Aug_2016.txt}
 
 
-./text/chapter4.tex:153: Package pgfplots Error: Could not read table file 'cod
-e/createData_SA_T_r_31Aug2016.txt'. In case you intended to provide inline data
-: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your
- lines with `\\' (refer to the pgfplotstable manual for details).
+Package pgfplots Warning: mesh processing did not find '[mesh/rows=<N>]' or '[m
+esh/cols=<N>]'. Assuming [mesh/rows=11,mesh/cols=] as sqrt(num points) = sqrt(1
+21) [ = 11.00000]. on input line 133.
 
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153 ...] {code/createData_SA_T_r_31Aug2016.txt};
-                                                  
-? 
-PGFPlots: reading {code/createData_SA_T_r_31Aug2016.txt}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 153.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction z). R
-eplacing it with a default range and clearing all plots. on input line 154.
-
- [warning /pgfplots/warning/empty range cleared axis]
+ [warning /pgfplots/warning/matrix delinearize uses sqrt]
 [42]
 
-./text/chapter4.tex:171: Package pgfplots Error: Could not read table file 'cod
+./text/chapter4.tex:150: Package pgfplots Error: Could not read table file 'cod
 e/createData_SA_x0_ebar_31Aug2016.txt'. In case you intended to provide inline 
 data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate 
 your lines with `\\' (refer to the pgfplotstable manual for details).
@@ -1814,25 +1798,47 @@ See the pgfplots package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.171 ...ode/createData_SA_x0_ebar_31Aug2016.txt};
+l.150 ...ode/createData_SA_x0_ebar_31Aug2016.txt};
                                                   
 ? 
 PGFPlots: reading {code/createData_SA_x0_ebar_31Aug2016.txt}
 
 Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 171.
+ filtered away) on input line 150.
 
  [warning /pgfplots/warning/plot without coordinates]
 
 Package pgfplots Warning: You have an axis with empty range (in direction z). R
-eplacing it with a default range and clearing all plots. on input line 172.
+eplacing it with a default range and clearing all plots. on input line 151.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+
+./text/chapter4.tex:168: Package pgfplots Error: Could not read table file 'cod
+e/createData_SA_x0_lambda_31Aug2016.txt'. In case you intended to provide inlin
+e data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminat
+e your lines with `\\' (refer to the pgfplotstable manual for details).
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 ...e/createData_SA_x0_lambda_31Aug2016.txt};
+                                                  
+? 
+PGFPlots: reading {code/createData_SA_x0_lambda_31Aug2016.txt}
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 168.
+
+ [warning /pgfplots/warning/plot without coordinates]
+
+Package pgfplots Warning: You have an axis with empty range (in direction z). R
+eplacing it with a default range and clearing all plots. on input line 169.
 
  [warning /pgfplots/warning/empty range cleared axis]
 [43]
-PGFPlots: reading {code/createData_SA_x0_lambda.txt}
 
-
-./text/chapter4.tex:207: Package pgfplots Error: Could not read table file 'cod
+./text/chapter4.tex:186: Package pgfplots Error: Could not read table file 'cod
 e/createData_SA_x0_b0_31Aug2016.txt'. In case you intended to provide inline da
 ta: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate yo
 ur lines with `\\' (refer to the pgfplotstable manual for details).
@@ -1841,18 +1847,18 @@ See the pgfplots package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.207 ...{code/createData_SA_x0_b0_31Aug2016.txt};
+l.186 ...{code/createData_SA_x0_b0_31Aug2016.txt};
                                                   
 ? 
 PGFPlots: reading {code/createData_SA_x0_b0_31Aug2016.txt}
 
 Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 207.
+ filtered away) on input line 186.
 
  [warning /pgfplots/warning/plot without coordinates]
 
 Package pgfplots Warning: You have an axis with empty range (in direction z). R
-eplacing it with a default range and clearing all plots. on input line 208.
+eplacing it with a default range and clearing all plots. on input line 187.
 
  [warning /pgfplots/warning/empty range cleared axis]
 [44]) [45]
@@ -1957,10 +1963,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37687 strings out of 493089
- 890823 string characters out of 6134843
- 1327573 words of memory out of 5000000
- 40456 multiletter control sequences out of 15000+600000
+ 37692 strings out of 493089
+ 890948 string characters out of 6134843
+ 1327574 words of memory out of 5000000
+ 40461 multiletter control sequences out of 15000+600000
  17033 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,17n,102p,10382b,2811s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1990,7 +1996,7 @@ f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on ociamthesismain.pdf (76 pages, 749995 bytes).
+Output written on ociamthesismain.pdf (76 pages, 750547 bytes).
 PDF statistics:
  488 PDF objects out of 1000 (max. 8388607)
  350 compressed objects within 4 object streams
