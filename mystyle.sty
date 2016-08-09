@@ -1,0 +1,8 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mystyle}
+\newenvironment{statement}
+  {\renewcommand{\acknowledgmentsname}{Statement of Certification}% Abstract > Acknowledgements
+   \begin{acknowledgments}}
+  {\end{acknowledgements}
+   \clearpage}
+\endinput

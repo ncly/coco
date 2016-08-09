@@ -118,12 +118,7 @@ The structural approach requires different model inputs in comparison to the oth
   \label{fig:sa1}
   \end{figure}
   
-  \begin{itemize}
-  \item figure \ref{fig:sa1}
-  \item with an increasing starting level
-  \item interestingly the analysis shows that the impact of the asset volatility is very small
-  \item not stable 
-  \end{itemize}
+Figure \ref{fig:sa1} details a CoCo's price reaction to changes of the initial asset-to-deposit ratio $x_0$ and the asset volatility $\sigma_A$. The diagram demonstrates that prices move closely with the asset-to-deposit ratio. This is due to the fact that financial institutions with higher initial asset-to-deposit ratios are better capitalized which reduces the conversion probability. At an asset-to-deposit ratio of 1.09, one can observe that the CoCo bond triggers. Interestingly, the analysis shows that the asset volatility does not influence a CoCo's price. Having said that, one would normally assume that a higher asset volatility is inversely related to the price because the likelihood of conversion rises. The lack of a stable solution for a given asset volatility $\sigma_A$ might be a shortcoming of the structural approach.
 
 %CoCo price V^st as function of maturity T and risk-free interest rate r
 \begin{figure}[H]
@@ -138,53 +133,31 @@ The structural approach requires different model inputs in comparison to the oth
     \caption[CoCo price pursuant to the structural approach as function of maturity and interest rate]{CoCo price pursuant to the structural approach as function of maturity $T$ and interest rate $r$}
   \label{fig:sa2}
   \end{figure}
-  
-  \begin{itemize}
-  \item figure \ref{fig:sa2}
-  \end{itemize}
 
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and equity-to-deposit threshold ebar
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={40}{190}, height=9cm, width=13cm, grid=both, z dir = reverse,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Equity$-$to$-$Deposit$ $Threshold$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, colormap/viridis, ytickmax = 0.025]
+  \begin{axis}[view={15}{210}, height=9cm, width=13cm, grid=both, z dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Equity$-$to$-$Deposit$ $Threshold$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_ebar_31Aug2016.txt};
     \end{axis}
   \end{tikzpicture}
-    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and equity-to-deposit threshold]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_t$ and equity-to-deposit threshold $\bar{e}$}
+    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and equity-to-deposit threshold]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_0$ and equity-to-deposit threshold $\bar{e}$}
   \label{fig:sa3}
   \end{figure}
 
-  \begin{itemize}
-  \item figure \ref{fig:sa3}
-  \end{itemize}
+Figure \ref{fig:sa2} exemplifies the CoCo price as function of maturity $T$ and the interest rate $r$. As can be seen from the diagram, the CoCo price decreases with rising interest rates. Though, there is a difference between the structural approach and the other two approaches because the price sensitivity of the CoCo decreases with rising maturities. At a maturity of around thirty years the price sensitivity with respect to the interest rate does not change anymore. Moreover, the price does not react to changes of the maturity.\\
 
-%CoCo price V^st as function of initial asset-to-deposit ratio x_0 and jump intensity in asset return process lambda
-\begin{figure}[H]
-\centering
-  \begin{tikzpicture}
-  \begin{axis}[view={10}{10}, height=9cm, width=13cm, grid=both, y dir = reverse,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Jump$ $Intensity$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, xtickmax=1.16, colormap/viridis]
-      \addplot3[surf] 
-      	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_lambda_31Aug2016.txt};
-    \end{axis}
-  \end{tikzpicture}
-    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and jump intensity]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_0$ and jump intensity $\lambda$}
-  \label{fig:sa4}
-  \end{figure}
-  
-  \begin{itemize}
-  \item figure \ref{fig:sa4}
-  \end{itemize}
+As expected figure \ref{fig:sa3} that the CoCo price falls with a rising equity-to-deposit threshold, which is set to be the conversion threshold for the structural approach. The explanation is similar to that of the trigger price $S^*$ under the equity or credit derivative approach. Generally, the conversion probability rises because the equity-to-deposit threshold approaches the current share price. Furthermore, one can observe that the CoCo trigger at the combination of asset-to-deposit ratio of 1.09 and an equity-to-deposit threshold of 6.00\%. Similar dynamics are also observable in figure \ref{fig:sa5}. By increasing the ratio of initial contingent-capital's nominal to deposits ratio the one can recognize that the valuation comes down as leverage increases. 
 
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and initial ratio of contingent capital's nominal to the initial value of deposits
 \begin{figure}[H]
 \centering
   \begin{tikzpicture}
-  \begin{axis}[view={10}{190}, height=9cm, width=13cm, grid=both, z dir = reverse,
-    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Nominal$-$to$-$Deposit$ $Ratio$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, xtickmin=1.08, colormap/viridis]
+  \begin{axis}[view={10}{20}, height=9cm, width=13cm, grid=both, y dir = reverse,
+    xlabel={$Asset$-$to$-$Deposit$ $Ratio$}, ylabel={$Nominal$-$to$-$Deposit$ $Ratio$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ypercent, xtickmax=1.17, colormap/viridis]
       \addplot3[surf] 
       	table [x=V1, y=V3, z=V2] {code/createData_SA_x0_b0_31Aug2016.txt};
     \end{axis}
@@ -193,7 +166,22 @@ The structural approach requires different model inputs in comparison to the oth
   \label{fig:sa5}
   \end{figure}
 
-  \begin{itemize}
-  \item figure \ref{fig:sa5}
-  \end{itemize}
+%CoCo price V^st as function of initial asset-to-deposit ratio x_0 and jump intensity in asset return process lambda
+\begin{figure}[H]
+\centering
+  \begin{tikzpicture}
+  \begin{axis}[view={70}{10}, height=9cm, width=13cm, grid=both,
+    ylabel={$Asset$-$to$-$Deposit$ $Ratio$}, xlabel={$Jump$ $Intensity$}, zlabel={$Theoretical$ $Price$},xlabel style={sloped like x axis}, ylabel style={sloped}, ytickmin=1.10, colormap/viridis]
+      \addplot3[surf] 
+      	table [x=V3, y=V1, z=V2] {code/createData_SA_x0_lambda_31Aug2016.txt};
+    \end{axis}
+  \end{tikzpicture}
+    \caption[CoCo price pursuant to the structural approach as function of asset-to-deposit ratio and jump intensity]{CoCo price pursuant to the structural approach as function of initial asset-to-deposit ratio $x_0$ and jump intensity $\lambda$}
+  \label{fig:sa4}
+  \end{figure}
+  
+Figure \ref{fig:sa4} draws attention to the importance of a correct estimation of the jump intensity $\lambda$ because of its significant impact on a CoCo's valuation. Rising jump intensities mean that more return jumps of both signs are expected to occur over the course of one year. This entails a higher tail risk which depresses the value of a CoCo but with a decreasing rate. The sensitivity analysis indicates, that the other two approaches underestimate the risk of severe events as they do not factor in discontinuous returns in their model. At low asset-to-deposit ratios one can observe that the depreciation of a CoCo can be severe. Undercapitalized banks bear high conversion risks.
+ 
+  
+  
 

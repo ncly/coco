@@ -2,6 +2,8 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ociamthesismain.aux
 The style file: plainnat.bst
+A level-1 auxiliary file: text/secondpage.aux
+A level-1 auxiliary file: text/dedication.aux
 A level-1 auxiliary file: text/abstract.aux
 A level-1 auxiliary file: text/chapter1.aux
 A level-1 auxiliary file: text/chapter2.aux
@@ -10,45 +12,46 @@ A level-1 auxiliary file: text/chapter4.aux
 A level-1 auxiliary file: text/chapter5.aux
 A level-1 auxiliary file: text/conclusions.aux
 A level-1 auxiliary file: text/appendix2.aux
+A level-1 auxiliary file: text/acknowlegements.aux
 Database file #1: bibliography/refs.bib
-You've used 62 entries,
+You've used 64 entries,
             2773 wiz_defined-function locations,
-            901 strings with 14450 characters,
-and the built_in function-call counts, 23177 in all, are:
-= -- 2046
-> -- 1133
-< -- 58
-+ -- 401
-- -- 336
-* -- 1610
-:= -- 3637
-add.period$ -- 187
-call.type$ -- 62
-change.case$ -- 287
-chr.to.int$ -- 59
-cite$ -- 124
-duplicate$ -- 1171
-empty$ -- 2083
-format.name$ -- 443
-if$ -- 4842
+            916 strings with 14919 characters,
+and the built_in function-call counts, 23770 in all, are:
+= -- 2102
+> -- 1153
+< -- 61
++ -- 409
+- -- 342
+* -- 1643
+:= -- 3735
+add.period$ -- 194
+call.type$ -- 64
+change.case$ -- 295
+chr.to.int$ -- 61
+cite$ -- 128
+duplicate$ -- 1202
+empty$ -- 2138
+format.name$ -- 451
+if$ -- 4965
 int.to.chr$ -- 4
 int.to.str$ -- 1
 missing$ -- 55
-newline$ -- 319
-num.names$ -- 248
-pop$ -- 636
+newline$ -- 330
+num.names$ -- 256
+pop$ -- 653
 preamble$ -- 1
-purify$ -- 235
+purify$ -- 241
 quote$ -- 0
-skip$ -- 908
+skip$ -- 933
 stack$ -- 0
-substring$ -- 562
-swap$ -- 81
-text.length$ -- 5
+substring$ -- 566
+swap$ -- 83
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 637
+type$ -- 659
 warning$ -- 0
-while$ -- 223
+while$ -- 229
 width$ -- 0
-write$ -- 783
+write$ -- 810
