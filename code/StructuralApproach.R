@@ -161,4 +161,4 @@ get_price <- function(nsimulations, ndays, dt, dz_1, dz_2corr, r, mu_Y, sigma_Y,
 }
 
 # Pricing Example
-# price_coco_sa(T <- 10, nsimulations <- 1, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.1494, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_A <- 0.0367, x0 <- 1.1364, B <- 1, coupon <- 0.06)
+# price_coco_sa(T <- 10, nsimulations <- 5000, rho <- 0.5, kappa <- 0.04, r_bar <- 0.06, r0 <- 0.03, sigma_r <- 0.05, mu_Y <- 0.00, sigma_Y <- 0.02, lambda <- 2, g <- 0.5, x_hat <- 1.1494, b0 <- 0.0341, p <- 0.8, e_bar <- 0.0681, sigma_A <- 0.0367, x0 <- 1.1364, B <- 1, coupon <- 0.06)

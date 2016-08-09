@@ -8,6 +8,8 @@
 %code environment in appendix
 %check https://www.sharelatex.com/learn/Code_listing for documentation
 \usepackage[utf8]{inputenc}
+
+\usepackage{marvosym}
  
 \usepackage{listings}
 \usepackage{color}
@@ -17,6 +19,7 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{siunitx}
+\usepackage{bigdelim}
 
 \usepackage{eurosym}
 
@@ -42,13 +45,6 @@
 \usepackage{ltxtable}
 \usepackage{float}
 
-\newcommand*{\captionsource}[2]{%
-  \caption[{#1}]{%
-    #1%
-    \\\hspace{\linewidth}%
-    \textbf{Source:} #2%
-  }%
-}
 
 \usepackage[round]{natbib}
 
@@ -56,6 +52,7 @@
 \usepgfplotslibrary{external}
 \usepgfplotslibrary{patchplots}
 \usepgfplotslibrary{units}
+\usetikzlibrary{pgfplots.statistics}
 
 \usepackage{url} % hyperref works too
 \PassOptionsToPackage{hyphens}{url}
@@ -402,8 +399,8 @@
 \setcounter{tocdepth}{1}
 
 \maketitle                  % create a title page from the preamble info
-
-%\include{text/dedication}        % include a dedication.tex file
+\include{text/secondpage}
+\include{text/dedication}        % include a dedication.tex file
 %\include{text/acknowlegements}   % include an acknowledgements.tex file
 \include{text/abstract}          % include the abstract
 
@@ -432,6 +429,7 @@
 %uncomment next line to change bibliography name to references
 \renewcommand{\bibname}{References}
 \bibliography{bibliography/refs}        %use a bibtex bibliography file refs.bib
-
+\include{text/acknowlegements} 
+%\include{text/lastpage}
 \end{document}
 

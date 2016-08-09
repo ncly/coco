@@ -1,13 +1,23 @@
 \chapter{Case Study}\label{empiricalanalysis}
 
-\section{Data Description}
-
-\subsection{HSBC}
+\section{HSBC CoCo}
 
 \section{Parametrization}
 
-\section{Comparison}
+\section{Valuation Results}
 
-\subsection{Qualitative Analysis}
+\begin{itemize}
+\item the mean absolute error (MAE) is the arithmetical average of the absolute difference between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$
+\item the MAE can be derived with
+\end{itemize}
+\begin{align}
+MAE &= \dfrac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i | 
+\end{align}
 
-\subsection{Quantitative Analysis}
+\begin{itemize}
+\item the root mean squared error (RMSE) represents the standard deviation of the difference between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$
+\item the RMSE is given by
+\end{itemize}
+\begin{align}
+RMSE &= \sqrt{\dfrac{\sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2}{n}}
+\end{align}

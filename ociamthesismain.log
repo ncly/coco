@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  4 AUG 2016 08:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  9 AUG 2016 23:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -290,6 +290,9 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/marvosym/marvosym.sty
+Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count89
 \lst@gtempboxa=\box26
@@ -658,6 +661,7 @@ Package: translator 2010/06/12 ver 1.10
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/translator-lang
 uage-mappings.tex)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/bigdelim.sty)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/eurosym/eurosym.sty
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
 \@eurobox=\box50
@@ -1286,13 +1290,17 @@ Package pgfplots external lib: patching system driver code for your PGF version
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
 ts.patchplots.code.tex)
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
-ts.units.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+ts.units.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.statistics.code.tex)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
-(./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
-(./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix2.aux
+(./ociamthesismain.aux (./text/secondpage.aux) (./text/dedication.aux)
+(./text/abstract.aux) (./text/chapter1.aux) (./text/chapter2.aux)
+(./text/chapter3.aux) (./text/chapter4.aux) (./text/chapter5.aux)
+(./text/conclusions.aux) (./text/appendix2.aux
 
 LaTeX Warning: Label `creditderivativeapproach' multiply defined.
 
@@ -1305,22 +1313,23 @@ LaTeX Warning: Label `sensiequity' multiply defined.
 
 LaTeX Warning: Label `sensistructural' multiply defined.
 
-))
+) (./text/acknowlegements.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 393.
-LaTeX Font Info:    ... okay on input line 393.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 393.
-LaTeX Font Info:    ... okay on input line 393.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 393.
-LaTeX Font Info:    ... okay on input line 393.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 393.
-LaTeX Font Info:    ... okay on input line 393.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 393.
-LaTeX Font Info:    ... okay on input line 393.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 393.
-LaTeX Font Info:    ... okay on input line 393.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 390.
+LaTeX Font Info:    ... okay on input line 390.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 390.
+LaTeX Font Info:    ... okay on input line 390.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 390.
+LaTeX Font Info:    ... okay on input line 390.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 390.
+LaTeX Font Info:    ... okay on input line 390.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 390.
+LaTeX Font Info:    ... okay on input line 390.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 390.
+LaTeX Font Info:    ... okay on input line 390.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count200
 \scratchdimen=\dimen274
@@ -1460,11 +1469,11 @@ Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.12}).
 
 \c__siunitx_mathsf_int=\count207
-LaTeX Font Info:    Try loading font information for U+msa on input line 393.
+LaTeX Font Info:    Try loading font information for U+msa on input line 390.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 393.
+LaTeX Font Info:    Try loading font information for U+msb on input line 390.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1474,20 +1483,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <fslogo.jpeg, id=4, 513.92pt x 513.92pt>
 File: fslogo.jpeg Graphic file (type jpg)
  <use fslogo.jpeg>
-Package pdftex.def Info: fslogo.jpeg used on input line 404.
+Package pdftex.def Info: fslogo.jpeg used on input line 401.
 (pdftex.def)             Requested size: 91.04881pt x 91.04303pt.
  [1
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./fslog
 o.jpeg>]
+\openout2 = `text/secondpage.aux'.
+
+
+(./text/secondpage.tex
+LaTeX Font Info:    Try loading font information for U+mvs on input line 22.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/marvosym/umvs.fd)) [2
+
+]
+\openout2 = `text/dedication.aux'.
+
+
+(./text/dedication.tex [3
+
+
+
+])
 \openout2 = `text/abstract.aux'.
 
+ (./text/abstract.tex [4
 
-(./text/abstract.tex [2
 
 
-]) (./ociamthesismain.toc [1
+]) (./ociamthesismain.toc
+[1
 
 
 
@@ -1495,8 +1522,7 @@ o.jpeg>]
 \tf@toc=\write4
 \openout4 = `ociamthesismain.toc'.
 
- [2]
-(./ociamthesismain.lof)
+ [2] (./ociamthesismain.lof)
 \tf@lof=\write5
 \openout5 = `ociamthesismain.lof'.
 
@@ -1511,7 +1537,8 @@ o.jpeg>]
 ]
 \openout2 = `text/chapter1.aux'.
 
- (./text/chapter1.tex
+
+(./text/chapter1.tex
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
@@ -1588,7 +1615,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<media/anatomy.pdf, id=56, 597.432pt x 844.95674pt>
+<media/anatomy.pdf, id=61, 597.432pt x 844.95674pt>
 File: media/anatomy.pdf Graphic file (type pdf)
  <use media/anatomy.pdf>
 Package pdftex.def Info: media/anatomy.pdf used on input line 11.
@@ -1667,7 +1694,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-[12] [13] [14] [15]) [16]
+[12] [13] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+
+Overfull \hbox (60.17165pt too wide) in paragraph at lines 238--238
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (60.17165pt too wide) in paragraph at lines 241--241
+[]|$[]$|  
+ []
+
+
+Overfull \hbox (60.17165pt too wide) in paragraph at lines 244--244
+[]|$[]$|  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
+
+ []
+
+[16]) [17]
 \openout2 = `text/chapter3.aux'.
 
  (./text/chapter3.tex
@@ -1677,16 +1729,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[17
+[18
 
 
 
-] [18] [19] [20]
+] [19] [20] [21]
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[21]
+[22]
 LaTeX Font Info:    Try loading font information for U+bbm on input line 140.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
@@ -1695,31 +1747,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[22]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
-[23] [24] [25]
+[24] [25] [26]
 Package pgfplots info on input line 317: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [26] <media/jumpprocess.pdf, id=184, 597.432pt x 844.95674pt>
+ [27] <media/jumpprocess.pdf, id=194, 597.432pt x 844.95674pt>
 File: media/jumpprocess.pdf Graphic file (type pdf)
 
 <use media/jumpprocess.pdf>
 Package pdftex.def Info: media/jumpprocess.pdf used on input line 343.
 (pdftex.def)             Requested size: 221.89723pt x 155.31322pt.
- [27]
+ [28]
 Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
-[28 <./media/jumpprocess.pdf>]
+[29 <./media/jumpprocess.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-[29] [30]
+[30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
@@ -1732,10 +1784,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
-[31] [32] [33]
-Package pgfplots info on input line 542: Using 'lua backend=false' for axis: x 
-coord trafo unsupported.
- [34]) [35]
+[32] [33] [34]
+
+Package pgfplots Warning: You have an axis with empty range (in direction y). R
+eplacing it with a default range and clearing all plots. on input line 580.
+
+ [warning /pgfplots/warning/empty range cleared axis]
+[35] [36]) [37]
 \openout2 = `text/chapter4.aux'.
 
  (./text/chapter4.tex
@@ -1750,130 +1805,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[36
+[38
 
 
 
 ]
 PGFPlots: reading {code/createData_CD_S_sigma_31Aug2016.txt}
 PGFPlots: reading {code/createData_CD_T_r_31Aug2016.txt}
- [37]
+ [39]
 PGFPlots: reading {code/createData_CD_Sstar_Cp_31Aug2016.txt}
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--50
 
  []
 
-[38]
+[40]
 PGFPlots: reading {code/createData_ED_S_sigma_31Aug2016.txt}
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 73.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
+ [41]
 PGFPlots: reading {code/createData_ED_T_r_31Aug2016.txt}
- [39]
 PGFPlots: reading {code/createData_ED_Sstar_Cp_31Aug2016.txt}
-
-[40] [41]
+ [42] [43]
 PGFPlots: reading {code/createData_SA_x0_sigma_31Aug2016.txt}
+PGFPlots: reading {code/createData_SA_T_r_5_Aug_2016.txt}
 
 
-./text/chapter4.tex:153: Package pgfplots Error: Could not read table file 'cod
-e/createData_SA_T_r_31Aug2016.txt'. In case you intended to provide inline data
-: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate your
- lines with `\\' (refer to the pgfplotstable manual for details).
+Package pgfplots Warning: mesh processing did not find '[mesh/rows=<N>]' or '[m
+esh/cols=<N>]'. Assuming [mesh/rows=11,mesh/cols=] as sqrt(num points) = sqrt(1
+21) [ = 11.00000]. on input line 131.
 
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153 ...] {code/createData_SA_T_r_31Aug2016.txt};
-                                                  
-? 
-PGFPlots: reading {code/createData_SA_T_r_31Aug2016.txt}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 153.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction z). R
-eplacing it with a default range and clearing all plots. on input line 154.
-
- [warning /pgfplots/warning/empty range cleared axis]
-[42]
-
-./text/chapter4.tex:171: Package pgfplots Error: Could not read table file 'cod
-e/createData_SA_x0_ebar_31Aug2016.txt'. In case you intended to provide inline 
-data: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate 
-your lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171 ...ode/createData_SA_x0_ebar_31Aug2016.txt};
-                                                  
-? 
+ [warning /pgfplots/warning/matrix delinearize uses sqrt]
+[44]
 PGFPlots: reading {code/createData_SA_x0_ebar_31Aug2016.txt}
 
-Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 171.
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
- [warning /pgfplots/warning/plot without coordinates]
+ []
 
-Package pgfplots Warning: You have an axis with empty range (in direction z). R
-eplacing it with a default range and clearing all plots. on input line 172.
-
- [warning /pgfplots/warning/empty range cleared axis]
-[43]
-PGFPlots: reading {code/createData_SA_x0_lambda.txt}
-
-
-./text/chapter4.tex:207: Package pgfplots Error: Could not read table file 'cod
-e/createData_SA_x0_b0_31Aug2016.txt'. In case you intended to provide inline da
-ta: maybe TeX screwed up your end-of-lines? Try `row sep=crcr' and terminate yo
-ur lines with `\\' (refer to the pgfplotstable manual for details).
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.207 ...{code/createData_SA_x0_b0_31Aug2016.txt};
-                                                  
-? 
+[45]
 PGFPlots: reading {code/createData_SA_x0_b0_31Aug2016.txt}
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 207.
-
- [warning /pgfplots/warning/plot without coordinates]
-
-Package pgfplots Warning: You have an axis with empty range (in direction z). R
-eplacing it with a default range and clearing all plots. on input line 208.
-
- [warning /pgfplots/warning/empty range cleared axis]
-[44]) [45]
+PGFPlots: reading {code/createData_SA_x0_lambda_31Aug2016.txt}
+ [46]) [47]
 \openout2 = `text/chapter5.aux'.
 
  (./text/chapter5.tex
 Chapter 5.
-) [46
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 10.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+) [48
 
 
 
 ]
 \openout2 = `text/conclusions.aux'.
 
- (./text/conclusions.tex
+
+(./text/conclusions.tex
 Chapter 6.
-) [47
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+[49
 
 
 
-]
+]) [50]
 \openout2 = `text/appendix2.aux'.
 
  (./text/appendix2.tex
@@ -1897,25 +1908,30 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
- [48
+ [51
 
 
 
 ])
-(./code/EquityDerivativeApproach.R [49] [50]) (./code/StructuralApproach.R
-[51] [52] [53]) [54]
+(./code/EquityDerivativeApproach.R [52] [53]) (./code/StructuralApproach.R
+[54] [55] [56]) [57]
 Appendix B.
-(./code/DiagramsCreditDerivativeApproach.R [55
+(./code/DiagramsCreditDerivativeApproach.R [58
 
 ])
-(./code/DiagramsEquityDerivativeApproach.R [56] [57])
-(./code/DiagramsStructuralApproach.R [58] [59] [60]) [61]
+(./code/DiagramsEquityDerivativeApproach.R [59] [60])
+(./code/DiagramsStructuralApproach.R [61] [62] [63]) [64]
 Appendix C.
-(./code/calibrateStructuralApproach.R [62
+(./code/calibrateStructuralApproach.R [65
 
 ]) (./code/estimateCIRParameter.R
-[63]) (./code/estimateMertonParameter.R) (./code/estimateJumpParameter.R))
-[64] (./ociamthesismain.bbl
+[66])
+
+Package natbib Warning: Citation `stackoverflow2014code' on page 67 undefined o
+n input line 53.
+
+(./code/estimateMertonParameter.R) (./code/estimateJumpParameter.R [67]))
+[68] (./ociamthesismain.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \OT1/cmr/m/n/12 barclayspublic / docs / InvestorRelations / esma / capital -[] 
 securities -[] documentation /
@@ -1927,43 +1943,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 ] Contingent -[] Capital -[] Notes -[] due -[] November -[]
  []
 
-[65
-\newlabel{estimateJumpsParameter}{{C.1.3}{65}}
+[69
 
 
-] [66]
-Underfull \hbox (badness 10000) in paragraph at lines 203--207
+] [70]
+Underfull \hbox (badness 10000) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 URL $http : / / www . group . intesasanpaolo . com / scriptIsir
 0 / si09 / contentData /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--207
+Underfull \hbox (badness 10000) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 view / 20160120[]AT1[]Euro[]Prospectus . pdf ? id = CNT -[] 05 
 -[] 00000003D473C & ct =
  []
 
-[67] [68] [69]
-Underfull \hbox (badness 10000) in paragraph at lines 372--376
+[71] [72] [73]
+Underfull \hbox (badness 10000) in paragraph at lines 385--389
 \OT1/cmr/m/n/12 www . zkb . ch / media / dok / corporate / investor -[] relatio
 ns / produktinformationsblatt -[]
  []
 
-) [70] (./ociamthesismain.aux (./text/abstract.aux) (./text/chapter1.aux)
-(./text/chapter2.aux) (./text/chapter3.aux) (./text/chapter4.aux)
-(./text/chapter5.aux) (./text/conclusions.aux) (./text/appendix2.aux))
+) [74]
+\openout2 = `text/acknowlegements.aux'.
+
+ (./text/acknowlegements.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+<text/signatureNicolaySchmitt.png, id=428, 1384.17125pt x 635.37375pt>
+File: text/signatureNicolaySchmitt.png Graphic file (type png)
+
+<use text/signatureNicolaySchmitt.png>
+Package pdftex.def Info: text/signatureNicolaySchmitt.png used on input line 8.
+
+(pdftex.def)             Requested size: 184.9429pt x 84.8895pt.
+) [75
+
+
+ <./text/signatureNicolaySchmitt.png>]
+
+Package natbib Warning: There were undefined citations.
+
+(./ociamthesismain.aux (./text/secondpage.aux) (./text/dedication.aux)
+(./text/abstract.aux) (./text/chapter1.aux) (./text/chapter2.aux)
+(./text/chapter3.aux) (./text/chapter4.aux) (./text/chapter5.aux)
+(./text/conclusions.aux) (./text/appendix2.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+(./text/acknowlegements.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37687 strings out of 493089
- 890823 string characters out of 6134843
- 1327573 words of memory out of 5000000
- 40456 multiletter control sequences out of 15000+600000
- 17033 words of font info for 69 fonts, out of 8000000 for 9000
+ 38403 strings out of 493089
+ 907153 string characters out of 6134843
+ 1339482 words of memory out of 5000000
+ 41138 multiletter control sequences out of 15000+600000
+ 17753 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,17n,102p,10382b,2811s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,102p,10403b,2812s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bb
 m12.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
@@ -1986,14 +2034,15 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on ociamthesismain.pdf (76 pages, 749995 bytes).
+f-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/stix/stix-mathrm.pfb>
+Output written on ociamthesismain.pdf (83 pages, 1165693 bytes).
 PDF statistics:
- 488 PDF objects out of 1000 (max. 8388607)
- 350 compressed objects within 4 object streams
+ 515 PDF objects out of 1000 (max. 8388607)
+ 368 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

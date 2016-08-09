@@ -321,7 +321,7 @@ The price of the CoCo can be separated into the individual components as present
         \draw [black] ({rel axis cs:0,0}|-{axis cs:Vsb,0}) -- ({rel axis cs:1,0}|-{axis cs:Vkifwd,0}) node [pos=0.73, above] {};
   \end{axis}
 \end{tikzpicture}
-\caption[CoCo price $V^{ed}$ and its components]{CoCo price $V^{ed}$ and its components under the equity derivative approach}
+\caption[CoCo price pursuant to the equity derivative approach and separation of its components]{CoCo price $V^{ed}$ and separation of its components under the equity derivative approach}
 \label{pricecomponents}
 \end{figure}
 
@@ -516,37 +516,75 @@ A reasonable mean-reversion speed $g$ for deposits is assumed to be equal to 0.5
 Similar to the credit and equity derivative approach the conversion factor $p$ depends on the trigger share price $S^*$ and the conversion price $C_p$: $p = S^*/C_p$. Moreover, the conversion threshold $\bar{e}$ of a CoCo also relies on the trigger share price $S^*$ as outlined by $\bar{e} = E_\text{Trigger}/D_0 = n S^*/D_0$.
 
 \subsection{Model Application}
-
-The generic CoCo parameters serve to calculate a pricing example under the structural approach. However, given the model's complexity additional input variables are required as outlined in table \ref{tbl:playa}. Running the monte-carlo simulation with these inputs yields a price $V^{sa}$ of 108.65. The derived value is comparable to those of the credit derivative approach $V^{cd}$ and the equity derivative approach $V^{ed}$.
-
+The parameters shown in table \ref{tbl:playa} serve to price a generic CoCo pursuant to the structural approach. The pricing results can be found in figure \ref{fig:comparison}.
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
-  \begin{axis}[
-    enlargelimits=0.15,
-    legend style={at={(0.5,-0.2)},
-      anchor=north,legend columns=-1},
-    ylabel={$Theoretical$ $Price$},
-    symbolic x coords={Vcd,Ved,Vsa},
-    xticklabels={$V^{cd}$, $V^{ed}$, $V^{sa}$},
-    xtick=data,
-    nodes near coords,
-    nodes near coords align={vertical},
-    x tick label style={rotate=45,anchor=east},
-    ybar=1pt,
-    bar width=1cm,
-    x=2cm,
-    enlarge x limits={abs=1cm},
-    enlarge y limits={abs=1cm},
-    colormap/viridis
+\begin{axis}[width=11cm, height=11cm, axis y line*=left, ylabel={$Theoretical$ $Price$}, ymin =70,
+        ylabel near ticks, xlabel={$Number$ $of$ $Paths$ $per$ $Simulation$}, xlabel near ticks, cycle list={blue}, yticklabel=\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\,\ , scale only axis=false, boxplot/draw direction=y,xtick={1,2,3,4,5,6,7,8},xticklabels={1,5,10,50,100,500,1000,5000}]
+ \addplot+[boxplot prepared={
+        lower whisker=80.45, lower quartile=89.74,
+        median=97.67, upper quartile=114.35,
+        upper whisker=137.52}] coordinates {};
+    \addplot+[boxplot prepared={
+        lower whisker=83.98, lower quartile=94.98,
+        median=98.22, upper quartile=104.26,
+        upper whisker=119.47}] coordinates {};
+    \addplot+[boxplot prepared={
+        lower whisker=89.43, lower quartile=94.08,
+        median=97.30, upper quartile=101.62,
+        upper whisker=108.38}] coordinates {};
+    \addplot+[boxplot prepared={
+        lower whisker=93.12, lower quartile=96.16,
+        median=97.55, upper quartile=99.06,
+        upper whisker=102.19}] coordinates {};
+    \addplot+[boxplot prepared={
+        lower whisker=94.98, lower quartile=96.82,
+        median=97.78, upper quartile=98.50,
+        upper whisker=102.02}] coordinates {};
+    \addplot+[boxplot prepared={
+        lower whisker=95.93, lower quartile=97.17,
+        median=97.71, upper quartile=98.05,
+        upper whisker=99.32}] coordinates {};
+      \addplot+[boxplot prepared={
+        lower whisker=97.06, lower quartile=97.57,
+        median=97.80, upper quartile=98.09,
+        upper whisker=98.72}] coordinates {};
+    \addplot+[boxplot prepared={
+        lower whisker=97.27, lower quartile=97.60,
+        median=97.77, upper quartile=97.93,
+        upper whisker=98.48}] coordinates {};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 1, 70.1)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 2, 70.3)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 3, 70.6)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 4, 71.1)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 5, 72)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 6, 74)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 7, 80)};
+     \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 8, 145)};
+      \draw [yellow] ({rel axis cs:0,0}|-{axis cs:0,107.46}) -- ({rel axis cs:1,0}|-{axis cs:9,107.46}) node [pos=0.73, below] {$V^{ed} = 107.46$};
+      \draw [yellow] ({rel axis cs:0,0}|-{axis cs:0,111.31}) -- ({rel axis cs:1,0}|-{axis cs:9,111.31}) node [pos=0.73, above] {$V^{cd} = 111.31$};
+\end{axis}
+\begin{axis}[
+	width=11cm, height=11cm,
+	xtick={1,2,3,4,5,6,7,8}, xticklabels={1,5,10,50,100,500,1000,5000},
+        %scale only axis=false,
+        hide x axis,
+        axis y line*=right,
+        ylabel={$Average$ $Time$ $per$ $Simulation$ $in$ $Seconds$},
+        ylabel near ticks,
+        %ymin = 0, ymax = 10,
+        ytick={1,2,3,4,5,6,7,8,9}, yticklabels={0,100,200,300,400,500,600,700,800}
     ]
-    \addplot coordinates {(Vcd, 111.31) (Ved,107.46)
-        (Vsa, 108.65)};
-  \end{axis}
+    %\addplot [green, mark = x, mark size = 0.25cm] coordinates {( 8, 7)}
+\end{axis}
+%      \addplot [black, mark = *] coordinates {( 1, 1600)};
 \end{tikzpicture}
 \caption[Comparison of pricing results]{Comparison of pricing results}
 \label{fig:comparison}
 \end{figure}
+
+Running the monte-carlo simulation with different path numbers per simulation leads to a broad range of prices. As shown by the blue whisker plots one can directly see the minimum, the 25\%-percentile, the median, the 75\%-percentile and the maximum for each path number. One hundred simulations have been conducted for each boxplot. It becomes apparent that the price stability is tightly connected to the average time per simulation as shown by the green crosses. For 5000 paths per simulation one can derive a median price of $V^{sa}$ of $97.77$. The derived value is significantly lower than those of the credit derivative approach $V^{cd}$ and the equity derivative approach $V^{ed}$ which are highlighted in yellow. This might be the case due to the fact that the structural approach accounts for discontinuous returns.
 
 
 %\begin{table}[H]

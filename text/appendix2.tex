@@ -40,6 +40,7 @@ The following source code is an implementation of the sensitivity analysis of th
 \chapter{Code - Case Study}
 
 \section{Parametrization - Structural Approach} \label{empirical}
+The following source code is an implementation \citet{merton1974pricing} Model which is used to estimate the asset volatility written in R.
 \lstinputlisting[language=R]{code/calibrateStructuralApproach.R}
 
 \subsection{\citet{cox1985theory} Model}
@@ -49,9 +50,11 @@ The following source code is an implementation of the method as described by \ci
 \lstinputlisting[language=R]{code/estimateCIRParameter.R}\label{estimateCIRParameter}
 
 \subsection{\citet{merton1974pricing} Model}
+The following source code is an implementation of the \citet{merton1974pricing} model which is used to estimate the asset volatility. The code is written in R. Similar techniques are applied by \citet{stackoverflow2014code}.
 \lstinputlisting[language=R]{code/estimateMertonParameter.R}\label{estimateMertonParameter}
 
 \subsection{Jump-Diffusion Process}
+The following source code is used to estimate the jump parameters after estimating the jump intensity. The code is written in R.
 \lstinputlisting[language=R]{code/estimateJumpParameter.R}\label{estimateJumpsParameter}
 
 
