@@ -5,7 +5,7 @@ estimate_CIR_parameters <- function(data, method = 'Hessian', days = 360 , signi
   R   <- data[,1]
   tau <- data[,2]
   h <- 1 / days
-  
+
   # Estimation of starting parameters corresponding to those of a Feller process
   phi0 <- acf(R, 1, plot = FALSE)
   kappa0 <- - log(phi0[1]$acf) / h

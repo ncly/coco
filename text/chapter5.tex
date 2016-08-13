@@ -1,8 +1,33 @@
 \chapter{Case Study}\label{empiricalanalysis}
 
-\section{HSBC CoCo}
+\section{CoCo Example}
+On March 30, 2015, HSBC Holdings has issued a CoCo (ISIN US404280AT69) with a perpetual maturity. The aggregate principal amount from the issuance of the CoCo sums up to USD 2.475bn. HSBC intends to further strengthen its capital base with the proceeds of the issuance. The CoCo pays semi-annually a coupon. Besides, the interest on the CoCo will be a rate per annum equal to 6.375\% for ten years. The conversion price is fixed ex ante at a price of USD 4.03488. The trigger event occur if the CET1 fails to remain above a threshold of 7.0\% as of any business day on which HSBC calculates the CET1 ratio. The CoCo converts automatically to equity
 
-\section{Parametrization}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[%timeplot,
+		height=7.8cm,
+		width=14cm,
+		date coordinates in=x,
+		xticklabel={\day/\month/\year},
+		x tick label style={rotate=45,anchor=north east},
+		ylabel = {$Relative$ $Price$ $Development$},
+		xlabel = {$Time$},
+		date ZERO=2015-03-31,
+		xtickmax=2016-06-30,
+		%table/col sep = semicolon,
+		colormap/viridis,
+		legend entries={CoCo (ISIN GB0005405286),Share (ISIN US404280AT69)}
+	]
+	\addplot [green] table[mark=none,line join=bevel, x=Date, y=cocoprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+	\addplot [blue] table[mark=none,line join=bevel, x=Date, y=shareprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+	\end{axis}
+\end{tikzpicture}
+\caption[Relative price development of HSBC's CoCo and share]{Relative price development of HSBC's CoCo and share adjusted for GBP/USD currency effects}
+\end{figure}
+
+\section{Model Application}
 
 \section{Valuation Results}
 

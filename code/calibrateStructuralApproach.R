@@ -30,12 +30,26 @@ calibrate_Jump <- function(returns, jump_Intesity){
   return(jump_parameters)
 }
 
-# CIR
+# CIR data
 # Input data: [R,tau] (n x 2), with R: annual bonds yields in percentage and tau: maturities in years
-data(data.cir)
-cir_data <- data.cir
+data <- read.csv2("spot_interest rate.csv", header = TRUE, sep=";", dec=",", as.is=TRUE)
+data[[1]] <- as.Date(data[[1]])
+data <- data[rowSums(is.na(data)) == 0,]
+data <- data[data$date>="2010-03-30" & data$date<="2015-03-30", ]
 
-calibrate_CIR(cir_data)
+tau <- cbind(rep(1, nrow(data)), rep(2, nrow(data)), rep(3, nrow(data)), rep(10, nrow(data)))
+tau <- as.vector(tau)
+
+data <- cbind(data$X1.0, data$X2.0, data$X5.0, data$X10.0)
+data <- as.vector(data)
+
+cir.data <- cbind(data, tau)
+cir.data <- calibrate_CIR(cir.data)
+
+kappa <- cir.data$kappa
+r_bar <- cir.data$r_bar
+sigma_r <- cir.data$sigma_r
+
 
 # Merton
 deposits <- matrix(1:1010, ncol = 1)
