@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  13 AUG 2016 02:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.7)  17 AUG 2016 19:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1310,8 +1310,11 @@ eX document
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (./ociamthesismain.aux (./text/secondpage.aux) (./text/dedication.aux)
-(./text/abstract.aux) (./text/chapter1.aux) (./text/chapter2.aux)
-(./text/chapter3.aux) (./text/chapter4.aux) (./text/chapter5.aux)
+(./text/abstract.aux) (./text/chapter1.aux) (./text/chapter2.aux
+
+LaTeX Warning: Label `tbl:paper' multiply defined.
+
+) (./text/chapter3.aux) (./text/chapter4.aux) (./text/chapter5.aux)
 (./text/conclusions.aux) (./text/appendix2.aux
 
 LaTeX Warning: Label `creditderivativeapproach' multiply defined.
@@ -1571,53 +1574,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
 [5]
-Overfull \hbox (4.94212pt too wide) in paragraph at lines 122--123
-[]\OT1/cmr/m/n/12 De Spiegeleer and Schoutens (2011b) tackle the pric-ing prob-
-lem with a credit-derivative
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
@@ -1627,17 +1624,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
  (./text/chapter2.tex
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-<media/anatomy.pdf, id=64, 597.432pt x 844.95674pt>
-File: media/anatomy.pdf Graphic file (type pdf)
- <use media/anatomy.pdf>
-Package pdftex.def Info: media/anatomy.pdf used on input line 11.
-(pdftex.def)             Requested size: 177.52455pt x 142.46545pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
@@ -1645,97 +1637,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
 
 
- <./media/anatomy.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+]
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]|\OT1/cmr/m/n/6 Tier 2 Buffer
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--101
-[]|\OT1/cmr/m/n/6 Senior Con-tin-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-[]|\OT1/cmr/m/n/6 Subordinated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--107
-[]|\OT1/cmr/m/n/6 Callable from
- []
-
-
-Underfull \hbox (badness 3536) in paragraph at lines 110--110
-[]|\OT1/cmr/m/n/6 Partial (75% of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[]|\OT1/cmr/bx/n/6 Conversion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--111
-[]|\OT1/cmr/m/n/6 Fixed at GBP
- []
-
-
-Underfull \hbox (badness 4492) in paragraph at lines 112--112
-\OT1/cmr/m/n/6 tifi-cates to risk
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--113
-[]|\OT1/cmr/bx/n/6 Trigger
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
-
- []
-
-[12] [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 
-Overfull \hbox (60.17165pt too wide) in paragraph at lines 238--238
-[]|$[]$|  
- []
-
-
-Overfull \hbox (60.17165pt too wide) in paragraph at lines 241--241
-[]|$[]$|  
- []
-
-
-Overfull \hbox (60.17165pt too wide) in paragraph at lines 244--244
-[]|$[]$|  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--254
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-[16]) [17]
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+[13]) [14]
 \openout2 = `text/chapter3.aux'.
 
  (./text/chapter3.tex
@@ -1745,16 +1692,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[18
+[15
 
 
 
-] [19] [20] [21]
+] [16] [17] [18]
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-[22]
+
+LaTeX Warning: Reference `valueatmaturity' on page 19 undefined on input line 1
+32.
+
+[19]
 LaTeX Font Info:    Try loading font information for U+bbm on input line 140.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
@@ -1763,50 +1714,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[23]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
-[24] [25] [26]
+[21] [22] [23]
 Package pgfplots info on input line 317: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [27] <media/jumpprocess.pdf, id=197, 597.432pt x 844.95674pt>
+ [24] <media/jumpprocess.pdf, id=126, 597.432pt x 844.95674pt>
 File: media/jumpprocess.pdf Graphic file (type pdf)
 
 <use media/jumpprocess.pdf>
 Package pdftex.def Info: media/jumpprocess.pdf used on input line 343.
 (pdftex.def)             Requested size: 221.89723pt x 155.31322pt.
- [28]
+ [25]
 Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
-[29 <./media/jumpprocess.pdf>]
+[26 <./media/jumpprocess.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
-[30] [31]
+[27] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 447--448
 
  []
 
 
-LaTeX Warning: Float too large for page by 3.38737pt on input line 502.
+LaTeX Warning: Float too large for page by 27.38737pt on input line 502.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
-[32] [33] [34]
+[29] [30] [31]
 
 Package pgfplots Warning: You have an axis with empty range (in direction y). R
 eplacing it with a default range and clearing all plots. on input line 580.
 
  [warning /pgfplots/warning/empty range cleared axis]
-[35] [36]) [37]
+[32] [33]
+Overfull \vbox (5.88737pt too high) has occurred while \output is active []
+
+
+[34])
 \openout2 = `text/chapter4.aux'.
 
  (./text/chapter4.tex
@@ -1821,26 +1776,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[38
+[35
 
 
 
 ]
 PGFPlots: reading {code/createData_CD_S_sigma_31Aug2016.txt}
 PGFPlots: reading {code/createData_CD_T_r_31Aug2016.txt}
- [39]
+ [36]
 PGFPlots: reading {code/createData_CD_Sstar_Cp_31Aug2016.txt}
 
 Underfull \hbox (badness 10000) in paragraph at lines 38--50
 
  []
 
-[40]
+[37]
 PGFPlots: reading {code/createData_ED_S_sigma_31Aug2016.txt}
- [41]
+ [38]
 PGFPlots: reading {code/createData_ED_T_r_31Aug2016.txt}
 PGFPlots: reading {code/createData_ED_Sstar_Cp_31Aug2016.txt}
- [42] [43]
+ [39] [40]
 PGFPlots: reading {code/createData_SA_x0_sigma_31Aug2016.txt}
 PGFPlots: reading {code/createData_SA_T_r_5_Aug_2016.txt}
 
@@ -1850,41 +1805,48 @@ esh/cols=<N>]'. Assuming [mesh/rows=11,mesh/cols=] as sqrt(num points) = sqrt(1
 21) [ = 11.00000]. on input line 131.
 
  [warning /pgfplots/warning/matrix delinearize uses sqrt]
-[44]
+[41]
 PGFPlots: reading {code/createData_SA_x0_ebar_31Aug2016.txt}
 
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[45]
+[42]
 PGFPlots: reading {code/createData_SA_x0_b0_31Aug2016.txt}
 PGFPlots: reading {code/createData_SA_x0_lambda_31Aug2016.txt}
- [46]) [47]
+ [43]) [44]
 \openout2 = `text/chapter5.aux'.
 
  (./text/chapter5.tex
 Chapter 5.
-Package pgfplots info on input line 22: Using 'lua backend=false' for axis: x c
+Package pgfplots info on input line 24: Using 'lua backend=false' for axis: x c
 oord trafo unsupported.
 PGFPlots: reading {code/data/final_relativepricedevelopment_HSBC-CoCo.txt}
 PGFPlots: reading {code/data/final_relativepricedevelopment_HSBC-CoCo.txt}
-[48
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4> not available
+(Font)              size <5> substituted on input line 27.
+
+[45
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
-) [49]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+Package pgfplots info on input line 71: Using 'lua backend=false' for axis: x c
+oord trafo unsupported.
+PGFPlots: reading {code/data/plottingdata_2.txt}
+PGFPlots: reading {code/data/plottingdata_2.txt}
+PGFPlots: reading {code/data/plottingdata_2.txt}
+PGFPlots: reading {code/data/plottingdata_3.txt}
+[46] [47]) [48]
 \openout2 = `text/conclusions.aux'.
 
-
-(./text/conclusions.tex
+ (./text/conclusions.tex
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--3
@@ -1901,11 +1863,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[50
+[49
 
 
 
-]) [51]
+]) [50]
 \openout2 = `text/appendix2.aux'.
 
  (./text/appendix2.tex
@@ -1927,27 +1889,32 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 2.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
- [52
+ [51
 
 
 
 ])
-(./code/EquityDerivativeApproach.R [53] [54]) (./code/StructuralApproach.R
-[55] [56] [57]) [58]
+(./code/EquityDerivativeApproach.R [52] [53]) (./code/StructuralApproach.R
+[54] [55] [56]) [57]
 Appendix B.
-(./code/DiagramsCreditDerivativeApproach.R [59
+(./code/DiagramsCreditDerivativeApproach.R [58
 
 ])
-(./code/DiagramsEquityDerivativeApproach.R [60] [61])
-(./code/DiagramsStructuralApproach.R [62] [63] [64]) [65]
+(./code/DiagramsEquityDerivativeApproach.R [59] [60])
+(./code/DiagramsStructuralApproach.R [61] [62] [63]) [64]
 Appendix C.
-(./code/calibrateStructuralApproach.R [66
+(./code/calibrateStructuralApproach.R [65
 
-]) (./code/estimateCIRParameter.R
-[67]) (./code/estimateMertonParameter.R [68]) (./code/estimateJumpParameter.R))
-[69] (./ociamthesismain.bbl
+]) [66] (./code/estimateCIRParameter.R) (./code/estimateMertonParameter.R [67])
+ (./code/estimateJumpParameter.R))
+[68] (./ociamthesismain.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 54--59
 \OT1/cmr/m/n/12 barclayspublic / docs / InvestorRelations / esma / capital -[] 
 securities -[] documentation /
@@ -1959,10 +1926,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 ] Contingent -[] Capital -[] Notes -[] due -[] November -[]
  []
 
-[70
+[69
 
 
-] [71]
+] [70]
 Underfull \hbox (badness 10000) in paragraph at lines 210--214
 \OT1/cmr/m/n/12 URL $http : / / www . group . intesasanpaolo . com / scriptIsir
 0 / si09 / contentData /
@@ -1974,13 +1941,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--214
 -[] 00000003D473C & ct =
  []
 
-[72] [73] [74]
+[71] [72] [73]
 Underfull \hbox (badness 10000) in paragraph at lines 385--389
 \OT1/cmr/m/n/12 www . zkb . ch / media / dok / corporate / investor -[] relatio
 ns / produktinformationsblatt -[]
  []
 
-) [75]
+) [74]
 \openout2 = `text/acknowlegements.aux'.
 
  (./text/acknowlegements.tex
@@ -1993,14 +1960,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-<text/signatureNicolaySchmitt.png, id=434, 1384.17125pt x 635.37375pt>
+<text/signatureNicolaySchmitt.png, id=371, 1384.17125pt x 635.37375pt>
 File: text/signatureNicolaySchmitt.png Graphic file (type png)
 
 <use text/signatureNicolaySchmitt.png>
 Package pdftex.def Info: text/signatureNicolaySchmitt.png used on input line 8.
 
 (pdftex.def)             Requested size: 184.9429pt x 84.8895pt.
-) [76
+) [75
 
 
  <./text/signatureNicolaySchmitt.png>] (./ociamthesismain.aux (./text/secondpag
@@ -2009,17 +1976,24 @@ e.aux) (./text/dedication.aux)
 (./text/chapter3.aux) (./text/chapter4.aux) (./text/chapter5.aux)
 (./text/conclusions.aux) (./text/appendix2.aux) (./text/acknowlegements.aux))
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38636 strings out of 493089
- 913475 string characters out of 6134843
- 1344459 words of memory out of 5000000
- 41352 multiletter control sequences out of 15000+600000
+ 38669 strings out of 493089
+ 914339 string characters out of 6134843
+ 1405665 words of memory out of 5000000
+ 41382 multiletter control sequences out of 15000+600000
  17753 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,21n,102p,10403b,2812s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,19n,102p,10403b,2812s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/nicolay/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bb
 m12.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 bx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
@@ -2043,14 +2017,11 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/public/marvosym/marvosym.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/stix/stix-mathex.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/stix/stix-mathit.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/stix/stix-mathrm.pfb>
-Output written on ociamthesismain.pdf (85 pages, 1175134 bytes).
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on ociamthesismain.pdf (84 pages, 1049789 bytes).
 PDF statistics:
- 522 PDF objects out of 1000 (max. 8388607)
- 373 compressed objects within 4 object streams
+ 455 PDF objects out of 1000 (max. 8388607)
+ 321 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

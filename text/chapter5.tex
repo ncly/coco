@@ -1,8 +1,57 @@
 \chapter{Case Study}\label{empiricalanalysis}
+In the following, all three approaches will be applied to a AT1 CoCo of HSBC which was issued in early 2015. The case study helps to evaluate the models with respect to their pricing tracking accuracy, parametrization complexity and calculation time. 
 
 \section{CoCo Example}
-On March 30, 2015, HSBC Holdings has issued a CoCo (ISIN US404280AT69) with a perpetual maturity. The aggregate principal amount from the issuance of the CoCo sums up to USD 2.475bn. HSBC intends to further strengthen its capital base with the proceeds of the issuance. The CoCo pays semi-annually a coupon. Besides, the interest on the CoCo will be a rate per annum equal to 6.375\% for ten years. The conversion price is fixed ex ante at a price of USD 4.03488. The trigger event occur if the CET1 fails to remain above a threshold of 7.0\% as of any business day on which HSBC calculates the CET1 ratio. The CoCo converts automatically to equity
+On March 30, 2015, HSBC issued its Perpetual Subordinated Contingent Convertible Securities. The aggregate principal amount from the issuance of the CoCo sums up to USD 2.475bn. HSBC intends to further strengthen its capital base with the proceeds of the issuance. The interest on the CoCo will be a rate per annum equal to 6.375\%. Besides, the CoCo pays its coupon semi-annually. The conversion price is fixed ex ante at USD 4.03488. The trigger event occur if the CET1 fails to remain above a threshold of 7.0\% as of any business day on which HSBC calculates the CET1 ratio. If the CoCo breaches the threshold, it converts automatically to equity.
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[%timeplot,
+		height=4.9cm,
+		width=12cm,
+		date coordinates in=x,
+		xticklabel={\day/\month/\year},
+		x tick label style={rotate=25,anchor=north east},
+		ylabel = {$Cumulative$ $Return$},
+		xlabel = {$Time$},
+		date ZERO=2015-03-31,
+		xtickmax=2016-06-30,
+		%table/col sep = semicolon,
+		colormap/viridis,
+		legend entries={CoCo (ISIN GB0005405286),Share (ISIN US404280AT69)},
+		legend style={font=\fontsize{4}{5}\selectfont},
+	]
+	\addplot [green] table[mark=none,line join=bevel, x=Date, y=cocoprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+	\addplot [blue] table[mark=none,line join=bevel, x=Date, y=shareprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+	\end{axis}
+\end{tikzpicture}
+\caption[Cumulative return of HSBC's CoCo and share]{Cumulative return of HSBC's share and CoCo adjusted for GBP/USD currency effects}
+\label{fig:cumulative}
+\end{figure}
+
+Figure \ref{fig:cumulative} gives a first impression of both the return development of the reference share price (ISIN US404280AT69) and the respective CoCo (ISIN GB0005405286). As illustrated the pricing period ranges from March 31, 2015 to June, 30, 2016. The mean price of the CoCo during this period equals GBP 66.25, whereas the minimum price is GBP 56.88 respectively the maximum price amounts to GBP 74.12. 
+
+\section{Methodology}
+
+To evaluate the price tracking accuracy of the approaches, the mean absolute error (MAE) and the root mean squared error (RMSE) are calculated for the model estimates in the aforementioned observation period. Subsequently, a brute force algorithm is applied to minimize the RMSE of each approach by varying the model implied trigger share price $S^*$. The approach is computationally intense and time consuming. Further research could be conducted to find other algorithms to optimize this process. After deriving a value for the model implied trigger price $S^*$ for each approach, the MAE is calculated.\\  
+
+The MAE is the arithmetical average of the absolute difference between the predicted CoCo value $\hat{y}_i$ and the observed market value $y_i$. The MAE is given by:
+\begin{align}
+MAE &= \dfrac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i | 
+\end{align}
+
+By contrast, the RMSE represents the standard deviation of the differences between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$. With the following equation the value can be derived:
+\begin{align}
+RMSE &= \sqrt{\dfrac{\sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2}{n}}
+\end{align}
+
+The derived values will help to determine the appropriateness of the models to price existing CoCos.
+
+\section{Valuation Results}
+
+In the following, the valuation results with respect to HSBC's CoCo will analyzed. Figure \ref{fig:valuation} visualizes the valuation results of the target approaches. It is interesting to see how the price estimates change by each approach. Qualitatively speaking it seems that the credit and equity derivative approach over- respectively underestimate the price of the CoCo. On the other side, the structural approach varies around the actual CoCo price.
+ 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
@@ -11,38 +60,65 @@ On March 30, 2015, HSBC Holdings has issued a CoCo (ISIN US404280AT69) with a pe
 		width=14cm,
 		date coordinates in=x,
 		xticklabel={\day/\month/\year},
-		x tick label style={rotate=45,anchor=north east},
-		ylabel = {$Relative$ $Price$ $Development$},
+		x tick label style={rotate=25,anchor=north east},
+		ylabel = {$Price$ $in$ $GBP$},
 		xlabel = {$Time$},
 		date ZERO=2015-03-31,
 		xtickmax=2016-06-30,
 		%table/col sep = semicolon,
 		colormap/viridis,
-		legend entries={CoCo (ISIN GB0005405286),Share (ISIN US404280AT69)}
+		legend entries={CoCo, CD, ED, SA}
 	]
-	\addplot [green] table[mark=none,line join=bevel, x=Date, y=cocoprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
-	\addplot [blue] table[mark=none,line join=bevel, x=Date, y=shareprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+	\addplot [blue] table[mark=none,line join=bevel, x=date, y=coco] {code/data/plottingdata_2.txt};
+	\addplot [green] table[mark=none,line join=bevel, x=date, y=cd] {code/data/plottingdata_2.txt};
+	\addplot [yellow] table[mark=none,line join=bevel, x=date, y=ed] {code/data/plottingdata_2.txt};
+	\addplot [orange] table[mark=none,line join=bevel, x=date, y=sa] {code/data/plottingdata_3.txt};
 	\end{axis}
 \end{tikzpicture}
-\caption[Relative price development of HSBC's CoCo and share]{Relative price development of HSBC's CoCo and share adjusted for GBP/USD currency effects}
+\caption[Simulation results for the CoCo of HSBC]{Simulation results for the CoCo of HSBC}
+\label{fig:valuation}
 \end{figure}
 
-\section{Model Application}
+Table \ref{tbl:valuationresults} emphasizes the first visual thought as the structural approach seems to best track the actual CoCo price with a RMSE of 0.1012 and a MAE of 6.52. The other two approaches do not seem to really track the price of the CoCo. However, the model implied conversion price of the CoCo under the structural approach equals 306.12.
 
-\section{Valuation Results}
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{lrrr}
+		\toprule
+			 & \textbf{Trigger price $S^*$} & \textbf{RMSE} & \textbf{MAE} \\
+		\midrule
+			Credit Derivative Approach & 215.03 & 0.2031 & 12.34\\
+			Equity Derivative Approach & 318.67 & 0.1974 & 11.65 \\			
+			Structural Approach & 306.41 & 0.1012  & \phantom{1}6.52 \\
+		\bottomrule
+	\end{tabular}
+	\caption[Case study results]{Parameter classification of the credit derivative approach}
+	\label{tbl:valuationresults}
+\end{table}
 
-\begin{itemize}
-\item the mean absolute error (MAE) is the arithmetical average of the absolute difference between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$
-\item the MAE can be derived with
-\end{itemize}
-\begin{align}
-MAE &= \dfrac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i | 
-\end{align}
 
-\begin{itemize}
-\item the root mean squared error (RMSE) represents the standard deviation of the difference between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$
-\item the RMSE is given by
-\end{itemize}
-\begin{align}
-RMSE &= \sqrt{\dfrac{\sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2}{n}}
-\end{align}
+\section{Final Remarks}
+
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{lcccc}
+		\toprule
+			 & \textbf{CD} & \textbf{ED} & \textbf{SA}\\
+		\midrule
+			Price tracking accuracy & \cellcolor{red!20} low & \cellcolor{red!20} low & \cellcolor{yellow!20} medium\\
+			Parametrization complexity & \cellcolor{green!20} low & \cellcolor{green!20} low & \cellcolor{red!20} high\\
+			Calculation time & \cellcolor{green!20} low & \cellcolor{green!20} low & \cellcolor{red!20} high\\
+		\bottomrule
+	\end{tabular}
+	\caption[Evaluation of pricing approaches with regard to three dimensions]{Evaluation of pricing approaches with regard to price tacking accuracy, parametrization complexity and calculation time}
+	\label{table:evaluationtrigger}
+\end{table}
+
+
+
+
+
+
+

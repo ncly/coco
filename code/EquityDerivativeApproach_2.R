@@ -9,7 +9,7 @@ price_coco_ed <- function(t, T, S_t, S_star, C_p, c_i, r, N, q, sigma, alpha){
 price_cb <- function(t, T, c_i, r, N){
   V_t_cb <- N * exp(-r * (T - t))
   
-  for (time in seq((t+1), T, 1)){
+  for (time in seq((t+0.5), T, 0.5)){
   V_t_cb <- V_t_cb + c_i * exp(-r * time)  
   }
   
@@ -23,7 +23,7 @@ price_dibi <- function(t, T, S_t, S_star, c_i, r, q, sigma, alpha){
   i <- t
   k <- T
   
-  for (i in seq((t+1), k, 1)) {
+  for (i in seq((t+0.5), k, 0.5)) {
   V_t_dibi <- V_t_dibi + c_i * exp(- r * i) * (pnorm(- calc_x_1_i(S_t, S_star, sigma, r, q, i) + sigma * sqrt(i)) + (S_star / S_t)^(2 * calc_lambda(r, q, sigma) - 2) * pnorm ( calc_y_1_i(S_t, S_star, sigma, r, q, i) - sigma * sqrt(i)))
   }
   
