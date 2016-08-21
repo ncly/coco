@@ -1,11 +1,35 @@
 \chapter{Conclusion}
-The thesis has the objective to compare different valuation methods for CoCos. Three pricing approaches have been selected: the credit derivative approach, the equity derivative approach \citep{de2011pricing} and the structural approach \citep{pennacchi2010structural}. All approaches are brought into context to the current state of research. Apart from this, the paper provides comprehensive explanations of the theoretical concepts behind the three approaches.  In addition, the models are applied consistently to a generic CoCo in order to understand their parametrization and the complexity of their implementation. An application to a real-world CoCo of HSBC allows for further insights.\\
+The thesis has the objective to compare different valuation methods for CoCos. Three pricing approaches have been selected: the credit derivative approach, the equity derivative approach \citep{de2011pricing} and the structural approach \citep{pennacchi2010structural}. All approaches are brought into context to the current state of research. Apart from this, the paper provides comprehensive explanations of the theoretical concepts behind the valuation approaches.  Also, the models are applied consistently to a generic CoCo to understand their parametrization and implementation complexity. An application to a real-world CoCo of HSBC allows for further insights.\\
 
-The first model, the credit derivative approach, is an elegant way to price CoCos. This is partly because the parametrization to market data is straightforward and quick calculations are guaranteed. However, conceptual weakness are detectable. A closer look into the model dynamics suggests that it does not account for discontinuous returns. Inherent tail risks of CoCos are potentially underestimated. This appears to be confirmed by the fact that prices estimated by credit derivative approach are significantly higher than those of the structural approach. In addition, losses from cancelled coupons of triggered CoCos are not taken into account which also leads to an overestimation of the price. From a practical point of view, the model does not inherit an equity spot process and therefore, equity risks cannot be determined. \citep{turfus2015cocos}\\
+The first model, the credit derivative approach, is theoretically an elegant way to price CoCos. This is partly because the parametrization to market data is straightforward and fast calculations are guaranteed. However, conceptual weaknesses are detectable. A closer look into the model dynamics suggests that the model does not account for discontinuous returns. Hence, inherent tail risks are potentially underestimated. This seems to be confirmed by the fact that the estimated price of the generic CoCo is significantly higher than those of the equity derivative approach and the structural approach. Also, losses from canceled coupons of triggered CoCos are not taken into account in the valuation which might lead to an overestimation. From a practical viewpoint, the model does not inherit an equity spot process and therefore, equity risks cannot be determined. \citep{turfus2015cocos}\\
 
-The equity derivative approach has strengths similar to that of the credit derivative approach. Though, they also share the same conceptual flaw. They take the stock price at conversion as model input and not as stochastic output although it is very likely that equity jumps occur when the CoCo is triggered. \citep{turfus2015cocos} Potentially, the equity derivative approach underestimates the value of dividend payments to CoCo investors after conversion has happend, albeit the risk might be small. One might also argue that credit risk calculations are not possible since the approach does not account for them. \citep{turfus2015cocos} \\
+The equity derivative approach has strengths similar to those of the credit derivative approach. Though, they share conceptual flaws. They take the stock price at conversion as model input and not as stochastic output although it is very likely that equity jumps occur when the CoCo is triggered. \citep{turfus2015cocos} Furthermore, the equity derivative approach might underestimate the value of dividend payments to CoCo investors after the conversion has happened. One might also argue that credit risk calculations are not possible since the approach does not account for them. \citep{turfus2015cocos} \\
 
-The structural approach complies very well with the hybrid nature of CoCos as it attempts to model the dynamics of the entire balance sheet. Tail risks are also taken into account by factoring in a jump diffusion process to overcome the artificial simplification of continuous returns under a Black-Scholes setting. Though, several model inputs are necessary to apply the valuation approach to real world examples. An accurate estimation proves itself to be very difficult since certain parameters are not directly observable in the market or are only updated infrequently. The case study, however, reveals that a precise parametrization is indispensable. In addition, good algorithm design skills are necessary to cut the calculation time of the Monte-Carlo simulation.
+The structural approach complies very well with the hybrid nature of CoCos as it attempts to model the dynamics of the entire balance sheet. Tail risks are taken into consideration by factoring in a jump diffusion process to overcome the artificial simplification of continuous returns under a Black-Scholes setting. Though, several model inputs are necessary to apply the valuation approach to real world examples. An accurate estimation proves itself to be tough since certain parameters are not directly observable in the market or updated infrequently. The case study, however, reveals that a precise parameterization is indispensable. Also, good algorithm design skills are necessary to cut the calculation time of the Monte-Carlo simulation.
+
+\begin{table}[H]
+	\setlength{\extrarowheight}{2.5pt}
+	\centering
+	\begin{tabular}{lcccc}
+		\toprule
+			 & \textbf{CD} & \textbf{ED} & \textbf{SA}\\
+		\midrule
+			Price tracking accuracy & \cellcolor{red!20} low & \cellcolor{red!20} low & \cellcolor{yellow!20} medium\\
+			Parametrization complexity & \cellcolor{green!20} low & \cellcolor{green!20} low & \cellcolor{red!20} high\\
+			Calculation time & \cellcolor{green!20} low & \cellcolor{green!20} low & \cellcolor{red!20} high\\
+		\bottomrule
+	\end{tabular}
+	\caption[Evaluation of pricing approaches with regard to three dimensions]{Evaluation of pricing approaches with regard to price tacking accuracy, parametrization complexity and calculation time}
+	\label{table:evaluationtrigger}
+\end{table}
+
+Table \ref{table:evaluationtrigger} summarizes the results of the thesis. It becomes apparent that the parameterization is far more complicated fo the structural approach compared to the other two approaches. Besides, the calculation time and associated cost are significantly higher for the structural approach. But the advantage is that the price tracking results are better over time. As already mentioned, the applied pricing process might only be a heuristic that worked well for the HSBC CoCo in the observation period. Further empirical evidence should be conducted. A shortcoming of all approaches is that they do not answer the question how confident they are about their own price estimates. 
+
+
+
+
+
+
 
 
 %\begin{itemize}

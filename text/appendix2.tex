@@ -1,19 +1,19 @@
 \chapter{Code - Models} \label{creditderivativeapproach}
 \section{Credit Derivative Approach} \label{creditderivativeapproach}
 
-The following source code is an implementation of the Credit Derivative Approach \citep{de2011pricing} written in R.
+The following source code is an implementation of the credit derivative approach \citep{de2011pricing} written in R.
  
 \lstinputlisting[language=R]{code/CreditDerivativeApproach.R}
 
 \section{Equity Derivative Approach} \label{equityderivativeapproach}
 
-The following source code is an implementation of the Equity Derivative Approach \citep{de2011pricing} written in R.
+The following source code is an implementation of the equity derivative approach \citep{de2011pricing} written in R.
  
 \lstinputlisting[language=R]{code/EquityDerivativeApproach.R}
 
 \section{Structural Approach} \label{structuralapproach}
 
-The following source code is an implementation of the Structural Approach \citep{pennacchi2010structural} with support from \citet{codestructrural} in translating the source code of \citet{pennacchi2010structural} from GAUSS to R.
+The following source code is an implementation of the structural approach \citep{pennacchi2010structural} with support from \citet{codestructrural} in translating the source code of \citet{pennacchi2010structural} from GAUSS to R.
  
 \lstinputlisting[language=R]{code/StructuralApproach.R}
 
@@ -21,31 +21,31 @@ The following source code is an implementation of the Structural Approach \citep
 
 \section{Credit Derivative Approach} \label{sensicredit}
 
-The following source code is an implementation of the sensitivity analysis of the Credit Derivative Approach \citep{de2011pricing} written in R.
+The following source code is an implementation of the sensitivity analysis of the credit derivative approach \citep{de2011pricing} written in R.
  
 \lstinputlisting[language=R]{code/DiagramsCreditDerivativeApproach.R}
 
 \section{Equity Derivative Approach} \label{sensiequity}
 
-The following source code is an implementation of the sensitivity analysis of the Equity Derivative Approach \citep{de2011pricing} written in R.
+The following source code is an implementation of the sensitivity analysis of the equity derivative approach \citep{de2011pricing} written in R.
  
 \lstinputlisting[language=R]{code/DiagramsEquityDerivativeApproach.R}
 
 \section{Structural Approach} \label{sensistructural}
 
-The following source code is an implementation of the sensitivity analysis of the Structural Approach \citep{pennacchi2010structural} written in R.
+The following source code is an implementation of the sensitivity analysis of the structural approach \citep{pennacchi2010structural} written in R.
  
 \lstinputlisting[language=R]{code/DiagramsStructuralApproach.R}
 
 \chapter{Code - Case Study}
 
 \section{Parametrization - Structural Approach} \label{empirical}
-The following source code is an implementation \citet{merton1974pricing} Model which is used to estimate the asset volatility written in R.
-\lstinputlisting[language=R]{code/calibrateStructuralApproach.R}
+The following source code is usd to calculate important model inputs. The source code is written in R.
+\lstinputlisting[language=R]{code/CopyOfcalibrateStructuralApproach.R}
 
 \subsection{\citet{cox1985theory} Model}
 
-The following source code is an implementation of the method as described by \citet{remillard2013statistical}. The method is used to calibrate the \citet{cox1985theory} model which is used for the structural approach pursuant to \citet{pennacchi2010structural} based on historical data. The software is an adaption of the source code as provided by \citet{calibrateCIR}.
+The following source code is an implementation of the method as described by \citet{remillard2013statistical}. The method is used to calibrate the \citet{cox1985theory} model which is used for the structural approach pursuant to \citet{pennacchi2010structural} based on historical yield curve data. The software is an adaption of the source code as provided by \citet{calibrateCIR}.
 
 \lstinputlisting[language=R]{code/estimateCIRParameter.R}\label{estimateCIRParameter}
 

@@ -1,8 +1,8 @@
-\chapter{Pricing Theories}
+\chapter{Valuation Concepts}
 
 \section{Credit Derivative Approach} \label{sec:creditderivativeapproach}
 
-In financial markets the reduced-form approach is widely used in order to price credit risk. It was originally introduced by \citet{jarrow1995pricing} respectively \citet{duffie1999modeling}. The credit derivative approach applies the reduced-form approach to CoCos. In this context, the derivation of a pricing formula for CoCos follows mainly \citet{de2011pricing}. 
+In financial markets, the reduced-form approach is widely used to price credit risk. It was originally introduced by \citet{jarrow1995pricing} respectively \citet{duffie1999modeling}. The credit derivative approach applies the reduced-form approach to CoCos. In this context, the derivation of a pricing formula for CoCos follows mainly \citet{de2011pricing}. 
 
 \subsection{Reduced-Form Approach and Credit Triangle}
 
@@ -39,7 +39,7 @@ In accordance with the aforementioned reduced-form approach, \citet{de2011pricin
     F^* &= 1 - \exp\left[- \lambda_{Trigger} (T-t)\right]
 \end{align}
 
-Additionally, the credit derivative approach models $F^*$ with the first exit time equation used in barrier option pricing under a Black-Scholes setting. \citep{su2009likely} Hence, the probability $F^*$ that the trigger level $S^*$ is touched within the next $T - t$ years is given by the following equation with the continuous dividend yield $q$, the continuous interest rate $r$, the drift $\mu$, the volatility $\sigma$ and the current share price $S$ of the issuing company: 
+Additionally, the credit derivative approach models $F^*$ with the first exit time equation used in barrier option pricing under a Black-Scholes setting. \citep{su2009likely} Hence, the probability $F^*$ that the trigger level $S^*$ is touched within the next $T - t$ years is given by the following equation.  The continuous dividend yield $q$, the continuous interest rate $r$, the drift $\mu$, the volatility $\sigma$ and the current share price $S$ of the issuing company are relevant variables: 
 \begin{align}
     F^* = \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) - \mu (T - t)}{\sigma \sqrt{(T - t)}}\right) + \left(\dfrac{S^*}{S}\right)^{\dfrac{2 \mu}{\sigma^2}} \Phi\left( \dfrac{\log \left(\dfrac{S^*}{S}\right) + \mu (T - t)}{\sigma \sqrt{(T - t)}}\right)
 \end{align}
@@ -49,7 +49,7 @@ In this regard, a CoCo's credit spread $s_{CoCo}$ can be approximated by the cre
     s_{CoCo} &= \left(1 - R_{CoCo}\right) \lambda_{Trigger} = {L}_{CoCo} \lambda_{Trigger}
 \end{align}
 
-In the trigger event, the face value $N$ converts into $C_r$ shares worth $S^*$. The loss of a long position in a CoCo is therefore determined by the conversion price $C_p$:
+In the trigger event, the face value $N$ converts into $C_r$ shares worth $S^*$. The conversion price $C_p$ therefore determines the loss of a long position in a CoCo:
 \begin{align} \label{cocoloss}
     {Loss}_{CoCo} &= N - C_r S^* = N \left(1 - R_{CoCo} \right) = N \left(1 - \dfrac{S^*}{C_p} \right)
 \end{align} 
@@ -64,72 +64,72 @@ Subsequently, a pricing formula for CoCos under the credit derivative approach c
 V^{cd}_t &= \sum^T_{i=1} c_i \exp\left[-(r + s_{CoCo_t}) (t_i - t)\right] + N \exp\left[-(r+s_{CoCo_t}) (T-t) \right]
 \end{align}
 
-In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to bear in mind its largest shortcoming. Losses from cancelled coupons of triggered CoCos are not taken into account in the valuation. Hence, the credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
+In summary, the credit derivative approach provides us with a concise method to price CoCos. However, one has to bear in mind the largest shortcoming. The valuation does not take into account the losses from canceled coupons of triggered CoCos. Hence, the credit derivative approach naturally overestimates the price of CoCos, but it equips investors with a simple rule of thumb formula. 
 
 \subsection{Parameter Classification and Adjustment} \label{creditparameterssection}
-The credit derivative approach requires several model inputs which can be found in table \ref{creditparameters}. Generally, one can separate three different types. Static inputs comprise parameters that are specified ex ante and are assumed to be constant. Dynamic inputs are updated regularly. Fitting parameters are used to fit the model prices to market prices. \citep{wilkens2014contingent}
+The credit derivative approach requires several model inputs which can be found in table \ref{creditparameters}. Generally, one can separate three different types. Static inputs comprise parameters that are specified ex-ante and are assumed to be constant. Dynamic inputs are updated regularly. Fitting parameters are used to fit the model prices to market prices. \citep{wilkens2014contingent}
 
 \begin{table}[H]
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\begin{tabular}{llll}
-		\toprule
-			 & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\
-		\midrule
-			$T$ & Maturity & Static input & Term sheet \\
-			$N$ & Notional & Static input & Term sheet \\			
-			$c$ & Coupon rate & Static input & Term sheet \\
-			$S_t$ & Share price & Dynamic input & Market data \\
-			$S^*$ & Trigger share price & Fitting parameter & -- \\
-			$C_p$ & Conversion price & Static input & Term sheet \\
-			$r$ & Risk-free interest rate & Dynamic input & Market data \\
-			$q$ & Dividend yield & Static input & Market data\\
-			$\sigma_E$& Share price volatility & Dynamic input & Market data \\
-		\bottomrule
-	\end{tabular}
-	\caption[Parameter classification of the credit derivative approach]{Parameter classification of the credit derivative approach \citep{wilkens2014contingent}}
-	\label{creditparameters}
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \begin{tabular}{llll}
+  \toprule
+    & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\
+  \midrule
+   $T$ & Maturity & Static input & Term sheet \\
+   $N$ & Notional & Static input & Term sheet \\   
+   $c$ & Coupon rate & Static input & Term sheet \\
+   $S_t$ & Share price & Dynamic input & Market data \\
+   $S^*$ & Trigger share price & Fitting parameter & -- \\
+   $C_p$ & Conversion price & Static input & Term sheet \\
+   $r$ & Risk-free interest rate & Dynamic input & Market data \\
+   $q$ & Dividend yield & Static input & Market data\\
+   $\sigma_E$& Share price volatility & Dynamic input & Market data \\
+  \bottomrule
+ \end{tabular}
+ \caption[Parameter classification of the credit derivative approach]{Parameter classification of the credit derivative approach \citep{wilkens2014contingent}}
+ \label{creditparameters}
 \end{table}
 
-All static inputs can be found in the term sheets of the respective CoCo. But beyond the model depends upon further dynamic inputs among others the share price $S$, the risk-free interest rate $r$, the dividend yield $q$ and the share price volatility $\sigma$. The daily share price $S$ is directly observed in the market. The risk-free interest rate $r$ is derived from sovereign bonds with the same maturity and currency. Furthermore, the input parameter $q$ relies on the three year average dividend yield of the issuing company. The share price volatility $\sigma$ is derived based on a yearly average volatility on a reference stock market index of the last five years similar to \citet{alvemar2012modelling}. In addition, the only degree of freedom in the credit derivative approach is the fitting parameter $S^*$ respectively the trigger share price. Because this input variable is neither a static parameter nor a market parameter, $S^*$ is adjusted by minimizing the root mean squared deviation to realized CoCo prices. \citep{erismann2011analytical}
+All static inputs can be found in the term sheets of the respective CoCo. But beyond the model depends upon further dynamic inputs among others the share price $S$, the risk-free interest rate $r$ and the share price volatility $\sigma$. The daily share price $S$ is directly observed in the market. The risk-free interest rate $r$ is derived from sovereign bonds with the same maturity and currency. Furthermore, the input parameter $q$ relies on the three year average dividend yield of the issuing company. The share price volatility $\sigma$ is derived based on a yearly average volatility on a reference stock market index of the last five years similar to \citet{alvemar2012modelling}. In addition, the only degree of freedom in the credit derivative approach is the fitting parameter $S^*$ respectively the trigger share price. Because this input variable is neither a static parameter nor a market parameter, $S^*$ is adjusted by minimizing the root mean squared deviation of realized and estimated CoCo prices. \citep{erismann2011analytical}
 
 \subsection{Model Application}
 
 In the following a fictive CoCo is priced with the credit derivative approach pursuantly the specifications as stated in table \ref{creditcoco}. After installing both R, a programming language for statistical computing, and Rstudio, an open-source integrated development environment, a reader can easily price the aforementioned CoCo example with the source code of chapter \ref{creditderivativeapproach}. The CoCo specifications are also used to analyze the price sensitivity in regard to certain input parameters. The results of the sensitivity analysis for the credit derivative approach can be found in section \ref{sensicredit}. In addition, this example data set is also used to apply the equity derivative approach and the structural approach.
 
 \begin{table}[H]
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\begin{tabular}{lrl}
-		\toprule
-			 & \textbf{Value} & \textbf{Comment} \\
-		\midrule
-			$T$ & $10$yrs & Maturity \\
-			$N$ & $100\%$ & Nominal \\			
-			$c$ & $6.00\%$ & Coupon rate \\
-			$S_0$ & $120$ & Initial share price\\
-			$S^*$ & $60$ & Trigger share price \\
-			$C_p$ & $75$ & Conversion price \\
-			$r$ & $3.00 \%$ & Risk-free interest rate\\
-			$q$ & $0.00\%$ & Dividend yield \\
-			$\sigma_E$ & $30.00\%$ & Share price volatility \\
-		\bottomrule
-	\end{tabular}
-	\caption[Specification of input variables for a generic CoCo under the credit derivative approach]{Specification of input variables for a generic CoCo under the credit derivative approach \citep{alvemar2012modelling}}
-	\label{creditcoco}
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \begin{tabular}{lrl}
+  \toprule
+    & \textbf{Value} & \textbf{Comment} \\
+  \midrule
+   $T$ & $10$yrs & Maturity \\
+   $N$ & $100\%$ & Nominal \\   
+   $c$ & $6.00\%$ & Coupon rate \\
+   $S_0$ & $120$ & Initial share price\\
+   $S^*$ & $60$ & Trigger share price \\
+   $C_p$ & $75$ & Conversion price \\
+   $r$ & $3.00 \%$ & Risk-free interest rate\\
+   $q$ & $0.00\%$ & Dividend yield \\
+   $\sigma_E$ & $30.00\%$ & Share price volatility \\
+  \bottomrule
+ \end{tabular}
+ \caption[Specification of input variables for a generic CoCo under the credit derivative approach]{Specification of input variables for a generic CoCo under the credit derivative approach \citep{alvemar2012modelling}}
+ \label{creditcoco}
 \end{table}
 
 The spread of the CoCo $s_{CoCo}$, which compensates an investor for the risk of equity conversion, equals $1.46\%$. Moreover,  the price $V^{cd}$ of the fictive CoCo under the credit derivative approach equates to $111.31$.
 
 \section{Equity Derivative Approach} \label{sec:equityderivativeapproach}
 
-In order to assess the value of a CoCo, investors can use a method which depends on equity derivatives. \citep{de2011pricing, de2014handbook} The so-called equity derivative approach attempts to compensate for the main drawback of the credit derivative approach, since it takes into account that coupon payments might be cancelled if the trigger of a CoCo was touched.\\
+To assess the value of a CoCo, investors can use a method which depends on equity derivatives. \citep{de2011pricing, de2014handbook} The so-called equity derivative approach attempts to compensate for the main drawback of the credit derivative approach since it takes into account that coupon payments might be canceled if the trigger of a CoCo was touched.\\
 
-Subsequently, the valuation can be divided into two steps: In the first step, the value of a CoCo is determined without coupon payments. Such a CoCo is called Zero-Coupon CoCo. In the second step, one has to incorporate the coupon payments in the pricing formula while keeping in mind that they might be knocked out. The closed-form solution is derived under a Black-Scholes setting.
+Subsequently, the valuation can be divided into two steps: In the first step, the value of a CoCo is determined without coupon payments. Such a CoCo is called Zero-Coupon CoCo. In the second phase, one has to incorporate the coupon payments in the pricing formula while keeping in mind that they might be knocked out. The closed-form solution is derived under a Black-Scholes setting.
 
 \subsection{Step One - Zero-Coupon CoCo}
 
-To determine the present value of a Zero-Coupon CoCo $V^{zcoco}$ at maturity $T$ we can use equation \ref{valueatmaturity}. The underlying assumption of the equity derivative approach is that the triggering of a CoCo respectively of a Zero-Coupon CoCo is equivalent to the share price falling below the level $S^*$. %The indicator function $\mathbbm{1}_{\{ \tau \leq T \}}$ equals one when trigger is touched at the time $\tau$, whereby $\tau$ is element of $[\tau, T]$.
+To determine the present value of a Zero-Coupon CoCo $V^{zcoco}$ at maturity $T$ we can use equation \ref{valueatmaturity}. The underlying assumption of the equity derivative approach is that the triggering of a CoCo respectively of a Zero-Coupon CoCo is equivalent to the share price falling below the share price level $S^*$. %The indicator function $\mathbbm{1}_{\{ \tau \leq T \}}$ equals one when trigger is touched at the time $\tau$, whereby $\tau$ is element of $[\tau, T]$.
 \begin{align} \label{pvedcoco}    
     V^{zcoco}_T &= \begin{cases} N & \text{if not triggered}\\ (1 - \alpha) N + \frac{\alpha N}{C_p} S^{*} & \text{if triggered} \end{cases} \nonumber\\
     &= N \mathbbm{1}_{\{ \tau > T \}} +\left[ \left( 1 - \alpha \right) N + \dfrac{\alpha N}{C_p } S^* \right] \mathbbm{1}_{\{ \tau \leq T \}}\nonumber\\
@@ -243,54 +243,54 @@ V^{ed}_t &= V^{sb}_t + V_t^{kifwd} - V_{t}^{bdic}
 
 \subsection{Parameter Classification and Adjustment}
 
-The equity derivative approach requires the same model inputs as the credit derivative approach. All parameters  are outlined in table \ref{equityparameters}. The input variables are adjusted in the same way as already described in section \ref{creditparameterssection}.
+The equity derivative approach requires the same model inputs as the credit derivative approach. All parameters are outlined in table \ref{equityparameters}. The input variables are adjusted in the same way as already described in section \ref{creditparameterssection}.
 
 \begin{table}[H]
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\begin{tabular}{clll}
-		\toprule
-			 & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\ 
-		\midrule
-			$T$ & Maturity & Static input & Term sheet \\
-			$N$ & Notional & Static input & Term sheet \\			
-			$c$ & Coupon rate & Static input & Term sheet \\
-			$\alpha$ & Conversion factor & Static input & Term sheet \\
-			$S_t$ & Share price & Dynamic input & Market data \\
-			$S^*$ & Share price & Fitting parameter & -- \\
-			$C_p$ & Conversion price & Static input & Term sheet \\
-			$r$ & Risk-free interest rate & Dynamic input & Market data \\
-			$q$ & Dividend yield & Static input & Market data\\
-			$\sigma_E$& Share price volatility & Dynamic input & Market data \\
-		\bottomrule
-	\end{tabular}
-	\caption[Parameter classification of the equity derivative approach]{Parameter classification of the equity derivative approach \citep{wilkens2014contingent}}
-	\label{equityparameters}
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \begin{tabular}{clll}
+  \toprule
+    & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\ 
+  \midrule
+   $T$ & Maturity & Static input & Term sheet \\
+   $N$ & Notional & Static input & Term sheet \\   
+   $c$ & Coupon rate & Static input & Term sheet \\
+   $\alpha$ & Conversion factor & Static input & Term sheet \\
+   $S_t$ & Share price & Dynamic input & Market data \\
+   $S^*$ & Share price & Fitting parameter & -- \\
+   $C_p$ & Conversion price & Static input & Term sheet \\
+   $r$ & Risk-free interest rate & Dynamic input & Market data \\
+   $q$ & Dividend yield & Static input & Market data\\
+   $\sigma_E$& Share price volatility & Dynamic input & Market data \\
+  \bottomrule
+ \end{tabular}
+ \caption[Parameter classification of the equity derivative approach]{Parameter classification of the equity derivative approach \citep{wilkens2014contingent}}
+ \label{equityparameters}
 \end{table}
 
 \subsection{Model Application}
 A fictive CoCo is priced based on the values shown in table \ref{equityexample}. The source code for the equity derivative approach can be found in chapter \ref{equityderivativeapproach}. 
 \begin{table}[H]
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\begin{tabular}{lrl}
-		\toprule
-			 & \textbf{Value} & \textbf{Comment} \\
-		\midrule
-			$T$ & $10$yrs & Maturity \\
-			$N$ & $100\%$ & Nominal \\			
-			$c$ & $6.00\%$ & Coupon rate \\
-			$\alpha$ & $1$ & Conversion factor \\ 
-			$S_0$ & $120$ & Initial share price \\
-			$S^*$ & $60$ & Trigger share price \\
-			$C_p$ & $75$ & Nominal conversion price \\
-			$r$ & $3.00\%$ & Risk-free interest rate\\
-			$q$ & $0.00\%$ & Dividend yield \\
-			$\sigma_E$& $30.00\%$ & Share price volatility \\
-		\bottomrule
-	\end{tabular}
-	\caption[Specification of input variables for a generic CoCo under the equity derivative approach]{Specification of input variables for a generic CoCo}
-	\label{equityexample}
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \begin{tabular}{lrl}
+  \toprule
+    & \textbf{Value} & \textbf{Comment} \\
+  \midrule
+   $T$ & $10$yrs & Maturity \\
+   $N$ & $100\%$ & Nominal \\   
+   $c$ & $6.00\%$ & Coupon rate \\
+   $\alpha$ & $1$ & Conversion factor \\ 
+   $S_0$ & $120$ & Initial share price \\
+   $S^*$ & $60$ & Trigger share price \\
+   $C_p$ & $75$ & Nominal conversion price \\
+   $r$ & $3.00\%$ & Risk-free interest rate\\
+   $q$ & $0.00\%$ & Dividend yield \\
+   $\sigma_E$& $30.00\%$ & Share price volatility \\
+  \bottomrule
+ \end{tabular}
+ \caption[Specification of input variables for a generic CoCo under the equity derivative approach]{Specification of input variables for a generic CoCo}
+ \label{equityexample}
 \end{table}
 The price of the CoCo can be separated into the individual components as presented in diagram \ref{pricecomponents}. In that sense, the value of the risk-free coupon bond makes up a major portion of a CoCo's value under the equity derivative approach. The value of the straight bond $V^{sb}$ is equal to 125.14. The short position in the set of binary down-and-in calls $V^{bdic}$ is equivalent to -15.88. Furthermore, the value of the knock-in forward corresponds to -1.80.
 
@@ -332,17 +332,17 @@ A third alternative to price CoCos is the structural approach of \citet{pennacch
 
 \subsection{Structural Banking Model}
 \subsubsection*{Bank Assets and Asset-To-Deposit Ratio}
-\citet{pennacchi2010structural} assumes that a bank holds a portfolio of loans, equities and off-balance sheet positions as assets whose returns follow a jump-diffusion process. The change of this portfolio $A_t$ is determined by the rate of return and the cash in- respectively outflows. In this context, the symbol $*$ is used to point out the change in value of the portfolio which can be quantified by the rate of return, excluding net cashflows. The aforementioned instantaneous rate of return is denoted as $d A_t^*/ A_t^*$ and follows a stochastic process as stated below under the risk-neutral probability measure $\mathbb{Q}$:
+\citet{pennacchi2010structural} assumes that a bank holds a portfolio of loans, equities and off-balance sheet positions as assets whose returns follow a jump-diffusion process. The change of this portfolio $A_t$ is determined by the rate of return and the cash in- respectively outflows. In this context, the symbol $*$ is used to point out the change in value of the portfolio which can be quantified by the rate of return, excluding net cashflows. The aforementioned instantaneous rate of return is denoted as $d A_t^*/ A_t^*$ and follows a stochastic process as stated below under the risk-neutral probability measure:
 \begin{align} \label{bankassetprocess}
 \dfrac{d A_t^*}{A_t^*} &= \left( r_t - \lambda_t k_t \right) dt + \sigma dz + \left( Y_{q_{t^{-}}} -1\right) dq_t
 \end{align}
 
 It should be noted that $r_t$ stands for the risk-free interest rate as defined by the \citet{cox1985theory} term-structure model which will be discussed shortly. $dz$ is a Brownian motion, whereby $\sigma$ denotes the volatility of returns of the aforementioned asset portfolio. $q_t$ is a Poisson counting process which increases by one whenever a Poisson-distributed event respectively a jump occurs. Hence, the variable $dq_t$ is one whenever such a jump takes place and zero otherwise. The risk-neutral probability that a jump happens is equal to $\lambda_t dt$ where $\lambda_t$ stands for the intensity of the jump process. Variable $Y_{q_{t^{-}}}$ is a i.i.d. random variable drawn from $\ln(Y_{q_{t^{-}}}) \sim \Phi\left(\mu_{y}, \sigma^2_{y}\right)$ at time $t$ where $\mu_{y}$ stands for the mean jump size and $\sigma_{y}$ denotes the standard deviation of jumps. In case the random variable $Y_{q_{t^{-}}}$ is greater than one, an upward shift in the bank's asset value can be observed. If the value is smaller than one a downward jump takes place. Given that the risk-neutral expected proportional jump $k_t$ is defined as $k_t = E^\mathbb{Q}_t\left[ Y_{q_{t^{-}}} - 1 \right]$, one can determine $k_t$ with the following formula: $k_t = \exp(\mu_{y}+\dfrac{1}{2}\sigma_y^2) - 1$. Thus, the risk-neutral expected change in $A^*$ from the jump element $(Y_{q_{t^{-}}}-1)dq_t$ equals $\lambda_t k_t dt$ in $dt$. To sum up, the value development of a bank's asset portfolio $A_t^*$ follows largely a continuous process. But disruptive jumps may occur as illustrated in the graph \ref{fig:jumpgraph}.\\
 \begin{figure}[ht]
-	\centering
-	\includegraphics[trim=0.6cm 7.05cm 0.9cm 9cm, scale = 0.4]{media/jumpprocess} \par
-	\caption[Jump-diffusion process]{The first graph shows two jumps in the state variable $A^*$ at discrete time points. Additionally, the corresponding Poisson counting process $q_t$ is highlighted in the second graph. \citep{ait2009handbook}}
-	\label{fig:jumpgraph}
+ \centering
+ \includegraphics[trim=0.6cm 7.05cm 0.9cm 9cm, scale = 0.4]{media/jumpprocess} \par
+ \caption[Jump-diffusion process]{The first graph shows two jumps in the state variable $A^*$ at discrete time points. Additionally, the corresponding Poisson counting process $q_t$ is highlighted in the second graph. \citep{ait2009handbook}}
+ \label{fig:jumpgraph}
 \end{figure}
 
 The risk-neutral process of bank assets $A_t$ including the net cashflows is equal to the assets' rate of return less interest payments $r_t$ respectively premium payments $h_t$ to deposit holders proportionally to their deposits $D_t$. Furthermore, one has to subtract the coupon payments $c_t$ to CoCo investors proportionally to the face value $B$.
@@ -433,10 +433,10 @@ As stated originally, the conversion of a CoCo at time $t_c$ occurs when the ass
 \bar{e} &= \dfrac{E_{t_c}}{D_{t_c}} = \dfrac{A_{t_c} - D_{t_c} - pB}{D_{t_c}} = \bar{x}_{t_c} - 1 - p b_{t_c}
 \end{align}
 
-Hence, it is possible to specify exactly the conversion trigger of a CoCo bond. This will be important for the valuation part.
+Hence, it is possible to specify exactly the conversion trigger of a CoCo bond, which will be substantial for the valuation part.
 
 \subsubsection*{CoCos}
-The valuation of a CoCo can be accomplished with a Monte Carlo simulation of both the asset and the deposit process. Along the asset-to-deposit ratio process, the CoCo pays coupons and the nominal at maturity unless the CoCo has not been triggered. If the trigger event occurs the conversion amount is paid out. \citep{wilkens2014contingent} The price of the CoCo $V^{st}$ is equal to the risk-neutral expectation of the aforementioned cashflows as derived by \citet{pennacchi2010structural}:
+The valuation of a CoCo can be accomplished with a Monte-Carlo simulation of both the asset and the deposit process. Along the asset-to-deposit ratio process, the CoCo pays coupons and the nominal at maturity unless the CoCo has not been triggered. If the trigger event occurs the conversion amount is paid out. \citep{wilkens2014contingent} The price of the CoCo $V^{st}$ is equal to the risk-neutral expectation of the aforementioned cashflows as derived by \citet{pennacchi2010structural}:
 \begin{align}
 V_0^{st} &= E_0^{\mathbb{Q}} \left[ \int_0^T \exp\left(-\int_0^t r_s ds\right) v\left( t \right) dt \right]
 \end{align}
@@ -449,65 +449,65 @@ The biggest challenge of the structural approach is the accurate estimation of i
 In general, one can distinguish three parameter types. The first group comprises parameters which are directly observable in the market respectively in a CoCo's term sheet. The second category encompasses variables that are linked to a bank's balance sheet or strategy and are thus semi-observable. Finally, the third group covers parameters which are in fact not observable and are determined based on expert judgement or calibration to market data. \citep{wilkens2014contingent} Hereinafter, major input variables and their adjustment will be described.
 
 \begin{table}
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\footnotesize
-	\begin{tabular}{p{1.8cm}p{6.8cm}p{2.4cm}p{2.5cm}}
-		\toprule
-			 & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\
-		\midrule
-			$T$ & Maturity & Static input & Term sheet\\
-			$B$ & Notional & Static input & Term sheet \\
-			$c$ & Coupon rate & Static input & Term sheet\\ 
-			$p$ & Conversion factor & Static input & \\
-			$\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting parameter & --\\
-			$\,\,\,$$\hookrightarrow$ $C_p$ & Conversion price & Static input & Term sheet\\
-			$x_t$ & Asset-to-deposit ratio & Dynamic input & \\
-			$\,\,\,$$\hookrightarrow$ $S_t$ & Share price & Dynamic input & Market data\\
-			$\,\,\,$$\hookrightarrow$ $n_t$ & Number of shares & Dynamic input & Market data\\
-			$\,\,\,$$\hookrightarrow$ $D_t$ & Deposit value & Dynamic input & Balance sheet\\
-			$\hat{x}$ & Target asset-to-deposit ratio & Static input & \\
-			$\,\,\,$$\hookrightarrow$ $A_\text{Target}$ & Target asset value & Static input & Term sheet \\
-			$\,\,\,$$\hookrightarrow$ $D_\text{Target}$ & Target deposit value & Static input & Term sheet\\
-			$g$ & Mean-reversion speed & Static input & Expert judgm.  \\
-			$\sigma_A$ & Annual asset return volatility & Dynamic input & \\
-			$\,\,\,$$\hookrightarrow$ $D_t$ & Deposit value & Dynamic input & Balance sheet\\
-			$\,\,\,$$\hookrightarrow$ $S_t$ & Share price & Dynamic input & Market data\\
-			$\,\,\,$$\hookrightarrow$ $n_t$ & Number of shares & Dynamic input & Market data\\
-			$\,\,\,$$\hookrightarrow$ $\sigma_E$& Historic share price volatility & Static input & Market data\\
-			$\,\,\,$$\hookrightarrow$ $r_t$ & Risk-free interest rate & Dynamic input & Market data \\
-			$\lambda$ & Jump intensity in asset return process & Static input  & Expert judgm.  \\	
-			$\mu_y$ & Mean jump size in asset return process & Static input &  \\
-			$\sigma_y$ & Jump volatility in asset return process & Static input &  \\
-			$\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  Historic share price data & Static input & Market data\\
-			$r_t$ & Risk-free interest rate & Dynamic input & Market data \\
-			$\bar{r}$ & Long-term risk-free interest rate & Static input & \\
-			$\sigma_r$ &Interest rate volatility & Static input & \\
-			$\kappa$ & Speed of convergence & Static input & \\
-			$\,\,\,$$\hookrightarrow$ $r_\text{past}$ & Set of historic risk-free interest rate data & Static input & Market data\\
-			$\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Static input & \\ 
-			$\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  Historic share price data & Static input & Market data\\
-			$\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  Historic risk-free interest rate data & Static input & Market data\\
-			$\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & \\
-			$\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting parameter & -- \\
-			$\,\,\,$$\hookrightarrow$ $n_0$ & Initial number of shares & Static input & Term sheet\\
-			$\,\,\,$$\hookrightarrow$ $D_0$ & Initial deposit value & Static input & Term sheet\\
-			$b_0$ & Ratio of the contingent capital's nominal to the initial value of deposits & Dynamic input & \\
-			$\,\,\,$$\hookrightarrow$ $D_t$ & Initial deposit value & Dynamic input & Balance sheet \\
-			$\,\,\,$$\hookrightarrow$ $B$ & Contingent capital nominal & Static input & Term sheet\\
-		\bottomrule
-	\end{tabular}
-	\caption[Parameter classification of the structural approach]{Parameter classification of the structural approach}
-	\label{tbl:structuralapproachdata}
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \footnotesize
+ \begin{tabular}{p{1.8cm}p{6.8cm}p{2.4cm}p{2.5cm}}
+  \toprule
+    & \textbf{Description} & \textbf{Usage} & \textbf{Source} \\
+  \midrule
+   $T$ & Maturity & Static input & Term sheet\\
+   $B$ & Notional & Static input & Term sheet \\
+   $c$ & Coupon rate & Static input & Term sheet\\ 
+   $p$ & Conversion factor & Static input & \\
+   $\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting param. & --\\
+   $\,\,\,$$\hookrightarrow$ $C_p$ & Conversion price & Static input & Term sheet\\
+   $x_t$ & Asset-to-deposit ratio & Dynamic input & \\
+   $\,\,\,$$\hookrightarrow$ $S_t$ & Share price & Dynamic input & Market data\\
+   $\,\,\,$$\hookrightarrow$ $n_t$ & Number of shares & Dynamic input & Market data\\
+   $\,\,\,$$\hookrightarrow$ $D_t$ & Deposit value & Dynamic input & Balance sheet\\
+   $\hat{x}$ & Target asset-to-deposit ratio & Static input & \\
+   $\,\,\,$$\hookrightarrow$ $A_\text{Target}$ & Target asset value & Static input & Term sheet \\
+   $\,\,\,$$\hookrightarrow$ $D_\text{Target}$ & Target deposit value & Static input & Term sheet\\
+   $g$ & Mean-reversion speed & Static input & Expert judgm.  \\
+   $\sigma_A$ & Annual asset return volatility & Dynamic input & \\
+   $\,\,\,$$\hookrightarrow$ $D_t$ & Deposit value & Dynamic input & Balance sheet\\
+   $\,\,\,$$\hookrightarrow$ $S_t$ & Share price & Dynamic input & Market data\\
+   $\,\,\,$$\hookrightarrow$ $n_t$ & Number of shares & Dynamic input & Market data\\
+   $\,\,\,$$\hookrightarrow$ $\sigma_E$& Historic share price volatility & Static input & Market data\\
+   $\,\,\,$$\hookrightarrow$ $r_t$ & Risk-free interest rate & Dynamic input & Market data \\
+   $\lambda$ & Jump intensity in asset return process & Static input  & Expert judgm.  \\ 
+   $\mu_y$ & Mean jump size in asset return process & Static input &  \\
+   $\sigma_y$ & Jump volatility in asset return process & Static input &  \\
+   $\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  Historic share price data & Static input & Market data\\
+   $r_t$ & Risk-free interest rate & Dynamic input & Market data \\
+   $\bar{r}$ & Long-term risk-free interest rate & Static input & \\
+   $\sigma_r$ &Interest rate volatility & Static input & \\
+   $\kappa$ & Speed of convergence & Static input & \\
+   $\,\,\,$$\hookrightarrow$ $r_\text{past}$ & Set of historic risk-free interest rate data & Static input & Market data\\
+   $\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Static input & \\ 
+   $\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  Historic share price data & Static input & Market data\\
+   $\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  Historic risk-free interest rate data & Static input & Market data\\
+   $\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & \\
+   $\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting param. & -- \\
+   $\,\,\,$$\hookrightarrow$ $n_0$ & Initial number of shares & Static input & Term sheet\\
+   $\,\,\,$$\hookrightarrow$ $D_0$ & Initial deposit value & Static input & Term sheet\\
+   $b_0$ & Ratio of the contingent capital's nominal to the initial value of deposits & Dynamic input & \\
+   $\,\,\,$$\hookrightarrow$ $D_t$ & Initial deposit value & Dynamic input & Balance sheet \\
+   $\,\,\,$$\hookrightarrow$ $B$ & Contingent capital nominal & Static input & Term sheet\\
+  \bottomrule
+ \end{tabular}
+ \caption[Parameter classification of the structural approach]{Parameter classification of the structural approach}
+ \label{tbl:structuralapproachdata}
 \end{table}
 
 \subsubsection*{Bank Assets and Asset-To-Deposit Ratio}
 The structural approach models the development of the asset-to-deposit ratio $x_t$ over time. On this account, the paper attempts to obtain $x_t$ with equity and deposit estimates. The equity component is equivalent to the daily observable market capitalization $S_t n_t$. Moreover, deposit values are inferred from a bank's quarterly published balance sheet data while assuming that all liabilities are deposits. The deposit level $D_t$ is interpolated between the disclosure of financial statements. \citep{wilkens2014contingent} Hence one can determine the asset-to-deposit ratio with the following equation: $x_t = (S_t n_t + D_t)/D_t$. Furthermore, the target asset-to-deposit ratio $\hat{x}$ is driven by the strategy of the issuing bank and can be described as follows: $\hat{x} = A_\text{Target}/D_\text{Target}$.\\
 
-The asset volatility $\sigma_A$ is also an important input variable of the asset process but is not observable on a daily basis. Therefore, the paper evaluates the asset volatility based on its relation to the share price volatility $\sigma_E$ as described by \citet{merton1974pricing}. The source code can be found in section \ref{estimateMertonParameter}. Moreover, the structural model assumes that asset returns follow a jump-diffusion process. This implies that the probability of extreme asset returns is larger than predicted by normally distributed asset returns. To estimate the parameters that govern the distribution of the jump size, the paper assumes that historical share price returns are a reliable proxy for asset jumps. The mean jump size $\mu_y$ and the jump volatility $\sigma_y$ are estimated based on threshold exceedance methods and assumptions on the jump intensity $\lambda$, which is in turn used to specify the number of exceedances over a threshold. \citep{longin2001extreme} The implementation is presented in section C.1.3.
+The asset volatility $\sigma_A$ is also an important input variable of the asset process but is not observable on a daily basis. Therefore, the paper evaluates the asset volatility based on its relation to the share price volatility $\sigma_E$ as described by \citet{merton1974pricing}. The source code can be found in section \ref{estimateMertonParameter}. Moreover, the structural model assumes that asset returns follow a jump-diffusion process. This implies that the probability of extreme asset returns is larger than predicted by normally distributed asset returns. To estimate the parameters that govern the distribution of the jump size, the paper assumes that historical share price returns are a reliable proxy for asset jumps. The mean jump size $\mu_y$ and the jump volatility $\sigma_y$ are estimated based on assumptions on the jump intensity $\lambda$, which is in turn used to specify the number of exceedances over a threshold. \citep{longin2001extreme} The implementation is presented in section C.1.3.
 
 \subsubsection*{Default-Free Term Structure}
-For the \citet{cox1985theory} model pricing parameters are estimated with the approach of \citet{remillard2013statistical}. The approach calibrates the long-term risk-free interest rate $\bar{r}$, the interest rate volatility $\sigma_r$ and the speed of convergence $\kappa$. To do so, maximum likelihood techniques for dependent observations are applied. The approach takes a series of daily sovereign bond yields as input which have maturities of one, three, five and ten years. The implementation of this approach can be found in section \ref{estimateCIRParameter}. Additionally, the correlation between the geometric Brownian motion for asset returns and the interest rate process $\rho$ is approximated with the five year daily correlation between a sovereign bond of the same tenure respectively denomination and a related stock market index.
+For the \citet{cox1985theory} model pricing parameters are estimated with the approach of \citet{remillard2013statistical}. The approach calibrates the long-term risk-free interest rate $\bar{r}$, the interest rate volatility $\sigma_r$ and the speed of convergence $\kappa$. To do so, maximum likelihood techniques for dependent observations are applied. The approach takes a series of daily sovereign bond yields as input which have maturities of one, three, five and ten years. The implementation of this approach can be found in section \ref{estimateCIRParameter}. Additionally, the correlation between the geometric Brownian motion for asset returns and the interest rate process $\rho$ is approximated with the five year daily correlation between the price of a sovereign bond of the same tenure respectively denomination and a related stock market index.
 
 \subsubsection*{Deposits and Insurance Premium}
 A reasonable mean-reversion speed $g$ for deposits is assumed to be equal to 0.5. The assumption follows the assessment of \citet{pennacchi2010structural}. He argues that this estimate for $g$ gives a plausible deposit's half time of around 3 years. The deposit's half-time in turn describes the time it takes for the deposit value to move half the distance towards its target value.
@@ -562,12 +562,12 @@ The parameters shown in table \ref{tbl:playa} serve to price a generic CoCo purs
      \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 6, 74)};
      \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 7, 80)};
      \addplot [green, mark = x, mark size = 0.25cm] coordinates {( 8, 145)};
-      \draw [yellow] ({rel axis cs:0,0}|-{axis cs:0,107.46}) -- ({rel axis cs:1,0}|-{axis cs:9,107.46}) node [pos=0.73, below] {$V^{ed} = 107.46$};
-      \draw [yellow] ({rel axis cs:0,0}|-{axis cs:0,111.31}) -- ({rel axis cs:1,0}|-{axis cs:9,111.31}) node [pos=0.73, above] {$V^{cd} = 111.31$};
+      \draw [orange] ({rel axis cs:0,0}|-{axis cs:0,107.46}) -- ({rel axis cs:1,0}|-{axis cs:9,107.46}) node [pos=0.73, below] {$V^{ed} = 107.46$};
+      \draw [orange] ({rel axis cs:0,0}|-{axis cs:0,111.31}) -- ({rel axis cs:1,0}|-{axis cs:9,111.31}) node [pos=0.73, above] {$V^{cd} = 111.31$};
 \end{axis}
 \begin{axis}[
-	width=11cm, height=11cm,
-	xtick={1,2,3,4,5,6,7,8}, xticklabels={1,5,10,50,100,500,1000,5000},
+ width=11cm, height=11cm,
+ xtick={1,2,3,4,5,6,7,8}, xticklabels={1,5,10,50,100,500,1000,5000},
         %scale only axis=false,
         hide x axis,
         axis y line*=right,
@@ -584,97 +584,93 @@ The parameters shown in table \ref{tbl:playa} serve to price a generic CoCo purs
 \label{fig:comparison}
 \end{figure}
 
-Running the monte-carlo simulation with different path numbers per simulation leads to a broad range of prices. As shown by the blue whisker plots one can directly see the minimum, the 25\%-percentile, the median, the 75\%-percentile and the maximum for each path number. One hundred simulations have been conducted for each boxplot. It becomes apparent that the price stability is tightly connected to the average time per simulation as shown by the green crosses. For 5000 paths per simulation one can derive a median price of $V^{sa}$ of $97.77$. The derived value is significantly lower than those of the credit derivative approach $V^{cd}$ and the equity derivative approach $V^{ed}$ which are highlighted in yellow. This might be the case due to the fact that the structural approach accounts for discontinuous returns.
+Running the Monte-Carlo simulation with different number of paths per simulation leads to a broad range of prices. As shown by the blue whisker plots one can directly see the minimum, the 25\%-percentile, the median, the 75\%-percentile and the maximum for each path number. One hundred simulations have been conducted for each boxplot. It becomes apparent that the price stability is tightly connected to the average time per simulation as shown by the green crosses. For 5000 paths per simulation one can derive a median price of $V^{sa}$ of $97.77$. The derived value is significantly lower than those of the credit derivative approach $V^{cd}$ and the equity derivative approach $V^{ed}$ which are highlighted in yellow. This might be the case due to the fact that the structural approach accounts for discontinuous returns.
 
 
 %\begin{table}[H]
-%	\setlength{\extrarowheight}{2.5pt}
-%	\centering
-%	\footnotesize
-%	\begin{tabular}{lrp{10cm}}
-%		\toprule
-%			 & \textbf{Value} & \textbf{Comment} \\
-%		\midrule
-%			$T$ & $10$yrs & Maturity \\
-%			$B$ & $100.00\%$ & Notional \\
-%			$c$ & $6.00\%$ & Coupon rate \\
-%			$S_0$ & 120 & Initial share price\\
-%			$n_0$ & 1 & Initial number of shares\\
-%			$S^*$ & 60 & Trigger share price\\
-%			$C_p$ & 75 & Conversion price\\
-%			$g$ & $10$ & Mean-reversion speed \\
-%			$\lambda$ & $2$& Jump intensity in asset return process\\			
-%			$\mu_y$ &$0$ & Mean jump size in asset return process\\
-%			$\sigma_y$ &$20\%$ & Jump volatility in asset return process\\		
-%			$r_0$ & $1.00 \%$ & Initial Risk-free interest rate\\
-%			$\bar{r}$ & $ 6.00\%$ & Long-term risk-free interest rate\\
-%			$\sigma_r$ & $5.00\%$ & Interest rate volatility \\
-%			$\kappa$ & $4.00\%$ & Speed of convergence \\
-%			$\rho$ & $50\%$ & Correlation between Brownian motion for asset returns and interest rate process\\
-%			$\sigma_E$& 30\% & Historic share price volatility\\
-%			$D_0$ & 880 & Initial deposit value \\
-%			$A_\text{Target}$ & 1015 & Target asset value\\
-%			$D_\text{Target}$ & 883.05 & Target deposit value\\
-%			$CC$ & 30 & Contingent capital value \\
-%		\bottomrule
-%	\end{tabular}
-%	\caption[Parameter specification of structural approach application]{Parameter specification of structural approach application \citep{erismann2015pricing}}
-%	\label{tbl:playa}
+% \setlength{\extrarowheight}{2.5pt}
+% \centering
+% \footnotesize
+% \begin{tabular}{lrp{10cm}}
+%  \toprule
+%    & \textbf{Value} & \textbf{Comment} \\
+%  \midrule
+%   $T$ & $10$yrs & Maturity \\
+%   $B$ & $100.00\%$ & Notional \\
+%   $c$ & $6.00\%$ & Coupon rate \\
+%   $S_0$ & 120 & Initial share price\\
+%   $n_0$ & 1 & Initial number of shares\\
+%   $S^*$ & 60 & Trigger share price\\
+%   $C_p$ & 75 & Conversion price\\
+%   $g$ & $10$ & Mean-reversion speed \\
+%   $\lambda$ & $2$& Jump intensity in asset return process\\   
+%   $\mu_y$ &$0$ & Mean jump size in asset return process\\
+%   $\sigma_y$ &$20\%$ & Jump volatility in asset return process\\  
+%   $r_0$ & $1.00 \%$ & Initial Risk-free interest rate\\
+%   $\bar{r}$ & $ 6.00\%$ & Long-term risk-free interest rate\\
+%   $\sigma_r$ & $5.00\%$ & Interest rate volatility \\
+%   $\kappa$ & $4.00\%$ & Speed of convergence \\
+%   $\rho$ & $50\%$ & Correlation between Brownian motion for asset returns and interest rate process\\
+%   $\sigma_E$& 30\% & Historic share price volatility\\
+%   $D_0$ & 880 & Initial deposit value \\
+%   $A_\text{Target}$ & 1015 & Target asset value\\
+%   $D_\text{Target}$ & 883.05 & Target deposit value\\
+%   $CC$ & 30 & Contingent capital value \\
+%  \bottomrule
+% \end{tabular}
+% \caption[Parameter specification of structural approach application]{Parameter specification of structural approach application \citep{erismann2015pricing}}
+% \label{tbl:playa}
 %\end{table}
 
 \begin{table}[H]
-	\setlength{\extrarowheight}{2.5pt}
-	\centering
-	\footnotesize
-	\begin{tabular}{lrp{10cm}}
-		\toprule
-			 & \textbf{Value} & \textbf{Comment} \\
-		\midrule
-			$T$ & $10$yrs & Maturity \\
-			$B$ & $100.00\%$ & Notional \\
-			$c$ & $6.00\%$ & Coupon rate \\
-			$p$ & $0.8$ & Conversion factor\\
-			$\,\,\,$$\hookrightarrow$ $S^*$ & 60 & Trigger share price\\
-			$\,\,\,$$\hookrightarrow$ $C_p$ & 75 & Conversion price\\
-			$x_0$ & $1.1364$ & Initial asset-to-deposit ratio\\
-			$\,\,\,$$\hookrightarrow$ $S_0$ & 120 & Initial share price\\
-			$\,\,\,$$\hookrightarrow$ $n$ & 1 & Number of shares\\
-			$\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value \\
-			$\hat{x}$ & $1.12$ & Target asset-to-deposit ratio\\
-			$\,\,\,$$\hookrightarrow$ $A_\text{Target}$ & 1000 & Target asset value\\
-			$\,\,\,$$\hookrightarrow$ $D_\text{Target}$ & 892.86 & Target deposit value\\
-			$g$ & $10$ & Mean-reversion speed \\
-			$\sigma_A$ & $3.63\%$ & Asset volatility \\
-			$\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value\\
-			$\,\,\,$$\hookrightarrow$ $n$ & 1 & Number of shares \\
-			$\,\,\,$$\hookrightarrow$ $S_0$ & 120 & Initial share price\\
-			$\,\,\,$$\hookrightarrow$ $\sigma_E$& 30\% & Historic share price volatility\\
-			$\,\,\,$$\hookrightarrow$ $r_0$ & $3.00\%$ & Initial risk-free interest rate\\
-			$\lambda$ & $2$& Jump intensity in asset return process\\			
-			$\mu_y$ &$0$ & Mean jump size in asset return process\\
-			$\sigma_y$ &$2.00\%$ & Jump volatility in asset return process\\
-			$\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  & Historic share price data\\		
-			$r_0$ & $3.00 \%$ & Risk-free interest rate\\
-			$\bar{r}$ & $ 6.00\%$ & Long-term risk-free interest rate\\
-			$\sigma_r$ & $5.00\%$ & Interest rate volatility \\
-			$\kappa$ & $4.00\%$ & Speed of convergence \\
-			$\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  & Set of historic risk-free interest rate data \\
-			$\rho$ & $50\%$ & Correlation between Brownian motion for asset returns and interest rate process\\
-			$\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  & Historic share price data \\
-			$\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  & Historic risk-free interest rate data \\
-			$\bar{e}$ & $6.81\%$ & Conversion threshold of the market value of shareholders' equity to original deposit value\\
-			$\,\,\,$$\hookrightarrow$ $S^*$ & 60 & Trigger share price\\
-			$\,\,\,$$\hookrightarrow$ $n$ & 1 & Number of shares\\
-			$\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value \\
-			$b_0$ & $3.41\%$ & Ratio of contingent capital's nominal to the initial deposit value\\
-			$\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value \\
-			$\,\,\,$$\hookrightarrow$ $CC$ & 30 & Contingent capital value \\
-		\bottomrule
-	\end{tabular}
-	\caption[Specification of input variables for a generic CoCo under the structural approach]{Specification of input variables for a generic CoCo under the structural approach}
-	\label{tbl:playa}
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \footnotesize
+ \begin{tabular}{lrp{10cm}}
+  \toprule
+    & \textbf{Value} & \textbf{Comment} \\
+  \midrule
+   $T$ & $10$yrs & Maturity \\
+   $B$ & $100.00\%$ & Notional \\
+   $c$ & $6.00\%$ & Coupon rate \\
+   $p$ & $0.8$ & Conversion factor\\
+   $\,\,\,$$\hookrightarrow$ $S^*$ & 60 & Trigger share price\\
+   $\,\,\,$$\hookrightarrow$ $C_p$ & 75 & Conversion price\\
+   $x_0$ & $1.1364$ & Initial asset-to-deposit ratio\\
+   $\,\,\,$$\hookrightarrow$ $S_0$ & 120 & Initial share price\\
+   $\,\,\,$$\hookrightarrow$ $n$ & 1 & Number of shares\\
+   $\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value \\
+   $\hat{x}$ & $1.12$ & Target asset-to-deposit ratio\\
+   $\,\,\,$$\hookrightarrow$ $A_\text{Target}$ & 1000 & Target asset value\\
+   $\,\,\,$$\hookrightarrow$ $D_\text{Target}$ & 892.86 & Target deposit value\\
+   $g$ & $10$ & Mean-reversion speed \\
+   $\sigma_A$ & $3.63\%$ & Asset volatility \\
+   $\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value\\
+   $\,\,\,$$\hookrightarrow$ $n$ & 1 & Number of shares \\
+   $\,\,\,$$\hookrightarrow$ $S_0$ & 120 & Initial share price\\
+   $\,\,\,$$\hookrightarrow$ $\sigma_E$& 30\% & Historic share price volatility\\
+   $\,\,\,$$\hookrightarrow$ $r_0$ & $3.00\%$ & Initial risk-free interest rate\\
+   $\lambda$ & $2$& Jump intensity in asset return process\\   
+   $\mu_y$ &$0$ & Mean jump size in asset return process\\
+   $\sigma_y$ &$2.00\%$ & Jump volatility in asset return process\\
+   $\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  & Historic share price data\\  
+   $r_0$ & $3.00 \%$ & Risk-free interest rate\\
+   $\bar{r}$ & $ 6.00\%$ & Long-term risk-free interest rate\\
+   $\sigma_r$ & $5.00\%$ & Interest rate volatility \\
+   $\kappa$ & $4.00\%$ & Speed of convergence \\
+   $\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  & Set of historic risk-free interest rate data \\
+   $\rho$ & $50\%$ & Correlation between Brownian motion for asset returns and interest rate process\\
+   $\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  & Historic share price data \\
+   $\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  & Historic risk-free interest rate data \\
+   $\bar{e}$ & $6.81\%$ & Conversion threshold of the market value of shareholders' equity to original deposit value\\
+   $\,\,\,$$\hookrightarrow$ $S^*$ & 60 & Trigger share price\\
+   $\,\,\,$$\hookrightarrow$ $n$ & 1 & Number of shares\\
+   $\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value \\
+   $b_0$ & $3.41\%$ & Ratio of contingent capital's nominal to initial deposit value\\
+   $\,\,\,$$\hookrightarrow$ $D_0$ & 880 & Initial deposit value \\
+   $\,\,\,$$\hookrightarrow$ $CC$ & 30 & Contingent capital value \\
+  \bottomrule
+ \end{tabular}
+ \caption[Specification of input variables for a generic CoCo under the structural approach]{Specification of input variables for a generic CoCo under the structural approach}
+ \label{tbl:playa}
 \end{table}
-
-
-
-
