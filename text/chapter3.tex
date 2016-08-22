@@ -80,7 +80,7 @@ The credit derivative approach requires several model inputs which can be found 
    $N$ & Notional & Static input & Term sheet \\   
    $c$ & Coupon rate & Static input & Term sheet \\
    $S_t$ & Share price & Dynamic input & Market data \\
-   $S^*$ & Trigger share price & Fitting parameter & -- \\
+   $S^*$ & Trigger share price & Fitting parameter & | \\
    $C_p$ & Conversion price & Static input & Term sheet \\
    $r$ & Risk-free interest rate & Dynamic input & Market data \\
    $q$ & Dividend yield & Static input & Market data\\
@@ -257,7 +257,7 @@ The equity derivative approach requires the same model inputs as the credit deri
    $c$ & Coupon rate & Static input & Term sheet \\
    $\alpha$ & Conversion factor & Static input & Term sheet \\
    $S_t$ & Share price & Dynamic input & Market data \\
-   $S^*$ & Share price & Fitting parameter & -- \\
+   $S^*$ & Trigger share price & Fitting parameter & | \\
    $C_p$ & Conversion price & Static input & Term sheet \\
    $r$ & Risk-free interest rate & Dynamic input & Market data \\
    $q$ & Dividend yield & Static input & Market data\\
@@ -459,40 +459,40 @@ In general, one can distinguish three parameter types. The first group comprises
    $T$ & Maturity & Static input & Term sheet\\
    $B$ & Notional & Static input & Term sheet \\
    $c$ & Coupon rate & Static input & Term sheet\\ 
-   $p$ & Conversion factor & Static input & \\
-   $\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting param. & --\\
+   $p$ & Conversion factor & Static input & | \\
+   $\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting param. & | \\
    $\,\,\,$$\hookrightarrow$ $C_p$ & Conversion price & Static input & Term sheet\\
-   $x_t$ & Asset-to-deposit ratio & Dynamic input & \\
+   $x_t$ & Asset-to-deposit ratio & Dynamic input & | \\
    $\,\,\,$$\hookrightarrow$ $S_t$ & Share price & Dynamic input & Market data\\
    $\,\,\,$$\hookrightarrow$ $n_t$ & Number of shares & Dynamic input & Market data\\
    $\,\,\,$$\hookrightarrow$ $D_t$ & Deposit value & Dynamic input & Balance sheet\\
-   $\hat{x}$ & Target asset-to-deposit ratio & Static input & \\
+   $\hat{x}$ & Target asset-to-deposit ratio & Static input & | \\
    $\,\,\,$$\hookrightarrow$ $A_\text{Target}$ & Target asset value & Static input & Term sheet \\
    $\,\,\,$$\hookrightarrow$ $D_\text{Target}$ & Target deposit value & Static input & Term sheet\\
    $g$ & Mean-reversion speed & Static input & Expert judgm.  \\
-   $\sigma_A$ & Annual asset return volatility & Dynamic input & \\
+   $\sigma_A$ & Annual asset return volatility & Dynamic input & | \\
    $\,\,\,$$\hookrightarrow$ $D_t$ & Deposit value & Dynamic input & Balance sheet\\
    $\,\,\,$$\hookrightarrow$ $S_t$ & Share price & Dynamic input & Market data\\
    $\,\,\,$$\hookrightarrow$ $n_t$ & Number of shares & Dynamic input & Market data\\
    $\,\,\,$$\hookrightarrow$ $\sigma_E$& Historic share price volatility & Static input & Market data\\
    $\,\,\,$$\hookrightarrow$ $r_t$ & Risk-free interest rate & Dynamic input & Market data \\
    $\lambda$ & Jump intensity in asset return process & Static input  & Expert judgm.  \\ 
-   $\mu_y$ & Mean jump size in asset return process & Static input &  \\
-   $\sigma_y$ & Jump volatility in asset return process & Static input &  \\
+   $\mu_y$ & Mean jump size in asset return process & Static input & | \\
+   $\sigma_y$ & Jump volatility in asset return process & Static input & | \\
    $\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  Historic share price data & Static input & Market data\\
    $r_t$ & Risk-free interest rate & Dynamic input & Market data \\
-   $\bar{r}$ & Long-term risk-free interest rate & Static input & \\
-   $\sigma_r$ &Interest rate volatility & Static input & \\
-   $\kappa$ & Speed of convergence & Static input & \\
+   $\bar{r}$ & Long-term risk-free interest rate & Static input & | \\
+   $\sigma_r$ &Interest rate volatility & Static input & | \\
+   $\kappa$ & Speed of convergence & Static input & | \\
    $\,\,\,$$\hookrightarrow$ $r_\text{past}$ & Set of historic risk-free interest rate data & Static input & Market data\\
-   $\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Static input & \\ 
+   $\rho$ & Correlation between Brownian motion for asset returns and interest rate process  & Static input & | \\ 
    $\,\,\,$$\hookrightarrow$ $S_\text{past}$ &  Historic share price data & Static input & Market data\\
    $\,\,\,$$\hookrightarrow$ $r_\text{past}$ &  Historic risk-free interest rate data & Static input & Market data\\
-   $\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & \\
-   $\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting param. & -- \\
+   $\bar{e}$ & Conversion threshold of the market value of original shareholders' equity to deposit value & Static input & | \\
+   $\,\,\,$$\hookrightarrow$ $S^*$ & Trigger share price & Fitting param. & | \\
    $\,\,\,$$\hookrightarrow$ $n_0$ & Initial number of shares & Static input & Term sheet\\
    $\,\,\,$$\hookrightarrow$ $D_0$ & Initial deposit value & Static input & Term sheet\\
-   $b_0$ & Ratio of the contingent capital's nominal to the initial value of deposits & Dynamic input & \\
+   $b_0$ & Ratio of the contingent capital's nominal to the initial value of deposits & Dynamic input & | \\
    $\,\,\,$$\hookrightarrow$ $D_t$ & Initial deposit value & Dynamic input & Balance sheet \\
    $\,\,\,$$\hookrightarrow$ $B$ & Contingent capital nominal & Static input & Term sheet\\
   \bottomrule
@@ -502,12 +502,12 @@ In general, one can distinguish three parameter types. The first group comprises
 \end{table}
 
 \subsubsection*{Bank Assets and Asset-To-Deposit Ratio}
-The structural approach models the development of the asset-to-deposit ratio $x_t$ over time. On this account, the paper attempts to obtain $x_t$ with equity and deposit estimates. The equity component is equivalent to the daily observable market capitalization $S_t n_t$. Moreover, deposit values are inferred from a bank's quarterly published balance sheet data while assuming that all liabilities are deposits. The deposit level $D_t$ is interpolated between the disclosure of financial statements. \citep{wilkens2014contingent} Hence one can determine the asset-to-deposit ratio with the following equation: $x_t = (S_t n_t + D_t)/D_t$. Furthermore, the target asset-to-deposit ratio $\hat{x}$ is driven by the strategy of the issuing bank and can be described as follows: $\hat{x} = A_\text{Target}/D_\text{Target}$.\\
+The structural approach models the development of the asset-to-deposit ratio $x_t$ over time. On this account, the paper attempts to obtain $x_t$ with equity and deposit estimates. The equity component is equivalent to the daily observable market capitalization $S_t n_t$. Moreover, deposit values are inferred from a bank's quarterly published balance sheet data while assuming that all liabilities are deposits. The deposit level $D_t$ is interpolated between the disclosure of financial statements. \citep{wilkens2014contingent} Hence one can determine the asset-to-deposit ratio with the following equation: $x_t = (S_t n_t + D_t)/D_t$. Furthermore, the target asset-to-deposit ratio $\hat{x}$ is driven by the strategy of the issuing bank and can be described as follows: $\hat{x} = A_\text{Target}/D_\text{Target}$. If the data is not available, the paper assumes that the asset-to-deposit ratio of the issue day is similar to the target ratio. \\
 
 The asset volatility $\sigma_A$ is also an important input variable of the asset process but is not observable on a daily basis. Therefore, the paper evaluates the asset volatility based on its relation to the share price volatility $\sigma_E$ as described by \citet{merton1974pricing}. The source code can be found in section \ref{estimateMertonParameter}. Moreover, the structural model assumes that asset returns follow a jump-diffusion process. This implies that the probability of extreme asset returns is larger than predicted by normally distributed asset returns. To estimate the parameters that govern the distribution of the jump size, the paper assumes that historical share price returns are a reliable proxy for asset jumps. The mean jump size $\mu_y$ and the jump volatility $\sigma_y$ are estimated based on assumptions on the jump intensity $\lambda$, which is in turn used to specify the number of exceedances over a threshold. \citep{longin2001extreme} The implementation is presented in section C.1.3.
 
 \subsubsection*{Default-Free Term Structure}
-For the \citet{cox1985theory} model pricing parameters are estimated with the approach of \citet{remillard2013statistical}. The approach calibrates the long-term risk-free interest rate $\bar{r}$, the interest rate volatility $\sigma_r$ and the speed of convergence $\kappa$. To do so, maximum likelihood techniques for dependent observations are applied. The approach takes a series of daily sovereign bond yields as input which have maturities of one, three, five and ten years. The implementation of this approach can be found in section \ref{estimateCIRParameter}. Additionally, the correlation between the geometric Brownian motion for asset returns and the interest rate process $\rho$ is approximated with the five year daily correlation between the price of a sovereign bond of the same tenure respectively denomination and a related stock market index.
+For the \citet{cox1985theory} model pricing parameters are estimated with the approach of \citet{remillard2013statistical}. The approach calibrates the long-term risk-free interest rate $\bar{r}$, the interest rate volatility $\sigma_r$ and the speed of convergence $\kappa$. To do so, maximum likelihood techniques for dependent observations are applied. The approach takes a series of daily sovereign bond yields as input which have maturities of one, two, five and ten years. The implementation of this approach can be found in section \ref{estimateCIRParameter}. Additionally, the correlation between the geometric Brownian motion for asset returns and the interest rate process $\rho$ is approximated with the five year daily correlation between the price of a sovereign bond of the same tenure respectively denomination and the related stock.
 
 \subsubsection*{Deposits and Insurance Premium}
 A reasonable mean-reversion speed $g$ for deposits is assumed to be equal to 0.5. The assumption follows the assessment of \citet{pennacchi2010structural}. He argues that this estimate for $g$ gives a plausible deposit's half time of around 3 years. The deposit's half-time in turn describes the time it takes for the deposit value to move half the distance towards its target value.
@@ -520,7 +520,7 @@ The parameters shown in table \ref{tbl:playa} serve to price a generic CoCo purs
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
-\begin{axis}[width=11cm, height=11cm, axis y line*=left, ylabel={$Theoretical$ $Price$}, ymin =70,
+\begin{axis}[width=11cm, height=8.8cm, axis y line*=left, ylabel={$Theoretical$ $Price$}, ymin =70,
         ylabel near ticks, xlabel={$Number$ $of$ $Paths$ $per$ $Simulation$}, xlabel near ticks, cycle list={blue}, yticklabel=\pgfmathparse{\tick}\pgfmathprintnumber{\pgfmathresult}\,\ , scale only axis=false, boxplot/draw direction=y,xtick={1,2,3,4,5,6,7,8},xticklabels={1,5,10,50,100,500,1000,5000}]
  \addplot+[boxplot prepared={
         lower whisker=80.45, lower quartile=89.74,
@@ -566,7 +566,7 @@ The parameters shown in table \ref{tbl:playa} serve to price a generic CoCo purs
       \draw [orange] ({rel axis cs:0,0}|-{axis cs:0,111.31}) -- ({rel axis cs:1,0}|-{axis cs:9,111.31}) node [pos=0.73, above] {$V^{cd} = 111.31$};
 \end{axis}
 \begin{axis}[
- width=11cm, height=11cm,
+ width=11cm, height=8.8cm,
  xtick={1,2,3,4,5,6,7,8}, xticklabels={1,5,10,50,100,500,1000,5000},
         %scale only axis=false,
         hide x axis,
@@ -580,11 +580,9 @@ The parameters shown in table \ref{tbl:playa} serve to price a generic CoCo purs
 \end{axis}
 %      \addplot [black, mark = *] coordinates {( 1, 1600)};
 \end{tikzpicture}
-\caption[Comparison of pricing results for a generic CoCo]{Comparison of pricing results for a generic CoCo}
+\caption[Comparison of pricing results for a generic CoCo]{Comparison of pricing results for a generic CoCo (only green crosses refer to right y-axis)}
 \label{fig:comparison}
 \end{figure}
-
-Running the Monte-Carlo simulation with different number of paths per simulation leads to a broad range of prices. As shown by the blue whisker plots one can directly see the minimum, the 25\%-percentile, the median, the 75\%-percentile and the maximum for each path number. One hundred simulations have been conducted for each boxplot. It becomes apparent that the price stability is tightly connected to the average time per simulation as shown by the green crosses. For 5000 paths per simulation one can derive a median price of $V^{sa}$ of $97.77$. The derived value is significantly lower than those of the credit derivative approach $V^{cd}$ and the equity derivative approach $V^{ed}$ which are highlighted in yellow. This might be the case due to the fact that the structural approach accounts for discontinuous returns.
 
 
 %\begin{table}[H]
@@ -622,7 +620,7 @@ Running the Monte-Carlo simulation with different number of paths per simulation
 % \label{tbl:playa}
 %\end{table}
 
-\begin{table}[H]
+\begin{table}
  \setlength{\extrarowheight}{2.5pt}
  \centering
  \footnotesize
@@ -674,3 +672,5 @@ Running the Monte-Carlo simulation with different number of paths per simulation
  \caption[Specification of input variables for a generic CoCo under the structural approach]{Specification of input variables for a generic CoCo under the structural approach}
  \label{tbl:playa}
 \end{table}
+
+Running the Monte-Carlo simulation with different number of paths per simulation leads to a broad range of prices. As shown by the blue whisker plots one can directly see the minimum, the 25\%-percentile, the median, the 75\%-percentile and the maximum for each path number. One hundred simulations have been conducted for each boxplot. It becomes apparent that the price stability is tightly connected to the average time per simulation as shown by the green crosses. For 5000 paths per simulation one can derive a median price of $V^{sa}$ of $97.77$. The derived value is significantly lower than those of the credit derivative approach $V^{cd}$ and the equity derivative approach $V^{ed}$ which are highlighted in orange. This might be the case due to the fact that the structural approach accounts for discontinuous returns.

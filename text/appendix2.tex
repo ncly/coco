@@ -1,4 +1,7 @@
 \chapter{Code - Models} \label{creditderivativeapproach}
+\section{Code Repository}
+The source could will be available under the following link until October 31, 2016: \url{https://drive.google.com/open?id=0BwsP9JbeT8w5bzMzVXo1VjJwNlk}
+
 \section{Credit Derivative Approach} \label{creditderivativeapproach}
 
 The following source code is an implementation of the credit derivative approach \citep{de2011pricing} written in R.
@@ -40,7 +43,7 @@ The following source code is an implementation of the sensitivity analysis of th
 \chapter{Code - Case Study}
 
 \section{Parametrization - Structural Approach} \label{empirical}
-The following source code is usd to calculate important model inputs. The source code is written in R.
+The following source code is used to calculate important model inputs. The source code is written in R.
 \lstinputlisting[language=R]{code/CopyOfcalibrateStructuralApproach.R}
 
 \subsection{\citet{cox1985theory} Model}
@@ -57,4 +60,7 @@ The following source code is an implementation of the \citet{merton1974pricing} 
 The following source code is used to estimate the jump parameters after estimating the jump intensity. The code is written in R.
 \lstinputlisting[language=R]{code/estimateJumpParameter.R}\label{estimateJumpsParameter}
 
+\section{Empirical Analysis - All Approaches} \label{fuckinglastcode}
+The following source code is used to calculate the estimated prices for each of the three models over the observation period. The approach minimizes in this regard the RMSE. Both the RMSE and the MAE are calculated for the observation period. The source code is written in R.
+\lstinputlisting[language=R]{code/empiricalAnalysis_CD.R}
 

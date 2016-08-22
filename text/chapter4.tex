@@ -5,7 +5,7 @@ In the following sections, the price sensitivity of all three valuation approach
 
 For the credit derivative approach, we investigate a set of scenarios concerning the underlying share price $S$, the share price volatility $\sigma_E$, a CoCo's maturity $T$, the risk-free interest rate $r$, the trigger share price $S^*$ and the conversion price $C_p$. The same scenarios are also analyzed for the equity derivative approach because the input parameters are the same.\\
 
-Varying share prices $S$ and share price volatilities $\sigma_E$ have a decisive impact on CoCo prices. The effect of both variables is presented in figure \ref{fig:cd1}. The diagram shows that higher share price levels lead to higher CoCo prices. This can be justified by the fact that it becomes less likely that the share price $S$ falls below the trigger share price $S^*$. Hence, the probability that investors face losses due to an equity conversion is lower. The compensation for that risk respectively the conversion spread $s_{CoCo}$ decreases. With surging share price volatilities $\sigma_E$, CoCo investors demand higher yields to compensate for rising conversion probabilities. For that reason, the conversion spread $s_{CoCo}$ increases which in turn leads to lower CoCo prices. However, the influence of this effect diminishes with rising share prices $S$ as it becomes less likely that stock prices below the predefined trigger share price $S^*$.\\
+Varying share prices $S$ and share price volatilities $\sigma_E$ have a decisive impact on CoCo prices. The effect of both variables is presented in figure \ref{fig:cd1}. The diagram shows that higher share price levels lead to higher CoCo prices. This can be justified by the fact that it becomes less likely that the share price $S$ falls below the trigger share price $S^*$. Hence, the probability that investors face losses due to an equity conversion is lower. The compensation for that risk respectively the conversion spread $s_{CoCo}$ decreases. With surging share price volatilities $\sigma_E$, CoCo investors demand higher yields to compensate for rising conversion probabilities. For that reason, the conversion spread $s_{CoCo}$ increases which in turn leads to lower CoCo prices. However, the influence of this effect diminishes with rising share prices $S$ as it becomes less likely that stock prices fall below the predefined trigger share price $S^*$.\\
 
 
 \begin{figure}
@@ -21,9 +21,9 @@ Varying share prices $S$ and share price volatilities $\sigma_E$ have a decisive
   \label{fig:cd1}
   \end{figure}
 
-Furthermore, figure \ref{fig:cd2} shows the reaction of the CoCo price due to changes in maturity $T$ and the risk-free interest rate $r$. One can observe that higher risk-free interest rate levels lead to lower CoCo prices. By contrast, for rising maturities, one can observe higher CoCo prices, except for the combination of high-interest rates and a maturity of ten years. In this scenario, the risk-free interest rate effect outweighs the maturity effect. Also, when analyzing the development of the conversion spread $s_{CoCo}$ one can also see that the conversion spread is at its maximum with a maturity of ten years. The influence of parameter $T$ on the value of a CoCo increases significantly with lower interest rate levels. The highest CoCo price can be found for the combination of low-interest rates and high maturities. One can explain the observation by compounding effects and comparatively high discount factors especially for the notional.  
+Furthermore, figure \ref{fig:cd2} shows the reaction of the CoCo price due to changes in maturity $T$ and the risk-free interest rate $r$. One can observe that higher risk-free interest rate levels lead to lower CoCo prices. By contrast, for rising maturities, one can observe higher CoCo prices, except for the combination of high-interest rates and a maturity of ten years. In this scenario, the risk-free interest rate effect outweighs the maturity effect. Also, when analyzing the development of the conversion spread $s_{CoCo}$ one can also see that the conversion spread is at its maximum with a maturity of ten years. The influence of parameter $T$ on the value of a CoCo increases significantly with lower interest rate levels. The highest CoCo price can be found for the combination of low-interest rates and high maturities. One can explain the observation by compounding effects and comparatively high discount factors especially for the notional. \\
   
-\begin{figure}[H]
+\begin{figure}
 \centering
 \begin{tikzpicture}
     \begin{axis}[view={10}{10}, height=9cm, width=13cm, grid=both, ypercent, y dir = reverse,
@@ -35,8 +35,7 @@ Furthermore, figure \ref{fig:cd2} shows the reaction of the CoCo price due to ch
     \caption[CoCo price pursuant to the credit derivative approach as function of maturity and interest rate]{CoCo price pursuant to the credit derivative approach as function of maturity $T$ and risk-free interest rate $r$}
   \label{fig:cd2}
   \end{figure}
-$ $ \\
-\begin{figure}[H]
+\begin{figure}
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={10}{10}, height=9cm, width=13cm, grid=both, y dir = reverse,
@@ -118,10 +117,10 @@ The structural approach requires different model inputs then the other two appro
   \label{fig:sa1}
   \end{figure}
   
-Figure \ref{fig:sa1} details a CoCo's price reaction to changes of the initial asset-to-deposit ratio $x_0$ and the asset volatility $\sigma_A$. The diagram demonstrates that prices move closely with the asset-to-deposit ratio. This is because financial institutions with higher initial asset-to-deposit ratios are better capitalized which, in turn, reduces the conversion probability. At an asset-to-deposit ratio of 1.09, one can observe that the CoCo bond triggers. Interestingly, the analysis shows that the asset volatility does not influence a CoCo's price. Having said that, one would typically assume that a higher asset volatility is inversely related to the price because the likelihood of conversion rises. The lack of a stable solution for a given asset volatility $\sigma_A$ might be a shortcoming of the structural approach.
+Figure \ref{fig:sa1} details a CoCo's price reaction to changes of the initial asset-to-deposit ratio $x_0$ and the asset volatility $\sigma_A$. The diagram demonstrates that prices move closely with the asset-to-deposit ratio. This is because financial institutions with higher initial asset-to-deposit ratios are better capitalized which, in turn, reduces the conversion probability. At an asset-to-deposit ratio of 1.09, one can observe that the CoCo bond triggers. Interestingly, the analysis shows that the asset volatility does not influence a CoCo's price. Having said that, one would typically assume that a higher asset volatility is inversely related to the price because the likelihood of conversion rises. The lack of a stable solution for a given asset volatility $\sigma_A$ might be a shortcoming of the structural approach.\\
 
 %CoCo price V^st as function of maturity T and risk-free interest rate r
-\begin{figure}[H]
+\begin{figure}
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={-30}{210}, height=9cm, width=13cm, grid=both, z dir = reverse,
@@ -135,7 +134,7 @@ Figure \ref{fig:sa1} details a CoCo's price reaction to changes of the initial a
   \end{figure}
 
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and equity-to-deposit threshold ebar
-\begin{figure}[H]
+\begin{figure}
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={15}{210}, height=9cm, width=13cm, grid=both, z dir = reverse,
@@ -150,10 +149,10 @@ Figure \ref{fig:sa1} details a CoCo's price reaction to changes of the initial a
 
 Figure \ref{fig:sa2} exemplifies the CoCo price as function of maturity $T$ and the interest rate $r$. As can be seen from the diagram, the CoCo price decreases with rising interest rates. Though, there is a difference between the structural approach and the other two approaches because the price sensitivity of the CoCo decreases with rising maturities. At a maturity of around thirty years, the price sensitivity concerning the interest rate does not change anymore. Moreover, the price does not react to changes in the maturity.\\
 
-As expected, figure \ref{fig:sa3} shows that the CoCo price falls with a rising equity-to-deposit threshold, which is set to be the conversion threshold for the structural approach. The explanation is similar to that of the trigger price $S^*$ under the equity  derivative approach. The conversion probability rises because the equity-to-deposit threshold approaches the current share price. Furthermore, one can observe that the CoCo triggers at the combination of an asset-to-deposit ratio of 1.09 and an equity-to-deposit threshold of 6.00\%. Similar dynamics are also observable in figure \ref{fig:sa5}. By increasing the ratio of initial contingent-capital's nominal to deposits ratio, one can recognize that the valuation comes down as leverage increases. 
+As expected, figure \ref{fig:sa3} shows that the CoCo price falls with a rising equity-to-deposit threshold, which is set to be the conversion threshold for the structural approach. The explanation is similar to that of the trigger price $S^*$ under the equity  derivative approach. The conversion probability rises because the equity-to-deposit threshold approaches the current share price. Furthermore, one can observe that the CoCo triggers at the combination of an asset-to-deposit ratio of 1.09 and an equity-to-deposit threshold of 6.00\%. Similar dynamics are also observable in figure \ref{fig:sa5}. By increasing the ratio of initial contingent-capital's nominal to deposits ratio, one can recognize that the valuation comes down as leverage increases.\\ 
 
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and initial ratio of contingent capital's nominal to the original value of deposits
-\begin{figure}[H]
+\begin{figure}
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={10}{20}, height=9cm, width=13cm, grid=both, y dir = reverse,
@@ -167,7 +166,7 @@ As expected, figure \ref{fig:sa3} shows that the CoCo price falls with a rising 
   \end{figure}
 
 %CoCo price V^st as function of initial asset-to-deposit ratio x_0 and jump intensity in asset return process lambda
-\begin{figure}[H]
+\begin{figure}
 \centering
   \begin{tikzpicture}
   \begin{axis}[view={70}{10}, height=9cm, width=13cm, grid=both,

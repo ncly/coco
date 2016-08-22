@@ -31,7 +31,7 @@ calibrate_Jump <- function(returns, jump_Intesity){
 }
 
 # CIR data
-# Input data: [R,tau] (n x 2), with R: annual bonds yields in percentage and tau: maturities in years
+# Input data: [R,tau] (n x 2), with R: yields in percentage and tau: maturities in years
 data <- read.csv2("data/spot_interest rate.csv", header = TRUE, sep=";", dec=",", as.is=TRUE)
 data[[1]] <- as.Date(data[[1]])
 data <- data[rowSums(is.na(data)) == 0,]
@@ -65,9 +65,6 @@ for(z in 1:(nrow(sharepriceGBP)-1)){
 deposits <- matrix(1:1010, ncol = 1)
 marketcap <- matrix(2:1011, ncol = 1)
 r <- c(matrix(0.01, nrow = 253), matrix(0.02, nrow = 252), matrix(0.03, nrow = 254), matrix(0.04, nrow = 251))
-
-
-
 
 volatility_equity <- matrix(0.1, nrow = 1010)
 
