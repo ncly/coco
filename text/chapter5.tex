@@ -1,23 +1,102 @@
 \chapter{Case Study}\label{empiricalanalysis}
+All three approaches will be applied to a AT1 CoCo of HSBC which was issued in early 2015. The case study helps to evaluate the models concerning their price tracking accuracy. 
 
-\section{HSBC CoCo}
+\section{CoCo Example}
+On March 30, 2015, HSBC issued its Perpetual Subordinated Contingent Convertible Securities. The aggregate principal amount from the issuance of the CoCo sums up to USD 2.475 bn. HSBC intended to strengthen its capital base with the proceeds of the issuance. The interest on the CoCo will be a rate per annum equal to 6.375\%. Besides, the CoCo pays its coupon semi-annually. The conversion price is fixed ex-ante at USD 4.03488. The trigger event occurs if the CET1 ratio fails to remain above a threshold of 7.0\% as of any business day on which HSBC calculates the CET1 ratio. If the CoCo breaches the threshold, it converts automatically to equity.
 
-\section{Parametrization}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+ \begin{axis}[%timeplot,
+  height=4.9cm,
+  width=12cm,
+  date coordinates in=x,
+  xticklabel={\day/\month/\year},
+  x tick label style={rotate=25,anchor=north east},
+  ylabel = {$Cumulative$ $Return$},
+  xlabel = {$Time$},
+  date ZERO=2015-03-31,
+  xtickmax=2016-06-30,
+  %table/col sep = semicolon,
+  colormap/viridis,
+  legend entries={CoCo (ISIN GB0005405286),Share (ISIN US404280AT69)},
+  legend style={font=\fontsize{4}{5}\selectfont},
+ ]
+ \addplot [green] table[mark=none,line join=bevel, x=Date, y=cocoprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+ \addplot [blue] table[mark=none,line join=bevel, x=Date, y=shareprice] {code/data/final_relativepricedevelopment_HSBC-CoCo.txt};
+ \end{axis}
+\end{tikzpicture}
+\caption[Cumulative return of HSBC's CoCo and equity]{Cumulative return of HSBC's share and CoCo adjusted for GBP/USD currency effects}
+\label{fig:cumulative}
+\end{figure}
 
-\section{Valuation Results}
+Figure \ref{fig:cumulative} gives a first impression of both the cumulative return development of the reference share price (ISIN US404280AT69) and the CoCo (ISIN GB0005405286). The pricing period ranges from March 31, 2015, to June 30, 2016. The mean price of the CoCo during this time intervall equals GBP 66.25, whereas the minimum price is GBP 56.88. The maximum price amounts to GBP 74.12. The biggest price jump can be found in early 2016 when turmoils arose regarding the healthiness of the entire European banking system. Many CoCos of other financial institutions reacted similarly.
 
-\begin{itemize}
-\item the mean absolute error (MAE) is the arithmetical average of the absolute difference between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$
-\item the MAE can be derived with
-\end{itemize}
+\section{Methodology}
+
+The aim of the case study is to determine how different the predicted are compared to observed prices. This is called price tracking accuracy. The mean absolute error (MAE) and the root mean squared error (RMSE) are calculated for the model estimates in the observation period to evaluate the price tracking accuracy of all three approaches. Input parameters are estimated as described in previous chapters. Subsequently, a brute force algorithm is applied to minimize the RMSE of each approach by varying the model implied trigger share price $S^*$. The respective source code can be found in section \ref{fuckinglastcode}. The approach is computationally intense. Further algorithm optimizations could improve the time-consuming pricing process. After deriving a value for the model implied trigger price $S^*$ for each approach, the MAE is calculated.\\  
+
+The RMSE represents the standard deviation of the differences between predicted CoCo values $\hat{y}_i$ and observed values $y_i$ for a number of trading days $i$. With the following equation the RMSE can be derived:
+\begin{align}
+RMSE &= \sqrt{\dfrac{\sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2}{n}}
+\end{align}
+
+By contrast, the MAE is the arithmetical average of the absolute differences between predicted CoCo values $\hat{y}_i$ and observed market values $y_i$ up to a certain time point $i$. The MAE is given by:
 \begin{align}
 MAE &= \dfrac{1}{n} \sum_{i=1}^{n} |\hat{y}_i - y_i | 
 \end{align}
 
-\begin{itemize}
-\item the root mean squared error (RMSE) represents the standard deviation of the difference between the predicted CoCo value $\hat{y}_i$ and the observed value $y_i$
-\item the RMSE is given by
-\end{itemize}
-\begin{align}
-RMSE &= \sqrt{\dfrac{\sum_{i=1}^{n} \left( \hat{y}_i - y_i \right)^2}{n}}
-\end{align}
+The obtained values will help to determine the appropriateness of the models to price existing CoCos over a certain period.
+
+\section{Valuation Results}
+
+In the following, the valuation results on HSBC's CoCo are analyzed visually and numerically. In that sense, figure \ref{fig:valuation} illustrates the valuation results and the observed CoCo prices.
+ 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+ \begin{axis}[%timeplot,
+  height=7.8cm,
+  width=14cm,
+  date coordinates in=x,
+  xticklabel={\day/\month/\year},
+  x tick label style={rotate=25,anchor=north east},
+  ylabel = {$Price$ $in$ $GBP$},
+  xlabel = {$Time$},
+  date ZERO=2015-03-31,
+  xtickmax=2016-06-30,
+  %table/col sep = semicolon,
+  colormap/viridis,
+  legend entries={CoCo, CD, ED, SA}
+ ]
+ \addplot [blue] table[mark=none,line join=bevel, x=date, y=coco] {code/data/plottingdata_2.txt};
+ \addplot [green] table[mark=none,line join=bevel, x=date, y=cd] {code/data/plottingdata_2.txt};
+ \addplot [yellow] table[mark=none,line join=bevel, x=date, y=ed] {code/data/plottingdata_2.txt};
+ \addplot [orange] table[mark=none,line join=bevel, x=date, y=sa] {code/data/plottingdata_3.txt};
+ \end{axis}
+\end{tikzpicture}
+\caption[Simulation results for the CoCo of HSBC]{Simulation results for the CoCo of HSBC}
+\label{fig:valuation}
+\end{figure}
+
+What becomes apparent is that the credit derivative approach and the equity derivative approach under- respectively overestimate the price of the CoCo for long time periods. It is interesting to observe that the price estimates are higher for the credit derivative approach compared to the estimates of the equity derivative approach. This finding has also been described theoretically. The structural approach, on the other side, follows more or less the CoCo price. The lack of stability of the price estimates for the structural approach may be explained by the fact that only one hundred paths per simulation have been conducted in the Monte-Carlo simulation per trading day. Due to the RMSE brute force algorithm and finite assumptions on the maturity, significant computational capacities are necessary to derive stable prices. \\
+
+Table \ref{tbl:valuationresults} supports the initial visual impression that the structural approach is superior in tracking the actual CoCo price as the RMSE equals 0.1012 and the MAE is 6.52. The other two methods do not appear to track the price of the CoCo adequately which is indicated by high RMSE and MAE values. The model implied conversion price of the structural approach is equal to 306.12. In contrast, the credit derivative method assumes a significantly lower trigger price of 215.03 which is different to the price of 318.67 that is implied by the equity derivative approach.
+
+\begin{table}[H]
+ \setlength{\extrarowheight}{2.5pt}
+ \centering
+ \begin{tabular}{lrrr}
+  \toprule
+    & \textbf{Trigger price $S^*$} & \textbf{RMSE} & \textbf{MAE} \\
+  \midrule
+   Credit Derivative Approach & 215.03 & 0.2031 & 12.34\\
+   Equity Derivative Approach & 318.67 & 0.1974 & 11.65 \\   
+   Structural Approach & 306.41 & 0.1012  & \phantom{1}6.52 \\
+  \bottomrule
+ \end{tabular}
+ \caption[Case study results]{Case study results and model implied trigger price $S^*$}
+ \label{tbl:valuationresults}
+\end{table}
+
+For the observation period, it seems that the structural approach performs best to track the price of the perpetual CoCo. Price differences between the estimated and observed prices might occur because none of the approaches accounts for the callability feature. Though, the empirical results cannot be generalized based on one CoCo. But one can summarize that the structural approach has been dominant to price the CoCo example in the observation period.
